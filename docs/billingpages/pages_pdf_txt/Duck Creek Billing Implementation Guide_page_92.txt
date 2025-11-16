@@ -1,0 +1,29 @@
+Key Default Value Description
+ServerConfig C:\Program Files\Duck Creek
+Technologies\shared\Server.ConfigThe location of the Server.config file.
+RequestIntervalInMilliseconds 60000 Specifies the time in milliseconds
+between checking for requests.
+Working with the Windows Events Log
+If the Windows Events log is full, it may cause the DuckCreek_Async_Request_Queue_EXAMPLE AsyncQueue 0
+service to terminate without processing requests.
+To troubleshoot the Windows Events log:
+1.Click Start , and then click Control Panel .
+2.Click Performance and Maintenance , and then click Administrative Tools .
+3.Double-click Computer Management , and then expand the Event Viewer .
+4.Click Application to view the logged events.
+5.Review the event logs for errors.
+6.Right-click Application to open the log file or save it to a different file.
+7.Right-click Application to clear the appropriate events log.
+All scheduled activities for a given day must be executed before subsequent activities will be processed.
+The following table lists the activity status codes associated with items in the scheduled activity table.
+Activity Status Code State Description
+C Complete The scheduled activity is successfully executed.
+F Failed The scheduled activity failed to execute.
+H Hold Execution of the scheduled activity is on hold.
+I Processing The scheduled activity is in the process of executing.
+P Pending Execution of the scheduled activity is pending.
+X Expired The scheduled activity has expired without executing.
+Working with Asynchronous Activity
+To verify asynchronous activity:
+The table should be empty unless there are outstanding requests.
+92 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,37 @@
+3.To display the new Account ReferenceID after the Book button has processed, set the Submission page to show
+the value of the text_AddAccountResponse.value field.
+4.(Optional) To generate desired feedback data, connect the BillingKeysPrivate.SetData field to execute both prior
+to the Book express action and after the return response.
+Suggestion: Connect BillingKeysPrivate.SetData to the data.TotalResult field
+To integrate Duck Creek Billing™ with external policy administration systems:
+1.The _BillingInputDoc must be set inside the working session on the Billing server. This data can be populated in
+multiple ways. Due to changes and customization, the carrier should determine paths and data of this session
+document by referring to the Account and Policy Plan manuscripts. These manuscripts can also set the data if
+desired, by calling the <ManuScript.initDataRq> request.
+2.Normal billing workflow or any modification implemented by the customer can be carried out.
+3.Once this data is set, the external system can call the Billing server with the billingStart:billingStart express
+action, and a returnURL. Once billing is done, the _BillingOutputDoc is available in the billing session for retrieval
+using the request API.
+For more information, contact your Account Manager.
+Creating Accounts and Users
+The following section includes information covering the types of accounts that can be created, and the types of
+accounts that are necessary to use specific billing features including Monthly Premium Reporting and the Agency Lite
+feature.
+End-User Functionality and Role-Based Security
+Out-of-the-box roles are provided as a framework for customization of the role-based security features implemented in
+Duck Creek Billing™. Roles can easily be customized to allow users to have specific privileges not available with the
+out-of-the-box role. Shipped roles include: administrator, agent, senior customer service representative, and standard
+customer service representative.
+Using the available roles and privileges, the following representative users can perform a variety of tasks:
+•Policy system user
+•Customer service representative
+•Payment processor
+•Billing administrator
+Working with Privileges and Out-of-the-Box Roles
+Duck Creek Billing™ provides four out-of-the-box roles that include specific privileges for an administrator, agent,
+senior customer service representative or standard customer service representative. These roles may be used as
+shipped to provide a user with a specific set of privileges, or privileges may be added or removed from the out-of-the-
+box roles. For example, using the out-of-the-box senior customer service representative role as a foundation, additional
+privileges may be added to allow the user to complete work not specified in the out-of-the-box role. The roles and
+associated privileges are managed in EXAMPLE UserAdmin™. The range of activities any given individual may
+19 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

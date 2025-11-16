@@ -1,0 +1,27 @@
+TogglePanelButton showButton 0
+PreviousButtonDefaultType N/A
+NextButtonDefaultType N/A
+StaticPanelContent leftPanel
+ComboBoxes maxSize 200
+custom N/A
+ContentUrl N/A
+ContentTitle blank
+ContentBorder Hide
+ContentFrame Hide
+ContentCollapsible False
+ContentScrollable False
+ContentHeight N/A
+ContentName N/A
+IgnoreIECheck 0
+ComboBoxes maxSize
+Defines the maximum width to use for all combo boxes.
+Default Valid
+200 Any positive integer.
+If the value of this setting is left blank, the default value of 200will be used.
+ContentUrl
+The URL of the external content you wish to use in EXAMPLE Express ®.
+Default Valid
+blank Any valid URL or path relative to EXAMPLE Express ®.
+ContentTitle
+If specified, a title bar containing the specified string will appear in the title bar at the top of the tab section.
+213 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

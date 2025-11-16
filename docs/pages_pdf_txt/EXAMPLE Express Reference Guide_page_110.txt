@@ -1,0 +1,31 @@
+Behavior Changes
+Out of the box, Avant Garde 2.1 controls validate input fields as data is entered. For example, a field such as a
+telephone number input field will not accept alphabetical characters. Alert messages were removed and replaced with
+visual cues and indicators. The following shows input fields with indicators of required fields. Unless the fields are
+completed, the user will not be able to navigate to the next page.
+Customizing Avant Garde 2.1 Skins
+Customizing skins has been made easier with Avant Garde 2.1. Each control is in its own file, and extending or
+overriding a control is done at the child class for individual fields or at the base class for all field types. Once a property
+has been added or removed, it is defined in the data-config section of the XSLT file for the control that was changed.
+Changes are made in one place (XSLT, child class, or base class) depending on the extent of the change.
+Making Changes in the XSLT Files
+To add or remove properties from controls, make changes to the data-config attribute in the XSLT file. Helper
+templates are provided to add properties to the data-config attribute. To add a new property, call the template called
+"addConfigProperty" and customize any of three parameters that it will accept.
+name — Name of the property
+value — Value for the property
+type — Type of property (string, number, Boolean, object, array, regEx)
+The following is an example of the template:
+<xsl:template name="addConfigProperty">
+<xsl:param name="name"/>newpropertyname</xsl:with-param>-->
+<xsl:param name="value"/>newpropertyvalue</xsl:with-param>-->
+<xsl:param name="type"/>string</xsl:with-param>-->
+Making Changes in the ExtJs Files
+Each control in Avant Garde 2.1 has its own source file that makes finding and customizing the control easier. All the
+source files are located in the C:\Program Files\Duck Creek
+Technologies\Express\Skins\DCTBase\Core\devscripts\ commonfolder. To make changes to specific
+fields, customizations can be done at the child class. The following is a code sample of the child class available for
+customizations in the Ext JS controls.
+DCT.InputStringField = Ext.extend(DCT.InputField, {
+inputXType: 'dctinputstringfield',
+110 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

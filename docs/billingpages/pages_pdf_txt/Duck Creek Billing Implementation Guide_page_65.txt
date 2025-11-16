@@ -1,0 +1,30 @@
+The Third Party Payment Interface is disabled by default.
+To enable the Third Party Payment interface:
+1.Open the Edit Configuration utility.
+2.In the Virtual Directory list, click the Express Virtual Directory.
+3.Click the Web Config tab.
+4.Browse to Use3rdPartyPayments .
+5.In the value field, change the setting to True .
+6.Browse to the ExternalPaymentsInterface .
+7.In the value field, set the path to the ExternalPaymentInterface.xml file.
+The default location for this file is: <installed dir>\Express\App_Data\ ExternalPaymentInterface.xml
+8.Click Save .
+The External Payment Interface must also be configured. The ExternalPaymentInterface.xml file contains a node called
+ExternalPaymentInterface. EXAMPLE Express ®uses the data configured in this section to build the URL and
+parameters to submit to a Third Party Payment Provider.
+To configure the External Third Party Payment Interface:
+1.Open the Edit Configuration utility.
+2.In the Virtual Directory list, select the Express Virtual Directory.
+3.Click the Server Config tab.
+4.Expand Billing .
+5.Configure the parameters listed in the following table.
+Name Type Required Description
+PaymentSiteURL String Yes Specifies the URL of the Third Party Payment Provider.
+PaymentSiteUserId String Yes Specifies the UserId for the Third Party Payment site.
+PaymentSitePassword String Yes Specifies the password for the Third Party Payment site.
+PaymentSiteReturnURL String Yes Specifies the return URL after the payment is completed.
+Specifying the parameters in the table will direct traffic to and from a third party payment site. For assistance with
+third party payment processing, contact your Account Manager.
+Working with Electronic Funds Transfers (EFT)
+The integration between Duck Creek Billing™ and Electronic Funds Transfer (EFT) payments is illustrated below.
+65 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

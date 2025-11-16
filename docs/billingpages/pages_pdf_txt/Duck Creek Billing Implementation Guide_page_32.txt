@@ -1,0 +1,47 @@
+Late Charge
+Threshold
+AmountDetermines the
+amount of the
+invoice that must
+remain unpaid in
+order to assess the
+late charge on an
+account. Any
+amount less than
+the threshold
+amount does not
+generate a late
+charge, and is
+written off or billed
+with the next
+scheduled invoice.
+Valid only
+when the
+Late
+Charge
+Action
+setting is
+Charge.Any value. $10
+Reminder
+Notice ActionDetermines whether
+reminder notices
+are sent on the
+account.•Reminder
+•NoneReminder
+Reminder
+Notice DaysDetermines the
+number of days
+before or after the
+due date that the
+reminder notice can
+be generated if the
+unpaid invoice
+amount meets or
+exceeds the
+Reminder Notice
+Threshold Amount.
+The value of the
+Reminder Notice
+Action Setting must
+be set to Reminder.Any value. 5
+32 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

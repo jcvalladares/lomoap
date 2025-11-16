@@ -1,0 +1,36 @@
+reset.css Contains style definitions that override those defined by the browser vendor for common
+HTML elements. By resetting these definitions to a common baseline, fewer cross-browser
+incompatibility issues occur.
+This file should not be modified.
+style.css Contains styles for visual elements that appear on pages (banners, footers, tabs, font sizes).
+topNav.css Contains styles controlling top navigation for ManuScript pages. This file is used only if
+specified for a PageSet in EXAMPLE Author ®.
+x_pagename .css Contains page-specific styles that override the global styles assigned in the above files.
+To allow for extensive layout customization, each system page can have a
+corresponding x_ pagename .css file (for example, x_login.css.) If an
+x_pagename .css file exists for a given page, the file will be loaded when that page
+is loaded. Out of the box, EXAMPLE Express ®skins include an x_ pagename .css
+file for commonly customized pages. If desired, you can add additional
+x_pagename .css files for any other pages you wish to customize.
+x_interview.css Contains styles to be applied to individual fields or page elements in EXAMPLE
+ManuScripts™. These styles are assigned in EXAMPLE Author ®.
+HTML Div Structure
+By default, EXAMPLE Express ®pages include the following container divs:
+•wrapper — Controls the overall page width
+•banner — Contains branding and top navigation
+◦logo — Contains the logo
+◦productNavigationDiv — Contains product-level navigation
+◦quickSearch — Contains the quick search
+◦actionGroup —Contains application-level navigation
+◦specialactions — Contains the New Quote feature
+•formContent — Controls page content between the banner and footer
+◦leftPanelArea — Contains content of the left panel
+◦policyActiveSection — Contains information on the active policy, if an active policy exists
+◦subActionGroup — Contains the sub navigation for pages (if in interview, contains navigation among
+ManuScript pages)
+◦relatedActions — Contains policy-related actions if a policy is active
+◦logonActions — Contains login options ( Change Password )
+◦main — Contains content of the page area between banner and footer to the right of the left panel
+◦header — Contains the page header
+◦pageTop — Contains page title (pageTitle) and instructional text (pageInst)
+81 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

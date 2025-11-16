@@ -1,0 +1,35 @@
+1.Open the Edit Configuration Utility.
+2.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+3.Under Mode , click Form .
+4.On the Web Config tab, in the list of settings, click the NewQuoteManuScriptID .
+5.In the value text box, clear the value.
+6.Click Save .
+7.Click Close .
+Be sure to define the desired system page for each <applicationLayout> in your ApplicationLayoutMap.xml
+file. For more information about the ApplicationLayoutMap.xml file, see Customizing
+ApplicationLayoutMap.xml .
+Customizing the System Loading Message
+EXAMPLE Express ®system pages and version 2 interview (ManuScript) pages display a "loading" message during
+long processes. By default, this message appears after four seconds. This number can be customized by modifying the
+EXAMPLE Express ®skins.
+To customize the number of seconds before the EXAMPLE Express ®loading message appears:
+1.In the Global Root Directory \Express\Skins\ CustomSkin \scripts directory, open the custom.js file.
+2.Modify the _loadingWaitTime variable to contain the desired time to elapse (in milliseconds) before displaying
+the loading message.
+3.Save and close custom.js .
+Enabling Top Navigation
+AvantGarde–based skins support the ability to apply a top-navigation layout to ManuScript pages in place of the default
+left-navigation layout. This type of navigation is ideal for ManuScript pages that require maximum screen real estate.
+To enable top-navigation layout:
+1.In EXAMPLE Author®, open the ManuScript containing the pages you wish to change.
+2.In Page Designer, click the PageSet containing the pages you wish to change.
+3.On the Definition tab, click Rule Set .
+4.In the Rule Set text box, enter topNav.
+5.Save and close the ManuScript.
+Enabling Help Link Tab Indexes
+In AvantGarde–based skins, by default, when users navigate through interview (ManuScript) pages in EXAMPLE
+Express ®using the Tabkey, help links are not included in the Tabkey navigation.
+To configure tab navigation to include help links:
+1.In the Global Root Directory \Express\Skins\ CustomSkin \xsl directory, open the interviewNew.xsl file.
+2.Change the following code:
+173 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

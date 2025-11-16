@@ -1,0 +1,34 @@
+◦buildPolicyLeftNavHeader — Controls the header of the left panel.
+◦createSubMenuArea — Renders the left navigation (such as the sub navigation for certain pages).
+◦buildPolicyRelatedTasks — Controls the Policy Actions in the left panel.
+◦buildPolicyLogonItems — Controls the Login Options in the left panel.
+Customizing CSS
+You can customize CSS for EXAMPLE Express ®by:
+•Customizing a set of global .css files that apply across the entire EXAMPLE Express ®application.
+•Customizing individual override files (indicated by the filename x_pagename.css ) that apply to single pages or
+portions of the EXAMPLE Express ®application.
+•Applying custom CSS styles to specific page elements in a ManuScript. These styles are defined in a single
+override file ( x_interview.css ), and are applied to individual fields and page elements in EXAMPLE Author ®. For
+more information about creating and applying custom CSS styles in EXAMPLE Author ®, see Working with CSS
+Override Styles in the Guide to EXAMPLE Author® .
+The x_interview.css file is automatically modified by EXAMPLE Author ®any time styles are edited using
+the CSS Manager in Page Designer. This file does not need to be edited by hand.
+The table below describes the customizable .css files in the Global Root Directory \Express\Skins\ CustomSkin \css
+directory. Use this table to determine which files to modify when customizing CSS.
+File Description
+buttons.css Contains styles for all links and buttons used in EXAMPLE Express ®.
+ext-all.css Contains styles controlling the layout of the EXT JavaScript framework used throughout
+EXAMPLE Express ®.
+forms.css Contains styles that define how EXAMPLE Express ®forms (interview pages) are displayed in
+the browser. Two standard sets of form layouts exist in the base installation of EXAMPLE
+Express ®: vertical and horizontal (across and down).
+generic.css Obsolete as of EXAMPLE Platform ®4.0.
+leftNav.css Contains styles controlling left navigation for ManuScript pages. This file is the default file
+used to control ManuScript page navigation.
+leftNavFloating.css Contains styles controlling the floating navigation panel. This file is only used if floating
+navigation is enabled.
+legacySkins.css Contains styles released in versions of EXAMPLE Express ®prior to 3.1. These styles are
+only loaded for ManuScripts containing version 1 pages.
+nav.css Contains styles controlling application-level navigation.
+popUp.css Contains styles controlling the layout of pop-up window contents.
+80 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

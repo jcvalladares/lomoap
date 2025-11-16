@@ -1,0 +1,36 @@
+customOnBlur(field) Executed when an onBlur event is executed.
+customOnKeyPress(field) Executed when an onKeyPress event is executed (for multi-line text boxes).
+customOnClick(field) Executed when an onClick event is executed.
+customOnChange(field) Executed when an onChange event is executed.
+customOnKeyUp(field) Executed when an onKeyUp event is executed (for multi-line text boxes).
+Customizing Out-of-the-Box Pages
+To customize the look and feel of out-of-the-box system pages, modify the appropriate .xsl and .css files in the Global
+Root Directory \Express\Skins\ CustomSkin \xsl and Global Root Directory \Express\Skins\ CustomSkin \css directories.
+Use the table below to determine which files to modify.
+Page Files to Modify Notes
+Login
+Login login.xsl, x_login.css N/A
+Agency
+Signupsignup.xsl, x_signup.css N/A
+Policy Administration Dashboard
+Policy
+Administration
+DashboarddashboardHome.xsl,
+x_dashboardHome.cssN/A
+Clients
+Client
+InformationclientInfo.xsl,
+x_clientInfo.cssN/A
+Client Details •ManuScript — Client
+Detail ManuScript
+•System pages —
+clientDetail.xsl,
+x_clientDetail.cssThis page can be driven by the Client Detail ManuScript. To
+customize this page, modify this ManuScript.
+Policies
+Interview interviewNew.xsl,
+interview.xsl,
+x_interview.cssThe interviewNew.xsl file is used for version 2 pages, and the
+interview.xsl file is used for version 1 pages. Both version 1 and
+version 2 pages use x_interview.css.
+83 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

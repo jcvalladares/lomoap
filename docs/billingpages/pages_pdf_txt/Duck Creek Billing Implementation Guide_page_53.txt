@@ -1,0 +1,32 @@
+◦Installment Schedule
+◦Make A Payment
+◦Items in Suspense
+◦Hold Billing Activities
+2.To view the active commission plans, click Active Commission Plans .
+All of the Inherited Plans and Agent Specific Plans associated with the selected account appear.
+Inherited plans are view-only. Any changes to a commission plan must be made at the level where the
+plan is created.
+3.To view the details of an inherited plan, click Details .
+To add a new commission plan:
+1.From the Active Commission Plans page, click Add New Commission Plan .
+The Commission Plan Details page appears.
+2.Accept the default selections, or use the dropdown list or text box to enter any different values.
+3.Enter the plan name in the Description text box.
+4.In the Terms section, below the Commission Rate heading, click one of the following options in the Type list:
+◦Percentage
+◦Flat Amount
+5.In the Value text box, enter the appropriate amount.
+6.Below the Commission Distribution heading, click one of the available options in the Entity Type list.
+The available options are determined by ManuScript customization.
+7.In the Percentage orAmount text box, enter the appropriate amount.
+Enter percentages as numbers carried out to two decimal points. For example, 10 percent would be
+entered as 10.00.
+8.After entering the value, click the page outside of the text box to refresh the page, or tab outside the text box.
+9.(Optional) To add an additional distribution for the commission amount, click Add New Distribution .
+10. (Optional) Repeat Steps 6 and 7 for each additional distribution.
+11. (Optional) Click Delete Distribution to remove a distribution from the commission plan.
+12. Click the page outside of the text box to refresh the page.
+The percentage or amount for other entity types will need to be changed to match the specified
+commission rate amount.
+13. Click Save New Plan.
+53 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

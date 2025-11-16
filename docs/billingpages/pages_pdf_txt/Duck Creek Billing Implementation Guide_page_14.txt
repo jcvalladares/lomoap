@@ -1,0 +1,26 @@
+•Row classification – Allows a class name to be appended to a row to change styling. This classification is based
+on a rule provided through a JavaScript function.
+•DataOnLoad event – Allows the onload event to occur immediately after a page or image is loaded.
+Date Fields
+Duck Creek Billing™ offers the following date field functionality for date fields:
+•System pages with their own Ext Js date fields that do not interfere with interview pages.
+•Available events for date fields:
+◦onBlur event
+◦onChange event
+◦onKeyUp event
+◦onKeyPress event
+Date fields are turned on by providing a function that is called for one of the listed events. The
+function is passed as a configuration parameter in the XSL. If the screen XSL does not pass a
+function, the event is not processed.
+Validation Functions
+•Credit Card Validation –The credit card validation function performs a behind-the-scenes validation on all
+entered credit card numbers. All standard credit card types are handled.
+•Time Validation –The Time Validation function checks that any entered time is valid.
+Integrating Duck Creek Billing
+Third-party products may be integrated with Duck Creek Billing™ to complete a billing package. Easy to configure
+integration points allow the user to integrate Duck Creek Billing with payment processing for EFT accounts, lockbox
+payments, and policy administration systems.
+Integrating with Inbound and Outbound Processes
+Duck Creek Billing™ integrates with a number of other systems, as illustrated below. Processes can be inbound,
+outbound or bi-directional.
+14 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

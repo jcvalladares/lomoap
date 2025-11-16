@@ -1,0 +1,30 @@
+{
+  "qwen-tiny": {
+    "name": "Qwen2.5-Coder-0.5B-Instruct",
+    "size": "0.5B parameters",
+    "memory": "~1-2GB",
+    "speed": "\u26a1\u26a1\u26a1 Ultra-fast",
+    "use_case": "Quick code snippets, completions"
+  },
+  "qwen": {
+    "name": "Qwen2.5-Coder-1.5B-Instruct",
+    "size": "1.5B parameters",
+    "memory": "~2-3GB",
+    "speed": "\u26a1\u26a1 Fast",
+    "use_case": "Balanced performance (Default)"
+  },
+  "codegemma": {
+    "name": "google/codegemma-2b",
+    "size": "2B parameters",
+    "memory": "~3-4GB",
+    "speed": "\u26a1 Good",
+    "use_case": "Google's specialized code model"
+  },
+  "deepseek": {
+    "name": "DeepSeek-Coder-V2-Lite-Base",
+    "size": "~6B parameters",
+    "memory": "~4-6GB",
+    "speed": "\ud83d\udc0c Slower but capable",
+    "use_case": "Complex algorithms, detailed code"
+  }
+}

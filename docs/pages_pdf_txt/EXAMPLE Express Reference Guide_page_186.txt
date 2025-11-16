@@ -1,0 +1,28 @@
+PerformanceLogging
+Boolean value indicating whether EXAMPLE Express ®should log performance data about the rendered page. (This
+setting is not included in the out-of-the-box Express\Web.config file, but it can be added manually.)
+Default Valid
+0 0— Do not render performance data on the page.
+1— Render performance data on the page.
+PolicyAdminManuScriptID
+This setting is only for use with EXAMPLE TransACT ®1.8. If using EXAMPLE TransACT ®2.1, leave this
+setting blank.
+ID of the TransACT Master ManuScript to use for EXAMPLE TransACT ®1.8.
+Default Valid
+null Valid ID of a ManuScript in an accessible catalog.
+PolicyBlockListAttachments
+Boolean value that determines whether attachments display on the Policy Details page.
+Default Valid
+0 •0 – Display attachments.
+•1 – Do not display attachments.
+PolicyBlockListMessages
+Boolean value that determines whether notifications display on the Policy Details page.
+Default Valid
+0 •0 – Display notifications.
+•1 – Do not display notifications.
+PolicyBlockListTasks
+Boolean value that determines whether tasks display on the Policy Details page.
+Default Valid
+0 •0 – Display tasks.
+•1 – Do not display tasks.
+186 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

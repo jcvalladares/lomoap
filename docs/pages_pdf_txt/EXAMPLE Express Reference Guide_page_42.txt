@@ -1,0 +1,52 @@
+edit="0" security="15" roleBased="1" multiAgency="0"/>
+<menuItem id="BatchMessage" caption="Batch Notification"
+content="batchMessage" action="" java="batchSelectTab" location="header" consumer="0"
+guest="0" login="1" edit="0" security="15" roleBased="1" multiAgency="0"/>
+</menu>
+</menuItem>
+<menuItem id="Search" caption="Search" content="search" action=""
+java="submitPage" location="header" consumer="0" guest="0" login="1" edit="0"
+security="15" roleBased="1" multiAgency="0" hideInPortfolio="0"/>
+<menuItem id="Save" caption="Save Quote/Policy" content="" action="save"
+java="submitAction" location="actions" consumer="1" guest="0" login="1" edit="2"
+security="15" roleBased="1" multiAgency="0" hideInPortfolio="0"/>
+<menuItem id="Print" caption="Create Policy Documents" content="print"
+action="" java="submitPage" location="actions" consumer="0" guest="0" login="1"
+edit="2" security="15" roleBased="1" multiAgency="0" hideInPortfolio="1"/>
+<menuItem id="New" caption="New Quote" content="newBasic" height="400"
+width="400" action="" java="submitPage" location="special" consumer="0" guest="0"
+login="1" edit="0" security="15" roleBased="1" multiAgency="0" hideInPortfolio="0"/>
+<menuItem id="LogOut" image="blank.gif" caption="Logout" content="logout"
+action="" java="submitPage" location="product" consumer="1" guest="1" login="1"
+edit="0" security="0" roleBased="1" multiAgency="0" hideInPortfolio="0"/>
+<menuItem id="Password" caption="Change Password" content="admin" action=""
+java="submitPage" location="logonOptions" consumer="1" guest="0" login="1" edit="0"
+security="15" roleBased="2" multiAgency="0" hideInPortfolio="0"/>
+</menu>
+<pageLayout id="dashboardHome">
+<zone>
+<column width=".31">
+<module id="newQuote" title="New Quote" content="new" collapsed="0">
+<attribute name="_ManuScriptPageSet" value="Basic"/>
+<attribute name="_ManuScriptPage" value="Basic"/>
+</module>
+<module id="mruQuote" title="Recently Accessed" content="mru" collapsed="1">
+<attribute name="pageSize" value="10"/>
+</module>
+</column>
+<column width=".69">
+<module id="notifications" content="messages" title="Notifications"
+collapsed="0">
+<attribute name="_displayCount" value="5"/>
+<attribute name="_showBody" value="1"/>
+<attribute name="_callbackForList" value="0"/>
+</module>
+<module id="taskQueue" title="Tasks" content="tasks" collapsed="1">
+<attribute name="_queryFilterSubset" value="QueueAssigned"/>
+<attribute name="_keynameQueueAssigned" value="TaskStatusCode"/>
+<attribute name="_keyvalueQueueAssigned" value="OPN"/>
+<attribute name="_keyopQueueAssigned" value="eq"/>
+<attribute name="_keyconnectorQueueAssigned" value=""/>
+<attribute name="_showFilter" value="DueToday"/>
+<attribute name="start" value="0"/>
+42 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

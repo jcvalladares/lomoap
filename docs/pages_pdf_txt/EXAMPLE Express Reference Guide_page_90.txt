@@ -1,0 +1,29 @@
+buttons.css Contains styles for all links and buttons used in EXAMPLE Express ®.
+customContainers.css Contains style definitions for 7 built-in custom containers.
+dctExtJsExtensions.css Contains extensions to the Ext JS components, such as the slider bar widget.
+dctExtJsOverrides.css Contains styles to override those used by Ext JS.
+dctExt-xtheme-blue.css Contains style definitions created to override styles in the blue Ext JS theme.
+dctExt-xtheme-gray.css Contains style definitions created to override styles in the gray Ext JS theme.
+ext-all-notheme.css Contains default styles for Ext JS components.
+ext-xtheme-blue.css Contains style definitions for Ext JS components with a blue color theme.
+ext-xtheme-gray.css Contains style definitions for Ext JS components with a gray color theme.
+forms.css Contains styles that define how EXAMPLE Express ®(interview pages)are displayed in
+the browser. Two standard sets of form layouts exist in the base installation of EXAMPLE
+Express ®: vertical and horizontal (across and down).
+hyperlinks.css Contains default styles for hyperlinks.
+leftNav.css Contains styles controlling left navigation for ManuScript pages. This file is the default file
+used to control ManuScript page navigation.
+leftNavFloating.css Contains styles controlling the floating navigation panel. This file is only used if floating
+navigation is enabled.
+main.css Contains styles for many basic HTML elements, such as the body, tables, inputs, etc.
+nav.css Contains styles controlling application-level navigation.
+popUp.css Contains styles controlling the layout of pop-up window contents.
+reset.css Contains style definitions that override those defined by the browser vendor for common
+HTML elements. By resetting these definitions to a common baseline, fewer cross-
+browser incompatibility issues occur.
+This file should not be modified.
+style.css Contains styles for visual elements that appear on pages (banners, footers, tabs, font
+sizes).
+topNav.css Contains styles controlling top navigation for ManuScript pages. This file is used only if
+specified for a PageSet in EXAMPLE Author ®.
+90 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

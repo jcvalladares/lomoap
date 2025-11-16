@@ -1,0 +1,45 @@
+<DisbursementUserFullName>Express Admin</DisbursementUserFullName>
+<DisbursementMethodCode>CK</DisbursementMethodCode>
+<DisbursementMethod>Check</DisbursementMethod>
+<DisbursementStatusCode>R</DisbursementStatusCode>
+<DisbursementStatus>Requested</DisbursementStatus>
+<ReversalReason xsi:nil="true"/>
+<ReversalDate xsi:nil="true"/>
+<RebillReason xsi:nil="true"/>
+<RebillDate xsi:nil="true"/>
+<CurrencyCulture>en-US</CurrencyCulture>
+<Amount>1.9400</Amount>
+<ProcessingOrgUnitCode>1</ProcessingOrgUnitCode>
+<DisbursementLockingTS>AAAAAAAhDQ8=</DisbursementLockingTS>
+<AssociatedParties>
+<Party PartyId="10" Role="Payee"/>
+</AssociatedParties>
+<Parties>
+<PartyRecord>
+<PartyRecordPartyId>10</PartyRecordPartyId>
+<Party>
+<PartyName>Name</PartyName>
+<PartyFirstName>Test</PartyFirstName>
+<PartyMiddleName xsi:nil="true"/>
+<PartyNamePrefix xsi:nil="true"/>
+<PartyNameSuffix xsi:nil="true"/>
+<PartyGender xsi:nil="true"/>
+<PartyBirthDate xsi:nil="true"/>
+<PartyCorrespondenceName>Test Name</PartyCorrespondenceName>
+<PartyTypeCode>P</PartyTypeCode>
+</Party>
+<PartyPhones>
+<PartyPhone>
+<PhoneNumber>8031234567</PhoneNumber>
+<PhoneExtension xsi:nil="true"/>
+<PhoneCountryCode xsi:nil="true"/>
+<PhoneFormatCode xsi:nil="true"/>
+</PartyPhone>
+</PartyPhones>
+<PartyEmails>
+<PartyEmail>
+<EmailAddress> testname@xyz.com </EmailAddress>
+</PartyEmail>
+</PartyEmails>
+<Locations>
+84 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

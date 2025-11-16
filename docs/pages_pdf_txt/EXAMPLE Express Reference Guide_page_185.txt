@@ -1,0 +1,30 @@
+MenuMapFactory
+Obsolete as of EXAMPLE Platform ®4.0.
+MessageDetailsManuScriptID
+ID of the ManuScript to use for editing or viewing message details.
+Default Valid
+null Valid ID of a ManuScript in an accessible catalog.
+NewQuoteLimitRequests
+Boolean value indicating whether to run listAgencies and associated requests on the New Quote page when the
+NewQuoteManuScriptID setting is not set to null. (This setting is not included in the out-of-the-box Express\Web.config
+file, but it can be added manually.)
+Default Valid
+0 0— Run listAgencies and associated requests on the New Quote page.
+1— Do not run listAgencies and associated requests on the New Quote page.
+NewQuoteManuScriptID
+ID of the New Quote Selection ManuScript to use when starting a new quote. The New Quote Selection ManuScripts
+enables a user-friendly interface for determining which ManuScript to use for a new quote.
+Default Valid
+NewQuoteSelectionPortfolio Valid ID of a ManuScript in an accessible catalog.
+OverrideLanguageForScreens
+The default is null to be compatible with previous versions of the EXAMPLE Platform ®. Setting this key to a valid
+language with a resource file will force all users to use a single browser language.
+PartySearchManuScriptID
+Reserved for future use.
+PassPhrase
+Encryption key used for authentication in EXAMPLE Express ®and EXAMPLE Server ®. The value of this setting must
+be identical when used in multiple config files. (This setting is not included in the out-of-the-box Express\Web.config
+file, but it can be added manually.)
+Default Valid
+N/A Any ASCII text string.
+185 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,40 @@
+Auto Rescind
+Tolerance
+DaysDetermines the tolerance number of days
+within the Auto Rescind Equity Date that
+a recalculated current equity date must
+be in order to rescind a policy term.Any positive integer. 5
+Auto
+Reinstate
+DaysDetermines the number of days from the
+term expiration date that the equity term
+expiration date and the equity date must
+meet after a payment has been made on
+the cancelled policy. If the payment made
+on the cancelled policy term brings the
+equity date to be greater than the term
+expiration date minus the Auto Rescind
+Days, the system will send a request for
+reinstatement to the issue system.Any integer between 0 and
+365.0
+Changing Bill Plans at Policy Renewal or Re-issue
+Out of the box, Duck Creek Billing™ does not allow users to change the selected bill plans at the account or policy
+level when a policy is renewed or re-issued. Customization is required to allow a bill plan to be changed at policy
+renewal or re-issue.
+To change bill plans during policy re-issuance or renewal:
+Code changes are required to retrieve the correct bill plan during the process of rendering the Renewal and
+Re-issue pages.
+1.Verify that the Submission page displays the current bill plan for the policy being re-issued or renewed.
+2.Verify that the options displayed in the Select Billing Plan list are compatible with the selected account level bill
+plan.
+3.Open the NewPolicyTermCommon.xsl file in Notepad or another text editor program.
+By default this file is located at C:\Program Files\Duck Creek Technologies\Transform\.
+4.Navigate to the BillClass section, and delete the <!--opening tag and the -->closing tag for the section to
+execute the code.
+5.Save the file.
+A different bill plan may now be specified when the policy is renewed or re-issued.
+Working with the Agency Lite Feature
+Direct bill systems typically use a gross premium basis for statement reconciliation. The Agency Lite feature in Duck
+Creek Billing™ allows agencies with low volumes of small agent accounts to reconcile statements on a net settlement
+of accounts basis using direct bill features.
+37 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

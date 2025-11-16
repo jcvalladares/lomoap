@@ -1,0 +1,38 @@
+}
+public virtual string DownloadBaseFileName
+{
+get { return ""; }
+}
+}
+}
+<action> Attributes
+The following table describes the attributes of each <action> entry in the PostActionMap.xml file.
+Node Description
+name Unique name for the action.
+assembly Assembly DLL name. The assembly should reside in the directory defined in the runtimeRoot
+configuration setting in the Server.Config file.
+typeName Class name in the assembly that is the PostAction-based class that provided the overridden Process()
+method.
+response Non-blank defines the enumeration of HTTP content-type and content-disposition ("", "download").
+Configuring File Download
+The following class methods can be overridden to create a content page that works with downloads by adding a new
+class to the OnDemand Framework.
+Class Method Description
+ResponseCode Allows the action to change the HTTP response (download).
+DownloadSourceFile URL to the file to be sent from the Web Server. If blank (""), then the entire
+state.ResponseDoc.OuterXml is sent as the file.
+DownloadTempFile Boolean value indicating that the DownloadSourceFile is a temporary file and should be
+deleted after the content is sent to the browser.
+DownloadBaseFileName Filename to send in HTTP response as default 'Save As' filename.
+The following is an example of a new post action class that downloads a static file:
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Xml;
+using DuckCreek.OnDemand;
+namespace ABC.Express
+{
+class DownloadDocument: PostAction // "ABCdownload" action processing
+{
+private string m_SourceURL;
+147 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

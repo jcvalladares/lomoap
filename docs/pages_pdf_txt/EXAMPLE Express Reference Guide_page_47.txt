@@ -1,0 +1,23 @@
+themes Customizable theme files.
+xsl Customizable .xsl files. Content and Common sub-directories are created during installation. Users
+must create copies of any DCTBase .xsl files they wish to customize and add them to one of these
+directories. All base page .xsl files are considered core files.
+The ExtJs Framework
+ExtJs is an open source JavaScript framework that provides rich browser controls such as calendar controls, sliders,
+accordions, and grids. Duck Creek Technologies, Inc. maintains a commercial license for the framework, allowing it to
+be packaged and installed with the EXAMPLE Platform ®.
+For API documentation for ExtJs controls, see one of the following:
+•http://www.sencha.com – Browse to this page and then navigate to the API documentation for ExtJs.
+•http://dev.sencha.com/deploy/dev/docs – Browse to this page to access API documentation for the latest version
+of the ExtJs framework.
+For archived versions of API documentation, browse to http://www.sencha.com/learn/Ext_Version_Archives .
+ExtJs Controls
+The following ExtJs controls are supported by the EXAMPLE Platform ®:
+ExtJs
+ControlDescription
+Dashboard
+portal
+widgetsPortal pages are the dashboard pages for Duck Creek Billing™ and EXAMPLE Express ®. They are
+the main home pages that users are directed to when they initially log in. Portlets are the small
+sections built on each page to give the user quick access to information for the product.
+47 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

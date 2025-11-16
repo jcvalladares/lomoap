@@ -1,0 +1,33 @@
+setTaskDeclined
+Sets the status of a task to Closed , with a reason of Declined . This action has two modes:
+•When executed from a ManuScript — The system uses the task record in the session at _TaskData/
+TaskRecord to obtain the task ID and task locking code from the paths defined in the schemas for the
+<Task.getRq> request response.
+•When executed from a system page — The system requires the following HTML form fields.
+Field Description
+_taskId ID of the task to decline.
+_taskLockingTS Encoded binary value that indicates the last time the task data was read and prevents
+multiple users from modifying a task at the same time. This value is generated from the
+<Task.getRq> request or the <Task.listRq> request.
+EXAMPLE Server ®Request: Task.setStatusRq
+setTaskDeleted
+Marks a task for delete. (Sets the status of the task to Deleted .) This action has two modes:
+•When executed from a ManuScript — The system uses the task record in the session at _TaskData/
+TaskRecord to obtain the task ID and task locking code from the paths defined in the schemas for the
+<Task.getRq> request response.
+•When executed from a system page — The system requires the following HTML form fields.
+Field Description
+_taskId ID of the task to delete.
+_taskLockingTS Encoded binary value that indicates the last time the task data was read and prevents
+multiple users from modifying a task at the same time. This value is generated from the
+<Task.getRq> request or the <Task.listRq> request.
+EXAMPLE Server ®Request: Task.setStatusRq
+setTaskStatus
+Sets the status of a task. This action has two modes:
+•When executed from a ManuScript — The system uses the task record in the session at _TaskData/
+TaskRecord to obtain the task ID, task status code, task status reason code, percentage complete, and task
+locking code from the paths defined in the schemas for the <Task.getRq> request response.
+•When executed from a system page — The system requires the following HTML form fields.
+Field Description
+_taskId ID of the task to modify.
+209 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

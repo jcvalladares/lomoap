@@ -1,0 +1,37 @@
+Using the Localization Framework
+Using the localization framework in the EXAMPLE Platform ®, you can configure the EXAMPLE Platform ®for use with
+multiple languages. Depending on your installation of the EXAMPLE Platform ®, you may have to localize any of the
+following by using lookup tables:
+•XSLT
+•JavaScript
+•Images
+In these sources, lookups should be performed instead of hard-coding the strings so that the system can
+react to the current language.
+XSLT
+To assist in looking up a string, you can use the dctLocalizedDirectory.xsl template found in one of the following
+directories (depending on the skin you are using):
+•Skins\DCTCore\xsl\ (AvantGarde)
+•Skins\DCTBase\Core\xsl\common\ (AvantGarde2)
+For example, to use one of the lookup templates:
+•In the dashboardHome.xsl file in the Skins\DCTBase\Core\xsl\content\ directory, locate the XSLT code
+that resembles the following code sample, and adjust accordingly:
+<div id="pageInstruction">
+<xsl:text> Welcome to the Policy Administration Dashboard, </xsl:text>
+<xsl:value-of select="/page/state/user/fullName"/>
+<xsl:text>. </xsl:text>
+</div>
+All base .xsl files in the EXAMPLE Platform ®(including the dashboardHome.xsl file) have been localized.
+Files mentioned on this page are referred to as examples only.
+Localizing Custom XSL
+If you wish to use a lookup template with your customized XSL, you must convert the code from a hard-coded string to
+a localized lookup.
+To convert a hard-coded XSL string to a localized lookup (using the example from above):
+1.Register the string in a globalization dictionary.
+a.Edit the DefaultDictionary.resources file in the Skins\AvantGarde2\xsl\localization\
+directory. For information about editing resource files, see Editing Resource Files .
+b.Add a new string named WELCOME_PAS_DB and whose value is Welcome to the Policy
+Administration Dashboard .
+2.Configure the skins to use the new string in the globalization dictionary.
+3.Replace the xsl:text XML that contains “Welcome to the Policy Administration Dashboard,” with a lookup. For
+example:
+93 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

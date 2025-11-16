@@ -1,0 +1,35 @@
+must create a custom skins directory (copied from the AvantGarde2 directory) and modify the files in this
+directory. For instructions on creating a custom skins directory and overriding DCTBase files, see Creating a
+Custom Skins Directory andOverriding DCTBase Files .
+The following table illustrates the directory structure of the Avant Garde 2 skin.
+Directory Description
+DCTBase (Non-Customizable)
+css CSS to be maintained and updated by Duck Creek Technologies, Inc. This directory contains core
+functionality that should not be customized.
+images Images to be maintained and updated by Duck Creek Technologies, Inc. This directory contains core
+functionality that should not be customized.
+scripts JavaScript to be maintained and updated by Duck Creek Technologies, Inc. This directory contains
+core functionality that should not be customized.
+devscripts Devscripts to be maintained and updated by Duck Creek Technologies, Inc. Used to reference
+functions that need to be overridden. This directory contains core functionality that should not be
+customized.
+themes Themes to be maintained and updated by Duck Creek Technologies, Inc. This directory contains core
+functionality that should not be customized.
+xsl XSL to be maintained and updated by Duck Creek Technologies, Inc. Used to reference files and
+templates that need to be overridden.This directory contains core functionality that should not be
+customized.
+AvantGarde2 (Customizable)
+css Customizable .css files. Filenames beginning with x_indicate override files to be used for CSS styles
+that apply to a single page only. By default, this directory includes the following files:
+•dctExtJsOverrides.css – Used to override layouts for HTML elements instead of altering the
+Ext-all.css file.
+•dctExt-xtheme-blue.css – Blue theme for any of the EXAMPLE Platform ®ExtJs extensions.
+•dctExt-xtheme-gray.css – Gray theme for any of the EXAMPLE Platform ®ExtJs extensions.
+•ext-xtheme-blue.css – Blue theme for any of the ExtJs controls.
+•ext-xtheme-gray.css – Gray theme for any of the ExtJs controls.
+If a different theme is desired, you must copy one of each of the color themes and name them
+accordingly.
+images Customizable image files. By default, this directory includes image files used with the gray and blue
+themes added during installation.
+scripts Customizable JavaScript files.
+46 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

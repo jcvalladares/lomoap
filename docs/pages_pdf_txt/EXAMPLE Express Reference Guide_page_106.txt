@@ -1,0 +1,9 @@
+Duck Creek Developer Toolbar Tools
+The Duck Creek Developer Toolbar includes the following tools:
+•Current Information – Displays useful ManuScript, session, system, skin, and user information.
+•Cutoff Inspector – When a parent element is not wide enough, the Cutoff Inspector identifies the child elements
+that are cut off. For example, the ZIP code field has been cut off in the following image:
+To view additional details about the child elements being cut off as well as their parent element, click the problem
+indicator button
+ .
+106 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

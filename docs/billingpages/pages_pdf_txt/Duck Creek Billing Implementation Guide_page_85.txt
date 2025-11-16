@@ -1,0 +1,36 @@
+<Location>
+<LocationAddressLine1>Address 1</LocationAddressLine1>
+<LocationAddressLine2 xsi:nil="true"/>
+<LocationCounty xsi:nil="true"/>
+<LocationCity>City</LocationCity>
+<LocationStateCode>MO</LocationStateCode>
+<LocationPostalCode>77777</LocationPostalCode>
+<LocationCountryCode xsi:nil="true"/>
+</Location>
+</Locations>
+</PartyRecord>
+</Parties>
+</Disbursement>
+</BillingDisbursement.getDisbursementDetailRs>
+Working with Reports and Letters
+Working with Reports
+The following are requirements for working with reports in Duck Creek Billing™:
+•The out-of-the-box reports must be accessible in SQL Server Reporting Services (SSRS)
+•SSRS must be integrated with Duck Creek Billing™
+•A user must be assigned the appropriate privileges to view reports
+Verifying Report Accessibility
+Before integrating reports with Duck Creek Billing™, you must verify the out-of-the-box reports are deployed and
+accessible in SQL Services Reporting Services. Even after integration, reports will not work in Duck Creek Billing™ if
+they do not work in SQL Services Reporting Services prior to integration.
+To verify the reports are deployed and accessible:
+1.Navigate to the Reports Server .
+2.Open the base folder containing reports, and navigate to the folder containing the daily reports installed out-of-
+the-box with Duck Creek Billing™.
+Make note of the base folder name and the URL for the Reports Server. This information is needed to
+complete integration with Duck Creek Billing™.
+3.Open one of the reports and verify it works as expected.
+4.Close SQL Server Reporting Services.
+Integrating EXAMPLE Server ®and SQL Server Reporting Services
+Regardless of when the services are started, integration with EXAMPLE Server ®is required to use the reporting
+features in Duck Creek Billing™.
+85 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

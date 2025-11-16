@@ -1,0 +1,29 @@
+•The Carrier Product Base Pages 7.0.0.0 ManuScript should be changed to inherit from the
+DuckCreekTech_ProductBaseBilling_Pages_7_0_0_0 ManuScript.
+For more informatin about using Commercial Lines, contact your account representative.
+Configuration Settings
+This section contains descriptions, defaults, and valid values of all EXAMPLE Server ®user-configurable settings. The
+Edit Configuration Utility in the Duck Creek root directory (by default C:\Program Files\Duck Creek
+Technologies\Util\EditConfig.exe ) may be used to manually alter these settings.
+Improperly adjusting EXAMPLE Server ®configuration settings can lead to unintended behaviors or can even
+prevent EXAMPLE Server ®products from functioning. Use caution when changing these settings.
+Billing
+Key Default Value
+PoliciesQueue .\PRIVATE$\EXAMPLEBILLINGCOMPONENTS0
+QueueProcessingUserId admin
+InvoicePath C:\Program Files\Duck Creek Technologies\Invoices
+AgencyStatementsFolderRootPath C:\Program Files\Duck Creek Technologies\Statements
+AgencyStatementsFromEmailAddress from@domain.com
+AgencyStatementsPassword password55
+DirectBillCommissionStatementsFolderRootPath C:\Program Files\Duck Creek
+Technologies\DirectBillCommissionStatements
+TempWorkingPath C:\Program Files\Duck Creek Technologies\Temp
+ProcessElectronicPayments True
+Use3rdPartyPayments False
+PaymentSiteURL Null
+PaymentSiteUserId Null
+PaymentSitePassword Null
+PaymentSiteReturnURL Null
+EFTTransmissionThrottleBuilder 1
+OrphannedCommissionAgentReference ###_DCT_ORPHAN_AGENT_###
+41 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

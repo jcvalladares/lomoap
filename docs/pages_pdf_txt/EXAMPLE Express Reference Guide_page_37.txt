@@ -1,0 +1,47 @@
+For instructions on modifying EXAMPLE Express ®for each role, see Customizing the EXAMPLE Express®
+Experience .
+Out-of-the-Box Roles
+EXAMPLE Express ®is shipped with four sample roles. Each role has a unique set of permissions and dashboard
+configurations. The following table provides a description of each role's privileges in EXAMPLE Express ®(defined in
+EXAMPLE UserAdmin™) and a description of the Policy Administration Dashboard for each role (defined in the
+ApplicationLayoutMap.xml file in the Global Root Directory\Express\App_Data directory).
+Role EXAMPLE Express ®Privileges Policy Administration Dashboard
+Agent •View and update quotes and policies, and
+create quotes
+•View and update client information, and
+create clients
+•View and update portfolio information, and
+create portfolios
+•View and create notifications
+•Create and work with tasks, and close and
+delete tasks created or owned by the
+agent
+•Add and remove attachments•New Quote module — Agents can select the
+appropriate product and start a quote.
+•Last Accessed module — Contains the last
+five quotes or policies accessed.
+•Notifications module — Contains the last five
+notifications received.
+•Tasks module — Contains assigned tasks
+due this week.
+Underwriter
+Assistant•View and update quotes and policies, and
+create quotes
+•View and update client information, and
+create clients
+•View and update portfolio information, and
+create portfolios
+•View and create notifications
+•Create and work with tasks, and close and
+delete tasks created or owned by the
+underwriter assistant
+•Add and remove attachments•New Quote module — Assistants can select
+the appropriate agency, producer, and product
+and start a quote.
+•Last Accessed module — Contains the last
+five quotes or policies accessed.
+•Notifications module — Contains the last five
+notifications received.
+•Tasks module — Contains assigned tasks
+due today.
+37 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

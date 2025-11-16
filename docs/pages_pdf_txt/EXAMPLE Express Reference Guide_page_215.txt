@@ -1,0 +1,29 @@
+CoreDirectory
+Points to the core being used. This allows EXAMPLE Express ®to know if the system is using the old or new core.
+When using the Avant Garde 2 skin, the core should point to the Core folder in the \DuckCreek
+Technologies\Express\Skins\DCTBase\ directory.
+Default Valid
+Skins\DCTBase\Core Any valid location.
+Custom
+Contains skin customizations.The value of this setting appears in the content XML document, which the XSL then
+transforms into page HTML. Skin developers can add any XML they wish to the <custom> element.
+New skin.config content should only be added in the <custom> section. Duck Creek will always add new
+supported skin configuration setting above the <custom> section, and will always ship an empty <custom>
+section.
+Default Valid
+N/A Any valid XML customization information.
+DCTExtJsExtensionTheme
+Duck Creek modifications to the ExtJs CSS framework have been moved to their own layer. This configuration setting
+Defines the theme to be used for the ExtJs EXAMPLE Platform ®extensions.
+Default Valid
+dctExt-xtheme-gray Any valid theme.
+ExtJsTheme
+Defines the base ExtJs theme CSS file to load.
+Default Valid
+ext-xtheme-gray Any valid theme.
+IgnoreIECheck
+Ignores the browser to check to allow controls on the page to be converted to ExtJs controls when using Internet
+Explorer 8 or higher. Enabling this setting could result in the increase of memory consumption by the Avant Garde 2
+skin.
+Default Valid
+215 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

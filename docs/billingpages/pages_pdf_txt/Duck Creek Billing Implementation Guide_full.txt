@@ -1,0 +1,3291 @@
+Accenture Duck Creek
+Duck Creek Billing™
+Implementation Guide
+1 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+2 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Copyright © 2000-2011 Duck Creek Technologies, Inc. All rights reserved.
+The software contains proprietary information of Duck Creek Technologies. It is provided under a license agreement
+containing restrictions on use and disclosure and is also protected by copyright law. Reverse engineering of the
+software is prohibited.
+Due to continued product development, this information may change without notice. The information and intellectual
+property contained herein is confidential between Duck Creek Technologies and the client and remains the exclusive
+property of Duck Creek Technologies. If you find any problems in the documentation, please report them to us in
+writing. Duck Creek Technologies does not warrant that this document is error-free.
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any
+means—electronic, mechanical, photocopying, recording or otherwise—without the prior written permission of Duck
+Creek Technologies, Inc.
+Duck Creek Technologies. http://www.duckcreektech.com
+3 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Duck Creek Billing™ Implementation Guide
+The Duck Creek Billing™ Implementation Guide takes the billing user from installation to a customer implementation
+ready for the hands-on billing user. The guide is organized by feature, and includes the appropriate configuration,
+customization, and integration work needed to use each feature.
+For more information about using billing, see the Duck Creek Billing™ User Guide . For more information about the
+features included in billing, see the Duck Creek Billing ™Features Overview .
+Duck Creek Billing™ Installation
+Duck Creek Billing™ requires installation of the following EXAMPLE Platform ®products:
+•EXAMPLE Server ®must be installed first
+•EXAMPLE TransACT ®
+•EXAMPLE Asynchronous Request Viewer
+•EXAMPLE Forms™
+Installation of EXAMPLE Express ®is also recommended, and is required for the installation of the Billing On
+Demand Components. Without EXAMPLE Express ®, Duck Creek Billing™ pages will not be viewable out of
+the box.
+System requirements for Duck Creek Billing™ are:
+•Microsoft Internet Explorer 8 or higher
+•Microsoft Message Queuing
+•Internet Information Service (IIS) v.7
+When installing IIS for the first time, the uninstall .NET Framework must be uninstalled first. After
+successfully installing IIS, reload .NET Framework
+•Microsoft .NET Framework v3.5 (SP 1)
+•Microsoft SQL Server 2005 (SP 3) with Full Text Search (FTS) and Reporting Services enabled.
+New SQL Server 2005 users should install FTS when installing Microsoft SQL Server 2005. Users who
+are upgrading should check in Control Panel>Administrative Tools>Services to see if FTS is installed
+and is started. If it is not shown in the Services folder, install it from the SQL 2005 CD.
+The following services must be started to run Duck Creek Billing™:
+◦DuckCreek_MSMQBillingListener_EXAMPLE SERVER
+◦DuckCreek_Async_Request_Queue_EXAMPLE Async Queue O
+◦DuckCreek Scheduled Requests EXAMPLE Billing Components O
+•Microsoft Excel 2003 for generating Excel format agent commission statements (EXAMPLE Platform ®4.2.2. or
+later)
+4 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Compatible versions of Microsoft Excel and SQL Server are required. SQL Server 2005 requires
+Microsoft Excel 2003.
+Installing Duck Creek Billing™
+When upgrading Duck Creek Billing™, be certain to upgrade all EXAMPLE Platform ®products to the same
+version number to ensure that all the installed products work as expected.
+To install Duck Creek Billing™:
+Space availability and requirements for the selected features appear on the screen.
+To install all the features and functionality available in Duck Creek Billing™, select both check boxes.
+1.Download the Duck Creek Billing™ installation file from the Duck Creek Technologies, Inc. Support Site .
+2.Execute the installation file.
+The contents of the file are extracted, and the system prepares the InstallShield® Wizard. One of the following
+occurs:
+◦If this is not the first time you have installed Duck Creek Billing ™ — The Existing Installed Instances
+Detectedscreen appears. Continue with step 3.
+◦If this is the first time you are installing Duck Creek Billing ™ — The Welcome screen appears.
+Continue with step 5.
+3.On the Existing Installed Instances Detectedscreen, select one of the following options:
+◦Install a new instance of this application — If you select this option, continue with step 4.
+◦Maintain or update the instance of this application selected below — If you select this option, follow the
+instructions in Modifying or Repairing an Installation .
+4.Click Next .
+The Welcome screen appears.
+5.On the Welcome screen, click Next .
+The License Agreement screen appears.
+6.Read the License Agreement carefully, and then do one of the following:
+◦Click I accept the terms of the license agreement to accept all terms of the agreement.
+◦Click I do not accept the terms of the license agreement , and then click Cancel to end the installation
+process.
+7.(Optional) If you wish to print the license agreement, click Print .
+8.Click Next .
+The Select a Feature screen appears.
+9.Select the check boxes for the features you wish to install.
+Options are:
+5 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+◦Billing Server Components (Requires previous instance of EXAMPLE Server ®.)
+◦Billing OnDemand Components (Requires previous instance of EXAMPLE Express ®.)
+10. Click Next .
+The Instance Name screen appears.
+11. Enter a unique instance name for the Duck Creek Billing™ install, or accept the default.
+12. Click Next .
+The system begins installation and opens the configuration portion of the Duck Creek Billing™ installation.
+The Configure Database Credential screen appears.
+Before beginning the configuration portion of an installation, the system checks to see if Microsoft
+Message Queuing is installed. If it is not installed, an alert appears asking if you wish to install MSMQ
+Messaging now. Clicking Yesaborts the configuration but does not install MSMQ Messaging. You must
+use Add/Remove Programs to install it manually, and then run the configuration portion again. If you
+click No, the installation process will continue normally, but Duck Creek Billing™ will not work properly
+until MSMQ Messaging is installed.
+Configuring Database Credentials
+When the Configure Database Credentials screen appears, all databases available for installation are displayed in the
+Configure window.
+To configure database setup and information:
+1.On the Configure Database Credentials screen, select the appropriate database from the list.
+2.Select the credentials to use for database installation and maintenance.
+Options are:
+◦Windows authentication — Use the current user's credentials.
+◦SQL Server authentication — Use the Login ID andPassword entered.
+To select SQL Server authentication , your SQL Server Installation must be configured to allow
+SQL Server authentication.
+3.Click Next .
+The Reporting Services screen appears.
+Configuring Reporting Services
+To use the reporting features of Duck Creek Billing™, Reporting Services must be turned on and configured.
+If you select the Skip reporting services configuration check box, reporting features will not be available in
+Duck Creek Billing™.
+6 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+To configure reporting services:
+Options are:
+1.On the Configure Reporting Services screen, select the credentials to use for Installation/Maintenance.
+◦Connect using your current credentials — Connect to the report server as the user running the install.
+◦Connect using the EXAMPLE Server ®credentials (DCTWP User) — Connects to the report server as
+the DCTWP User or whatever is specified in the Worker Process login ID during database credential
+configuration.
+At runtime the credentials for the DCTWP User are used.
+2.In the Report Server field, enter the name of the server to use for the SQL Reporting Services web service
+3.(Optional) Click Test to test the reporting server.
+4.In the Deploy reports to this report server folder field, enter the name of the folder to store the reports in.
+5.Click Next .
+Executing the Duck Creek Billing™ Installation
+When the installation is ready to configure your system for Duck Creek Billing™, the following list of installation items
+appears:
+•XML Files
+•Manuscripts
+•Database Setup
+•Reporting Setup
+By default, the installation executes all items in this list. If you do not wish the installation to execute an item, clear the
+check box beside that item.
+Clearing a check box causes the installation to notexecute a process and may prevent Duck Creek Billing™
+from running correctly.
+During installation, if a database does not exist, the installation creates that database and executes all selected
+processes. If the database already exists, however, the installation compares the existing database structure to the
+appropriate scripts. (You can view a list of differences between the existing structure and these scripts by clicking the
+Preview Changes button.) If the Database Setup check box is selected, the installation then makes the appropriate
+changes to the existing database tables and columns.
+To see changes to the XML Files andDatabase Setup items, click Preview Changes beside the
+appropriate item.
+To execute the selected installation items:
+1.Click Finish .
+7 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+As the installation executes each process, that process becomes shaded.
+2.Upon completion, the system displays a message indicating whether configuration was successful. Click OK, and
+then do one of the following:
+◦If the configuration was not successful, a View Errors button appears. Click View Errors to open a text file
+with the installation errors listed. When finished, click Close , and then continue with step 4.
+◦If the configuration was successful, click Close .
+3.(Optional) If necessary, click Back to return to the previous window and select or clear any check boxes.
+4.If the installation opens another InstallShield Wizard dialog box, click Finish .
+Configuring Services for Duck Creek Billing™
+Services configuration files are located at: C:\Program Files\Duck Creek Technologies\Shared\Bin\DuckCreek.Utility.
+To edit these files, open them in a text editor program.
+The following services must be configured:
+•MSMQBillingListenerSvc.exe.config
+•ScheduledRequestSvc.exe.config
+MSMQBillingListenerSvc.exe.config
+The Microsoft Message Queue (MSMQ) Billing Listener is a message store that enables messages to be read or
+written. When a message is read, it is removed from the queue. The MSMQ is accessible via an API.
+Key Definition Default
+ServerConfig The location of the Server.config file. C:\Program Files\Duck Creek
+Technologies\Shared\Server.config
+Request Url The URL of the EXAMPLE Server ®that the
+service will post requests to.http://localhost:8080/DuckCreek/
+DCTServer.aspx
+DuckCreekUserID The user ID. admin
+DuckCreekPassword The user password. admin
+ErrorLog Specifies the name of the Event Log to log
+errors for this service.DCTMSMQBillingListener
+OverwriteErrorLog This setting forces old event entries to be
+overwritten as the Event Log fills up.1 (True)
+When moving from testing to production, it is recommended the message queue be cleared and the
+DuckCreek_MSMQBillingListener_EXAMPLE SERVER be restarted to ensure that only valid production
+messages are in the queue.
+ScheduledRequestSvc.exe.config
+The ScheduledRequestSvc specifies the frequency to check for scheduled requests.
+8 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Key Definition Default
+ServerConfig The location of the Server.config file. C:\Program Files\Duck Creek
+Technologies\Shared\Server.config
+RequestIntervalInMilliseconds Specifies the time in milliseconds between
+checking for requests.60000 (one minute)
+DuckCreekUserID The user ID. admin
+DuckCreekPassword The user password. admin
+RequestUrl URL of the EXAMPLE Server ®responsible
+for working with the specified web site to
+ensure the correct application pool is
+recycled.http:/localhost:8080/DuckCreek/
+DCTServer.aspx
+AppLogSource The source description used by the service
+when logging an error to the Event Log.DCTSchedRequestSvc
+AppLogName The name of the Event Log to log errors for
+this service.Application
+RequestFile The XML containing the request. ScheduledRequests.xml
+RequestToCheckForSuccess The name of the request to check for
+successful activity scheduling.ScheduledActivity.queueListRq
+RequestTimeoutInMilliseconds The amount of time in milliseconds the
+service watis for EXAMPLE Server ®to
+respond when sending a request to the
+URL.120000 (two minutes)
+The User Interface
+Duck Creek Billing™ is for real-world people performing real-world tasks. The intuitive user interface offers quick,
+functional access to the information and processes that users access most frequently. Key elements of the user
+interface include:
+•The Billing Dashboard
+•The Account Home page
+•The Policy Term Summary page
+•Controls (grids, dates, and validation)
+Duck Creek Billing is a highly customizable and configurable product. Not all pages may appear as described
+in this user guide, which is based on out-of-the-box settings.
+9 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The Billing Dashboard
+From the Billing Dashboard page, a user can:
+•Search for a payment.
+•Enter a single payment from the Cash Management screen instead of within an account.
+•View summary information for payments automatically or manually entered that were not posted to a policy or
+account.
+•Create an account in the billing system without going through policy issuance.
+•View a list of recently created or accessed accounts.
+•Open an available report with one click.
+•View notifications and tasks.
+10 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The Account Home Page
+The Account Home page is the primary workhorse for the Duck Creek Billing™ system, and provides a direct path for
+accessing and managing billing activities at the account level.
+The Account Home page provides quick access to view and work with:
+•The most recent invoice.
+•The account history, sortable by date, activity type, or policy term in the Recent Account Activity list.
+•A list of all policy terms associated with the account, with a link for quick access to the Policy Term Summary
+page for each term.
+•A summary of the account ledger and account details, providing a quick look at the account status.
+11 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+•Payment and payment allocation details.
+•A list of any Items in Suspense for the account.
+•Transferring payments from one account to another.
+•Transferring policy terms from one account to another.
+•Manually allocating payments.
+•Adding notes to an account.
+The Policy Term Summary Page
+The Policy Term Summary page design echoes that of the Account Home page, and provides easy-to-use access for
+policy term details.
+12 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+This page provides answers to the most frequently asked questions concerning policy account terms. All tasks related
+to policy terms are quickly launched from this page.
+From the Policy Term Summary page, the user can:
+•Transfer a policy term to another policy.
+•View or edit policy term settings.
+•Update renewal information.
+•Hold billing activity for the policy term.
+•View policy term details.
+•View detailed information for the insured and the agent.
+•Access a list of other policy terms associated with the account.
+Working with Controls
+The Duck Creek Billing™ user interface incorporates ExtJs2.2, making available a diverse set of GUI-based form
+controls (widgets) including:
+•Grids and filters
+•Date fields
+•Validation functions
+Grids and Filters
+In Duck Creek Billing™, users can change the items displayed in a grid using filters or special options on the grid.
+Items that are displayed in a list may be determined by using the Support_CodeListExclusion database table. If the
+user selects an item from the grid that is not displayed, that selection will override the exclusions, and the item will
+appear on the page. See Working with Grids and Filters in the Duck Creek Billing™ User Guide .
+Grids in Duck Creek Billing™ integrate a wide variety of tools that allow users to easily view customized information.
+These grid types include:
+•Grid Types
+◦Grouping grids – Group items within the grid. Common rows are grouped together based on the grid's
+configuration.
+◦Preview grids – Display an extra information row per item. This information row can be collapsed or
+expanded (for a single row or for all rows) using a button in the grid toolbar.
+•Check box grid – Display a check box on each row, based on a row rule check. These grids can store all
+selected rows in a paging grid, storing the items selected on each page until the user is ready to submit the
+selections.
+•Grid toolbar – Allow users to display or hide items according to their preferences.
+•Column filtering – Allows users to filter grid data within each column. Data is displayed based on all filters the
+user has selected. Filtering types include:
+◦Dates – Allows less than or equal to ,greater than or equal to , and equal filtering.
+◦Text – Allows text searches.
+◦Amounts – Allows less than or equal to ,greater than or equal to , and equal filtering.
+◦Support table values – Loads selectable items using check boxes.
+13 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+•Row classification – Allows a class name to be appended to a row to change styling. This classification is based
+on a rule provided through a JavaScript function.
+•DataOnLoad event – Allows the onload event to occur immediately after a page or image is loaded.
+Date Fields
+Duck Creek Billing™ offers the following date field functionality for date fields:
+•System pages with their own Ext Js date fields that do not interfere with interview pages.
+•Available events for date fields:
+◦onBlur event
+◦onChange event
+◦onKeyUp event
+◦onKeyPress event
+Date fields are turned on by providing a function that is called for one of the listed events. The
+function is passed as a configuration parameter in the XSL. If the screen XSL does not pass a
+function, the event is not processed.
+Validation Functions
+•Credit Card Validation –The credit card validation function performs a behind-the-scenes validation on all
+entered credit card numbers. All standard credit card types are handled.
+•Time Validation –The Time Validation function checks that any entered time is valid.
+Integrating Duck Creek Billing
+Third-party products may be integrated with Duck Creek Billing™ to complete a billing package. Easy to configure
+integration points allow the user to integrate Duck Creek Billing with payment processing for EFT accounts, lockbox
+payments, and policy administration systems.
+Integrating with Inbound and Outbound Processes
+Duck Creek Billing™ integrates with a number of other systems, as illustrated below. Processes can be inbound,
+outbound or bi-directional.
+14 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Systems integrated with Duck Creek Billing™ include:
+•Policy administration systems
+•General Ledger
+•EFT Payments
+•External Payment Processing
+•Third Party Payment Interface
+•Disbursement Interface
+Integrating with the General Ledger
+The integration process between Duck Creek Billing™ and a general ledger system is illustrated below.
+15 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+General Ledger systems can be interfaced with Duck Creek Billing™ using database tables. For more information
+about this feature, contact your Duck Creek Account Manager.
+Integrating with Policy Administration Systems
+The integration between Duck Creek Billing™ and policy administration systems is bi-directional. Data flows from the
+policy administration system to Duck Creek Billing™, as illustrated below.
+16 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The integration process from Duck Creek Billing™ back to the policy administration system is illustrated below.
+17 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The following interfaces may require customization to support a specific Duck Creek Billing™ implementation.
+•Policy to Billing
+◦Account, Policy Term, and Party Setup
+◦Receivable Posting
+•Billing to Policy
+◦Pending Cancel
+◦Rescind Pending Cancellation
+◦Payment on Canceled Policy
+Out of the box, Duck Creek Billing™ is integrated with EXAMPLE Express ®. It is only necessary to hook up individual
+product lines to the Duck Creek Billing™ system.
+To integrate Duck Creek Billing™ with a Product Line:
+1.Using the EXAMPLE Author ®import tool, import the Billing Policy Integration Framework ManuScript (all fields)
+into the product line.
+These fields do not exist inside current Policy ManuScripts, including any Commercial Lines Templates
+5.x.x.x and earlier releases. These fields can be added by importing the fields from the ManuScript
+Billing_PolicyIntegration_Framework_1_0_0_0.xml, which is included with the Duck Creek Billing™
+install specifically for this purpose.
+2.In the Policy Pages ManuScript, on the Submission page, create a Book button, using the express action
+billingStart:billingStart .
+18 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+3.To display the new Account ReferenceID after the Book button has processed, set the Submission page to show
+the value of the text_AddAccountResponse.value field.
+4.(Optional) To generate desired feedback data, connect the BillingKeysPrivate.SetData field to execute both prior
+to the Book express action and after the return response.
+Suggestion: Connect BillingKeysPrivate.SetData to the data.TotalResult field
+To integrate Duck Creek Billing™ with external policy administration systems:
+1.The _BillingInputDoc must be set inside the working session on the Billing server. This data can be populated in
+multiple ways. Due to changes and customization, the carrier should determine paths and data of this session
+document by referring to the Account and Policy Plan manuscripts. These manuscripts can also set the data if
+desired, by calling the <ManuScript.initDataRq> request.
+2.Normal billing workflow or any modification implemented by the customer can be carried out.
+3.Once this data is set, the external system can call the Billing server with the billingStart:billingStart express
+action, and a returnURL. Once billing is done, the _BillingOutputDoc is available in the billing session for retrieval
+using the request API.
+For more information, contact your Account Manager.
+Creating Accounts and Users
+The following section includes information covering the types of accounts that can be created, and the types of
+accounts that are necessary to use specific billing features including Monthly Premium Reporting and the Agency Lite
+feature.
+End-User Functionality and Role-Based Security
+Out-of-the-box roles are provided as a framework for customization of the role-based security features implemented in
+Duck Creek Billing™. Roles can easily be customized to allow users to have specific privileges not available with the
+out-of-the-box role. Shipped roles include: administrator, agent, senior customer service representative, and standard
+customer service representative.
+Using the available roles and privileges, the following representative users can perform a variety of tasks:
+•Policy system user
+•Customer service representative
+•Payment processor
+•Billing administrator
+Working with Privileges and Out-of-the-Box Roles
+Duck Creek Billing™ provides four out-of-the-box roles that include specific privileges for an administrator, agent,
+senior customer service representative or standard customer service representative. These roles may be used as
+shipped to provide a user with a specific set of privileges, or privileges may be added or removed from the out-of-the-
+box roles. For example, using the out-of-the-box senior customer service representative role as a foundation, additional
+privileges may be added to allow the user to complete work not specified in the out-of-the-box role. The roles and
+associated privileges are managed in EXAMPLE UserAdmin™. The range of activities any given individual may
+19 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+perform within Duck Creek Billing™ is determined through the roles granted to that person using EXAMPLE
+UserAdmin™.
+The BillingLogin Role allows the user to login to Duck Creek Billing™, and is required for all users other than
+those with system administration privileges.
+Privilege Out-of-the-Box Roles
+BillingAdmin BillingAgent BillingSeniorCSR BillingStandardCSR
+Access Billing Account Summary page x x x
+Access Account Summary page for
+Commission Accounts
+Access Disbursement Detail page x x
+Access to the Installment Schedule page x x x
+Items in Suspense page x x
+Payment Detail page x x
+Policy Summary page x x x
+Receivable Write off/Waive Detail page x x
+Unidentified Payment page and assign
+payments to an accountx
+Allows the user to do anything in billing x
+Batch cash management facilities x
+Add notes to an account x x x
+Authorize disbursements x
+Hold billing and follow up activities x x
+Update the target due date of an account x x
+Change payor or paynee on an account x x x
+Change policy plan settings x x
+Change policy plan settings for a renewal
+termx x
+Change the hold type on an item in
+suspensex x
+20 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Allows user to change the system date
+Create an account without a policy x x
+Schedule disbursement service interface
+requestsx
+Edit scheduled EFT requests
+View the Error Queue
+Hold Billing and Follow up Activity
+Enter a payment inside an account x x
+Enter a payment outside an account,
+including unidentified paymentsx x
+Manage Hold Events x
+Manually redistribute installments x x x
+Manually allocate money in suspense x x
+Manually rescind a policy in PCN status x
+Manually re-suspend a previously disbursed
+disbursement
+View, create, edit, delete, and process
+payment batchesx x
+Search for a payment x x
+Re-bill disbursements x
+Manually override the refund to source
+check
+Reprint an invoice x x
+View the billing aged receivables report
+View all billing reports
+View billing cash in suspense report
+View billing commission activity report
+View billing daily cash journal report
+View Disbursement Activity report
+21 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+View billing disbursements pending
+authorization report
+View billing general ledger report
+View Billing payment batch report
+View transactional balancing report
+View unidentified cash report
+Request a disbursement up to a specified
+limitx
+Resuspsend a pending disbursement x x
+Reverse a payment x
+Submit monthly payroll reports x x
+Suspend an allocated payment x
+Transfer cash from suspense x x
+Transfer a policy between accounts x
+Transfer a polciy terem to a collections
+accountx
+View image associated with an invoice x x x
+Access reports x x
+Write off cash in suspense x
+Write off or waive receivables x x
+Selecting Billing Account Options
+Billing plans may be configured by specifying the values for Billing Account Options. The available options control all
+automated billing and collection processes, including account type, installment scheduling and invoicing and collection
+follow-up activities. The options Duck Creek Billing™ users see is determined by the ManuScript configuration.
+Any modifications to existing Billing Account Option configurations will affect all billing accounts and policies
+which reference the configuration.
+The following table includes all the possible options, and may include options that are not configured in your selected
+ManuScript.
+Category Option Definition Valid Entries Default
+22 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Payment
+Account Type
+CodeSpecifies the type of
+account.•Account
+•Agency LiteAccount
+NSF Charge
+ActionSpecifies whether a
+charge is assessed
+for non-sufficient
+funds (NSF).•A—Assess
+NSF fee.
+•N—Do not
+assess NSF
+fee.A
+NSF
+Reversal
+Charge
+AmountAmount of the NSF
+penalty.Any value,
+including 0.$25
+Payment
+Reversal Due
+Date Adjust
+ReasonWhen a payment is
+reversed, the
+system re-opens the
+bill items that were
+closed by the
+reversed payment.
+The system adjusts
+the due date for the
+closed items only
+when a payment
+reversal reason is
+indicated here.•CM—
+Company
+mistake.
+•NSF —Non-
+sufficient
+funds.CM
+Excess
+Payment On
+PolicyDefines how excess
+payment is handled
+when a payment
+allocation is directed
+to a specific policy
+with a zero balance.•A—Payment
+will be
+automatically
+allocated to
+other policies
+on the
+account that
+have a
+balance.
+•S—Suspend
+the payment
+on the policy
+it was
+intended for,
+and allow for
+disbursement.A
+23 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Scheduling
+Planned
+Installment
+Frequency
+CodeThe frequency at
+which billing occurs
+on the account
+level.Monthly Monthly
+Bill
+Production
+Offset DaysThe number of days
+between the invoice
+date and the due
+date. Determines
+when the invoice is
+generated.Any positive
+number between
+1 and 31.20
+EFT Draw
+Offset DaysThe number of days
+between EFT
+invoice date and the
+due date. This value
+is added to the EFT
+invoice date to
+determine the EFT
+draw date.Any positive
+number between
+1 and 31.3
+Out of Cycle
+Bill Allowed
+IndicatorDetermines whether
+an out of cycle bill is
+allowed.Select check box
+to allow.Not selected
+EFT Pre Note
+IndicatorDetermines whether
+the account sends
+pre-notes when it is
+first set up on EFT.Select check box
+to allow.Not selected
+Default Policy
+Plan
+Manuscript IDSpecifies the ID of
+ManuScript being
+used.Any valid
+ManuScript ID.Billing_PolicyPlanSetup_TemplateFull_1_0_0_0
+Disbursement
+Disbursement
+Method CodeDetermines the
+method by which
+disbursements will
+be sent to the payee
+on the account.•Check
+•EFT
+•Credit CardCheck
+Hold
+Disbursement
+IndicatorDetermines whether
+the account allows
+for automatic
+disbursement
+requests.Select check box
+to allow.Not selected
+24 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Invoice
+Account
+RollupDisplays the total
+amount due on the
+invoice.Select check box
+to allow.Selected
+Aggregation
+RollupDisplays the
+aggregation on the
+invoice.Select check box
+to allow.Not selected
+Bill Item
+RollupDisplays bill items
+on the invoice.Select check box
+to allow.Not selected
+Commission
+RollupDisplays
+commission on
+invoice.Select check box
+to allow.Not selected
+Coverage
+RollupDisplays coverage
+on invoice.Select check box
+to allow.Not selected
+Form MS Specifies forms
+ManuScript.Any valid
+ManuScript.BillingInvoice
+Line Type
+RollupDisplays line type
+on invoice.
+If this
+check box
+is not
+selected,
+no
+information
+will display
+on the
+invoice
+even if
+other
+check
+boxes are
+selected.Select check box
+to allow.Selected
+Policy Rollup Displays the amount
+due on each policy
+below the Premium
+heading on the
+invoice.Select check box
+to allow.Selected
+25 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Receivable
+Sub Type
+RollupDisplays the
+receivable sub type
+on the invoice.Select check box
+to allow.Not selected
+Receivable
+Type RollupDisplays each
+receivable on the
+invoice.Select check box
+to allow.Selected
+Transaction
+Type RollupDisplays the
+transaction type in
+the description box
+on the invoice.Select check box
+to allow.Not selected
+Unit Rollup Displays the unit on
+the invoice.Select check box
+to allow.Not selected
+Invoice
+MethodSpecifies the
+invoice type.•Paper
+•EFTPaper
+EFT Service
+Charge
+AmountSpecifies the
+service charge
+amount for EFT
+invoice.Any value. $1
+EFT Service
+Charge
+ActionDetermines whether
+the account will
+generate service
+charges for EFT
+invoices.•Fixed Service
+Charge
+•No Service
+Charge
+•Variable
+Service
+ChargeFixed Service Charge
+Invoice
+Service
+ChargeSpecifies the
+service charge
+amount.Any value. $1
+Paper Invoice
+Service
+Charge
+ActionDetermines whether
+the account will
+generate a service
+charge for paper
+invoices.•Fixed Service
+Charge
+•No Service
+Charge
+•Variable
+Service
+ChargeA
+26 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Suppress
+FirstDetermines if the
+first invoice should
+be suppressed.Select check box
+to allow.Not selected
+Paper Invoice
+Service
+Charge
+PercentSpecifies the
+service charge
+percentage.Any value. 8.00 (8%)
+EFT Invoice
+Service
+Charge
+PercentSpecifies the
+service charge
+percentage.Any value. 8.00 (8%)
+Service
+Charge
+Minimum
+AmountSpecifies the
+minimum service
+charge amount
+assessed.Any amount. $5.00
+Service
+Charge
+Maximum
+AmountSpecifies the
+maximum service
+charge amount
+assessed.Any amount. $20.00
+EFT Variable
+Service
+Charge
+ExclusionsSpecifies items
+excluded from the
+variable service
+charge calculation.Any valid
+selection.None
+First Name
+(EFT Only)Specifies the first
+name on bank
+account used for the
+EFT draw.Any valid entry. None
+Last Name
+(EFT Only)Specifies the last
+name on bank
+account used for the
+EFT draw.Specifies the last
+name on bank
+account used for
+the EFT draw.None
+Bank Name
+(EFT Only)Bank Name
+(EFT Only)Any valid entry. None
+Account Type
+(EFT Only)Specifies the
+account type.Checking
+SavingsNone
+Routing
+Number
+(EFT Only)Specifies the bank
+routing number.Any valid entry. None
+27 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Account
+Number
+(EFT Only)Specifies the bank
+account number.Any valid entry. None
+Target Draw
+Days
+(EFT Only)Determines the day
+of the month the
+EFT draft is drawn
+from the specified
+account.Any positive
+number between
+1 and 31.1
+Paper
+Variable
+Service
+Charge
+ExclusionsSpecifies items
+excluded from the
+variable service
+charge calculation.Any valid
+selection.None
+Invoice Line
+Type
+(Paper Only)Specifies the items
+to exclude from the
+variable service
+charge calculation.(None)
+Earned Premium
+First Invoiced
+Premium
+Missed Invoice
+Premium
+Prior Invoiced
+Premium
+Past Due
+Premium
+First Invoiced
+Charges
+Prior Invoiced
+Charges
+Past Due Charges
+(All)None
+Receivable
+Type
+(Paper Only)Specifies the
+receivable type for
+the items to exclude
+from the variable
+service charge
+calculation.(None)
+Premium
+Tax
+Fee
+Surcharge
+ERPM
+Deposit
+(All)Deposit
+28 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Receivable
+Sub Type
+(Paper Only)Specifies the
+receivable sub type
+items to exclude
+from the variable
+service charge
+calculation.(None)
+PREV
+DBRB
+N
+L
+S
+(All)(All)
+Transaction
+Type (Paper
+Only)Specifies the
+transaction type for
+the items to exclude
+from the variable
+service charge
+calculation.(None)
+Endorsement
+Flat Cancellation
+New Business
+Pro Rata
+Cancellation
+Monthly Report
+(All)(All)
+Use
+Projected
+Service
+ChargeDetermines if the
+projected service
+charge is displayed
+on the Installment
+Schedule.Select the check
+box to utilize.Selected
+Target Due
+DaysDetermines the day
+of the month that
+invoices for the
+account are due.Any positive
+number between
+1 and 31.1
+Suspense
+Disbursement
+Maximum
+AmountSpecifies the
+suspended amount
+that can be
+disbursed
+automatically at the
+time the
+Disbursement Write
+Hold Days is
+reached. If the
+amount is more
+than the
+Disbursement
+Maximum Amount,
+the money is held in
+suspense.Any positive
+value.$99,999.99
+29 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Disbursement
+Minimum
+AmountSpecifies the
+suspended amount
+that can be
+disbursed
+automatically at the
+time the
+Disbursement Write
+Hold Days is
+reached. If the
+amount is less than
+the Disbursement
+Minimum Amount,
+the money is written
+off.Any positive
+value.$10
+Disbursement
+Write Off
+Hold DaysSpecifies the
+number of days
+money will be held
+in suspense before
+it is evaluated for
+disbursement or
+write off.Any value
+including 0.30
+Cash With
+Application
+Disbursement
+Write Off
+Hold DaysSpecifies the
+number of days
+payments marked
+with "Cash with
+App" payment type
+will be held in
+suspense before
+evaluation for
+disbursement or
+write off.Any value
+including 0.30
+Follow Up
+Late Charge
+ActionDetermines whether
+the account will be
+charged late fees.•Charge
+•NoneCharge
+30 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Late Charge
+AmountDetermines the
+amount of the late
+charge. Valid only
+when the value of
+the Late Charge
+Action setting is
+Charge. Late
+charges appear on
+the next scheduled
+invoice, and are not
+included in the
+current amount due.Any value. $10
+Late Charge
+DaysDetermines the
+number of days past
+the due date the
+late charge is
+assessed if the
+unpaid invoice
+amount meets or
+exceeds the Late
+Charge Threshold
+Amount. Valid only
+when the Late
+Charge Action
+setting is C.Any value. 3
+31 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Late Charge
+Threshold
+AmountDetermines the
+amount of the
+invoice that must
+remain unpaid in
+order to assess the
+late charge on an
+account. Any
+amount less than
+the threshold
+amount does not
+generate a late
+charge, and is
+written off or billed
+with the next
+scheduled invoice.
+Valid only
+when the
+Late
+Charge
+Action
+setting is
+Charge.Any value. $10
+Reminder
+Notice ActionDetermines whether
+reminder notices
+are sent on the
+account.•Reminder
+•NoneReminder
+Reminder
+Notice DaysDetermines the
+number of days
+before or after the
+due date that the
+reminder notice can
+be generated if the
+unpaid invoice
+amount meets or
+exceeds the
+Reminder Notice
+Threshold Amount.
+The value of the
+Reminder Notice
+Action Setting must
+be set to Reminder.Any value. 5
+32 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Reminder
+Notice
+Threshold
+AmountDetermines the
+unpaid amount of
+the invoice that
+must remain unpaid
+to generate a
+reminder notice for
+an account. Any
+amount less that the
+threshold amount
+will not generate a
+reminder notice,
+and will be written
+off or billed with the
+next scheduled
+invoice. The value
+of the Reminder
+Notice Action
+setting must be
+Reminder.Any value. $10
+EFT Default
+Letter
+ManuScript
+IDSpecifies the
+ManuScript to be
+used.Any valid
+ManuScript ID.
+EFTPCN
+Evaluation
+DaysSpecifies the
+number of calendar
+days after an EFT
+invoice due date
+that a policy term
+will be evaluated for
+pending
+cancellation status.Any positive
+integer.0
+Commissions
+Commission
+Statement
+FormatSpecifies
+commission
+statement format.•Adobe PDF
+•Excel
+•Comma
+Separated
+Value (CSV)
+•XMLAdobe PDF
+33 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Commission
+Statement
+FrequencySpecifies
+commission
+statement frequency
+and day of the
+month for
+processing.•Monthly
+•Any number
+between 1
+and 31.•Monthly
+•31
+Commission
+Statement
+Payment/
+Collection
+MethodSpecifies the
+method for paying
+and collecting
+commissions.•Check
+•EFTCheck
+Selecting Policy Plan Options
+Policy plan options may be specified by determining the values for policy plan options. At the policy-level, these options
+control invoice frequency, commission scheme, follow up for pending cancel, payment allocation and down payments.
+The table below specifies what policy options are available for configuration. ManuScript configuration determines
+which options are available to Duck Creek Billing™ users.
+The following table includes the policy options available.
+Category Option Definition Valid Entries Default
+Scheduling
+Frequency Determines the planned installment
+frequency code for invoicing.•Monthly
+•Quarterly
+•Annually
+•Semi-Annually
+•Bi-MonthlyMonthly
+Installment
+Plan
+DescriptionSpecifies a free-form description of the
+installment plan.•None
+•One less than term
+•Two less than termOne
+less
+than
+term
+Late Entered
+Strategy CodeDetermines whether to catch up or
+spread the premium when a bill item is
+posted to billing after its effective date.•Catch up
+•Spread
+•NoneNone
+Max Number
+of InstallmentsDetermines the maximum number of
+installments for a policy term based on
+frequency.12 invoices 12
+34 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+New Business
+Earliest Bill
+Offset DaysDetermines the maximum number of
+days from the effective date of the new
+business policy term that the first
+installment is due.
+Changing this setting after
+policy issuance will cause
+rescheduling activity to occur.Any positive number, including
+0.45
+Last Available
+Due Date
+DisplacementDetermines the minimum number of days
+prior to the expiration date of a policy
+term that an invoice can be due.
+Changing this setting after
+policy issuance will cause
+rescheduling activity to occur.Any positive number, including
+0.30
+Renewal
+Business
+Earliest Bill
+OffsetDetermines the maximum number of
+days from the effective date of the
+renewal policy term that the first
+installment can be due.Any positive number, including
+0.20
+Rescind
+Redistribution
+StrategyDetermines what to do with installments
+that did not invoice due to a rescission
+because the policy was in a pending
+cancellation status.•Catchup
+•SpreadCatchup
+Reinstatement
+Charge
+AmountDetermines the policy term charge
+created in billing that is assessed when a
+policy term is reinstated.Any positive value. $5
+Commission
+35 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Commission
+SchemeDetermines how commission is paid on a
+policy.•POW1 (Paid on Written) —
+The entire commission
+amount is authorized when
+the receivable is posted.
+•POP1 (Paid on Paid) —
+The commission is
+authorized as payments
+are applied to the
+receivable.
+•POP2 (Paid on First Paid)
+—The entire commission
+amount is paid when the
+first payment is applied to
+the receivable.
+•POE1 (Paid on Effective)
+— Commission is
+authorized for each policy
+transaction at issuance.
+Payment is not required.
+•POP4 (Paid on First Paid,
+plus latter of effective or
+activity date) — Receiving
+one good payment on the
+policy term releases the
+commission for the policy
+term. The latter of the
+policy transaction effective
+date or the activity date
+(process date) of the
+payment is used as the
+commission authorization
+date.POW1
+Follow Up
+P C N Allow Determines whether or not the policy
+term should ever be evaluated for
+pending cancellation.•Selected — Yes
+•Cleared — NoSelected
+P C N Trig
+DaysDetermines the number of days after the
+due date that a policy term is evaluated
+for pending cancellation.Any positive integer. 5
+36 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Auto Rescind
+Tolerance
+DaysDetermines the tolerance number of days
+within the Auto Rescind Equity Date that
+a recalculated current equity date must
+be in order to rescind a policy term.Any positive integer. 5
+Auto
+Reinstate
+DaysDetermines the number of days from the
+term expiration date that the equity term
+expiration date and the equity date must
+meet after a payment has been made on
+the cancelled policy. If the payment made
+on the cancelled policy term brings the
+equity date to be greater than the term
+expiration date minus the Auto Rescind
+Days, the system will send a request for
+reinstatement to the issue system.Any integer between 0 and
+365.0
+Changing Bill Plans at Policy Renewal or Re-issue
+Out of the box, Duck Creek Billing™ does not allow users to change the selected bill plans at the account or policy
+level when a policy is renewed or re-issued. Customization is required to allow a bill plan to be changed at policy
+renewal or re-issue.
+To change bill plans during policy re-issuance or renewal:
+Code changes are required to retrieve the correct bill plan during the process of rendering the Renewal and
+Re-issue pages.
+1.Verify that the Submission page displays the current bill plan for the policy being re-issued or renewed.
+2.Verify that the options displayed in the Select Billing Plan list are compatible with the selected account level bill
+plan.
+3.Open the NewPolicyTermCommon.xsl file in Notepad or another text editor program.
+By default this file is located at C:\Program Files\Duck Creek Technologies\Transform\.
+4.Navigate to the BillClass section, and delete the <!--opening tag and the -->closing tag for the section to
+execute the code.
+5.Save the file.
+A different bill plan may now be specified when the policy is renewed or re-issued.
+Working with the Agency Lite Feature
+Direct bill systems typically use a gross premium basis for statement reconciliation. The Agency Lite feature in Duck
+Creek Billing™ allows agencies with low volumes of small agent accounts to reconcile statements on a net settlement
+of accounts basis using direct bill features.
+37 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Because manual reconciliation is required for each statement and for the creation of commission records,
+agency lite accounts are not recommended for large numbers of agents or for agents with more than 50
+policies per statement.
+Important considerations for agency lite accounts include:
+•Net payments indicate that the agent is retaining the commission.
+•Gross payments indicate that the commission should be paid to the agent.
+•Manual data entry is not required if the statement is paid in full.
+•Once an account setting is specified as gross or net, it cannot be changed.
+•Net and gross commission payments cannot be mixed within an account.
+Commission authorization records in direct bill are usually written to the CommissionAuthorization database table
+based on rules in the commission scheme specified in the Policy Plan Setup Options. For agency lite accounts, no
+commission scheme is specified, so no commission records are written.
+The balances in direct bill always represent gross amounts. If payment is made in the net amount, an open balance
+representing the commission the agent has retained will remain.
+Configuring Agency Lite Accounts
+To configure the Agency Lite option:
+1.In the Billing Account Options settings in the Account Type section, make the following selections:
+◦In the Account Type Code list, click Agency Lite .
+◦In the Gross/Net Indicator list, click the appropriate commission option.
+2.Click Save Changes .
+3.In the Policy Plan Settings , in the Follow Up section, clear the PCNAllow check box to prevent the Agency Lite
+policies from going into PCN status.
+4.Click Save Changes .
+5.Open the appropriate ManuScript.
+6.In the Commission_PolicyPlan.Scheme field in the policy plan ManuScript, clear the default value to prevent
+commission authorization records from being written.
+For information about entering payments for an Agency Lite account or for writing off commission adjustments, see
+Working with Agency Lite Accounts in the Duck Creek Billing™ User Guide .
+Working with Monthly Reporting
+Monthly Premium Reporting allows a business to pay higher premiums during the time the business is more active,
+and lower premiums during times of reduced activity. Pricing for an MPR policy is based on the annual estimated
+exposure or payroll subject to the rates, the exposure modification, and other factors the carrier has in the filing. By
+reporting the actual exposure, the premium due can be accurately calculated. Businesses that may benefit from MPR
+include construction contractors, amusement parks, and ski resorts.
+Policy Setup
+The Carrier_Billing_Policy_Account_Common_1_0_0_0 ManuScript defines the interface between policy and billing.
+This ManuScript contains earned annual premium (EAP), net rate, and exposure information. This information is
+38 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+mapped from the policy data during the booking process. The data is sent using the <BillingObj.addPolicyTermRq>
+request and stored in the DC_BIL_PolicyTerm database table for use during subsequent Duck Creek Billing™
+processes.
+Policy Term Configuration
+The following table lists the additional policy plan parameters required to indicate a policy is configured for MPR.
+Field Name Definition
+CollectionMSID The ManuScript ID of the LOB-specific collection screen.
+FormMSID The ManuScript ID of the LOB-specific forms ManuScript.
+MPRDueDay The day the MPR completion is due.
+MPRPrdOffset The number of days before the MPR due date that the MPR form is produced.
+PCNPFollowUp The number of days after the MPR due date that a PCNP follow-up activity is scheduled.
+PCNRTrigDays The number of days after the MPR due date that a PCNR follow-up activity is triggered.
+Allow PCNNP Indicates whether a policy should PCN for non-payment of an MPR receivable.
+AllowPCNNR Indicates whether a policy should PCN for non-reporting.
+LastAvailMPRDtDisp Controls when the last MPR form can be produced for a policy.
+Creating an MPR Policy
+Because customization is required to utilize the MPR feature, the steps required to create a policy will vary. The
+following procedure is based on out-of-the-box functionality, and assumes the appropriate ManuScripts have been
+customized.
+To create an MPR policy:
+1.Click the Policy Management tab.
+2.Create an auditable policy with a Monthly audit period frequency.
+3.Enter the policy information.
+4.Make note of the policy number before leaving the Policy Management system.
+5.On the Submission page, select the MPR Policy check box.
+6.Click Complete Issuance .
+7.Click the Billing tab.
+8.From the Billing Dashboard, in the I want to find an account by list, click one of the following options:
+◦Account Number
+◦Policy Number
+9.In the searching for text box, enter the policy number noted in Step 4.
+10. Click Search .
+39 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The Account Home page appears and when the MPR form is generated for an account, the activity is included in the
+Recent Account Activity list for the account.
+Producing the Form
+A forms ManuScript must be created for each line of business. Copy the Billing_MPR_Forms_Line1 ManuScript and
+adjust the keys and IDs for the target line of business. This ManuScript can be customized with your specific form and
+data. The EXAMPLE Server ®code calls the <billing.printFormsRq> request to initiate the production of the form and
+creating the activity log entry.
+After the first MPR form is created, the next form is automatically scheduled along with a scheduled activity to evaluate
+PCNR for non-reporting or PCNP for non-payment of a report. EXAMPLE Server ®schedules the next MPR activity by
+using the due day of the account, subtracting the MPRPrdOffset value, and backing up the date if necessary for non-
+processing days.
+To prevent scheduling conflicts, verify the calculated production date is before the last allowed date
+(LastAvailMPRDtDisp value).
+Processing the Returned MPR Form
+MPR Report data is entered from the Policy Term Summary page for the appropriate account in Duck Creek Billing™.
+SeeWorking with Monthly Premium Reporting in the Duck Creek Billing™ User Guide . The collection ManuScript must
+be created, and can be modeled after the out-of-the-box sample MPR Collection Line 1 ManuScript that works with
+BaseProduct.
+Pending Cancel for Non-Reporting
+A PCNR follow-up is similar to a regular PCN for non-payment. Policy term parameters control whether the policy can
+PCNR for non-reporting or PCNP for non-payment of the MPR receivable.
+Final Audit
+When a Final Audit transaction is received for an MPR policy by Duck Creek Billing™, a new receivable transaction for
+the entire premium amount replaces any existing premium receivables for the policy term.
+The only transactions valid in Duck Creek Billing™ following a Final Audit are Revised Audit or Void Final
+Audit.
+For details about entering MPR Report information, see Working with Monthly Premium Reporting in the Duck Creek
+Billing™ User Guide .
+For more information about configuring an MPR policy, contact your Account Representative.
+Integrating with Commerical Lines ManuScripts
+The following three ManuScripts are needed to integrate Duck Creek Billing™ with Commercial Lines:
+•The Carrier Product Base Workflow ManuScript, which is shipped with Duck Creek Billing™, should be changed
+to inherit from the DCT_BillingProductBase_Workflow_1_0_0_0.
+•The Carrier Product Base Data 7.0.0.0 ManuScript should be changed to inherit from the
+DuckCreekTech_ProductBaseBilling_Data_7_0_0_0 ManuScript.
+40 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+•The Carrier Product Base Pages 7.0.0.0 ManuScript should be changed to inherit from the
+DuckCreekTech_ProductBaseBilling_Pages_7_0_0_0 ManuScript.
+For more informatin about using Commercial Lines, contact your account representative.
+Configuration Settings
+This section contains descriptions, defaults, and valid values of all EXAMPLE Server ®user-configurable settings. The
+Edit Configuration Utility in the Duck Creek root directory (by default C:\Program Files\Duck Creek
+Technologies\Util\EditConfig.exe ) may be used to manually alter these settings.
+Improperly adjusting EXAMPLE Server ®configuration settings can lead to unintended behaviors or can even
+prevent EXAMPLE Server ®products from functioning. Use caution when changing these settings.
+Billing
+Key Default Value
+PoliciesQueue .\PRIVATE$\EXAMPLEBILLINGCOMPONENTS0
+QueueProcessingUserId admin
+InvoicePath C:\Program Files\Duck Creek Technologies\Invoices
+AgencyStatementsFolderRootPath C:\Program Files\Duck Creek Technologies\Statements
+AgencyStatementsFromEmailAddress from@domain.com
+AgencyStatementsPassword password55
+DirectBillCommissionStatementsFolderRootPath C:\Program Files\Duck Creek
+Technologies\DirectBillCommissionStatements
+TempWorkingPath C:\Program Files\Duck Creek Technologies\Temp
+ProcessElectronicPayments True
+Use3rdPartyPayments False
+PaymentSiteURL Null
+PaymentSiteUserId Null
+PaymentSitePassword Null
+PaymentSiteReturnURL Null
+EFTTransmissionThrottleBuilder 1
+OrphannedCommissionAgentReference ###_DCT_ORPHAN_AGENT_###
+41 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+DebitChangeNoticePath C:\Program Files\Duck Creek
+Technologies\DebitChangeNotices
+ExternalDocumentsFolderRootPath C:\Program Files\Duck Creek Technologies\ExternalDocuments
+UseExternalDocumentInterface False
+UseExternalDocumentInBatchMode False
+ScheduledActivityDelay 600000
+AgencyStatementsFolderRootPath
+Default location for Agency Billing statements.
+Default Valid
+C:\Program Files\Duck Creek Technologies\Statements Any valid location.
+AgencyStatementsFromEmailAddress
+This setting is the email address used to send Agency Billing statements.
+Default Valid
+from@domain.com Any valid email address.
+AgencyStatementsPassword
+This setting is the default password that allows a user to unlock the Excel spreadsheet containing an Agency Billing
+statement.
+Default Valid
+password55 Any valid Excel password
+DebitChangeNoticePath
+Specifies the path for debit change notices.
+Default Valid
+C:\Program Files\Duck Creek Technologies\DebitChangeNotices Any valid directory path.
+DirectBillCommissionStatementsFolderRootPath
+This setting specifies the location of the commission statements in Duck Creek Billing™.
+Default Valid
+C:\Program Files\Duck Creek Technologies\DirectBillCommissionStatements Any valid file location.
+42 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+EFTTransmissionThrottleBuilder
+This setting specifies use of the EFTTransmissionThrottleBuilder.
+Default Valid
+1 •1— True
+•2— False
+ExternalDocumentsFolderRootPath
+Specifies the location of external documents.????
+Default Valid
+C:\Program Files\Duck Creek Technologies\ExternalDocuments Any valid folder location.
+InvoicePath
+Default path for the location of invoices created by Duck Creek Billing™.
+Default Valid
+C:\Program Files\Duck Creek Technologies\Invoice Any valid location.
+OrphanedCommissionAgentReference
+Specifies the value for handling agent commission statements for agents no longer associatied with an agency.????
+Default Valid
+###_DCT_ORPHAN_AGENT_### ??
+PaymentSiteURL
+This setting specifies the URL for the 3rd party payment processor.
+Default Valid
+Null Any valid URL.
+PaymentSiteUserId
+This setting specifies the user id for the 3rd party payment processor.
+Default Valid
+Null Any valid user id.
+43 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+PaymentSitePassword
+This setting specifies the password for the 3rd party payment processor.
+Default Valid
+Null Any valid password.
+PaymentSiteReturnURL
+This setting specifies the return URL for the 3rd party payment processor.
+Default Valid
+Null Any valid URL.
+PoliciesQueue
+This setting specifies the name of the Message Queue where integration messages between policy and Duck Creek
+Billing are placed and processed.
+Default Valid
+.\PRIVATE$\BillingIntegration Any valid message queue.
+ProcessElectronicPayment
+This setting determines if electronic payment processing is allowed in Agency Billing.
+Default Valid
+False •False — Not allowed.
+•True — Allowed.
+QueueProcessingUserId
+This setting is reserved for future use.
+ScheduledActivityDelay
+Specifies the delay for scheduled activities.
+Default Valid
+600000 (milliseconds) Any valid time entry.
+TempWorkingPath
+Specifies the location of the temporary working path.
+44 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Default Valid
+C:\Program Files\Duck Creek Technologies\Temp Any valid location.
+Use3rdPartyPayments
+This setting specifies whether to allow 3rd party payments in Duck Creek Billing™.
+Default Valid
+False •False — Do not allow.
+•True — Allow.
+UseExternalDocumentInterface
+This setting specifies whether to use an external document interface.
+Default Valid
+False •True — Use and external document interface.
+•False — Do not use an external document interface.
+UseExternalDocumentInterfaceInBatchMode
+This setting specifies whether to use an external document interface for batch processing.
+Default Valid
+False •True — Use and external document interface for batch processing.
+•False — Do not use an external document interface for batch processing.
+Working with Invoices and Installments
+Customizing an Invoice
+The ManuScript to use for billing forms must be specified in the Invoice Section of the Billing Account Options. For
+details on how to specify the ManuScript for use, see Selecting Billing Account Options in the Duck Creek Billing™
+User Guide .
+See the EXAMPLE Forms™ Reference Guide for detailed information about customizing forms in general.
+Specifying Non-Processing Days
+Non-processing, or blackout days, are specified in the ProcessingBlackoutDates database table. This information is
+used when determining Target Due Days and Target Draw Days for invoices.
+45 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Manually Redistributing Installments
+Manual installment redistribution allows customers to have additional time to pay a large amount due, such as final
+audit premiums. When configured, this feature is accessible from the Installment Schedule page as a link in the
+Balance column. The link is only available when the Installment Schedule view is expanded, an open balance exists,
+and the Account Type Code does not equal Agent .
+Installments can be manually redistributed outside the current policy term dates, and any items that have been
+redistributed outside the policy term are catch-up items on the next installment.
+To have the required permissions to manually redistribute an installment, the logged in user must be
+assigned the role of BillingAgent with the BIL_ManualInstallmentRedistribution privilege. This is an out-of-the-
+box privilege assigned to the BillingAgent role. For more information on billing roles and privileges, see
+Creating a Billing Role in the Duck Creek Billing™ User Guide .
+Creating a New EXAMPLE Server ®Request
+The <BillSchedule.redistributeInstallmentBalanceRq> request must be created to control the redistribution. This
+request must specify the BillItemScheduleID , the earliest installment date for the redistribution, and the number of new
+installments to create.
+Redistributed installments will have a different installment type code than regular installments so they can be easily
+identified in the database tables. This change also allows credit allocation to work correctly since the usual method of
+matching debits based on effective and expiration dates will not work with redistributed installments.
+The existing credit allocation processing will be changed to search for debits that could be outside the range of
+installment dates based on their effective and expiration dates.
+Working with a Late Entered Policy
+Through ManuScript configuration, the Late Entered Strategy feature allows a Duck Creek Billing™ user to insert an
+out-of-cycle draw for an EFT invoice account for a late entered new business policy. Out of the box, without the Late
+Entered Strategy feature enabled, when the scheduled invoice day has already been passed in the current month, a
+late entered new business policy installment is added to the next scheduled installment for the account, resulting in as
+much as 31 days of coverage without premium payment.
+TheLate Entered Strategy feature has a positive effect on cash flow and commission authorization, in addition to
+protecting policy equity by minimizing the amount of time coverage is provided without payment.
+TheLate Entered Strategy is valid for a new business premium by EFT invoice only. Other transactions, such
+as endorsements and renewals, are scheduled based on the Late Entered Strategy Code value on the policy
+plan associated with the policy. For more information, see Selecting Policy Plan Options .
+The following table lists the settings that determine the behavior of a late entered new business policy on the
+installment schedule.
+46 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Item DescriptionValid
+Entries
+EFT Draw
+Offset DaysThe number of days between the EFT invoice date and the due date. This value is specified in
+the Account Settings.Any
+positive
+number
+between
+1 and 31.
+Target Draw
+DateThe day of the month that the EFT draft is drawn from the specified account. This value is
+specified in the Account Settings.Any
+positive
+number
+between
+1 and 31.
+EFT
+Transmission
+OffsetThe number of days between the EFT Draw Date and the actual draw. This value is specified in
+the DC_BIL_BankDetails.Any
+positive
+number
+between
+1 and 31.
+Policy
+Effective
+DateThe date the policy is effective. Specified in the policy management system. Any valid
+date.
+Policy Issue/
+Policy Entry
+DateThe date the policy is issued or entered into the policy management system. This value is
+specified in the policy management system.Any
+valid
+date.
+EFT Out of
+Cycle Draw
+Due to Late
+EntryAllows the user to insert an out-of-cycle draw for an EFT invoice account for late entered new
+business policies to collect payment before the next scheduled EFT draw. This value is specified
+in the Billing_AccountPlanSetup_Base_1_0_0_0 ManuScript.True or
+False.
+EFT Out of
+Cycle Next
+Draw Offset
+DaysThe number of days before the next regularly scheduled draw date that an out-of-cycle draw can
+be made. This prevents an out-of-cycle draw from being too close to the regularly scheduled
+draw. If the value of the parameter is not met, the out-of-cycle draw is not scheduled. This value
+is specified in the Billing_AccountPlanSetup_Base_1_0_0_0 ManuScript.Any
+positive
+number
+between
+0 and
+31.
+The following scenairo demonstrates the results of installment scheduling that uses the out-of-the-box settings with no
+late entered policy.
+47 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Item Value Explanation
+EFT Draw Offset
+Days10
+Target Draw Days 16
+Policy Effective
+DateJanuary
+16
+Draw Transmission
+Offset Days2
+Policy Issue/Entry
+DateJanuary
+6This example illustrates how scheduling works out of the box, without the Late Entered
+Strategy feature enabled, and without a late entered policy.
+The following scenario demonstrates the results of installment scheduling that uses the out-of-the-box settings with a
+late entered policy.
+Item Value Explanation
+EFT Draw
+Offset Days10
+Target Draw
+Days16
+Policy
+Effective
+DateJanuary
+16
+Draw
+Transmission
+Offset Days2
+Policy Issue/
+Entry DateJanuary
+7In this example, the policy is late entered because sufficient time (10 days) does not exist for the
+EFT draw between the Policy Issue/Entry Date, the Policy Effective Date, and the Target Draw
+Date. The installment will bill with the next scheduled installment on February 16, leaving no
+payment for coverage for between January 16 and February 16. Depending on the value for the
+Late Entered Strategy Code in the Policy Plan Setup , the missed installment will either be caught-
+up with the next installment or spread over subsequent installments.
+The following scenario demonstrates the results of installment scheduling that uses the Late Entered Strategy feature
+with a value of 0specified for the EFT Out of Cycle Next Draw Offset Days parameter.
+Item Value Explanation
+48 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+EFT Draw
+Offset Days10
+Target Draw
+Days16
+Policy
+Effective
+DateJanuary
+16
+Draw
+Transmission
+Offset Days2
+Policy Issue/
+Entry DateJanuary
+7
+EFT Out of
+Cycle Draw
+Due to Late
+EntrySelected
+EFT Out of
+Cycle Next
+Draw Offset
+Days0The policy is late entered because sufficient time (10 days) does not exist for the EFT
+draw between the Policy Issue/Entry Date and the Policy Effective Date. An out-of-cycle
+installment is needed and is inserted with an invoice date of January 7 and a draw date
+of January 17. This reduces the time of coverage without premium to two days.
+The following scenario demonstrates the results of installment scheduling that uses the Late Entered Strategy feature
+with a value of 7specified for the EFT Out of Cycle Next Draw Offset Days parameter.
+Item Value Explanation
+49 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+EFT Draw
+Offset Days10
+Target Draw
+Days16
+Policy
+Effective
+DateJanuary
+16
+Draw
+Transmission
+Offset Days2
+Policy Issue/
+Entry DateJanuary
+30
+EFT Out of
+Cycle Draw
+Due to Late
+EntrySelected
+EFT Out of
+Cycle Next
+Draw Offset
+Days7The policy is late entered because sufficient time (10 days) does not exist for the EFT
+draw between the Policy Issue/Entry Date and the Policy Effective Date. Because the
+value of the EFT Out of Cycle Next Draw Offset Days is 7, there is sufficient time for the
+EFT draw before the next scheduled draw on February 16, so an out of cycle draw is
+inserted with an EFT draw date of February 9.
+The following scenario demonstrates the results of installment scheduling that uses the Late Entered Strategy feature
+with a value of 7specified for the EFT Out of Cycle Next Draw Offset Days parameter and a later Policy Issue/Entry
+Date than the previous table.
+Item Value Result
+50 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+EFT Draw
+Offset Days10
+Target Draw
+Days16
+Policy
+Effective
+DateJanuary
+16
+Draw
+Transmission
+Offset Days2
+Policy Issue/
+Entry DateJanuary
+31
+EFT Out of
+Cycle Draw
+Due to Late
+EntrySelected
+EFT Out of
+Cycle Next
+Draw Offset
+Days7The policy is late entered because sufficient time (10 days) does not exist for the EFT
+draw between the Policy Issue/Entry Date and the Policy Effective Date. Because the
+value of the EFT Out of Cycle Next Draw Offset Days is 7, there is not sufficient time for
+the EFT draw before the next scheduled draw on February 16, so no out of cycle
+installment is inserted. Depending on the value for the Late Entered Strategy Code in
+thePolicy Plan Setup , the missed installment will either be caught-up with the next
+installment or spread over subsequent installments.
+Late Entered Strategy can be used for both single and multiple policy accounts. Missed installments are included in the
+Installment Schedule, which is accessible from the left navigation panel from the Account Home page.
+Change the date filter on the Installment Schedule page to view missed installments. Depending on the value
+for the Late Entered Strategy Code in the Policy Plan Setup , the missed installment will either be caught-up
+with the next installment or spread over subsequent installments.
+To use the Late Entered Strategy feature:
+1.In the Billing Account Plan Setup Base 1.0.0.0 ManuScript, specify the following values:
+If the value in the EFT Out of Cycle Next Draw Offset Days is not met, the out-of-cycle draw is not
+processed. Depending on the value for the Late Entered Strategy Code in the Policy Plan Setup , the
+missed installment will either be caught-up with the next installment or spread over subsequent
+installments.
+◦Set the EFT Out of Cycle Draw Due to Late Entry parameter to True (1).
+◦Set the EFT Out of Cycle Next Draw Offset Days parameter to specify the number of days before the next
+scheduled draw that the out-of-cycle draw should be processed. This setting can be 0which does not
+specify a number of days and means the installment is automatically processed.
+51 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+2.Save the ManuScript changes.
+Working with Commissions
+Commission Plans
+Before premium is issued, an overall commission rate or amount must be specified. The commission can be a
+percentage or a flat amount, and it can vary by policy term or be the same across all policy terms. The commission
+plan can vary by the following policy attributes:
+•Agent Reference
+•Line Of Business
+•Master Company
+•Issue System
+•Product Code
+•Inception Date
+•Policy Term Effective Date
+•State
+Five customer-definable keys are also used to determine the correct commission plan. One of the keys can be used to
+indicate the selected coverage and premium class combination. The same definable key can be used for a separate
+line of business or product in more than one commission plan.
+When a policy is rated, the commission rate or flat amount is determined by performing a look-up based on policy
+attributes specified in the creation of the commission plan, including the customer definable keys. The search begins at
+the lowest level of the hierarchy to obtain the correct commission plan, as well as the overall rate of commission or flat
+amount.
+Commission plan changes are supported through the use of effective and expiration dates, which allows new policies
+to use new commission rates or flat amounts and commission distributions while existing policies use prior commission
+rates or flat amounts and distributions.
+The commission distribution specifies the entity type that will receive the commission distribution and the amount of the
+distribution. Using the entity tiers created in EXAMPLE UserAdmin™, commission plans can be inherited from a higher
+agent tier to a lower tier. A commission plan that is inherited from a higher tier can only be changed at the tier where
+the commission plan was created.
+Commission plans associated with an account are listed on two commission plans pages:
+•Active Commission Plans – Enables the user to add a plan, maintain an existing plan, and view all active
+commission plans associated with an agent's account.
+•Expired Commission Plans – Displays the details of expired commission plans that were previously associated
+with an agent's account.
+To view the commission plans associated with an account:
+1.In the left navigation panel of one of the following pages, click Commission Plans :
+◦Account Home
+52 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+◦Installment Schedule
+◦Make A Payment
+◦Items in Suspense
+◦Hold Billing Activities
+2.To view the active commission plans, click Active Commission Plans .
+All of the Inherited Plans and Agent Specific Plans associated with the selected account appear.
+Inherited plans are view-only. Any changes to a commission plan must be made at the level where the
+plan is created.
+3.To view the details of an inherited plan, click Details .
+To add a new commission plan:
+1.From the Active Commission Plans page, click Add New Commission Plan .
+The Commission Plan Details page appears.
+2.Accept the default selections, or use the dropdown list or text box to enter any different values.
+3.Enter the plan name in the Description text box.
+4.In the Terms section, below the Commission Rate heading, click one of the following options in the Type list:
+◦Percentage
+◦Flat Amount
+5.In the Value text box, enter the appropriate amount.
+6.Below the Commission Distribution heading, click one of the available options in the Entity Type list.
+The available options are determined by ManuScript customization.
+7.In the Percentage orAmount text box, enter the appropriate amount.
+Enter percentages as numbers carried out to two decimal points. For example, 10 percent would be
+entered as 10.00.
+8.After entering the value, click the page outside of the text box to refresh the page, or tab outside the text box.
+9.(Optional) To add an additional distribution for the commission amount, click Add New Distribution .
+10. (Optional) Repeat Steps 6 and 7 for each additional distribution.
+11. (Optional) Click Delete Distribution to remove a distribution from the commission plan.
+12. Click the page outside of the text box to refresh the page.
+The percentage or amount for other entity types will need to be changed to match the specified
+commission rate amount.
+13. Click Save New Plan.
+53 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+TheSave New Plan option will not appear until the values entered in the Commission Percentage or
+Amount text box balances with the sum of the distribution percentage or amount.
+The Active Commission Plans page appears.
+The Save All Changes option is not enabled unless the plan has been changed.
+14. Click Save All Changes to save the plan changes.
+15. (Optional) Click Edit Plan to edit the new plan.
+16. (Optional) Click Delete Plan to delete the new plan.
+To add a renewal term:
+The Terms section of the page refreshes, and displays separate Commission Rate and Commission Distribution
+options for new business and renewal terms.
+1.Click Add Renewal Term .
+2.In the new business section, below the Commission Rate heading, click one of the following options in the Type
+list:
+◦Percentage
+◦Flat Amount
+3.In the Value text box, enter the appropriate amount.
+4.Below the Commission Distribution heading, click one of the available options in the Entity Type list.
+5.In the Percentage orAmount text box, enter the appropriate amount.
+6.After entering the value, click the page outside of the text box to refresh the page, or tab outside the text box.
+7.(Optional) Click Add New Distribution to add another entity type.
+8.In the Percentage orAmount text box, enter the appropriate amount.
+9.After entering the value, click the page outside of the text box to refresh the page.
+10. Click Save New Plan.
+11. Click Save All Changes to save the plan changes.
+12. (Optional) Click Edit Plan to edit the new plan.
+13. (Optional) Click Delete Plan to delete the new plan.
+To edit an existing agent specific plan:
+1.Click Edit Plan .
+The Commission Plan Details page appears.
+2.Edit the desired details.
+3.Click Save Changes.
+4.(Optional) Click Discard Changes to restore the previously saved plan.
+5.Click Return To Plan List to return to the Active Commission Plans page.
+6.Click Save All Changes to save the changes made on the previous page.
+54 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+7.Click Undo All Changes to discard the changes made on the previous page.
+To view the expired commission plans associated with an account:
+1.Click Expired Commission Plans .
+2.(Optional) Click Details to view commission plan details.
+3.Click Return To Plan List to return to the Commission Plan Details page.
+Expired commission plans are retained on an account, and an audit trail is automatically maintained.
+Configuring Commission Options
+Commission rate and eligibility are determined in the policy system and transmitted to Duck Creek Billing™ on the
+policy term premium record. Records are written to database tables based on the commission scheme specified in the
+Policy Plan Setup option. The CommissionStatementSchedule database table maps an agent to the statement
+schedule and produces statements based on the data in the table.
+The <BillCommission.buildCommissionStatementRq> request populates the following two tables:
+•DC_BIL_DirectBillCommissionStatementSummary — Contains information needed by a check-writing
+interface.
+•DC_BIL_DirectBillCommissionStatementDetails — Contains details for statement make-up to generate
+printable statement.
+Most data in these tables is stored in an XML column.
+Commission statement requests should be initiated serially from a single source and processed by a single
+server to avoid possible race conditions between multiple threads and/or servers when writing to the
+disbursements file.
+Commission processing uses two requests:
+•The <BillCommission.buildCommissionStatementRq> request uses the agencyId, statementDate, and
+printDirectory attributes.
+•The <BillCommission.printCommissionStatementRq> request uses the statementId and printDirectory parameters
+to generate printable statements. This request initiates a report using SQL Server 2005 Reporting Services to
+produce statements.
+Reports are output as PDF files to the directory specified in the printDirectory attribute. If the print directory is not
+passed in as an attribute, the DirectBillCommissionStatementsFolderRootPath setting in the Server.Config file is used.
+The statement file name will be DirectBillCommissionStatement_Agency_[Agency]_[StatementDate]_[StatementId].pdf.
+Customers are responsible for printing and sending the statements, or maintaining the files.
+Database Components
+The following table includes a list of the database tables used to configure commissions.
+Table Name Definition
+55 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+DC_BIL_CommissionAuthorization The AgencyRollupReference column contains the general
+agency for the policy at the time of the commission
+authorization. The AuthorizationDateTime column contains
+the exact date and time that the commission is authorized.
+DC_BIL_DirectBillCommissionStatementSummary This database table stores the summary information for each
+commission statement. This table provides the information
+needed by the interface to the customer's external check
+writing system. To support extensibility and interface flexibility,
+most of the data is contained within a single XML data
+column.
+DC_BIL_DirectBillCommissionStatementDetail This database table holds the detailed information for creating
+the statement. The information in this table is used to
+generate a commission statement for a given agency. Most of
+the data is contained within a single XML data column.
+Configuring Commissions
+The commission scheme for a policy is specified from the Policy Term Settings for the appropriate account. See
+Working with Commissions in the Duck Creek Billing™ User Guide .
+In addition to selecting the commission scheme option, ManuScript customization is required for commission
+configuration.
+To customize the appropriate ManuScript:
+1.Specify the values for the following two fields in the appropriate ManuScript:
+◦CommissionAmount
+◦CommissionPercent
+The following table describes the valid values for the two ManuScript fields required for commission generation.
+Field Name DefinitionTo Disable
+Commissions
+CommissionAmount Calculation that determines commission amount by multiplying the
+value in the PolicyOutput.PremiumChange field by the value in
+the PolicyOutput.CommissionPercent field.Set the field type
+toConstant with a
+value of 0.
+CommissionPercent The value multiplied by the PolicyOutput.PremiumChange to
+determine commission amount.Set the value to
+zero ( 0). Default is
+.10(10 percent).
+2.Save the ManuScript changes.
+Available Commissions Plans
+The following table lists the out-of-the-box commission payment strategies available in Duck Creek Billing™.
+56 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Table
+NameDefinition Setting
+Paid on
+WrittenPayment is not required before commission is released. The entire commission amount is
+authorized when the receivable is posted. The commission authorization date is the activity
+date of the policy transaction. Debit receivables create an authorization record. Credit
+receivables generate a de-authorization record.POW1
+Paid on
+EffectiveThe commission is authorized for each policy transaction at issuance. Payment is not required
+before the commission is released. The commission authorization date is the latter of the
+effective date or the activity date of the policy transaction.POE1
+Paid on
+Paid Pro
+RataPayment is required before commission is released. The amount of commission that has been
+paid to date for a given receivable is evaluated. Next, based on the payment activity, the
+amount of commission that should have been paid is evaluated. The difference is the
+commission amount that is authorized. The activity date of the payment is used as the
+commission authorization date for all debit policy transactions. All other policy transactions
+use the activity date of the policy transaction as the commission authorization date .When
+premiums are written off, the corresponding commission amount is still authorized.POP1
+Paid on
+Paid
+First
+PaymentThe entire commission amount is paid when the first payment is applied to the receivable.
+Receiving one valid payment on the policy term releases the commission for that policy term.
+The activity date of the payment is used as the commission authorization date for a new
+business or a renewal policy transaction. All other policy transactions use the activity date of
+the policy transaction as the commission authorization date.POP2
+Paid on
+First
+PaidThe commission is released following the receipt of one valid payment on the policy term. The
+latter of the policy transaction effective date or the activity date of the payment is used as the
+commission authorization date for a new business or renewal policy. All other policy
+transactions use the latter of the policy transaction effective date or the activity date of the
+policy transaction as the commission authorization date.POP4
+Working with Agent Commissions
+Agent Commission accounts are used to specify how commissions are paid to the various levels that are determined
+when the commission account is created. The commissions features in Duck Creek Billing™ can be customized
+through ManuScript configuration to accommodate a variety of commission plans and payment schemes.
+The first step for working with agent commission is creating the multi-level commission feature using the role-based
+security features in EXAMPLE UserAdmin™. Next, a Direct Bill Commission account is created to contain the details
+for how and when the commission is collected and distributed to the agent. Part of the account creation includes
+specifying the format that will be used to generate commission statements for the account. After the hierarchy is
+created, the agent's account is setup, and statement format is specified, the final step for working with agent
+commission is actually creating commission plans to associate with the agent's account. Commission plans can be
+created, edited, or deleted using the Commission Statement Maintenance page. Commission plans can be inherited
+through the hierarchy created in EXAMPLE UserAdmin™. The following topics explain each of these required steps in
+detail.
+57 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Working with Multi-level Commisisons
+The multi-level commission feature is enabled by using the role-based security features in EXAMPLE UserAdmin™.
+Recommended Reading:
+TheEXAMPLE UserAdmin™ Overview describes the basic concepts of role-based security and how the
+EXAMPLE Platform ®uses EXAMPLE UserAdmin™, and the "Initial Setup" in the EXAMPLE UserAdmin™
+User Guide , which describes the process of working with entities, roles, and users.
+EXAMPLE UserAdmin™ may be used to set up and define the entities, roles, users and hierachy (parent/child
+relationships for commission distribution and plan inheritance. Commissions may be distributed at one or multiple
+levels in the hierarchy as specified in the commission plan that is created for an account. Commission plans can be
+created at one tier, and then be inherited by a lower tier, but they cannot be created at a lower tier and then be
+inherited at a higher tier.
+A policy's commission plan is determined when the policy is entered. The policy administration system retrieves the
+commission plan ID and sends it to Duck Creek Billing™ where it is stored in each BillItem record. When the
+commission is distributed, it pulls the appropriate commission plan using the commission plan ID. The necessary keys
+are used to search from the lowest tier of the hierarchy to obtain the correct commission plan and distribution. The
+commission distribution includes each recipient ID, as well as the recipients’ distributed commission percentage.
+When a search for a commission plan begins, it is based on both the fixed and variable policy attributes specified in the
+commission plan. The search begins at the lowest level of the hierarchy and moves upward. If no match is found at the
+first level, the search moves to the next tier in the hierarchy. If a match is found at this tier, the commission plan is
+returned. The search process continues through all the tiers, and if no match is found at the highest tier, an error is
+returned.
+For a given commission plan, the user may also specify different rates and distributions for new business and
+renewals.
+Overview for Creating a Multi-Level Commission Plan
+The following table includes the process for creating a multi-level commission plan.
+Step Description
+1 Determine the required hierarchy.
+2 Determine whether to use existing entity types or create new entity types for your commission structure.
+3 To create new entity types, see Working with Entity Types .
+4 Determine what entities need to be added to the entity types.
+5 To create new entities, see Working with Entities .
+6 Associate the required roles with each entity.
+7 If additional roles are needed, see Working with Roles to create new roles.
+58 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+8 Select the required Lines of Business for each entity.
+For more information, see Working with Product Authorizations .
+9 Select the parent for the entity. For more information, see Working with Entities .
+This step is not required for the top tier of the hierarchy.
+Creating an Agent Commission Account
+Users create a Direct Bill Commission account type specifically to collect and distribute agent commission. This
+account contains information for each specific agent about that agent's preferred statement format and commission
+payment method.
+The following ManuScripts are used in the customization of the available account options:
+•Billing_Policy_Account_Common_1_0_0_0.xml
+•Billing_Commission_Plans_1_0_0_0
+•Carrier_Billing_Commission_Plans_1_0_0_0
+•Billing_AccountPlanSetup_TemplateDirectBillCommission_1_0_0_0
+•Agent_Plans_1_0_0_0
+•Carrier_ Agent_Plans_1_0_0_0
+Commission payments to agents can be made by check or EFT. When payments are made by check, a file is
+automatically created for use with the Duck Creek Billing™ disbursement interface. When the EFT option is selected,
+the user must enter bank details for the agent, and a commission payment is processed like any other disbursement.
+Any amount that is not paid by EFT or check is returned and applied back to the agent's commission statement to be
+included with the next payment.
+The Commission Account privilege is required for access to the Account Home page for a direct bill
+commission account. For more information, see Creating a Billing User .
+Creating an Agent Account
+To create an agent account:
+1.On the Billing Dashboard, click Create A New Account .
+2.In the Bill Account Class list, click Direct Bill Commission .
+3.Click Search For An Existing Party .
+4.In the I'm looking for list, click Agency .
+5.In the I want to search by list, click Reference Number .
+6.Enter the reference number for the appropriate EXAMPLE UserAdmin™ entity.
+7.Click Search For Party .
+8.Click the appropriate existing party.
+The Create New Account page appears.
+59 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+9.Click Create New Account .
+10. In the Commission Statement Format list, click the appropriate statement format or formats.
+11. In the Commission Statement Frequency list, click the appropriate day.
+12. In the Commission Statement Payment/Collection Method list, click one of the following options:
+◦Check
+◦EFT
+13. (Optional) Enter bank account details for EFT payments.
+14. Click Complete .
+15. (Optional) Click Commission Plans in the left navigation panel of the Account Home page to create a
+commission plan for this account.
+16. (Optional) Click Account Settings in the left navigation panel of the Account Home page to change account
+settings.
+Working with the Commission Statement Maintenance Page
+The Commission Statement Maintenance page provides quick user access for working with commission statements for
+an account.
+The Commission Statement Maintenance page allows the user to:
+•View the details of a pending commission statement
+•Stop or resume the production of a pending commission statement
+•Create an ad hoc (on demand) commission statement
+•Manually adjust amounts on the pending commission statement
+The commission statement includes the following information:
+•Policyholder Name
+•Gross Premium Amount
+•Commission Rate or Flat Amount
+•The Seller (Producer) Reference
+•Seller (Producer) Name
+•Authorized commission that has not been paid for the current commission statement period
+•Authorized commission that has been reversed, or clawed back, either manually or automatically
+(An automatic adjustment is triggered in response to a policy premium transaction)
+(A m anual adjustment is initiated by a user and is not triggered in response to a policy premium transaction)
+•Authorized commission that has been paid, but the payment was returned
+The Commission Statement Maintenance page includes only items associated with the current statement period. A
+debit balance carries forward as a single entry into the next commission statement period. To reduce or eliminate a
+debit balance, an agent payment can be entered from the Make A Payment page for the appropriate account, or be
+entered as a single payment from the Billing Dashboard.
+The Commission Statement Maintenance page is accessible from the left hand navigation panel of the following pages:
+60 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+•Account Home
+•Installment Schedule
+•Make A Payment
+•Items in Suspense
+•Hold Billing Activities
+Viewing a Pending Commission Statement
+The following information appears in the Summary section of the Commission Statement Maintenance page:
+•Agent Reference Number
+•Agent Name
+•Statement Period
+•Previous Statement Balance
+•Payments Made/Received
+•Current Activity
+•Current Statement Balance
+Holding or Resuming Statement Production
+When the production of a commission statement is placed on hold, it is for an indefinite period of time. The hold must
+be manually released to resume the commission statement production. Holding and resuming statement production is
+added to the Recent Account Activity list for the agent's account, but not all the details are listed. If an agent is
+terminated or canceled, commission statement generation does not automatically stop, but can be manually
+suspended using the hold statement feature.
+To place a commission statement on hold:
+1.On the Commission Statement Maintenance page, in the Hold Reason list, click the appropriate option.
+Out of the box, the available options are:
+•Reason 1
+•Reason 2
+•Reason 3
+The text for available options may be customized in the
+Carrier_Billing_Commission_Statement_Authorization_Maintenance_1_0_0_0.xml ManuScript.
+TheHold Statement button appears.
+2.Click Hold Statement .
+The statement will remain on hold until statement activity is manually resumed.
+To resume statement production:
+•Click Resume Statement .
+61 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Requesting an Ad Hoc Statement
+Commission statements are produced on a specified scheduled, usually monthly. Commission statement periods do
+not have overlapping days. For example, the dates included in the commission begin with January 1, 2011, at 12:00
+a.m. and ends with January 31, 2011 at 11:59 p.m.
+The statement period for an ad hoc statement is specified by when the statement is generated. Ad hoc statements
+include all the activity that has occured since the previous statement was produced. After an ad hoc commission
+statement is produced, the next commission statement is produced according to the original schedule.
+An ad hoc statement does not appear for viewing, but is produced in the format or formats specified in the commission
+plan setup, and is automatically placed in the appropriate statement folder. An Archive folder is also created and
+contains a copy of each statement format generated for an account. By default, this folder location is: C:\Program
+Files\Duck Creek Technologies\DirectBillCommissionStatements .
+To request an ad hoc statement:
+•On the Commission Statement Maintenance page, click Request Ad Hoc Statement .
+The statement is automatically placed in the archive folder and all other appropriate folders, based on statement
+format.
+Adjusting the Commission Statement
+Commission adjustments can be made at the account or policy level. New entries can be added to a pending
+commission statement, including both negative and positive entries.
+•A negative entry reflects a new claw back authorized commission. A claw back is associated with a specific
+policy.
+•A positive entry reflects payables that are not generated from anywhere, but rather are created and result in
+additional commission for the agent can be added. Examples could include a bonus or repayment of an expense
+incurred by the agent.
+Adjustments can be made only on pending commission statements. A commission statement that has been paid
+cannot be adjusted. Any necessary adjustment must be made on a subsequent statement.
+Adjustments to a pending commission statement are recorded in the General Ledger report which is accessible from
+the Billing Dashboard. The Commission Activity report is also available from the Billing Dashboard.
+To adjust a commission plan:
+Commission Adjustment is selected by default in the Reason list.
+1.On the Commission Statement Maintenance page, enter the appropriate policy number in the Policy Number
+textbox below the Statement Entries heading, and then click Search .
+The account number, policy holder name and policy term information appear.
+2.Click Add Commission Adjustment .
+The Add Commission Adjustment window appears.
+3.Enter the appropriate date, or use the calendar button calendar button.png to select a date in the Authorization
+Date list.
+62 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The adjustment date must be the current date or later.
+4.Enter the adjustment amount in the Authorized Amount textbox.
+For dollar and cents amounts, enter the full amount including the decimal point.
+For a debit, enter a minus sign (-) before the amount. Entering a dollar sign ($) is not required.
+5.Click Add.
+Details of the adjustment appear on the Commission Statement page, and the commission statement summary at the
+top of the page is updated based on the adjustment amount.
+Multi Format Commission Statements
+Commission statements are available in the following formats:
+•Adobe PDF (PDF)
+•Microsoft Excel (XLS)
+Compatible versions of Microsoft Excel and SQL Server are required. SQL Server 2005 requires
+Microsoft Excel 2003.
+•Comma Separated Value (CSV)
+•XML
+To provide flexibility, more than one format may be selected for the same commission statement. For example, by
+selecting both PDF and XLS formats, the user can print the PDF statement for mailing, and attach the XLS statement
+to an email without additional work.
+When a statement is produced, a folder is automatically created for each selected statement format. An Archive folder
+that includes a copy of each statement format is also created. By default, the folder location is C:\Program
+Files\Duck Creek Technologies\DirectBillCommissionStatements\ . The commission statement folder
+location is specified during the Duck Creek Billing™ installation process, and is configurable.
+To specify the statement format:
+1.From the Account Home page, in the left navigation panel, click Account Settings .
+2.In the Commission Statement Format section, click the appropriate options.
+TheAdobe PDF format check box is automatically selected, and cannot be cleared because it is
+required to enable the ability to view commission statements online.
+3.Click Save Changes .
+63 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Viewing Commission Statements Online
+The View Statement link is added to the Recent Account Activity list when a commission statement is generated for
+an account. This includes scheduled monthly statements and ad hoc statements. The link allows the user to view a
+PDF version of the statement from the Account Home page. Regardless of the statement format option or options
+selected for the account, the online statement is only available as a PDF.
+To view the statement:
+•Click the View Statement button View Statement Image.png for the appropriate item on the Recent Account
+Activity list.
+The File Download dialog box appears, and allows the user to view or save the PDF file.
+Working with the Third Party Payment Interface
+The integration process between Duck Creek Billing™ and a third party payment interface to process credit card, debit
+card, and electronic checks is shown below.
+Configuring Third Party Payment Processing
+Duck Creek Billing™ can be integrated with a third party payment processor.
+Lock box functionality must be configured prior to successful deployment of the Third Party Payment
+Interface. See Configuring the Lockbox .
+64 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The Third Party Payment Interface is disabled by default.
+To enable the Third Party Payment interface:
+1.Open the Edit Configuration utility.
+2.In the Virtual Directory list, click the Express Virtual Directory.
+3.Click the Web Config tab.
+4.Browse to Use3rdPartyPayments .
+5.In the value field, change the setting to True .
+6.Browse to the ExternalPaymentsInterface .
+7.In the value field, set the path to the ExternalPaymentInterface.xml file.
+The default location for this file is: <installed dir>\Express\App_Data\ ExternalPaymentInterface.xml
+8.Click Save .
+The External Payment Interface must also be configured. The ExternalPaymentInterface.xml file contains a node called
+ExternalPaymentInterface. EXAMPLE Express ®uses the data configured in this section to build the URL and
+parameters to submit to a Third Party Payment Provider.
+To configure the External Third Party Payment Interface:
+1.Open the Edit Configuration utility.
+2.In the Virtual Directory list, select the Express Virtual Directory.
+3.Click the Server Config tab.
+4.Expand Billing .
+5.Configure the parameters listed in the following table.
+Name Type Required Description
+PaymentSiteURL String Yes Specifies the URL of the Third Party Payment Provider.
+PaymentSiteUserId String Yes Specifies the UserId for the Third Party Payment site.
+PaymentSitePassword String Yes Specifies the password for the Third Party Payment site.
+PaymentSiteReturnURL String Yes Specifies the return URL after the payment is completed.
+Specifying the parameters in the table will direct traffic to and from a third party payment site. For assistance with
+third party payment processing, contact your Account Manager.
+Working with Electronic Funds Transfers (EFT)
+The integration between Duck Creek Billing™ and Electronic Funds Transfer (EFT) payments is illustrated below.
+65 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+EFT works on a negative response basis which means payment is assumed unless the bank returns a rejection notice.
+EFT payments are based on the following assumptions:
+•The account is not in a stop or hold status
+•Policies under the account that are in a pending cancel status are not included in the draw amount being billed for
+the current billing period.
+•The account is in an active EFT status or pending EFT status.
+Customization is required to use this feature. For more information about integrating EFT payments and Duck Creek
+Billing™, contact your Account Manager.
+Configuring the EFT Maintenance Privilege
+A user must be authorized to change EFT draw dates or cancel a pending EFT draw. The following procedure details
+the steps required to create and associate this privilege with a Duck Creek Billing™ user. If a user does not have the
+required permission or the draw amount exceeds the user's limit, the EFT pages are read-only.
+For information about using this feature, see Working with EFT Maintenance in the Duck Creek Billing™ User
+Guide .
+To create the required privilege for authorizing disbursements and associate that privilege with a user:
+1.Open EXAMPLE UserAdmin™, and in the left navigation panel, click Add a role .
+2.Enter a role name and description in the appropriate text boxes.
+66 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+3.Click Select General System and then select the appropriate privileges.
+4.Click Select Policy Administration and then select the appropriate privileges.
+5.Click Billing Administration and then select the appropriate privileges.
+6.Click Author Administration , select the appropriate privileges, and the click Finish .
+7.Click the View Entities Associated with this role button
+ for the newly created role.
+8.Click Add more entities to role .
+9.Enter an entity name in the Enter Name text box and then click Search .
+10. Select the appropriate entities, and then click Add roles to these entities .
+11. Click Manage role/privilege associations in the left navigation panel.
+12. In the Role list click the appropriate role, and then in the Privilege list, click BIL_EftMaintenance .
+13. Enter EFTMaintenance in the Name text box, enter the appropriate value in the Value text box, and then click
+Insert .
+14. To create a new user or associate this role with an existing user, see Working with Users .
+Working with an Automated Notice of Change
+The bank account information used by EFT invoice accounts is automatically updated or created in Duck Creek
+Billing™ in response to messages from a bank or payment processing service.
+When Duck Creek Billing™ receives a message to change the bank details for an account, the changes are made
+automatically. When the changes are successfully processed, a message is added to the Recent Account Activity list
+for the account.
+To prevent disclosure of confidential information, details are not included in the message on the Recent
+Account Activity list. For example, a routing number change would not include the actual routing number,
+but instead would only indicate the routing number has changed.
+An error message is created in the Billing Error Queue if bank account changes are not processed by Duck Creek
+Billing™.
+Changes are effective when they are processed and do not affect any previous transactions. If an account is on hold
+when a change message is received, Duck Creek Billing™ processes the message and the account is updated. Details
+can be edited after they are automatically updated.
+The following table lists the specific ACH file format requirements for the records affected by an Automated Notice of
+Change.
+Record Name ACH File Format Requirements
+67 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Batch Header •Entry class code
+•Debit date
+•Bank routing transit number
+•Batch header number
+There is only one batch header record for each debit date
+processed, but there may be multiple batch header records per
+tape.
+Detail Record •Amount
+•Trace number for each EFT rejection
+There is one detail record for each transaction being rejected.
+Detail Addenda Record (Includes
+Rejection and Change Records)•Rejection records support rejections of assumed payments and
+prenotes.
+•Change records support change transactions.
+Each record must include a detail addenda for either rejection or
+change.
+Batch Control Record •Number of detail records within a batch
+•Total debit amount
+•Bank routing transit number
+•Batch number
+There is one batch control record for each batch header record.
+The following table lists the value and content of the Batch Header record.
+Length Position Field Name Description
+1 1 Record type A required 1-character field which indicates the type of input record. The valid
+type is 5.
+3 2 - 4 Service
+class codeA 3-position numeric field which identifies the general classification of dollar
+entries to be exchanged. For example, debits, credits, or mixed debits and
+credits.
+16 5 - 20 Company
+nameA 16-position character field established by the originator for further identifying
+the source of the entry, and for descriptive purposes for the receiver.
+68 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+20 21 - 40 Company
+discretionary
+dataA 20-position character field which allows originators to include codes of
+significance only to them, and to enable specialized handling of all subsequent
+entries in that batch.
+10 41 - 50 Company
+identificationA 10-position character field which identifies an originator.
+3 51 - 53 Standard
+entry class
+codeA required 3-position character field which permits the following entries to be
+distinguished:
+•RET for rejections
+•COR for changes
+•CCD for commercial deposit files
+•PPD for personal deposit account files
+10 54 - 63 Company
+entry
+descriptionA 10-position character field used to describe the purpose of the entry to be
+displayed back to the receiver.
+6 64 - 69 Company
+descriptive
+dateA 6-position character field used by the originator as the date it would like to
+see displayed to the receiver for descriptive purposes.
+6 70 - 75 Effective
+entry dateA required 6-position character field which is the date specified by the
+originator on which it intends a batch of entries to be debited.
+The format is MMDDYY for COR and RET.
+3 76 - 78 Settlement
+dateA 3-position numeric field which identifies the scheduled settlement date for a
+batch of entries.
+1 79 Originator
+status codeA 1-position character field which refers to the originating depository (financial
+institution) initiating the entry.
+8 80 - 87 Originating
+DFI
+identificationA required eight 8-position character field which identifies the DFI originating
+entries (bank routing transit number).
+7 88 - 94 Batch
+numberA required seven 7-position numeric field assigned in ascending sequence for
+each batch by the sending point in a given file of entries.
+The following table lists the value and content of the Detail record.
+Length Position Field Name Description
+1 1 Record type A required 1-character field which indicates the type of input record. The
+valid type is 6.
+69 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+2 2 - 3 Transaction
+codeA required 2-position character field which identifies various types of debit
+and credit entries.
+Valid codes are:
+•21 – DDA Credit
+•26 – DDA Debit
+•31 – Savings Credit
+•36 – Savings Debit
+•27 – DDA Prenote
+•37 – Saving Prenote
+8 4 - 11 Receiving DFI
+identificationAn 8-position character field which is the standard routing number.
+1 12 Check digit A 1-position character field which is a sub- field within individual DFI
+identification.
+17 13 - 29 DFI account
+numberA 17-position character field which identifies the receiving depository
+financial institution’s customer identification.
+10 30 - 39 Amount A required 10-position numeric field which contains the amount associated
+with the detail record.
+15 40 - 54 Individual
+identification
+numberA 15-position character field which contains the accounting number by
+which the receiver is known to the number originator.
+22 55 - 76 Individual name A 22-position character field which provides additional identification for the
+receiver.
+2 77 - 78 Discretionary
+dataA 2-position character field used by the originating depository financial
+institution to include codes used for specialized handling of the entry.
+1 79 Addenda record
+indicatorA 1-position numeric field used to indicate the existence of the addenda
+record.
+15 80 - 94 Trace number A required 15-position numeric field which uniquely identifies each entry
+within a batch.
+The following table lists the value and content of the Detail Addenda Record for Rejection.
+Length PositionField
+NameDescription
+1 1 Record
+type codeA required 1-position character field which indicates the type of input record.
+The valid type is 7.
+70 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+2 2 - 3 Addenda
+type codeA 2-position character field which defines the specific interpretation and format
+for the addenda information contained in the same record. The valid type for
+Rejections is 99.
+3 4 - 6 Return
+reason
+codeA required 3-position character field which is a standard code used to describe
+the reason for returning an entry.
+15 7 - 21 Original
+entry trace
+numberA required 15-position character field which is the trace number that was
+originally included on the entry being rejected.
+6 22 - 27 Date of
+deathA 6-position character field which is the date of death for those entries being
+returned for reason of death.
+8 28 - 35 Original
+receiving
+DFI IDAn 8-position character field which is the receiving DFI Identification as originally
+included on the entry.
+44 36 - 79 Addenda
+informationA 44-position character field used to relay explanatory information required with
+the use of certain return reason codes.
+15 80 - 94 Trace
+NumberA 15-position numeric field which uniquely identifies each entry within a batch.
+The following table lists the value and content of the Detail Addenda Record for Change.
+Length PositionField
+NameDescription
+1 1 Record
+type codeA required 1-position character field which indicates the type of input record. The
+valid type is 7.
+2 2 - 3 Addenda
+type codeA 2-position character field which defines the specific interpretation and format
+for the addenda information contained in the same record. The code for Notices
+of Change is 98.
+3 4 - 6 Change
+codeA required 3-position character field which is used to relay corrected customer
+information back to the originator of that entry.
+15 7 - 21 Original
+entry trace
+numberA 15-position character field which is the trace number that was originally
+included on the entry being rejected.
+6 22 - 27 Reserved A 6-position character field which is reserved for use by the ODFI.
+8 28 - 35 Original
+receiving
+DFI IDAn 8-position character field which is the receiving DFI identification as originally
+included on the entry.
+71 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+29 36 - 64 Corrected
+dataA required 29-position character field which is used to relay corrected customer
+information back to the originator of that entry.
+15 65 - 79 Reserved A 15-position character field which is reserved for use by the ODFI.
+15 80 - 94 Trace
+NumberA 15-position numeric field which uniquely identifies each entry within a batch.
+Working with a Bank Details Modulus Check
+Through customization and integration with Duck Creek Billing™ Automated Clearing House (ACH) and Banker's
+Automated Clearing Services (BACS) verification can be utilized to reduce the number of rejected transactions.
+Users can design a custom workflow using the Modulus Check Request and Account Setup provided in Duck Creek
+Billing™
+For more information about specific customization and integration, contact your Duck Creek Account Manager.
+Working with Refunding to a Payment Source
+The Refund to Payment Source feature allows refunds to be made automatically to the source of payment. It requires
+configuration and integration with custom interfaces.
+To utilize the Refund to Source feature:
+1.From the Account Home page for the appropriate account, click Account Settings in the left navigation panel.
+2.In the Disbursement section, select the Refund To Source check box.
+3.Clear the Hold Disbursement Indicator check box to allow automatic disbursements.
+Although no report of rejected refunds is available, a list or report can be created by the return file or a transmission
+from the bank. Regardless of the reason, all rejected refunds are placed in the Items In Suspense list. The refund
+must be manually re-suspended in the associated bill account, and can either be resubmitted to the source for
+refunding or be refunded manually.
+This feature supports both the ACH EFT format which is utilized in the United States, and the BACS EFT format which
+is utilized in the United Kingdom.
+The following table lists the custom interfaces required for refund processing.
+Method Interface
+Check Disbursement Interface
+Credit Card or Debit Card Electronic Payment Interface
+EFT EFT Transmission Builder
+Only a user with the Override Refund To Source privilege can specify that a refund be made in a format other
+than the payment source or group multiple payments into a single refund.
+If the user has the required permissions, the Refund to Check and Refund to EFT check boxes are enabled.
+72 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+To override the source of payment for a refund:
+The Items in Suspense page appears.
+To perform the same action on multiple items in suspense, select all the appropriate check boxes.
+The disburse funds page appears and displays each select suspense item, the amount, and the refund method.
+The Refund To Source page appears with the selected payee displayed.
+The party data system search appears.
+The Refund To Source page appears.
+The amount entered cannot exceed the Available Amount.
+The Items In Suspense page appears with the Items Pending Disbursement list displayed.
+1.From the Account Home page, click Items in Suspense .
+2.Select the check box for the appropriate item in suspense.
+3.In the Select An Action list, click Disburse .
+4.Select one of the following check boxes:
+◦Refund To Check
+◦Refund To EFT
+5.Click Submit .
+6.(Optional) Click Select Another Payee to name a different payee for the disbursement.
+7.Select the appropriate party.
+8.(Optional) In the Disbursement Amount text box, enter an amount other than the default to disburse less than
+the full amount.
+9.Click Refund .
+10. (Optional) Click the View Details link to see the details of the item pending disbursement.
+Working with External Payment Processing
+The integration between Duck Creek Billing™ and external payment processing/lock box systems is illustrated below.
+73 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Typically, a lock box is a post office box that is accessible by a bank or payment processor. The bank or processor
+retrieves the payments, processes them, and deposits them directly into the company's account. Payments are
+converted to electronic data, and the Duck Creek Billing™ lock box interface parses the incoming payment files using
+XSL extensions. The Duck Creek Billing™ Lock Box Interface handles the processing of incoming lock box files by
+creating and submitting payment batches into the system. The actual implementation is configurable by XSL templates
+used to map the lock box file to internal Duck Creek Technologies, Inc. Server requests.
+The Duck Creek Billing Watch Directory Service monitors lock box directories and submits corresponding EXAMPLE
+Server ®requests based on incoming files. A customer can implement a new lock box format by altering the XSL, or
+overriding the request with a custom implementation.
+The lock box interface uses the following EXAMPLE Server ®requests:
+•<PaymentProcessing.processPaymentsRq> request
+•<PaymentProcessing.testProcessPaymentsXSL> request
+The following table includes the attributes of the <PaymentProcessing.processPaymentsRq> request.
+Request NameRequest
+NameType Required Description
+<PaymentProcessing.processPaymentsRq> lockboxFile String Yes Specifies the lockbox file to
+execute. The file is listed in the
+BillingInterfaces.xml configuration
+file.
+74 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+When EXAMPLE Server ®executes the <PaymentProcessing.processPaymentsRq> request, the PaymentProcessing
+object does the following:
+•Checks the configuration file for the lock box information.
+•Scans all the files in the specified lock box watch directory.
+•Sorts each file into batches as specified in the file mapping.
+•Executes the <BillingCashManagement.processCreateBatchRq> request for each batch.
+•Executes the <BillingCashManagement.processAddBatchPaymentRq> request for each payment record.
+•Executes the <BillingCashManagement.processBatchRq> request to process each batch after loading all
+payments.
+•Copies all lock box files to the backup directory.
+•Copies the file to the error directory and logs a process exception.
+This <PaymentProcessing.testProcessPaymentsXSL> request was designed to help debug configuring the XSL files
+used to map the lock box file format to the XML request format used.
+The request returns the XML output for each batch and payment record for a specified lock box file in the watch
+directory.
+Configuring the Lockbox
+To configure the lockbox interface:
+1.Open the Edit Configuration utility.
+2.In the Virtual Directory list, click the Express virtual directory.
+3.Click the Master Catalog tab.
+4.Browse to the BillingInterfaces section.
+5.Set the urlandrootdir attributes to the location of the BillingInterfaces.xml file.
+Typically the location is C:\Program Files\Duck Creek Technologies\Shared\.
+6.Click Refresh .
+7.Click the Billing Interfaces tab.
+8.Configure the lock box interface by adding or editing the appropriate lock box elements in the following table.
+Attribute Type Required Description
+name String Yes Specifies the name of the lock
+box instance.
+path String Yes Specifies the watch directory for
+the lock box instance.
+currencyCulture String No Specifies the currencyCulture for
+the lock box instance.
+75 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+batchStartPosition Int Yes Specifies the start position of the
+batch number in the lock box file
+mapping.
+batchLength Int Yes Specifies the length of the batch
+number in the lock box file
+mapping.
+xsl/path String Yes Specifies the directory for the
+XSL files.
+The default path is
+C:\Program Files\Duck
+Creek
+Technologies\transform\
+backup/path String Yes Specifies the backup directory for
+the lock box files.
+error/path String Yes Specifies the error directory for
+the lock box files.
+processCreateBatchRqXsl String Yes Specifies the name of the XSL
+file to map
+<BillingCashManagement.processAddBatchPaymentRq>
+requestString Yes Specifies the name of the XSL
+file to map
+processScheduleBatchRqXsl String No Specifies the name of the XSL
+file to map
+processBatchRqXsl String Yes Specifies the name of the XSL
+file to map
+XSL Configuration
+One of two methods can be used to customize the file mappings and the Billing Cash Management requests:
+•Billing Cash Management API calls using the XSL extensions (for example, <xsl:value-of
+select="LockBoxBatch:getBatchNumber()"/>)
+•Constant values or hard coded XSL text values (for example, <EntryUserId>Admin</EntryUserId>)
+The following table contains the XSL extensions that can be used with API calls.
+Name Type Use Description
+76 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+<xsl:stylesheet
+xmlns:LockBoxBatch="urn:LockBoxBatch"/>String Required Specifies the XSL extension prefix
+required to map to the LockBoxBatch
+object.
+<xsl:value-of
+select="LockBoxBatch:getBatchNumber()"/>String Required Gets the string for the batch number
+specified in the lock box configuration
+by LockBox/@currencyCulture &
+LockBox/@batchLength
+<xsl:value-of
+select="LockBoxBatch:getProcessedDate()"/>String Required Gets the current processing date
+<xsl:value-of
+select="LockBoxBatch:getBatchId()"/>Integer Required Maps the BatchId created in
+createBatchRq to subsequent requests
+(batchRq)
+<xsl:stylesheet
+xmlns:LockBoxRecord="urn:LockBoxRecord"/>Integer Required XSL extension prefix required to map to
+the LockBoxRecord object
+<xsl:value-of
+select="LockBoxRecord:getSubString(#,#)"/>String Required Gets a substring from the lock box
+directory format given the string start
+position and length. (Extends .NET
+substring() function)
+<xsl:value-of
+select="LockBoxRecord:getSubStringDecimal
+(#,#)"/>Decimal Optional Returns the same value as
+getSubString() but formats the return
+value as a decimal
+<xsl:value-of
+select="LockBoxRecord:getBatchId()"/>String Required Maps the BatchId created in
+createBatchRq to LockBoxRecords
+<xsl:value-of
+select="LockBoxRecord:getProcessedDate()"/>String Required Gets the current processing date
+Example 1: XSL for the <BillingCashManagement.processCreateBatchRq> request
+<xsl:template match="@* | node()">
+<BillingCashManagement.processCreateBatchRq>
+<PaymentBatchRecord>
+<BatchNumber>
+<xsl:value-of select="LockBoxBatch:getBatchNumber()"/>
+</BatchNumber>
+<ControlTotal>0</ControlTotal>
+<Description>
+LockBox Transmission <xsl:value-of select="LockBoxBatch:getProcessedDate()"/>
+</Description>
+<EntryUserId>Admin</EntryUserId>
+<CurrencyCulture>en-US</CurrencyCulture>
+</PaymentBatchRecord>
+77 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+</BillingCashManagement.processCreateBatchRq>
+</xsl:template>
+Example 2: XSL for the <BillingCashManagement.processAddBatchPaymentRq> Request
+<xsl:template match="@* | node()">
+<BillingCashManagement.processAddBatchPaymentRq>
+<PaymentBatchEntryRecord>
+<PaymentBatchEntryId></PaymentBatchEntryId>
+<AccountId>
+</AccountId>
+<AccountReference>
+<xsl:value-of select="LockBoxRecord:getSubString(2,14)"/>
+</AccountReference>
+<PolicyReference>
+<xsl:value-of select="LockBoxRecord:getSubString(16,14)"/>
+</PolicyReference>
+<PaymentBatchId>
+<xsl:value-of select="LockBoxRecord:getBatchId()"/>
+</PaymentBatchId>
+<PaymentReference>
+</PaymentReference>
+<Amount>
+<xsl:value-of select="LockBoxRecord:getSubStringDecimal(36,10)"/>
+</Amount>
+<EntryUserId>Admin</EntryUserId>
+<CurrencyCulture>en-US</CurrencyCulture>
+<PaymentMethodCode>CK</PaymentMethodCode>
+<AllocationClassCode>P</AllocationClassCode>
+<PostMarkDate></PostMarkDate>
+<EntryDate>
+<xsl:value-of select="LockBoxRecord:getProcessedDate()"/>
+</EntryDate>
+<PaymentBatchEntryLockingTS>
+</PaymentBatchEntryLockingTS>
+<ProcessedTimestamp>
+</ProcessedTimestamp>
+<PaymentMethodDetail>
+</PaymentMethodDetail>
+<UnidentifiedRecord>
+</UnidentifiedRecord>
+</PaymentBatchEntryRecord>
+</BillingCashManagement.processAddBatchPaymentRq>
+</xsl:template>
+Example 3: XSL for the <BillingCashManagement.processBatchRq> Request
+<xsl:template match="@* | node()">
+<BillingCashManagement.processBatchRq>
+<PaymentBatchRecord>
+<PaymentBatch>
+<PaymentBatchId>
+<xsl:value-of select="LockBoxBatch:getBatchId()"/>
+</PaymentBatchId>
+78 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+</PaymentBatch>
+</PaymentBatchRecord>
+</BillingCashManagement.processBatchRq>
+</xsl:template>
+Using the Watch Directory Service
+The Duck Creek Watch Directory Service is designed to execute requests for inbound lock box files. The file hits the
+watch directory and then executes the corresponding lock box request with the lock box name.
+To configure the DCT Watch Directory Service:
+1.Browse to the DuckCreek.Utility.WatchDirectorySvc.exe.config located in the existing Shared directory at
+C:\Program Files\Duck Creek Technologies\ Shared\Bin.
+2.Configure the Watch Directory Service using the required configuration settings contained in the following table.
+Name Type Description
+ServerConfig String Specifies the location of the Server.config file.
+RequestUrl String Specifies the URL of the EXAMPLE Server ®to execute requests.
+DuckCreekUserID String Specifies the User Id to execute the requests.
+DuckCreekPassword String Specifies the User password.
+Following is an example of the configuration xml:
+<configuration>
+<appSettings>
+<add key="InterfacesConfigPath" value="C:\Program Files\Duck Creek Technologies
+\Shared\BillingInterfaces.xml"/>
+</appSettings>
+</configuration>
+Configuring the Watch Directory
+After the lockbox configuration is complete, each watch directory must be created.
+To configure a watch directory:
+1.Open the Edit Configuration utility.
+2.Click the BillingInterfaces tab.
+3.Browse to FileWatcherService .
+4.In the path attribute, specify the path to the lock box watch directory.
+This is the same as the LockBoxInterface/LockBoxFiles/LockBox/@path value.
+5.In the action attribute, enter the < PaymentProcessing.processPaymentsRq> request command with the
+lockboxFile attribute set to the name of the lock box instance.
+79 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+This is the same as the LockBoxInterface/LockBoxFiles/LockBox/@name.
+Following is an example of the Watch Directory Service xml:
+<Interfaces>
+<FileWatcherService>
+<WatchDirectory path="C:\Platform\Lockboxfiles\Bank1"
+action="PaymentProcessing.processPaymentsRq lockboxFile=&quot;Bank1&quot; " />
+<WatchDirectory path="C:\Platform\Lockboxfiles\*"
+action="PaymentProcessing.processPaymentsRq lockboxFile=&quot;""&quot; " />
+</FileWatcherService>
+</Interfaces>
+Working with the Disbursement Service Interface
+The Disbursement Service Interface integrates Duck Creek Billing™ with external check writing/disbursement systems.
+It is accessible to users from the Billing Administration tab in Duck Creek Billing™, but must be configured for use.
+Working with the Disbursement Interface Service
+The Disbursement Interface Service uses the EXAMPLE Scheduled Request Queue to run a server request and
+process pending disbursements that have been requested in Duck Creek Billing™. The server request processes a
+pre-defined quantity of disbursements, and then reschedules itself for processing future disbursements based on the
+configuration settings specified.
+The Disbursement Service Interface does the following:
+80 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+•EXAMPLE Server ®writes disbursements to the database when a user disburses money from EXAMPLE
+Express ®
+•Requests are scheduled
+•The Scheduled Activity Service calls the <BillingDisbursementInterface.processDisbursmentInterfaceRq> request
+for disbursements
+•Schedules the first request through use of the Disbursement Interface on the Billing Administration tab in Duck
+Creek Billing™
+•Reads pending disbursements and processes them using a customized request
+•Calls the <BillingDisbursement.completeRq> request manually to complete disbursements
+•The Disbursement Interface Service writes the disbursement detail records in the appropriate format (xml, flat file
+or web service), and changes the disbursement status to SB (submitted).
+The Disbursement Interface Service implementation is configurable by overriding the DCT
+<BillingDisbursementInterface.processDisbursementInterfaceRq> request with a custom request.
+Configuring the Disbursement Interface Service
+Configuration settings must be specified to control the function of the disbursement interface.
+By default, the Disbursement Interface will return an error unless the disbursement interface has been written.
+The following table lists the configuration settings for the disbursement interface, and these settings are typically
+overridden by a custom request.
+Configuration
+SettingDefinition Default
+StartTime Specifies the earliest time in the day the interface will check for
+disbursements.08:00:00
+An empty node means no
+restriction.
+InterfaceWindow Specifies the number of minutes from the start time that
+requests can be processed. Using duration rather than a
+specific time makes it easier to process through midnight.600
+Frequency Specifies in seconds how often the interface will check for
+unprocessed pending disbursements.600
+RecordsPerCycle Specifies the maximum number of disbursements that will be
+processed per cycle.100
+An empty node or value of 0
+means unlimited
+disbursements processed per
+cycle.
+For information about using the disbursement interface, see Working in the Billing Administration Area in the Duck
+Creek Billing™ User Guide . For more information about customization and integration, contact your Account Manager.
+81 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Configuring the Disbursement Authorization Privilege
+The Disbursement Authorization feature allows Duck Creek Billing™ users to create a threshold for automatic
+disbursements, and requires a specific privilege to enable a user to authorize a disbursement.
+Disbursements can be processed automatically without any authorization. Out-of-the-box, the account authorization
+limit default is 0, which prevents automatic disbursements.
+For more information about using this feature, see Working with Disbursement Authorization in the Duck
+Creek Billing™ User Guide .
+Specifying the Automatic Disbursement Value
+To allow automatic disbursements up to a specific amount:
+•Change the value of the AutomaticDisbursementAuthorizationLimit field in the Disbursement_AccountPlan group
+in the Billing_Policy_Account_Common_1_0_0_0 ManuScript to the appropriate value.
+Automatic disbursements will now be processed up to and including this amount with no authorization required.
+Working with the Disbursement Authorization Privilege
+To create the required privilege for authorizing disbursements and associate that privilege with a user:
+Only one disbursement authorization limit may be designated for a user.
+1.Open EXAMPLE UserAdmin™, and in the left navigation panel, click Add a role .
+2.Enter a role name and description in the appropriate text boxes.
+3.Click Select General System and then select the appropriate privileges.
+4.Click Select Policy Administration and then select the appropriate privileges.
+5.Click Billing Administration and then select the appropriate privileges.
+6.Click Author Administration , select the appropriate privileges, and the click Finish .
+7.Click the View Entities Associated with this role button
+ for the newly created role.
+8.Click Add more entities to role .
+9.Enter a name in the Enter Name text box and then click Search .
+10. Select the appropriate entities, and then click Add roles to these entities .
+11. Click Manage role/privilege associations in the left navigation panel.
+12. In the Role list click the appropriate role, and then in the Privilege list, click BIL_AuthorizeDisbursement .
+13. Enter DisbursementAuthorizationLimit in the Name text box, enter the appropriate value in the Value text box,
+and then click Insert .
+14. To create a new user or associate this role with an existing user, see Working with Users .
+The Disbursements Pending Authorization report is accessible from the Billing Dashboard, and lists all pending
+disbursements awaiting authorization. This report can be used to verify and authorize disbursements for Duck Creek
+Billing™ accounts.
+The Disbursement Activity report, also accessible from the Billing Dashboard, lists all the processed disbursements.
+82 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+The Disbursement Interface Service processes all Duck Creek Billing™ disbursements whether they originate from
+within Duck Creek Billing™ or are paid using a system that is external to Duck Creek Billing™. External disbursements
+are subject to the same authorization rules as internal disbursements.
+A disbursement cannot be requested and authorized by the same Duck Creek Billing™ user.
+Configuring the Disbursement Interface Service
+Configuration settings must be specified to control the function of the disbursement interface.
+By default, the Disbursement Interface will return an error unless the disbursement interface has been written.
+The following table lists the configuration settings for the disbursement interface, and these settings are typically
+overridden by a custom request.
+Configuration
+SettingDefinition Default
+StartTime Specifies the earliest time in the day the interface will check for
+disbursements.08:00:00
+An empty node means no
+restriction.
+InterfaceWindow Specifies the number of minutes from the start time that
+requests can be processed. Using duration rather than a
+specific time makes it easier to process through midnight.600
+Frequency Specifies in seconds how often the interface will check for
+unprocessed pending disbursements.600
+RecordsPerCycle Specifies the maximum number of disbursements that will be
+processed per cycle.100
+An empty node or value of 0
+means unlimited
+disbursements processed per
+cycle.
+For information about using the disbursement interface, see Working in the Billing Administration Area in the Duck
+Creek Billing™ User Guide . For more information about customization and integration, contact your Account Manager.
+The Disbursement Interface
+The following structure details the data available from the standard Duck Creek Billing Disbursement Interface.
+<BillingDisbursement.getDisbursementDetailRs status="success">
+<Disbursement>
+<AccountId>1</AccountId>
+<DisbursementId>1</DisbursementId>
+<DisbursementRequestDate>2009-10-06</DisbursementRequestDate>
+<DisbursalDate xsi:nil="true"/>
+83 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+<DisbursementUserFullName>Express Admin</DisbursementUserFullName>
+<DisbursementMethodCode>CK</DisbursementMethodCode>
+<DisbursementMethod>Check</DisbursementMethod>
+<DisbursementStatusCode>R</DisbursementStatusCode>
+<DisbursementStatus>Requested</DisbursementStatus>
+<ReversalReason xsi:nil="true"/>
+<ReversalDate xsi:nil="true"/>
+<RebillReason xsi:nil="true"/>
+<RebillDate xsi:nil="true"/>
+<CurrencyCulture>en-US</CurrencyCulture>
+<Amount>1.9400</Amount>
+<ProcessingOrgUnitCode>1</ProcessingOrgUnitCode>
+<DisbursementLockingTS>AAAAAAAhDQ8=</DisbursementLockingTS>
+<AssociatedParties>
+<Party PartyId="10" Role="Payee"/>
+</AssociatedParties>
+<Parties>
+<PartyRecord>
+<PartyRecordPartyId>10</PartyRecordPartyId>
+<Party>
+<PartyName>Name</PartyName>
+<PartyFirstName>Test</PartyFirstName>
+<PartyMiddleName xsi:nil="true"/>
+<PartyNamePrefix xsi:nil="true"/>
+<PartyNameSuffix xsi:nil="true"/>
+<PartyGender xsi:nil="true"/>
+<PartyBirthDate xsi:nil="true"/>
+<PartyCorrespondenceName>Test Name</PartyCorrespondenceName>
+<PartyTypeCode>P</PartyTypeCode>
+</Party>
+<PartyPhones>
+<PartyPhone>
+<PhoneNumber>8031234567</PhoneNumber>
+<PhoneExtension xsi:nil="true"/>
+<PhoneCountryCode xsi:nil="true"/>
+<PhoneFormatCode xsi:nil="true"/>
+</PartyPhone>
+</PartyPhones>
+<PartyEmails>
+<PartyEmail>
+<EmailAddress> testname@xyz.com </EmailAddress>
+</PartyEmail>
+</PartyEmails>
+<Locations>
+84 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+<Location>
+<LocationAddressLine1>Address 1</LocationAddressLine1>
+<LocationAddressLine2 xsi:nil="true"/>
+<LocationCounty xsi:nil="true"/>
+<LocationCity>City</LocationCity>
+<LocationStateCode>MO</LocationStateCode>
+<LocationPostalCode>77777</LocationPostalCode>
+<LocationCountryCode xsi:nil="true"/>
+</Location>
+</Locations>
+</PartyRecord>
+</Parties>
+</Disbursement>
+</BillingDisbursement.getDisbursementDetailRs>
+Working with Reports and Letters
+Working with Reports
+The following are requirements for working with reports in Duck Creek Billing™:
+•The out-of-the-box reports must be accessible in SQL Server Reporting Services (SSRS)
+•SSRS must be integrated with Duck Creek Billing™
+•A user must be assigned the appropriate privileges to view reports
+Verifying Report Accessibility
+Before integrating reports with Duck Creek Billing™, you must verify the out-of-the-box reports are deployed and
+accessible in SQL Services Reporting Services. Even after integration, reports will not work in Duck Creek Billing™ if
+they do not work in SQL Services Reporting Services prior to integration.
+To verify the reports are deployed and accessible:
+1.Navigate to the Reports Server .
+2.Open the base folder containing reports, and navigate to the folder containing the daily reports installed out-of-
+the-box with Duck Creek Billing™.
+Make note of the base folder name and the URL for the Reports Server. This information is needed to
+complete integration with Duck Creek Billing™.
+3.Open one of the reports and verify it works as expected.
+4.Close SQL Server Reporting Services.
+Integrating EXAMPLE Server ®and SQL Server Reporting Services
+Regardless of when the services are started, integration with EXAMPLE Server ®is required to use the reporting
+features in Duck Creek Billing™.
+85 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+To integrate SQL Server Reporting Services with EXAMPLE Server ®:
+1.Open the Edit Configuration utility.
+The default location for this utility is C:\Program Files\Duck Creek Technologies\Util\EditConfig.exe.
+2.In the Virtual directory list, click the EXAMPLE Server ®virtual directory.
+3.Click the Server.Config tab.
+4.Navigate to the Reporting section.
+5.Set the ReportServerInterfaceEnabled setting to True .
+6.Set the ReportServerUrl to the URL for the virtual directory for your report server's Web service. For example,
+http://<report server name>ReportServer .
+7.Set the value of the BaseFolder setting to the base folder containing the Duck Creek Billing™ reports.
+8.Click Save ,Bounce , and then click Close .
+9.Navigate to the ReportServerUrl specified in Step 6.
+10. Click the name of the base folder specified in Step 7.
+11. Click Data Sources , and then click Example Data .
+12. Click the Properties tab, and then click General in the left navigation panel.
+13. Select Windows Integrated Security .
+14. Click Apply , and then close the browser.
+Assigning Report Access Privileges
+A user must have the appropriate EXAMPLE UserAdmin™ privilges to view or access reports.
+A user can be granted access to view all available reports or access can be granted for specific reports.
+To ensure the required privileges are assigned:
+1.Navigate to EXAMPLE UserAdmin™ .
+2.Select the appropriate user, and then view the privileges associated with the user.
+3.Select the appropriate report privileges, and then click Save andClose .
+The reports available on the Billing Dashboard are determined by the assigned privileges of the logged in user.
+Creating a Custom Report
+You can create custom Duck Creek Billing™reports using Microsoft SQL Server Business Intelligence Development
+Studio.
+Consider the following guidelines for any custom report created for use with Duck Creek Billing™:
+•Reports must include the following parameters:
+◦ProcessingDate , to specify the run date the report
+◦CultureCode , to specify the culture
+•Although reports may be viewed primarily online, custom reports should be tested in different formats in SQL
+Server Reporting Services to ensure they render as expected.
+86 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+•The queries the reports are based on should be highly optimized for performance because many reports run
+against the transactional database.
+To create a custom report:
+1.Create the report using Microsoft SQL Server Business Intelligence Development Studio.
+2.Save the report.
+Duck Creek Technologies, Inc. recommends saving the report to the base folder where the out-of-the-
+box Duck Creek Billing™reports are located.
+3.Verify that the custom report can be opened using SQL Server Reporting Services.
+4.Run SQL Server Management Studio and connect to the Example Data database.
+5.Execute the following SQL statement:
+INSERT INTO DC_PLT_Reports (Name, FullPath)
+VALUES ('Display Name', 'Report path');
+6.Change the Display Name to the report name you wish to display on the Billing Dashboard.
+7.To change the Report Path to the path of the report within SQL Server Reporting Services, perform one of the
+following actions:
+◦If the report is located in the base folder, specify a relative path (for example, ./Billing/Monthly/Aged
+Receivables ).
+◦If the report is not located in the base folder but is still on the ReportServerUrl, specify the report path,
+starting at the root folder level (for example, /Example Server/Billing/Monthly/Aged
+Receivables ).
+◦If the report is located on a server other than ReportServerUrl, specify the full URL (for example,
+http://localhost/ReportServer/?/EXAMPLE Server/Billing/Monthly/Aged
+Receivables ).
+The custom report appears in the Reports list on the Billing Dashboard.
+Out-of-the-Box Reports
+The following table lists the out-of-the-box reports installed with Duck Creek Billing™.
+Report Name Description
+Aged
+ReceivablesLists all aged receivables.
+Cash in
+SuspenseLists all cash in suspense.
+Daily Cash
+JournalThe daily cash journal.
+87 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Unidentified
+CashLists unidentified cash entered into the system.
+Commission
+ActivityDisplays all authorized commissions that occurred on a particular day. This report may be used to
+interface with a customer's check-writing system that actually pays commissions to agents. The
+interface may be configured at implementation time. The system will extract information from the
+Bill Item and Commission Authorization tables during the daily batch process. It then produces a
+daily report of all commissions that have been authorized that day.
+Disbursement
+ActivityIncludes all disbursement activity for Duck Creek Billing™ accounts.
+Disbursements
+Pending
+AuthorizationLists all pending disbursements awaiting disbursement authorization.
+General
+LedgerDisplays the amounts on the general ledger to date. This is not a daily scheduled report but is
+produced when requested.
+Payment
+Batch ActivityDetailed account of payment batch activity.
+Transaction
+BalancingQueries all of the database tables to ensure everything is in balance.
+Working with Manual Letter Generation
+Duck Creek Billing™ functionality provides a framework for customization to allow the user configure a menu link in the
+left navigation panel of a specified page to open a particular ManuScript page. Examples of this functionality that are
+available out of the box include the EFT Maintenance page and the Commission Plans page.
+Using this framework, after customization, users can manually trigger the generation of specified letters from Duck
+Creek Billing™ for viewing and printing. The letters are generated by clicking the Account Workflow link in the left
+navigation panel from the Account Home page for the appropriate account . Letters can also be generated by clicking
+thePolicy Workflow link on the left navigation panel of the Policy Term Summary page for a specific policy associated
+with that account.
+The link names may be customized by the user during implementation.
+When a letter is printed, that activity appears on the Recent Account Activity list for the account, and includes a
+paperclip link
+ that allows the user to open the letter for viewing.
+To print a letter using Manual Letter Generation:
+1.From the left navigation panel on the Account Home page, click Account Workflow .
+88 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+You can also:
+From the left navigation panel on the Policy Summary page, click Policy Workflow .
+A list of available letters appears.
+2.Click the appropriate item in the list.
+3.Click Print to print the selected letter, or click Cancel to return to the Account Home page.
+For information about this feature contact your Duck Creek Technologies Account Representative.
+Working with Automatic Letter Generation
+When implemented, the Automatic Letter Generation feature allows users to integrate a third-party forms provider to
+manage letters that are generated automatically.
+Out of the box, generated letters (in the form of XML) are placed in the following directory: C:\Program Files\Duck
+Creek Technologies\External Documents.
+The appropriate letter is generated automatically when one of the following events occur:
+•Billing_PostPaymentReversalEvent
+•Billing_EFT_RepresentEvent
+•Billing_ReversePaymentEvent
+•Billing_EFT_RejectEvent
+•Billing_PostDisbursementEvent
+•Billing_EFT_ChangeEvent
+Each event triggers a specific ManuScript which automatically generates the appropriate letter for the event. The form
+data is generated as XML, and can be sent to a third-party forms provider. The conditions that trigger the events can
+be configured or specified to provide additional flexibility. For example, the system could automatically create an EFT
+payment rejection letter the same day the payment is reversed in the billing system. This provides the benefit of prompt
+notification to the payor regarding the status of their payment, and provides information regarding the action required to
+prevent cancellation of the associated policy or policies.
+Other letters that could be automatically generated include notification of:
+•Representment of an EFT payment following an initial rejection.
+•EFT or other payment type rejection.
+•Disbursement from the account.
+•Changes to the EFT information held for the account.
+When a letter is automatically generated for an account, the Recent Account Activity list is updated to include the
+form name, the name of the third-party provider, a date and time stamp, a success or failure message, and link that
+opens the letter for viewing.
+The DCT_DocumentInterface section in the Server.config file contains the parameters used by the component map
+and must be customized for each carrier's needs.
+89 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Enabling the Automated Letter Generation Feature
+To use this feature following ManuScript customization:
+1.Navigate to the Edit Configuration Utility (located at Global Root Directory\Util\EditConfig.exe), select the
+appropriate Virtual Directory, and open the Server.config file.
+2.In the ExternalDocumentsFolderRootPath section, locate the UseExternalDocumentInterface section and change
+the default value of False toTrue .
+3.Click Save , and then click Bounce.
+The Automated Letter Generation feature is now enabled.
+For more information, contact your Account Manager.
+Troubleshooting
+Troubleshooting Scheduled Activities
+Duck Creek Billing™ uses two services for scheduled activities processing:
+•The Duck Creek Scheduled Requests EXAMPLE Billing Components 0
+•The DuckCreek_Async_Request_Queue_ EXAMPLE AsynceQueue 0
+If scheduled activities do not work as expected, verify that the Duck Creek Scheduled Requests EXAMPLE
+Billing Components 0 and the DuckCreek_Async_Request_Queue_ EXAMPLE AsynceQueue 0 services are
+running.
+To verify the services are running:
+1.From the Start menu, click Control Panel .
+2.Click Administrative Tools .
+3.Click Services .
+4.Locate and click Duck Creek Scheduled Requests EXAMPLE Billing Components O .
+5.Do one of the following:
+◦Click Start .
+◦Click Restart .
+6.Locate and click DuckCreek_Async_Request_Queue_EXAMPLE AsyncQueue 0 .
+7.Repeat Step 5 .
+Following are the steps involved in scheduled activities processing:
+1.The Duck Creek Scheduled Requests EXAMPLE Billing Components 0 service queries for outstanding scheduled
+activities in the DC_BIL_ScheduledActivities table.
+2.Any outstanding activities are set to process, and a request to process the appropriate activities is sent to the
+server.
+3.The request is processed by the server, and asynchronous activity is scheduled if required.
+4.Any scheduled asynchronous activity is sent to the Semaphore table.
+90 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+5.The DuckCreek_Async_Request_Queue_EXAMPLE AsyncQueue 0 reads the Semaphore table and executes
+the request.
+6.After the request is completed, the scheduled activity item is set to a status of C (Complete) in the
+DC_BIL_ScheduledActivities table.
+If the scheduled activities fail to process, try the following troubleshooting tips.
+Checking Configuration Files
+Verify that the settings in the DuckCreek.Utility.ScheduledRequestSvc.exe.config and the
+AsyncQueueService.exe.config file are correct. In the Duck Creek root directory (for example, C:\Program Files\Duck
+Creek Technologies\) navigate to the appropriate file.
+The following table lists the configuration settings in the DuckCreek.Utility.ScheduledRequestSvc.exe.config file. To
+modify these settings, open the Edit Config Utility located by default at C:\Program Files\Duck Creek
+Technologies\Util\EditConfig.exe or another text editor program.
+Key Default Value Definition
+ServerConfig C:\Program Files\Duck Creek
+Technologies\Shared\Server.ConfigThe location of the Server.config file.
+RequestIntervalInMilliseconds 60000 Specifies the time in milliseconds between
+checking for requests.
+DuckCreekUserID admin The user ID.
+DuckCreekPassword admin The user password.
+RequestUrl http://localhost:8080/DuckCreek/
+dctserver.aspxURL of the EXAMPLE Server ®responsible
+for working with the specified web site to
+ensure the correct application pool is
+recycled.
+AppLogSource DCTSchedRequestSvc The source description used by the service
+when logging an error to the Event Log.
+AppLogName DCTSchedRequestLog The name of the Event Log to log errors for
+this service.
+RequestFile ScheduledRequests.xml The XML containing the request.
+RequestToCheckForSuccess ScheduledActivity.queueListRq The name of the request to check for
+successful activity scheduling.
+RequestTimeoutInMilliseconds 120000 The amount of time in milliseconds the
+service waits for EXAMPLE Server ®to
+respond when sending a request to the
+URL.
+The following table lists the configuration settings in the AsyncQueueService.exe.config file. To modify these settings,
+open the Edit Config Utility that is located by default at C:\Program Files\Duck Creek Technologies\Util\EditConfig.exe.
+91 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+Key Default Value Description
+ServerConfig C:\Program Files\Duck Creek
+Technologies\shared\Server.ConfigThe location of the Server.config file.
+RequestIntervalInMilliseconds 60000 Specifies the time in milliseconds
+between checking for requests.
+Working with the Windows Events Log
+If the Windows Events log is full, it may cause the DuckCreek_Async_Request_Queue_EXAMPLE AsyncQueue 0
+service to terminate without processing requests.
+To troubleshoot the Windows Events log:
+1.Click Start , and then click Control Panel .
+2.Click Performance and Maintenance , and then click Administrative Tools .
+3.Double-click Computer Management , and then expand the Event Viewer .
+4.Click Application to view the logged events.
+5.Review the event logs for errors.
+6.Right-click Application to open the log file or save it to a different file.
+7.Right-click Application to clear the appropriate events log.
+All scheduled activities for a given day must be executed before subsequent activities will be processed.
+The following table lists the activity status codes associated with items in the scheduled activity table.
+Activity Status Code State Description
+C Complete The scheduled activity is successfully executed.
+F Failed The scheduled activity failed to execute.
+H Hold Execution of the scheduled activity is on hold.
+I Processing The scheduled activity is in the process of executing.
+P Pending Execution of the scheduled activity is pending.
+X Expired The scheduled activity has expired without executing.
+Working with Asynchronous Activity
+To verify asynchronous activity:
+The table should be empty unless there are outstanding requests.
+92 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
+
+•Check the Semaphore table to see if it contains any outstanding requests.
+Checking for Failed Scheduled Activities
+The DC_BIL_ProcessException table stores exception information about failed requests. This table can be queried for
+any processing exceptions that may have occurred when a scheduled activity has failed. Any scheduled activites that
+have failed to process are logged in this table.
+Re-launching a Scheduled Activity
+If the cause of a scheduled activity processing failure is not known after following the troubleshooting tips, re-launching
+the system may result in successful execution of the scheduled activity.
+To re-launch a scheduled activity:
+The scheduled activity server will attempt to re-execute the request.
+1.In the DC_BIL_ScheduledActivities table locate any activity with a code of I (Processing).
+2.Change the code to P(Pending).
+3.If this is not successful, set the code to Pwhile monitoring with TraceMonitor to help locate the error. For more
+information about using TraceMonitor, see EXAMPLE TraceMonitor inUtilities .
+Troubleshooting the MSMQ Billing Listener
+The DuckCreek_MSMQBillingListener_EXAMPLE Billing Components 0 service logs the requests and responses for
+errors to the BillingListenerErrors file.
+The requests and responses for errors logged by the MSMQ Billing Listener are automatically placed in the
+BillingListenerErrors file, by default, located in the Duck Creek root directory (for example, C:\Program
+Files\Duck Creek Technologies). This file is dynamically generated when errors are logged.
+The request and response files for Duck Creek Billing™ errors share the same unique name. For example, if a request
+is identified as 8193.Rq.xml, the corresponding response would be identified as 8193.Rs.xml.
+For more information see Viewing the Error Queue in the Duck Creek Billing™ User Guide .
+Troubleshooting with the Configuration Inspector Utility
+The Configuration Inspector utility, located in the EXAMPLE Utility Center, can be used to inspect Duck Creek Billing™
+and identify issues with ManuScripts or configuration settings. For more information, see Working with the
+Configuration Inspector in the EXAMPLE Utility Center .
+93 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

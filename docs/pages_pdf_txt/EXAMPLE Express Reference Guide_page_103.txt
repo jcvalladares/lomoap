@@ -1,0 +1,9 @@
+The name of each custom container can be specified as the value of the Custom Container parameter in
+EXAMPLE Author ®.
+The following table displays the seven custom containers stored in the customContainers.css file.
+Custom Container Image
+GrayPanel
+LightPanel
+BluePanel
+BlackBorder
+103 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

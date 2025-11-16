@@ -1,0 +1,19 @@
+MinimalLightGray
+MinimalWhite
+PlainWhite
+ccTemplate.psd
+The ccTemplate.psd file (located in the C:\Program Files\Duck Creek
+Technologies\Express\Skins\AvantGarde2\Photoshop Source directory) is a pre-divided template that
+can be used to create a custom container.
+To use the ccTemplate.psd file:
+1.In Adobe Photoshop, replace the sample container with your own design.
+2.On the Filemenu, click Save for Web and Devices .
+The Save dialog box appears.
+3.Navigate to the C:\Program Files\Duck Creek
+Technologies\Express\Skins\AvantGarde2\images\cc\ directory, create a new folder, and then click
+Save .
+By default, the sections are saved as cc-t.png, cc-tl.png, cc-tr.png, etc.
+custom-cc.css
+The custom-cc.css file is where all custom containers are defined. To use this file:
+1.Create a custom theme. For information about creating a custom theme, see Themes .
+104 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

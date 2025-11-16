@@ -1,0 +1,33 @@
+batchStartPosition Int Yes Specifies the start position of the
+batch number in the lock box file
+mapping.
+batchLength Int Yes Specifies the length of the batch
+number in the lock box file
+mapping.
+xsl/path String Yes Specifies the directory for the
+XSL files.
+The default path is
+C:\Program Files\Duck
+Creek
+Technologies\transform\
+backup/path String Yes Specifies the backup directory for
+the lock box files.
+error/path String Yes Specifies the error directory for
+the lock box files.
+processCreateBatchRqXsl String Yes Specifies the name of the XSL
+file to map
+<BillingCashManagement.processAddBatchPaymentRq>
+requestString Yes Specifies the name of the XSL
+file to map
+processScheduleBatchRqXsl String No Specifies the name of the XSL
+file to map
+processBatchRqXsl String Yes Specifies the name of the XSL
+file to map
+XSL Configuration
+One of two methods can be used to customize the file mappings and the Billing Cash Management requests:
+•Billing Cash Management API calls using the XSL extensions (for example, <xsl:value-of
+select="LockBoxBatch:getBatchNumber()"/>)
+•Constant values or hard coded XSL text values (for example, <EntryUserId>Admin</EntryUserId>)
+The following table contains the XSL extensions that can be used with API calls.
+Name Type Use Description
+76 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

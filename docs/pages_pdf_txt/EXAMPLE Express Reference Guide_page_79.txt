@@ -1,0 +1,38 @@
+•You must override a template that uses match instead of a name for PV2 pages. For example, <xsl:template
+match="action"> instead of <xsl:template name="questionInput">.
+•The element you are matching may be present in the debugContent.xml for Version 1 or Version 2 pages. For
+example, "action" occurs in both page versions, but "section" does not.
+•A corresponding match template for Version 1 pages (usually found in the dctShared.xsl or interview.xsl files) is
+not present.
+Overriding JavaScript Files
+To override DCTCore .js files:
+1.In the Global Root Directory \Express\Skins directory, open the custom.js file.
+2.Copy all functions you wish to override to the custom.js file.
+Follow the best practices below when overriding DCTCore .js files:
+•Some functions from DCTCore .js files and DCTBase.js files may be overridden. When overriding .js files in the
+DCTCore/DCTBase directory (depending upon your version of EXAMPLE Platform ®), Duck Creek Technologies,
+Inc. recommends copying and overriding an entire function, rather than only a part of it. For additional information,
+seeOverriding JavaScript Files in the EXAMPLE Express® Reference Guide .
+•To help distinguish between custom and base skin code, create a comment each time you change the skins.
+◦For more information about overriding DCTBase files, see Overriding DCTBase Files in the EXAMPLE
+Express ®Reference Guide .
+◦For more information about overriding DCTCore files, see Overriding DCTCore Files in the EXAMPLE
+Express ®Reference Guide .
+Customizing XSL
+When customizing XSL files, follow the guidelines below.
+Interview Pages
+When customizing interview (ManuScript-driven) pages:
+•Customize Version 2 interview pages by modifying the InterviewNew.xsl file.For additional information, see
+Customizing XSL inEXAMPLE Express® Reference Guide .
+•If working with Version 1 pages (not recommended), modify the interview.xsl file.
+System Pages
+When customizing or creating system pages, follow the sequence of template calls below for building a page.
+1.Include a template that matches the root of the content for the page.
+2.Within this template, start the process of building the container by calling the buildContainer template in the
+dctContainer.xsl file (located in the Global Root Directory \Express\Skins\DCTCore\xsl directory).
+3.Set up the following templates. (These templates will be called by the process begun in Step 2.)
+◦processPageHeader — Controls the header content for the page.
+◦buildLeftPanelContent — Controls the content of the left panel area of the container.
+◦buildPageContent — Controls the main page content.
+4.(Optional) In the buildLeftPanelConten t template, call any of the following component templates:
+79 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

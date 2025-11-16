@@ -1,0 +1,29 @@
+ServerConfig C:\Program Files\Duck Creek Technologies
+4.x\Express\App_Data\OnDemand.Config
+ServerDomain N/A
+SMTPServer null
+SMTPServerPort 25
+SSOErrorMsg You do not have access to Example Express. Please contact your administrator
+or login.
+TaskDetailManuScriptID Carrier_TaskDetailEditing
+TimeOut 360000
+UploadDir C:\Program Files\Duck Creek Technologies 4.0\Express\Upload
+UserDetailsManuScriptID N/A
+XmlNamespaceUri null
+XSLTDir Skins\AvantGarde2
+AddPartyManuScriptID
+Reserved for future use.
+AgencyDetailsManuScriptID
+Obsolete for EXAMPLE Platform ®4.0. This functionality is now available for use in EXAMPLE UserAdmin™. See the
+AgencyDetailsManuScriptID configuration setting in the UserAdmin\Web.config file.
+AllowMultiLanguageScreens
+A setting of False will set the language on the first visit of the Web site based on the Example\Web.config setting
+OverrideLanguageForScreen . If the OverrideLaguageForScreen setting is not defined, the language will be set by
+the browser.
+A setting of True will allow multiple languages to be used. The browser will check for new versions of objects with
+every page.
+Any language used must have a resource file associated with it. If a resource file is not associated with a
+language setting, the language will be set to the default resource file.
+Using one language in a browser will improve performance because objects are cached in the system and
+will not require frequent refreshes.
+179 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

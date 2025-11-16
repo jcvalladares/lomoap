@@ -1,0 +1,35 @@
+Policy
+Administration
+DashboardOut-of-the-box Lila-based skins do not support a role-based dashboard. Instead, Lila-based skins
+include a Home page that displays the five most recently accessed quotes and policies.
+Task system Out-of-the-box Lila-based skins do not support the task system available with AvantGarde-based
+skins.
+Notification
+system
+(message
+system)Out-of-the-box Lila-based skins use a message and diary system instead of a notification system.
+Out of the box, Lila-based skins provide the ability to send, receive, and reply to messages, and to
+create messages (diary items) that can be attached to clients or policies.
+Search
+functionalityOut-of-the-box Lila-based skins do not incorporate the Quick Search feature available with
+AvantGarde-based skins. In addition, Lila-based skins use an Open page and a Client page to
+view and search for policies and clients (respectively), rather than a single search page.
+For more information, see Customizing Skins .
+Directory Structure
+The Avant Garde skin includes an entirely new directory structure, designed to make managing your skin files easier
+than ever.
+The following table illustrates the directory structure of the Avant Garde skin.
+Directory Description
+DCTCore
+scripts JavaScript to be maintained and updated by Duck Creek Technologies, Inc. This directory contains
+core functionality that should not be customized.
+xsl XSL to be maintained and updated by Duck Creek Technologies, Inc. This directory contains core
+functionality that should not be customized.
+Customizable Directory
+css Customizable .css files. Files preceded by x_indicate override files to be used for CSS styles that
+apply to a single page only.
+images Customizable image files.
+scripts Customizable JavaScript files.
+Source Obsolete as of EXAMPLE Platform ®4.0.
+xsl Customizable .xsl files.
+44 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

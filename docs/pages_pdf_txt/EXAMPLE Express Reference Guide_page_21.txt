@@ -1,0 +1,30 @@
+Created Date task was created.
+Created By User who created the task. If the task was system-generated, the value will be System .
+Queue Queue to which the task is assigned.
+Assignee User (within the assigned queue) to which the task is assigned.
+Description Task details.
+Notes Any user-added notes for the task.
+Task History History of the task, including any changes to assignee, queue, or status.
+Attachments Documents attached to the task.
+Actions available for tasks include:
+•Pick up – Available only if a user has permission to view and work with tasks, as determined by privileges in
+EXAMPLE UserAdmin™. Available only when a task is not already assigned. Picking up a task assigns the task
+to the user who picks it up.
+•Complete – Available only if a user has permission to view and work with tasks, as determined by privileges in
+EXAMPLE UserAdmin™. Available only when a task is assigned to the user. Marking a task as complete sets the
+state of the task to Completed .
+•Decline – Available only if a user has permission to decline the task, as determined by privileges in EXAMPLE
+UserAdmin™. Declining a task sets the state of the task to Closed , with a reason of Declined .
+•Edit – All users can add notes. A user to whom a task is assigned can also edit the due date. A user who created
+a task can edit the title, category, and description.
+•Send to Queue – Available only when a task is assigned to the user. Sending a task back to the queue moves
+the task back into an unassigned state within its queue.
+•Reassign – Available only if a user has permission to reassign, as determined by privileges in EXAMPLE
+UserAdmin™. This action allows the user to select a new queue and (if desired) a new assignee.
+•Delete the task – Available only if a user has permission to delete the task, as determined by privileges in
+EXAMPLE UserAdmin™. This action marks the task for deletion. The task is not deleted until the associated
+policy is purged from the database.
+In addition, users who have attachment privileges and have created or been assigned a task can add and delete
+attachments from that task.
+The Task Details page appears as follows:
+21 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,30 @@
+id Required Unique ID of the module. Out of the box, options are:
+•newQuote
+•mruQuote
+•notifications
+•taskQueue
+Custom modules can be created by adding templates to the dctCustomModules.xsl
+file. For instructions on adding custom modules, see Adding or Customizing Modules .
+title Optional Text that will display as the module title in EXAMPLE Express ®.
+content Optional Name of the content item to call. Out of the box, options are:
+•new
+•mru
+•messages
+•tasks
+tabPanel Optional Displays modules in a tab panel. For example:
+Valid values include:
+•0– Do not display the module in a tab panel.
+•1– Display the module in a tab panel.
+simple Optional Renders a module without a frame or background. Valid values include:
+•0– Do not use a frame or background with the module.
+•1– Use a frame or background with the module.
+collapsed Optional Renders a module collapsed when the page is loaded. Valid values include:
+•0– Do not collapse the module when the page is loaded.
+•1– Collapse the module when the page is loaded.
+iconCIs Optional Specifies the class to use to load the icon that will be displayed on a tab panel. Out of the
+box, the EXAMPLE Platform ®includes some panel icon classes, defined at the bottom of
+the style.css file.
+<attribute> (child of <module>)
+name Required Name of the form variable to be applied to the module. Varies per module. (See table
+below for more detail.)
+155 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

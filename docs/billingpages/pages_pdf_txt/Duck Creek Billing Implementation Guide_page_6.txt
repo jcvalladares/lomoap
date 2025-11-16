@@ -1,0 +1,32 @@
+◦Billing Server Components (Requires previous instance of EXAMPLE Server ®.)
+◦Billing OnDemand Components (Requires previous instance of EXAMPLE Express ®.)
+10. Click Next .
+The Instance Name screen appears.
+11. Enter a unique instance name for the Duck Creek Billing™ install, or accept the default.
+12. Click Next .
+The system begins installation and opens the configuration portion of the Duck Creek Billing™ installation.
+The Configure Database Credential screen appears.
+Before beginning the configuration portion of an installation, the system checks to see if Microsoft
+Message Queuing is installed. If it is not installed, an alert appears asking if you wish to install MSMQ
+Messaging now. Clicking Yesaborts the configuration but does not install MSMQ Messaging. You must
+use Add/Remove Programs to install it manually, and then run the configuration portion again. If you
+click No, the installation process will continue normally, but Duck Creek Billing™ will not work properly
+until MSMQ Messaging is installed.
+Configuring Database Credentials
+When the Configure Database Credentials screen appears, all databases available for installation are displayed in the
+Configure window.
+To configure database setup and information:
+1.On the Configure Database Credentials screen, select the appropriate database from the list.
+2.Select the credentials to use for database installation and maintenance.
+Options are:
+◦Windows authentication — Use the current user's credentials.
+◦SQL Server authentication — Use the Login ID andPassword entered.
+To select SQL Server authentication , your SQL Server Installation must be configured to allow
+SQL Server authentication.
+3.Click Next .
+The Reporting Services screen appears.
+Configuring Reporting Services
+To use the reporting features of Duck Creek Billing™, Reporting Services must be turned on and configured.
+If you select the Skip reporting services configuration check box, reporting features will not be available in
+Duck Creek Billing™.
+6 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

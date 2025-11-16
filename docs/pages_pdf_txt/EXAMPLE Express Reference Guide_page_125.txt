@@ -1,0 +1,6 @@
+LightPanel
+BluePanel
+BlackBorder
+MinimalLightGray
+MinimalWhite
+125 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

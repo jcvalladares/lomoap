@@ -1,0 +1,4 @@
+## Berkshire Hathaway Three
+
+### Overview
+Three is a comprehensive insurance company founded in 1965 by Warren Buffett. It offers a wide range of policies for various industries, including cleaning & janitorial, hospitality, residential construction, restaurants & taverns, technology services, trade contractors, resources, articles & whitepapers, FAQs, certificates, claims, claims process, file a worker's compensation claim, file a property, auto, or liability claim, 1-800-507-4495 agents, get quote, three by berkshire hathaway get the latest updates from three subscribe, contact a small business advisor at 1-800-507-4495 monday - fri. 8 am - 9 pm est, monday through friday, 8 a m to 9 p m e s t © 2019-2025 berkshire hathaway direct insurance company, dba three. all rights reserved. cookie policy privacy policy sitemap pressroom careers get a quote three on facebook three on instagram three on x three on linkedin

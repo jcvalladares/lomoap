@@ -1,0 +1,31 @@
+EFT Draw
+Offset Days10
+Target Draw
+Days16
+Policy
+Effective
+DateJanuary
+16
+Draw
+Transmission
+Offset Days2
+Policy Issue/
+Entry DateJanuary
+30
+EFT Out of
+Cycle Draw
+Due to Late
+EntrySelected
+EFT Out of
+Cycle Next
+Draw Offset
+Days7The policy is late entered because sufficient time (10 days) does not exist for the EFT
+draw between the Policy Issue/Entry Date and the Policy Effective Date. Because the
+value of the EFT Out of Cycle Next Draw Offset Days is 7, there is sufficient time for the
+EFT draw before the next scheduled draw on February 16, so an out of cycle draw is
+inserted with an EFT draw date of February 9.
+The following scenario demonstrates the results of installment scheduling that uses the Late Entered Strategy feature
+with a value of 7specified for the EFT Out of Cycle Next Draw Offset Days parameter and a later Policy Issue/Entry
+Date than the previous table.
+Item Value Result
+50 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

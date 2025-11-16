@@ -1,0 +1,34 @@
+Key Value Returned
+T('TEST') // Test
+DCT.Strings.TEST Test
+T('MISSING KEY') // MISSING KEY
+DCT.Strings.MISSING KEY Undefined
+To use these strings:
+•Use the DCT.Strings namespace or the T() function as desired in any JavaScript in the skin.
+The Avant Garde 2 skins are configured to make these string variables available on any page.
+Localizing Custom JavaScript
+The following example illustrates how to successfully localize your custom JavaScript.
+Example:
+Assume that a customer-specific business requirement requires that an alert check box which states, "Hello world!",
+displays in the appropriate language each time the user presses TAB to navigate to the next field in EXAMPLE
+Express ®.
+To implement this change:
+1.In the Skins\AvantGarde2\xsl\localization\ directory, modify the DefaultDictionary.resources file by adding a new
+BLUR_EVENT_FIRED string with a value of Hello World . For more information about editing resource files, see
+Editing Resource Files .
+2.(optional) Register the string in a second resource file for another language by creating a new
+DefaultDictionary.es.resources file (copied from the DefaultDictionary.resources file) and then editing the
+BLUR_EVENT_FIRED string with a value of Hola mundo!
+3.Configure EXAMPLE Express ®skins to use the newly-created string in the globalization dictionary by adding the
+following line of code to the customOnBlur function:
+alert(T('BLUR_EVENT_FIRED'));
+To test the change above:
+1.In EXAMPLE Express ®, load a quote, leave a required field blank, and attempt to navigate to the next field by
+pressing TAB.
+2.Verify that a message saying, "Hello world!"" or "Hola mundo!" (depeinding on the current browser culture)
+appears.
+When no resource file is present, the language defaults to the invariant culture.
+Testing EXAMPLE Express ®with Another Language
+To test EXAMPLE Express ®with another language:
+1.In the Skins\AvantGarde2\xsl\localization\ directory, copy the DefaultDictionary.fr.resources file .
+133 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

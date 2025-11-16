@@ -1,0 +1,33 @@
+XML DescriptionDatabase Column
+(length)
+<session> [read-only]
+<data id="d0"> [read-only]
+<!--policy data goes
+here-->Associated policy data. [read-only]
+<messages
+messageID=""Primary tag for notification details. This tag is used by the
+<OnlineData.saveMessageRq> request to determine which
+notification to update.MessageID (int 4)
+quoteID="" ID of any quotes associated with the notification. Can be null. [read-only]
+clientID=""> ID of any clients associated with the notification. Can be null.
+The out-of-the-box notifications model does not use this field.[read-only]
+<message
+messageID=""Notification details. [read-only] (same as
+<messages> above)
+locked="" Indicator of whether the notification should be locked. Locked (bool)
+securityLevel=""> Security level that can access the notification. SecurityLevel (int 4)
+<agency /> Agency to which the sender belongs. [read-only]
+<sender /> Username of the sender. Sender (50)
+<fullname /> Full name of the sender. [read-only]
+<securityLevel /> Security level of the sender. [read-only]
+<email /> E-mail address of the sender. [read-only]
+<subject /> Subject line of the notification. Subject (255)
+<sentOn /> Date the notification was sent. SentOn (datetime)
+<remindOn /> Remind date. The out-of-the-box notifications model does not
+use this field.RemindOn (datetime)
+<action /> Type of notification. Action (50)
+<notifyEmail /> E-mail address to be notified upon status change or inactivity.
+The out-of-the-box notifications model does not use this field.NotifyEmail (50)
+<notifyDate /> Date to auto-notify if there is no status change by this date.
+The out-of-the-box notifications model does not use this field.NotifyDate (datetime)
+167 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

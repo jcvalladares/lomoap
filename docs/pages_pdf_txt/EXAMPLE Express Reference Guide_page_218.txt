@@ -1,0 +1,29 @@
+Theme name
+Defines the theme to be used with EXAMPLE Express ®pages. By default, the the corresponding DuckCreek theme
+stylesheet will be automatically loaded from the C:\Program Files\Duck Creek
+Technologies\Express\Skins\AvantGarde2\themes\DuckCreek\css\ directory.
+Default Valid
+DuckCreek Any valid theme.
+TogglePanelButton showButton
+Defines whether a button displays at the top of the page to open or close all collapsible sections on the page.
+Default Valid
+0 •0– Hides the button that collapses all collapsible sections on the page.
+•1– Displays the button that collapses all collapsible sections on the page.
+Accenture Duck Creek Claims Integration
+The Accenture Duck Creek EXAMPLE Platform ®offers the ability to attach a policy to a claim when the Accenture
+Claim Components is installed.
+When the first notice of loss (FNOL) is reported, a loss representative can access, verify, and attach policies to the
+Accenture Claim Components by accessing Accenture Duck Creek Policy Administration. Policies with claims can be
+filtered to be automatically sent for underwriter review. When an open claim exists on a policy, the pricing page in
+EXAMPLE Express ®will display a notification that the policy is in underwriter review.
+Through the renewal process, underwriters can receive notices on policies with claims. Claim details can be reviewed
+through the Loss History page of Policy Administration. The following details about the claim are displayed to the
+underwriter at the claim level on the Loss History page:
+•Line of business
+•Cause of loss
+•Description of loss
+•Date of loss
+•Claim status
+•Total loss incurred
+•Loss location
+218 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,34 @@
+•footer — Contains the page footer
+Customizing JavaScript
+When customizing JavaScript for EXAMPLE Express ®, it is important to understand the JavaScript frameworks and
+processing functions used in EXAMPLE Express ®skins.
+JavaScript Frameworks in EXAMPLE Express ®
+The following open source JavaScript frameworks are used in EXAMPLE Express ®skins:
+•Ext JS (http://extjs.com/ ) — This framework is used for the following controls:
+◦Grid controls
+◦Calendar control
+◦Accordion control
+◦Progress bar control
+◦Tool tips
+◦Alert messages, confirmation messages, Yes/No save messages, and modal pop-ups
+•Scriptaculous (http://script.aculo.us/ ) — This framework is used for section toggling.
+•Prototype.js (http://www.prototypejs.org/ ) — This framework is used for AJAX processing and HTML snippet
+manipulation (dynamically inserting or removing HTML).
+Customizing ManuScript Processing
+To customize system behavior during ManuScript processing, modify the following variables and functions in the
+custom.js file in the Global Root Directory \Express\Skins\ CustomSkin \scripts directory.
+Customize the system behavior that occurs during ManuScript processing using the custom.js file in the
+Global Root Directory \Express\Skins\ Custom Skin \scripts directory.
+Item Description
+Variables
+_loadingWaitTime Time to elapse (in milliseconds) before displaying a "loading" message when
+performing system actions.
+Functions
+customOnload() Executed when pages are displayed or when any AJAX process causes the container
+(the area containing the header, footer, and page tabs) to be redrawn.
+skipRequiredChecking() Executed before the doCheck event is called. This function must return a value of true
+to skip required checking.
+customOnSubmit() Executed before the page or AJAX process is called.
+customFieldFormat() Executed before the onBlur and prevent functions. This function allows for field format
+changes before submitting a page.
+82 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

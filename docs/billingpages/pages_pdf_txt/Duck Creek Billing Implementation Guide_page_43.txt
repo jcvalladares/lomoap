@@ -1,0 +1,26 @@
+EFTTransmissionThrottleBuilder
+This setting specifies use of the EFTTransmissionThrottleBuilder.
+Default Valid
+1 •1— True
+•2— False
+ExternalDocumentsFolderRootPath
+Specifies the location of external documents.????
+Default Valid
+C:\Program Files\Duck Creek Technologies\ExternalDocuments Any valid folder location.
+InvoicePath
+Default path for the location of invoices created by Duck Creek Billing™.
+Default Valid
+C:\Program Files\Duck Creek Technologies\Invoice Any valid location.
+OrphanedCommissionAgentReference
+Specifies the value for handling agent commission statements for agents no longer associatied with an agency.????
+Default Valid
+###_DCT_ORPHAN_AGENT_### ??
+PaymentSiteURL
+This setting specifies the URL for the 3rd party payment processor.
+Default Valid
+Null Any valid URL.
+PaymentSiteUserId
+This setting specifies the user id for the 3rd party payment processor.
+Default Valid
+Null Any valid user id.
+43 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

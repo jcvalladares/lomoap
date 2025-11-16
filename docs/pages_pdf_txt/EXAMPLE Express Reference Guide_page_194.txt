@@ -1,0 +1,36 @@
+rollbackHistory Rolls back the transaction records of a policy to the specified history image,
+removing any subsequent transactions and making the specified history
+image the current image. This action then loads the (new) current policy
+image into the active session and invokes the interview process of the
+associated ManuScript.
+runRulesAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit
+attribute set to 2. Loads the Policy Forms page.
+runRulesPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request with the forceInit attribute set to 2.
+Loads the Policy Forms page.
+save Saves the active quote or policy to the database using the
+<OnlineData.storePolicyRq> request.
+saveMessage Updates the specified message in the database from the HTML form fields
+on the New Message page (message.xsl). Out-of-the-box pages for
+EXAMPLE Express ®4.0 are not designed to use this action.
+saveNotification Updates the specified notification in the database from the HTML form fields
+on the New Message page (messageNew.xsl).
+setActiveAgency Updates the active agency for the logged in user in the EXAMPLE Express ®
+<state> node.
+setLanguage Sets the language property in the session and the EXAMPLE Express ®
+<state> node to the specified language.
+setPrintManuScript Sets the ManuScriptID to use when the Create Policy Documents link is
+clicked. This action should be used when a different ManuScript than the
+loaded interview ManuScript (state.ManuScriptID) is needed.
+setTaskComplete Sets the status of a task to Complete .
+setTaskDeclined Sets the status of a task to Closed , with a reason of Declined .
+setTaskDeleted Marks a task for delete. (Sets the status of the task to Deleted .)
+setTaskStatus Sets the status of a task.
+signup Creates an agency signup request and sends an e-mail to the recipient
+specified by the MailTo configuration setting in the Express\Web.config file.
+submit Saves the active quote or policy to the database using the
+<OnlineData.storeTransactionRq> request.
+switchUser Moves the active quote or policy to the specified agency and logs in as a
+different user to load the active policy.
+194 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,4 @@
+### Title: Five Ways AI is Increasing Efficiency in Claims Administration
+
+#### Summary:
+AI is transforming claims administration by providing more efficient, actionable insights, and streamlined processes. By leveraging AI's ability to summarize large volumes of data, generate tailored communications, and deliver deeper analysis, claims teams can reduce workload, enhance decision-making, and improve overall efficiency. However, successful implementation requires a commitment to responsible AI adoption, including clear governance, secure data, and transparent reporting. Explore Origami Risk's TRUST framework for AI adoption and learn how to implement AI responsibly using their new guide.

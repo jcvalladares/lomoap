@@ -1,0 +1,44 @@
+Commission
+SchemeDetermines how commission is paid on a
+policy.•POW1 (Paid on Written) —
+The entire commission
+amount is authorized when
+the receivable is posted.
+•POP1 (Paid on Paid) —
+The commission is
+authorized as payments
+are applied to the
+receivable.
+•POP2 (Paid on First Paid)
+—The entire commission
+amount is paid when the
+first payment is applied to
+the receivable.
+•POE1 (Paid on Effective)
+— Commission is
+authorized for each policy
+transaction at issuance.
+Payment is not required.
+•POP4 (Paid on First Paid,
+plus latter of effective or
+activity date) — Receiving
+one good payment on the
+policy term releases the
+commission for the policy
+term. The latter of the
+policy transaction effective
+date or the activity date
+(process date) of the
+payment is used as the
+commission authorization
+date.POW1
+Follow Up
+P C N Allow Determines whether or not the policy
+term should ever be evaluated for
+pending cancellation.•Selected — Yes
+•Cleared — NoSelected
+P C N Trig
+DaysDetermines the number of days after the
+due date that a policy term is evaluated
+for pending cancellation.Any positive integer. 5
+36 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

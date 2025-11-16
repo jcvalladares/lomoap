@@ -1,0 +1,28 @@
+•Check the Semaphore table to see if it contains any outstanding requests.
+Checking for Failed Scheduled Activities
+The DC_BIL_ProcessException table stores exception information about failed requests. This table can be queried for
+any processing exceptions that may have occurred when a scheduled activity has failed. Any scheduled activites that
+have failed to process are logged in this table.
+Re-launching a Scheduled Activity
+If the cause of a scheduled activity processing failure is not known after following the troubleshooting tips, re-launching
+the system may result in successful execution of the scheduled activity.
+To re-launch a scheduled activity:
+The scheduled activity server will attempt to re-execute the request.
+1.In the DC_BIL_ScheduledActivities table locate any activity with a code of I (Processing).
+2.Change the code to P(Pending).
+3.If this is not successful, set the code to Pwhile monitoring with TraceMonitor to help locate the error. For more
+information about using TraceMonitor, see EXAMPLE TraceMonitor inUtilities .
+Troubleshooting the MSMQ Billing Listener
+The DuckCreek_MSMQBillingListener_EXAMPLE Billing Components 0 service logs the requests and responses for
+errors to the BillingListenerErrors file.
+The requests and responses for errors logged by the MSMQ Billing Listener are automatically placed in the
+BillingListenerErrors file, by default, located in the Duck Creek root directory (for example, C:\Program
+Files\Duck Creek Technologies). This file is dynamically generated when errors are logged.
+The request and response files for Duck Creek Billing™ errors share the same unique name. For example, if a request
+is identified as 8193.Rq.xml, the corresponding response would be identified as 8193.Rs.xml.
+For more information see Viewing the Error Queue in the Duck Creek Billing™ User Guide .
+Troubleshooting with the Configuration Inspector Utility
+The Configuration Inspector utility, located in the EXAMPLE Utility Center, can be used to inspect Duck Creek Billing™
+and identify issues with ManuScripts or configuration settings. For more information, see Working with the
+Configuration Inspector in the EXAMPLE Utility Center .
+93 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

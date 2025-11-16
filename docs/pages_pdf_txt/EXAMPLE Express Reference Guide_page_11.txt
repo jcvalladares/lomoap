@@ -1,0 +1,6 @@
+When sending a notification, users can specify any one of the following four possible recipients:
+•All users – All users will receive the notification.
+•Selected users – The user can select from a list of all users who belong to the entities at which the logged-in
+user is a member and has the ViewUserList privilege.
+•Selected entities – The user can select from a list of all entities where he or she has the ViewEntity privilege.
+11 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

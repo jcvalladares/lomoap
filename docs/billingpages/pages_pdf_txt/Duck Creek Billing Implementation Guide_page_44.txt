@@ -1,0 +1,27 @@
+PaymentSitePassword
+This setting specifies the password for the 3rd party payment processor.
+Default Valid
+Null Any valid password.
+PaymentSiteReturnURL
+This setting specifies the return URL for the 3rd party payment processor.
+Default Valid
+Null Any valid URL.
+PoliciesQueue
+This setting specifies the name of the Message Queue where integration messages between policy and Duck Creek
+Billing are placed and processed.
+Default Valid
+.\PRIVATE$\BillingIntegration Any valid message queue.
+ProcessElectronicPayment
+This setting determines if electronic payment processing is allowed in Agency Billing.
+Default Valid
+False •False — Not allowed.
+•True — Allowed.
+QueueProcessingUserId
+This setting is reserved for future use.
+ScheduledActivityDelay
+Specifies the delay for scheduled activities.
+Default Valid
+600000 (milliseconds) Any valid time entry.
+TempWorkingPath
+Specifies the location of the temporary working path.
+44 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

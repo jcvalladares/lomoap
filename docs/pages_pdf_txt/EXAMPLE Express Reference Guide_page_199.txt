@@ -1,0 +1,30 @@
+_consumerKey (Required if _consumerPartialKey and _consumerQuoteNumber are not specified) Full
+consumer key for the desired quote.
+_consumerPartialKey (Required if _consumerKey is not specified) Partial consumer key for the desired quote.
+_consumerQuoteNumber (Required if _consumerKey is not specified) Quote number of the desired quote.
+EXAMPLE Server ®Request: Consumer.loginRq, Consumer.listConsumerQuotesAndPoliciesRq,
+Consumer.loadQuoteRq (if only one consumer quote exists and no in-force policies exist in the results of the
+Consumer.listConsumerQuotesAndPoliciesRq)
+consumerNewQuote
+Creates a new quote in the DC_POL_ConsumerQuote table. This action can be executed from a system page only.
+HTML Form Fields:
+Field Description
+_manuscriptLOB Combined string of the ManuScriptID and LOB code for the new quote. The syntax of this string
+isManuScriptID |LOBCode . The two elements are separated by the pipe (|) character.
+EXAMPLE Server ®Request: Consumer.newQuoteRq
+consumerReLogin
+From within EXAMPLE Express ®, logs a consumer user out of the proxy account and logs them in to an existing full
+user account. This action can be executed from a ManuScript or a system page. This action will execute the
+ExitInterviewField if this setting is defined in the Express\Web.config file.
+Duck Creek Technologies, Inc. recommends executing the <TransACT.checkInRq> request to check the
+policy in from the proxyaccount user and check it out under the newly created account.
+Parameters/HTML Form Fields:
+Field Description
+_username Username under which to log in.
+_password Password for the account under which to log in.
+_target A value of interview returns the user to the interview process. A blank value or any other value
+returns the user to the dashboard page.
+_canSave Boolean value that determines whether the policy is editable. A value of 1indicates that the policy is
+editable.
+_policyID ID of the policy to returnt the user to. Applicable if the _target value is interview .
+199 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

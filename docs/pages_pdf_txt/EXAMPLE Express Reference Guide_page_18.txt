@@ -1,0 +1,23 @@
+•Due Date – Click the button to the right of the selection box to display the date selection box. Set both dates to
+the same to search on a specific date, or select the starting and end date on or between which to search. Click
+Save to set the selected dates.
+•Assigned To – Click the button to the right of the selection box to display a list of people whose tasks the user
+can search. Select all of the people to search by selecting one or more checkboxes. Up to ten assignees display
+on each page of the Assigned To selection box. Page through the box to select additional people not shown on
+page one.
+•Status – Click the button to the right of the selection box to display a list of statuses to search. Choose the
+statuses to search by selecting one or more checkboxes.
+•Category – Click the button to the right of the selection box to display a list of categories (e.g., Billing or General)
+to search. Choose the statuses to search by selecting one or more checkboxes.
+•Created – Click the button to the right of the selection box to display the date selection box. Set both dates to the
+same value to search on a specific date, or select the starting and end date for a search range. Click Save to set
+the selected dates.
+•Reference # – Click the Reference Number list to choose Reference Number or Title/Desc (description) as a
+search parameter. Enter a policy, quote, bill, or account number, title, or description in the text box to the right of
+the dropdown.
+Reassigning Multiple Selections
+To reassign multiple selections:
+1.In the Task Management Area, select the check boxes to the left of the listed tasks.
+2.(Optional) To reassign multiple tasks from more than one page at the same time, select checkboxes on the
+current page, navigate to a new page, and select additional checkboxes.
+18 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,40 @@
+Avant Garde 2
+EXAMPLE Platform ®4.2.2 includes the Avant Garde 2 skin, built on the AvantGarde 1 foundation. Complete with a
+new directory structure, new ExtJs controls, and more, Avant Garde 2 delivers extreme ease of use and a world-class
+look and feel.
+The Avant Garde 2 skin includes the following significant ehnhancements:
+•New directory structure – A new core set of skin files has been created to allow for easy upgrades. For more
+information about the new directory structure, see Directory Structure .
+•Updated ExtJs framework – Avant Garde 2 is built on the latest version of the ExtJs framework. It provides
+increased performance, new controls, enhanced stability, and a complete set of entry fields, combo boxes, radio
+buttons, and check boxes that has been converted to the new ExtJs framework to take full advantage of new
+features such as validation edits, visual cues, and auto-filtering. EXAMPLE Platform ®users can now implement
+these new controls in their system pages. For more information, see The ExtJs Framework .
+•Minified JavaScript files – The EXAMPLE Platform ®now includes compressed, minified versions of the
+JavaScript files to assist with performance during runtime. For more information about minified JavaScript files,
+seeMinified JavaScript Files .
+•One-to-one override structure – The new one-to-one file structure allows for much easier customizations. By
+maintaining base and customized versions with the same file name in different directories, users can easily
+compare them each time an EXAMPLE Platform ®upgrade is performed and then make any necessary changes
+to the customizable files. For more information, see Customizing EXAMPLE Express ®Skins .
+At no time is it necessary to modify any files in the Base directory to change the way a skin function or
+layout is processed.
+•Refactored JavaScript – All JavaScript has been reorganized based on function in the
+DCTBase\Core\Devscripts directories, and all unused JavaScript has been removed. All EXAMPLE Platform ®
+core JavaScript code is stored in the DCTBase\Core\Devscripts directories.
+•Updated user input fields – User input fields have now been converted to ExtJs controls to allow user to take
+advantage of visual cues such as required field indicators, validation edits, auto-filtering combo boxes, and
+quicktips for dropdown lists containing content that exceeds the width of the dropdown list.
+•New EXAMPLE Express ®themes – Avant Garde 2 introduces a new theme system designed to assist in
+applying CSS style customizations. For more information, see Themes .
+•Updates to EXAMPLE TransACT ®pages – A new Version 2 pages version of each EXAMPLE TransACT ®
+page has been created for use with the Avant Garde 2 skin. When using the Avant Garde 2 skin, the ManuScript
+catalog should reference the TransACTMaster2_1_0_PagesV2 ManuScript.
+Directory Structure
+The Avant Garde 2 skin includes an entirely new directory structure, designed to make managing your skin files easier
+than ever. Much like the DCTCore directory and the Avant Garde skin, Avant Garde 2 is associated with a new
+DCTBase directory. This directory contains all base JavaScript and XSL files required to make EXAMPLE Express ®
+skins function correctly.
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTBase or AvantGarde2
+directories. All files in these directories are overwritten during upgrades. Instead, to override these files, you
+45 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

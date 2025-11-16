@@ -1,0 +1,35 @@
+To integrate SQL Server Reporting Services with EXAMPLE Server ®:
+1.Open the Edit Configuration utility.
+The default location for this utility is C:\Program Files\Duck Creek Technologies\Util\EditConfig.exe.
+2.In the Virtual directory list, click the EXAMPLE Server ®virtual directory.
+3.Click the Server.Config tab.
+4.Navigate to the Reporting section.
+5.Set the ReportServerInterfaceEnabled setting to True .
+6.Set the ReportServerUrl to the URL for the virtual directory for your report server's Web service. For example,
+http://<report server name>ReportServer .
+7.Set the value of the BaseFolder setting to the base folder containing the Duck Creek Billing™ reports.
+8.Click Save ,Bounce , and then click Close .
+9.Navigate to the ReportServerUrl specified in Step 6.
+10. Click the name of the base folder specified in Step 7.
+11. Click Data Sources , and then click Example Data .
+12. Click the Properties tab, and then click General in the left navigation panel.
+13. Select Windows Integrated Security .
+14. Click Apply , and then close the browser.
+Assigning Report Access Privileges
+A user must have the appropriate EXAMPLE UserAdmin™ privilges to view or access reports.
+A user can be granted access to view all available reports or access can be granted for specific reports.
+To ensure the required privileges are assigned:
+1.Navigate to EXAMPLE UserAdmin™ .
+2.Select the appropriate user, and then view the privileges associated with the user.
+3.Select the appropriate report privileges, and then click Save andClose .
+The reports available on the Billing Dashboard are determined by the assigned privileges of the logged in user.
+Creating a Custom Report
+You can create custom Duck Creek Billing™reports using Microsoft SQL Server Business Intelligence Development
+Studio.
+Consider the following guidelines for any custom report created for use with Duck Creek Billing™:
+•Reports must include the following parameters:
+◦ProcessingDate , to specify the run date the report
+◦CultureCode , to specify the culture
+•Although reports may be viewed primarily online, custom reports should be tested in different formats in SQL
+Server Reporting Services to ensure they render as expected.
+86 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,20 @@
+The following interfaces may require customization to support a specific Duck Creek Billing™ implementation.
+•Policy to Billing
+◦Account, Policy Term, and Party Setup
+◦Receivable Posting
+•Billing to Policy
+◦Pending Cancel
+◦Rescind Pending Cancellation
+◦Payment on Canceled Policy
+Out of the box, Duck Creek Billing™ is integrated with EXAMPLE Express ®. It is only necessary to hook up individual
+product lines to the Duck Creek Billing™ system.
+To integrate Duck Creek Billing™ with a Product Line:
+1.Using the EXAMPLE Author ®import tool, import the Billing Policy Integration Framework ManuScript (all fields)
+into the product line.
+These fields do not exist inside current Policy ManuScripts, including any Commercial Lines Templates
+5.x.x.x and earlier releases. These fields can be added by importing the fields from the ManuScript
+Billing_PolicyIntegration_Framework_1_0_0_0.xml, which is included with the Duck Creek Billing™
+install specifically for this purpose.
+2.In the Policy Pages ManuScript, on the Submission page, create a Book button, using the express action
+billingStart:billingStart .
+18 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

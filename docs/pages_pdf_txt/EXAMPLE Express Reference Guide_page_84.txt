@@ -1,0 +1,49 @@
+New Quote •ManuScript — New
+Quote Selection
+ManuScript
+•System pages —
+new.xsl, x_new.css
+newBasic.xsl,
+x_newBasic.css,
+newExtended.xsl,
+x_newExtended.cssOut of the box, this page is driven by the New Quote Selection
+ManuScript. To customize this page, modify this ManuScript.
+If using the system screens instead, the out-of-the-box newBasic.xsl
+and newExtended.xsl files call new.xsl. If desired, these pages can
+be customized to contain unique content.
+Policy Details policy.xsl, x_policy.css N/A
+Policy
+Documentsprint.xsl, x_print.css N/A
+Policy Forms printjob.xsl, x_printjob.css N/A
+Edit Form editPrintJobNew.xsl,
+editPrintJob.xsl,
+x_editPrintJob.cssThe editPrintJobNew.xsl file is used for version 2 pages, and the
+editPrintJob.xsl file is used for version 1 pages.
+This page is ManuScript-driven and is accessed from the Policy
+Forms page.
+Notifications
+Notifications messages.xsl,
+x_messages.cssN/A
+Send a
+Notification•ManuScript —
+Message Detail
+ManuScript,
+MessageDetail.xsl
+•System pages —
+messageNew.xsl,
+x_messageNew.cssThis page can be driven by the Message Detail ManuScript. When
+driven by the Message Detail ManuScript, the system uses
+MessageDetail.xsl.
+Notification
+Details•ManuScript —
+Message Detail
+ManuScript,
+MessageDetail.xsl
+•System pages —
+message.xsl,
+x_message.cssThis page can be driven by the Message Detail ManuScript. When
+driven by the Message Detail ManuScript, the system uses
+MessageDetail.xsl.
+Tasks
+My Tasks taskInfo.xsl N/A
+84 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

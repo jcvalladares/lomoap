@@ -1,0 +1,39 @@
+The following are considered best practices with regard to overriding .xsl files:
+•When copying templates from DCTCore files to the custom skins directory, copy entire templates, not parts of
+them.
+◦To help distinguish between custom and base skin code, create a comment each time you change
+the skins.
+◦For more information about overriding DCTBase files, see Overriding DCTBase Files in the
+EXAMPLE Express ®Reference Guide .
+◦For more information about overriding DCTCore files, see Overriding DCTCore Files in the
+EXAMPLE Express ®Reference Guide .
+•Each overridden template should be placed in the correct .xsl file in the custom skins directory. For example:
+◦Home screen changes should be copied to the home.xsl file.
+◦Open screen changes should be copied to open.xsl.
+◦Page Version 1 interview screen changes should be copied to the interview.xsl file; Page Version 2
+interview screen changes should be copied to the interviewNew.xsl file.
+To make it easier for the necessary files to call the correct overrides, you can also maintain all overrides
+in a single template file called custom.xsl. Create a custom.xsl file by copying the
+dctCommonControls.xsl file into a new file and removing all templates and comments so that only the
+opening and closing tags for <xsl:stylesheet...> remain.
+•Often, Page Version 1 and Page Version 2 pages with the same name exist. Ensure that overridden templates
+specific to Page Version 2 are not used in Version 1 pages. Failure to check for this will result in broken pages.
+To prevent this from occurring, ensure that the custom.xsl file is called by the following files:
+◦dctCommonControls.xsl—Because no import statements exist in this file, the import statement for the
+custom.xsl file should be added at the top of the file, immediately after the <xsl:stylesheet> opening tag. The
+dctCommonControls.xsl file is called by most other .xsl files. Any files that call the dctCommonControls.xsl
+file do not need to call the custom.xsl file.
+◦documentation.xsl (for PV2 annotations)—The import statement for the custom.xsl file should be added
+after all pre-existing import statements.
+◦interview.xsl (for PV1)—This file should only call the custom.xsl file if dctCommonControls.xsl is not
+imported by this file.
+◦interviewNew.xsl (for PV2)—This file should only call the custom.xsl file if dctCommonControls.xsl is not
+imported by this file.
+As of the EXAMPLE Platform 4.0.0 release, the interview.xsl and interviewNew.xsl files now import
+the dctCommonControls.xsl file.
+•Re-order any existing import statements at the beginning of the following files so that the dctShared.xsl file is the
+last import statement:
+◦interview.xsl
+◦editPrintJob.xsl
+If the following are all true, you must place your overrides in the interviewNew.xsl file:
+78 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

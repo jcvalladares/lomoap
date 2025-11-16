@@ -1,0 +1,33 @@
+•In the Express\Web.config file, change the value of the DefaultCulture attribute for the appSettings configuration
+setting to the desired language. For example:
+<add key="DefaultCulture" value="en-US"/>.
+Resource Files
+With regard to the EXAMPLE Platform ®, lookup tables refer to resource files to determine the appropriate text for a
+given culture or language. As of EXAMPLE Platform ®4.2.2, EXAMPLE Express ®skins now ship with an
+xsl\localization\ directory that contains resource files. These files serve as dictionaries of strings that are
+accessed by the XSLT through the templates in the dctLocalizedDictionary.xsl file. The .NET framework currently
+supports the following three culture types for use with localization:
+Culture Type File Name Purpose
+Invariant Culture DefaultDictionary.resources Default text for all strings
+Neutral Culture •DefaultDictionary.en.resources
+•DefaultDictionary.fr.resources•English overrides
+•French overrides
+Specific Culture •DefaultDictionary.en-US.resources
+•DefaultDictionary.fr-FR.resources•US specific English overrides
+•French specific overrides
+Editing Resource Files
+Using the EXAMPLE Platform ®, you can edit resource files to control the text to be used for a specific culture or
+language.
+Because .resx files are XML-based, .resources files should be converted to .resx files when editing them. To do this,
+use a tool such as ResGen.exe, which ships with the Microsoft Windows SDK.
+Resource files can also be easily converted between the two formats from a command line. For example:
+•Convert DefaultDictionary.resources to DefaultDictionary.resx (for editing)
+•ResGen.exe DefaultDictionary.resources DefaultDictionary.resx
+•Convert DefaultDictionary.resx back to DefaultDictionary.resources (for runtime use)
+•ResGen.exe DefaultDictionary.resx DefaultDictionary.resources
+Because it is overwritten during installation, It is recommended that you do not modify the
+DefaultDictionary.resources file (or any other file shipped in the AvantGarde or AvantGarde2
+directories). Instead, it is recommended that you create a custom skin and modify its
+DefaultDictionary.resources file.
+.resx files must be converted back to .resources format prior to being used in a runtime environment.
+137 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

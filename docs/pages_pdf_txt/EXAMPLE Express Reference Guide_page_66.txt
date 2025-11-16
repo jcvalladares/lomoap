@@ -1,0 +1,32 @@
+•If there was previously a skin selected by a request string override since the user last logged in, maintain that
+same skin override.
+•Any time the currently selected application layout has an “xsltDir” override specified, use that skin.
+This rule does not apply after switching from a layout with an override specified. If that is the case,
+proceed with the next rule.
+•The skin directory defined in the Express web.config’s “XSLTDir” setting will be used to select the current skin.
+Setting Up Portfolio
+For information on setting up the Portfolio feature, see Portfolio in the EXAMPLE Platform® .
+Setting Up Consumer Access
+For information on setting up the EXAMPLE Platform ®Consumer Access feature, see Consumer Access in the
+EXAMPLE Platform® .
+Setting Up Mass Tasks
+Mass Tasks functionality can be enabled by performing an upgrade of an existing installation or by installing a new
+instance of EXAMPLE Server ®, EXAMPLE Express ®, and Duck Creek Billing™.
+When Mass Task functionality is installed, the following are also added or modified:
+•Stored procedure: DC_SP_PLT_ProcessAssignWorkflowTasksFromXML
+•TaskDetails ManuScript.
+•Skins
+Additionally, the following are added:
+•Mass Reassign page (see Mass Reassign page )
+•TaskRecords group with these fields: EntityId, TaskId, TaskLockingTS, and UserId
+•ModifyTasks is assigned to those users who have access to ViewTasks (see EXAMPLE UserAdmin™ Privileges )
+•ViewTasksOnly is added
+For more information about Mass Tasks, see Tasks .
+Setting Up Pitney Bowes Address Verification
+About the Installation
+Pitney Bowes Address Verification requires the following be installed:
+•EXAMPLE Server ®
+•EXAMPLE Express ®
+•EXAMPLE TransACT ®
+The installation utility sets up the following for Pitney Bowes Address Verification:
+66 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

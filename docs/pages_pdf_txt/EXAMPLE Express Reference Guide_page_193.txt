@@ -1,0 +1,35 @@
+loadPortfolio Loads the specified Portfolio into the session and invokes the interview
+process of the associated ManuScript.
+login Logs the user into EXAMPLE Server ®and begins a new EXAMPLE
+Express ®session.
+messageDetail Updates the active notification in the database using the interview content
+of a Message Detail ManuScript.
+newMessage Displays a New Message page (message.xsl, or—if a Message Detail
+ManuScript is used—messageDetail.xsl). Performs no database action.
+Out-of-the-box pages for EXAMPLE Express ®4.0 are not designed to use
+this action.
+newNotification Displays a Send a Notification page (messageNew.xsl, or—if a Message
+Detail ManuScript is used—messageDetail.xsl). Performs no database
+action.
+newQuote Creates a new quote in the active session, invoking the interview process of
+the specified ManuScript. Performs no database action.
+newTask Adds a new task based on the task record located in the session at the path
+_TaskData/TaskRecord.
+previewAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit
+attribute set to 0or3. Loads the Policy Forms page.
+previewPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request with the forceInit attribute set to 0or
+3. Loads the Policy Forms page.
+readMessage Displays the Notification Details page (message.xsl, or—if a Message Detail
+ManuScript is used—messageDetail.xsl) for the specified notification.
+refreshAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit
+attribute set to 3. Loads the Policy Forms page and executes the
+<FormsEngine.setPrintJobItemsRq> request with an autoMark attribute set
+tomarkDefault .
+rescind Reverts the current policy image back to the state of the specified history
+image, retaining records of any transactions that are removed.
+resetManuScriptID Resets the associated ManuScript for the active quote.
+resetSession Clears all session information.
+193 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

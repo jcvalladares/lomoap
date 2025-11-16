@@ -1,0 +1,39 @@
+DC_BIL_CommissionAuthorization The AgencyRollupReference column contains the general
+agency for the policy at the time of the commission
+authorization. The AuthorizationDateTime column contains
+the exact date and time that the commission is authorized.
+DC_BIL_DirectBillCommissionStatementSummary This database table stores the summary information for each
+commission statement. This table provides the information
+needed by the interface to the customer's external check
+writing system. To support extensibility and interface flexibility,
+most of the data is contained within a single XML data
+column.
+DC_BIL_DirectBillCommissionStatementDetail This database table holds the detailed information for creating
+the statement. The information in this table is used to
+generate a commission statement for a given agency. Most of
+the data is contained within a single XML data column.
+Configuring Commissions
+The commission scheme for a policy is specified from the Policy Term Settings for the appropriate account. See
+Working with Commissions in the Duck Creek Billing™ User Guide .
+In addition to selecting the commission scheme option, ManuScript customization is required for commission
+configuration.
+To customize the appropriate ManuScript:
+1.Specify the values for the following two fields in the appropriate ManuScript:
+◦CommissionAmount
+◦CommissionPercent
+The following table describes the valid values for the two ManuScript fields required for commission generation.
+Field Name DefinitionTo Disable
+Commissions
+CommissionAmount Calculation that determines commission amount by multiplying the
+value in the PolicyOutput.PremiumChange field by the value in
+the PolicyOutput.CommissionPercent field.Set the field type
+toConstant with a
+value of 0.
+CommissionPercent The value multiplied by the PolicyOutput.PremiumChange to
+determine commission amount.Set the value to
+zero ( 0). Default is
+.10(10 percent).
+2.Save the ManuScript changes.
+Available Commissions Plans
+The following table lists the out-of-the-box commission payment strategies available in Duck Creek Billing™.
+56 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

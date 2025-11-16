@@ -1,0 +1,46 @@
+◦[MapFile].xml
+◦[MapFile]*.xml
+◦Custom[MapFile].xml
+Customizing PostActionMap Files
+To create a new Express Action, you must:
+1.Add the new class to a class library that performs the action. For more information about adding a new class, see
+Adding a New Class (below).
+2.(Optional) Modify your custom post action to force navigation to a specific content page.
+3.Publish the new post action to the PostActionMap.xml file. For a description of the attributes of each <action>
+entry, see <action> Attributes (below).
+4.(Optional) If the action requires a file download, configure or override the ResponseCode , and override the three
+download methods. For more information, see Configuring File Download (below).
+Adding a New Class
+The base class for any Express Action is based on the following class. Each derived action overrides the Process()
+method to build the XML content for the page.
+namespace DuckCreek.OnDemand
+{
+/// <summary>
+/// Each post-back action will have a PostAction-derived class for the activities
+/// </summary>
+public class PostAction
+public const string
+POSTACTIONRESPONSE_NORMAL = "",
+POSTACTIONRESPONSE_DOWNLOAD = "download";
+public PostAction()
+{
+}
+public virtual void Process(PageState state,
+System.Collections.Specialized.NameValueCollection requestForm)
+{
+}
+public virtual string ResponseCode(PostActionFactory factory, string ActionName)
+{
+// pull response code from the map file, derived classes may override
+XmlElement Elem = factory.GetEntry(ActionName);
+return (Elem == null) ? "" : Elem.GetAttribute("response");
+}
+public virtual string DownloadSourceFile
+{
+get { return ""; }
+}
+public virtual bool DownloadTempFile
+{
+// indicates to the OnDemand framework that the download file should be deleted.
+get { return true; }
+146 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

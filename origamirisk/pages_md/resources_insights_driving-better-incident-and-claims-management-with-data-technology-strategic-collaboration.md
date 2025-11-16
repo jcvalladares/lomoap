@@ -1,0 +1,5 @@
+# Driving Better Incident and Claims Management with Data, Technology & Strategic Collaboration
+
+## Summary
+
+Origami Risk offers a comprehensive solution for driving better incident and claims management. Their platform provides an innovative platform for speed, scalability, and security, enhancing operations with advanced AI tools, seamless integration with data sources, expert system configuration and guidance, and intuitive mobile apps for on-the-go reporting. The company's purpose-built solutions improve outcomes with configurable, integrated solutions for risk, safety, and insurance, and they offer a wide range of industry-specific solutions for various sectors. Additionally, Origami Risk supports the risk and insurance ecosystem by providing transparency and continuous improvement through regular updates and case studies.

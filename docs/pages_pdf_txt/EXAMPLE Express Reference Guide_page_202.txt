@@ -1,0 +1,35 @@
+duplicate
+Duplicates the specified quote or policy in the database.
+HTML Form Fields:
+Field Description
+_QuoteID ID of the quote or policy to duplicate.
+_startIndex Indication of whether the target page is the Open or Client page.
+initAsyncPrintJob
+Executes the <Session.getPropertyRq> request and the <FormsEngine.initPrintJobRq> request asynchronously, and
+loads the Policy Forms page. This action causes the <FormsEngine.initPrintJobRq> request to be executed with the
+forceInit attribute set to 1.
+initPrintJob
+Executes the <Session.getPropertyRq> request and the <FormsEngine.initPrintJobRq> request, and loads the Policy
+Forms page. This action causes the <FormsEngine.initPrintJobRq> request to be executed with the forceInit attribute
+set to 1.
+issue
+Saves the active quote or policy to the database using the <OnlineData.storeTransactionRq> request. This action
+allows issuance processes to be invoked from the request map. If an active history image exists, the
+<OnlineData.updateHistoryRq> request is called instead. This action uses the active EXAMPLE Express ®state
+information to determine the clientID and policyID to save.
+load
+Loads the specified quote or policy into the session and invokes the interview process of the associated ManuScript. If
+desired, users can specify the PageSet and page to open by including a ManuScriptEditingID field in the specified
+ManuScript. This field must contain a comma-delimited list of ManuScriptID ,PageSet ,Page that indicates which
+ManuScript PageSet and page to load.
+Interview parameters:
+•quoteID – ID of the quote or policy to load.
+•lob– LOB code of the ManuScript to load (as identified in the ManuScriptCatalog.xml file.)
+HTML Form Fields:
+Field Description
+_QuoteID ID of the quote or policy to load.
+_manuscriptLOB LOB code of the ManuScript to load (as identified in the ManuScriptCatalog.xml file).
+loadHistoryTx2
+Loads the specified history image of a quote or policy into the session and invokes the interview process of the
+associated ManuScript. This action will use the PageSet and page specified on the action in Page Designer, if
+202 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

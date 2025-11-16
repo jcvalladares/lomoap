@@ -1,0 +1,46 @@
+private string m_BaseFileName;
+public override void Process(PageState state,
+System.Collections.Specialized.NameValueCollection requestForm)
+{
+try
+{
+// may need to access form fields to know what has been selected in Browser.
+// this example accesses a form field named _selectedFileID, but use
+anything.
+string FileID = requestForm["_selectedFileID"];
+// just put sample data here for now
+m_SourceURL = "c:\\Temp\\SomeFile.txt";
+m_BaseFileName = "SomeOutpuFile.txt"; // can be any filename
+}
+catch (Exception e)
+{
+throw new Exception("Could not download attachment.", e);
+}
+}
+public override string DownloadSourceFile
+{
+// defines to the OnDemand framework where to find the file to send to the
+browser
+get { return m_SourceURL; }
+}
+public override bool DownloadTempFile
+{
+// indicates to the OnDemand framework to delete file after download.
+get { return true; }
+}
+public override string DownloadBaseFileName
+{
+// indicates the filename to use when user is prompted for filename
+get { return m_BaseFileName; }
+}
+}
+}
+Customizing the EXAMPLE Express® Experience
+The total EXAMPLE Express ®experience can be customized by specifying which pages should be available in
+EXAMPLE Express ®and what each page should contain using the ApplicationLayoutMap.xml file available with the
+OnDemand Framework. If desired, through the OnDemand Framework and EXAMPLE Express ®skins files, a unique
+EXAMPLE Express ®experience can be defined for each type of user that works in EXAMPLE Express ®.
+Customizing the EXAMPLE Express ®experience requires modifications to the following items:
+•The ApplicationLayoutMap.xml file — This file controls which navigation elements appear in EXAMPLE
+Express ®for each type of user and what content appears on each page. If desired, this information can be
+148 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

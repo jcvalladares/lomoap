@@ -1,0 +1,38 @@
+•EXAMPLE Server ®writes disbursements to the database when a user disburses money from EXAMPLE
+Express ®
+•Requests are scheduled
+•The Scheduled Activity Service calls the <BillingDisbursementInterface.processDisbursmentInterfaceRq> request
+for disbursements
+•Schedules the first request through use of the Disbursement Interface on the Billing Administration tab in Duck
+Creek Billing™
+•Reads pending disbursements and processes them using a customized request
+•Calls the <BillingDisbursement.completeRq> request manually to complete disbursements
+•The Disbursement Interface Service writes the disbursement detail records in the appropriate format (xml, flat file
+or web service), and changes the disbursement status to SB (submitted).
+The Disbursement Interface Service implementation is configurable by overriding the DCT
+<BillingDisbursementInterface.processDisbursementInterfaceRq> request with a custom request.
+Configuring the Disbursement Interface Service
+Configuration settings must be specified to control the function of the disbursement interface.
+By default, the Disbursement Interface will return an error unless the disbursement interface has been written.
+The following table lists the configuration settings for the disbursement interface, and these settings are typically
+overridden by a custom request.
+Configuration
+SettingDefinition Default
+StartTime Specifies the earliest time in the day the interface will check for
+disbursements.08:00:00
+An empty node means no
+restriction.
+InterfaceWindow Specifies the number of minutes from the start time that
+requests can be processed. Using duration rather than a
+specific time makes it easier to process through midnight.600
+Frequency Specifies in seconds how often the interface will check for
+unprocessed pending disbursements.600
+RecordsPerCycle Specifies the maximum number of disbursements that will be
+processed per cycle.100
+An empty node or value of 0
+means unlimited
+disbursements processed per
+cycle.
+For information about using the disbursement interface, see Working in the Billing Administration Area in the Duck
+Creek Billing™ User Guide . For more information about customization and integration, contact your Account Manager.
+81 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

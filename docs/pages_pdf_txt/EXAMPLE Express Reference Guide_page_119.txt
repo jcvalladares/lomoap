@@ -1,0 +1,33 @@
+SSN dctInputSSNFields.js DCT.InputSSNField •Assigns the validation routine to
+validate and mask SSN fields
+•Sets the formatter to handle formatting
+if formatmask has been set
+◦Formats for U.S. format
+•Sets the validation type process to
+mask the field for correct characters
+and validation
+◦Checks for numbers and dashes
+•Sets debug information if Web.config
+key is turned on
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+String dctInputStringFields.js DCT.InputStringField •Assigns the validation routine to
+validate string values
+•Sets the formatter to handle formatting
+if formatmask has been set
+◦Formats for uppercase,
+lowercase, specific string layout,
+or no formatting
+•Sets debug information if Web.config
+key is turned on
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+119 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

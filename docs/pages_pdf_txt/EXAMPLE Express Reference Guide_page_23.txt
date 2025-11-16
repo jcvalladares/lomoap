@@ -1,0 +1,17 @@
+From the Notes page, users can:
+Function Description
+Filter
+notes
+viewIn the View notes dropdown on the Notes page or on the Policy Details page, users have the following
+options to filter the notes they wish to view:
+•View all notes (default)
+•View my notes
+•View deleted notes
+View
+note In the list of notes for a given quote or policy, click View
+ . When a user views an existing note, the
+note text and Internal Only checkbox appear as read-only. Once saved, a note cannot be edited.
+Users must have the Security Level CarrierAdmin (SecLevel_CarrierAdmin) or Security Level
+CarrierUser (SecLevel_Underwriter) security level with the entity associated to the policy to
+view Internal Only notes.
+23 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,35 @@
+caption Optional Text to display in EXAMPLE Express ®for the menu item.
+If extending the caption of the New Quote <menuItem> beyond the size of
+the existing button image, you may need to customize the buttons.css and
+associated image files.
+content Optional Name of the <pageLayout> or—if the specified <pageLayout> does not exist—the
+ContentMap.xml item to call. If blank, the current page will be used unless an action
+calls a new page.
+action Optional Name of the PostActionMap.xml item to execute when the <menuItem> is selected.
+java Required Name of the JavaScript method or action to perform (usually, submitPage ). This
+attribute is used by the skin to determine what code to execute on the client/
+JavaScript. The following parameters will be passed to the method:
+1.content —The value of the content attribute (above)
+2.action — The value of the action attribute (above)
+location Optional Location for the menu item. Defaults to header . Options are:
+•header — In the header (where the application-level navigation appears in the
+out-of-the-box screens)
+•special — Right edge of the header (where the New Quote action appears in the
+out-of-the-box screens)
+•extendedLeftNav — In the Policy Actions list
+•product — Top edge of the application (where the system navigation appears in
+the out-of-the-box screens)
+•logonOptions — In the Login Options list
+Menu location can be changed by modifying the location attirbute only. You
+do not need to recreate CSS definitions and images.
+consumer Optional Value indicating how the item should be treated if the user is using consumer access
+mode. Options are:
+•0— Hide if user is a consumer
+•1— Show to all users
+•2— Show only if user is a consumer
+guest Optional Value indicating how the item should be treated if the user is using guest access
+mode. Options are:
+•0— Hide if user is a guest
+•1— Show to all users
+•2— Show only if user is a guest
+153 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

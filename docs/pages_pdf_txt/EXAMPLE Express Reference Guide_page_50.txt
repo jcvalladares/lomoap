@@ -1,0 +1,29 @@
+String
+Format Mask Output
+email user@domain.tld
+phone ###-###-####
+time HH:MM:SS AM/PM (Note: seconds are optional.)
+time24 HH:MM:SS (military time)
+textarea:rows:4:width:100%:
+textarea:rows:4:width:100:4 and 100 represent values for the number of rows (height) and the
+percentage of the window or the width in percentage or pixels.
+Any non-numeric characters other than the percent sign (%)
+entered after the width will be removed and replaced with "px" to
+denote that they are pixels.
+zipcode ##### or #####-####
+ip ??#.??#.??#.??#
+ssn ###-##-####
+hide: Always masks characters (displays an asterisk (*)) on entry and on display.
+An additional format mask can be added after the colon. (For example,
+hide:ssn.)
+This format mask only works with interview pages.
+hideOnEntry: Masks characters (displays an asterisk (*)) as they are entered. An
+additional format mask can be added after the colon. (For example,
+hideOnEntry:ssn.)
+This format mask only works with interview pages and does not
+hide characters displayed as read-only.
+hideOnDisplay: Always masks characters (displays an asterisk (*)) only on display, not on
+entry. An additional format mask can be added after the colon. (For example,
+hideOnDisplay:ssn.)
+This format mask only works with interview pages.
+50 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

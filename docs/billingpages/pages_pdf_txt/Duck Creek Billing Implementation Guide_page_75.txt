@@ -1,0 +1,34 @@
+When EXAMPLE Server ®executes the <PaymentProcessing.processPaymentsRq> request, the PaymentProcessing
+object does the following:
+•Checks the configuration file for the lock box information.
+•Scans all the files in the specified lock box watch directory.
+•Sorts each file into batches as specified in the file mapping.
+•Executes the <BillingCashManagement.processCreateBatchRq> request for each batch.
+•Executes the <BillingCashManagement.processAddBatchPaymentRq> request for each payment record.
+•Executes the <BillingCashManagement.processBatchRq> request to process each batch after loading all
+payments.
+•Copies all lock box files to the backup directory.
+•Copies the file to the error directory and logs a process exception.
+This <PaymentProcessing.testProcessPaymentsXSL> request was designed to help debug configuring the XSL files
+used to map the lock box file format to the XML request format used.
+The request returns the XML output for each batch and payment record for a specified lock box file in the watch
+directory.
+Configuring the Lockbox
+To configure the lockbox interface:
+1.Open the Edit Configuration utility.
+2.In the Virtual Directory list, click the Express virtual directory.
+3.Click the Master Catalog tab.
+4.Browse to the BillingInterfaces section.
+5.Set the urlandrootdir attributes to the location of the BillingInterfaces.xml file.
+Typically the location is C:\Program Files\Duck Creek Technologies\Shared\.
+6.Click Refresh .
+7.Click the Billing Interfaces tab.
+8.Configure the lock box interface by adding or editing the appropriate lock box elements in the following table.
+Attribute Type Required Description
+name String Yes Specifies the name of the lock
+box instance.
+path String Yes Specifies the watch directory for
+the lock box instance.
+currencyCulture String No Specifies the currencyCulture for
+the lock box instance.
+75 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

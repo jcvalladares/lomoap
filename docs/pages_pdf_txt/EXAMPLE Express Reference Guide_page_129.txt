@@ -1,0 +1,36 @@
+x_[pageName].css Contains styles for the page using the [pageName].xsl file. To determine which XSL file a
+page is using, click the "Current Information" button on the developer toolbar and look for
+the "Active XSL" page name. This information can also be found by searching for the
+JavaScript variable "sCurrentPage".
+x_interview.css Contains styles applied to a ManuScript page through EXAMPLE Author ®. This file is
+intended to be modified by ManuScript developers.
+x_interview_main.css Contains styles applied to a ManuScript page through the XSL. This file is intended to be
+modified by skins developers.
+HTML Div Structure
+By default, EXAMPLE Express ®pages include the following container divs:
+•wrapper – Controls the overall page width
+•banner – Contains branding and top navigation
+◦logo – Contains the logo
+◦productNavigationDiv – Contains product-level navigation
+◦quickSearch – Contains the quick search
+◦actionGroup – Contains application-level navigation
+◦specialactions – Contains the New Quote feature
+•formContent – Controls page content between the banner and footer
+◦leftPanelArea – Contains content of the left panel
+◦policyActiveSection – Contains information on the active policy, if an active policy exists
+◦subActionGroup – Contains the sub navigation for pages (if in interview, contains navigation among
+ManuScript pages)
+◦relatedActions – Contains policy-related actions if a policy is active
+◦logonActions – Contains login options ( Change Password )
+◦main – Contains content of the page area between banner and footer to the right of the left panel
+◦header – Contains the page header
+◦pageTop – Contains page title (pageTitle) and instructional text (pageInst)
+•footer — Contains the page footer
+Customizing XSL
+When customizing XSL files, follow the guidelines below.
+Interview Pages
+When customizing interview (ManuScript-driven) pages:
+•Modify the interview.xsl file and follow the guidelines found in Overriding DCTBase Files .
+System Pages
+When customizing or creating system pages, follow the sequence of template calls below for building a page.
+129 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

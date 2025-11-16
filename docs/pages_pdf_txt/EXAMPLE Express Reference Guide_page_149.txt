@@ -1,0 +1,38 @@
+defined for each type of user in the system. For instructions on customizing the ApplicationLayoutMap.xml file,
+seeCustomizing ApplicationLayoutMap.xml .
+•EXAMPLE Express ®Skins — While security permissions defined in EXAMPLE UserAdmin™ control the
+EXAMPLE Server ®permissions available to each type of user (e.g., whether a particular role can work with
+quotes and policies, and which quotes and policies that role can work with), the display of certain features in
+EXAMPLE Express ®(e.g., the grid that displays the list of quotes and policies) is controlled through EXAMPLE
+Express ®skins files. While roles and privileges in EXAMPLE UserAdmin™ control server-level permissions,
+EXAMPLE Express ®skins control what interface elements appear on the screen. When customizing EXAMPLE
+Express ®, you must modify EXAMPLE Express ®skins to hide or display features as appropriate for each type of
+user. For instructions on customizing EXAMPLE Express ®skins to display the desired features for each type of
+user, see Customizing Skins Per Role .
+Customizing ApplicationLayoutMap.xml
+The ApplicationLayoutMap.xml file controls which navigation elements appear in EXAMPLE Express® for each type of
+user and what content appears on each page. You can define this information for each type of user in the system by
+creating a custom ApplicationLayoutMap.xml file using the Edit Configuration Utility.
+Any changes made to the shipped ApplicationLayoutMap.xml files are overridden during the upgrade
+process. All changes should be made in the appropriate custom ApplicationLayoutMap files.
+You must reset EXAMPLE Express® (run DCTReset.exe) for any changes to appear in EXAMPLE Express ®.
+Creating Custom ApplicationLayoutMap Files
+The ApplicationLayoutMap.xml file is configured so that a particular implementation of EXAMPLE Express ®can have
+multiple ApplicationLayoutMap.xml files at the path specified by the ApplicationLayoutFactory configuration setting in
+the Express\Web.config file. If desired, you can create a custom ApplicationLayoutMap file in addition to
+ApplicationLayoutMap.xml. At runtime, the system will use the following files at the path specified by the
+ApplicationLayoutFactory configuration setting. (For each of the following files, [MapFile] is the file name specified in
+theApplicationLayoutFactory configuration setting.)
+•[MapFile].xml
+•[MapFile]*.xml
+•Custom[MapFile].xml
+Custom map files should adhere to the following naming convention: Custom[MapFile].xml , where
+[MapFile] is the text specified in the appropriate Express\Web.config setting (e.g., ContentMap,
+PostActionMap, ApplicationLayoutMap). The [MapFile]*.xml convention is reserved for Duck Creek
+Technologies, Inc. use only. If you have migrated your custom map files from a previous version of
+the EXAMPLE Platform ®, Duck Creek Technologies, Inc. recommends that you apply the
+Custom[MapFile].xml naming convention to your custom files.
+Because the EXAMPLE Platform ®combines all files that use the above naming conventions, keep the following tips in
+mind when using a custom ApplicationLayoutMap file:
+•Be sure no conflicts exist among any items defined in any ApplicationLayoutMap file.
+149 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

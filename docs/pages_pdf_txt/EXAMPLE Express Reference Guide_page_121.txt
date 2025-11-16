@@ -1,0 +1,35 @@
+ZIP code dctInputZipCodeFields.js DCT.InputZipCodeField •Assigns the validation routine to
+validate ZIP code values
+•Sets the validation type process to
+mask the field for correct characters
+and validation
+•Sets debug information if Web.config
+key is turned on
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+Buttons
+You can create custom buttons for use with the Avant Garde 2 skin using the following files:
+•buttonDefaults.css – Sets the default styles for buttons. For more information, see buttonDefaults.css .
+•buttons.css – Contains style definitions for 15 built-in button types. For more information, see buttons.css .
+•custom-buttons.css – File where all custom buttons are defined. For more information, see custom-buttons.css .
+•globalButton.psd – Pre-divided template for creating buttons. For more information, see globalButton.psd .
+buttonDefaults.css
+The buttonDefaults.css file sets default styles for buttons. These default styles can be overwritten in the buttons.css
+and custom-buttons.css files.
+The following table list some notable classes you can use with the buttonDefaults.css file.
+Class Description
+g-btn-bar Forces multiple buttons contained in a <div> to align side-by-side instead of stacking vertically.
+g-btn Sets default button height to 24px and right margin to 10px. Applied to every button file.
+g-btn-l, g-
+btn-m, g-
+btn-rCorresponds to the left, middle, and right sections of a button. Background images are set to g-btn-
+slice.png. By default, the background position is set to the position of the green button in g-btn-
+slice.png.
+g-btn-left,
+g-btn-rightDetermines the position of icons.
+g-btn-text Sets the default font size to 0.9 em , font weight to bold, and font color to #333333 .
+121 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

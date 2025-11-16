@@ -1,0 +1,33 @@
+mapped from the policy data during the booking process. The data is sent using the <BillingObj.addPolicyTermRq>
+request and stored in the DC_BIL_PolicyTerm database table for use during subsequent Duck Creek Billing™
+processes.
+Policy Term Configuration
+The following table lists the additional policy plan parameters required to indicate a policy is configured for MPR.
+Field Name Definition
+CollectionMSID The ManuScript ID of the LOB-specific collection screen.
+FormMSID The ManuScript ID of the LOB-specific forms ManuScript.
+MPRDueDay The day the MPR completion is due.
+MPRPrdOffset The number of days before the MPR due date that the MPR form is produced.
+PCNPFollowUp The number of days after the MPR due date that a PCNP follow-up activity is scheduled.
+PCNRTrigDays The number of days after the MPR due date that a PCNR follow-up activity is triggered.
+Allow PCNNP Indicates whether a policy should PCN for non-payment of an MPR receivable.
+AllowPCNNR Indicates whether a policy should PCN for non-reporting.
+LastAvailMPRDtDisp Controls when the last MPR form can be produced for a policy.
+Creating an MPR Policy
+Because customization is required to utilize the MPR feature, the steps required to create a policy will vary. The
+following procedure is based on out-of-the-box functionality, and assumes the appropriate ManuScripts have been
+customized.
+To create an MPR policy:
+1.Click the Policy Management tab.
+2.Create an auditable policy with a Monthly audit period frequency.
+3.Enter the policy information.
+4.Make note of the policy number before leaving the Policy Management system.
+5.On the Submission page, select the MPR Policy check box.
+6.Click Complete Issuance .
+7.Click the Billing tab.
+8.From the Billing Dashboard, in the I want to find an account by list, click one of the following options:
+◦Account Number
+◦Policy Number
+9.In the searching for text box, enter the policy number noted in Step 4.
+10. Click Search .
+39 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

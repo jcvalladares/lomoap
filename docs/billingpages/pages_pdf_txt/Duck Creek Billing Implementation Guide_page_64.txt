@@ -1,0 +1,17 @@
+Viewing Commission Statements Online
+The View Statement link is added to the Recent Account Activity list when a commission statement is generated for
+an account. This includes scheduled monthly statements and ad hoc statements. The link allows the user to view a
+PDF version of the statement from the Account Home page. Regardless of the statement format option or options
+selected for the account, the online statement is only available as a PDF.
+To view the statement:
+•Click the View Statement button View Statement Image.png for the appropriate item on the Recent Account
+Activity list.
+The File Download dialog box appears, and allows the user to view or save the PDF file.
+Working with the Third Party Payment Interface
+The integration process between Duck Creek Billing™ and a third party payment interface to process credit card, debit
+card, and electronic checks is shown below.
+Configuring Third Party Payment Processing
+Duck Creek Billing™ can be integrated with a third party payment processor.
+Lock box functionality must be configured prior to successful deployment of the Third Party Payment
+Interface. See Configuring the Lockbox .
+64 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,34 @@
+7.Click Undo All Changes to discard the changes made on the previous page.
+To view the expired commission plans associated with an account:
+1.Click Expired Commission Plans .
+2.(Optional) Click Details to view commission plan details.
+3.Click Return To Plan List to return to the Commission Plan Details page.
+Expired commission plans are retained on an account, and an audit trail is automatically maintained.
+Configuring Commission Options
+Commission rate and eligibility are determined in the policy system and transmitted to Duck Creek Billing™ on the
+policy term premium record. Records are written to database tables based on the commission scheme specified in the
+Policy Plan Setup option. The CommissionStatementSchedule database table maps an agent to the statement
+schedule and produces statements based on the data in the table.
+The <BillCommission.buildCommissionStatementRq> request populates the following two tables:
+•DC_BIL_DirectBillCommissionStatementSummary — Contains information needed by a check-writing
+interface.
+•DC_BIL_DirectBillCommissionStatementDetails — Contains details for statement make-up to generate
+printable statement.
+Most data in these tables is stored in an XML column.
+Commission statement requests should be initiated serially from a single source and processed by a single
+server to avoid possible race conditions between multiple threads and/or servers when writing to the
+disbursements file.
+Commission processing uses two requests:
+•The <BillCommission.buildCommissionStatementRq> request uses the agencyId, statementDate, and
+printDirectory attributes.
+•The <BillCommission.printCommissionStatementRq> request uses the statementId and printDirectory parameters
+to generate printable statements. This request initiates a report using SQL Server 2005 Reporting Services to
+produce statements.
+Reports are output as PDF files to the directory specified in the printDirectory attribute. If the print directory is not
+passed in as an attribute, the DirectBillCommissionStatementsFolderRootPath setting in the Server.Config file is used.
+The statement file name will be DirectBillCommissionStatement_Agency_[Agency]_[StatementDate]_[StatementId].pdf.
+Customers are responsible for printing and sending the statements, or maintaining the files.
+Database Components
+The following table includes a list of the database tables used to configure commissions.
+Table Name Definition
+55 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

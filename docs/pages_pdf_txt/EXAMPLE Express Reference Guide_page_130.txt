@@ -1,0 +1,37 @@
+1.Include a template that matches the root of the content for the page.
+2.Within this template, start the process of building the container by calling the buildContainer template in the
+dctContainer.xsl file (located in the Global Root Directory \Express\Skins\DCTBase\xsl\ directory).
+3.Set up the following templates. (These templates will be called by the process begun in Step 2.)
+◦processPageHeader – Controls the header content for the page.
+◦buildLeftPanelContent – Controls the content of the left panel area of the container.
+◦buildPageContent – Controls the main page content.
+4.(Optional) In the buildLeftPanelConten t template, call any of the following component templates:
+◦buildPolicyLeftNavHeader – Controls the header of the left panel.
+◦createSubMenuArea – Renders the left navigation (such as the sub navigation for certain pages).
+◦buildPolicyRelatedTasks – Controls the Policy Actions in the left panel.
+◦buildPolicyLogonItems – Controls the Login Options in the left panel.
+Interview Page Styles
+Avant Garde 2.1 skins control interview page styling using the following two CSS files:
+•x_interview – Contains styles applied to a page through EXAMPLE Author ®.
+•x_interview_main – Contains styles applied to interview pages through XSL.
+Overriding DCTBase Files
+Customizing skins sometimes requires that you override files in the DCTBase directory. To do this, you must create a
+custom skins directory, copy the desired templates or functions from the DCTBase files to that directory, and then
+make your customizations. Files in the custom skins directory are called after files in the DCTCore directory and
+therefore take precedence. For information about creating a custom skins directory, see Creating a Custom Skins
+Directory .
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTBase or AvantGarde2
+directories. All files in these directories are overwritten during upgrades. Instead, you must create a custom
+skins directory (copied from the AvantGarde2 directory) and modify the files within it.
+Overriding XSL Files
+To override DCTBase .xsl files:
+1.In the Content or Common folders in the C:Program Files\Duck Creek
+Technologies\Skins\DCTBase\Core\xsl\ directory, locate the file containing the template you wish to
+override.
+2.Copy the file containing the template you wish to override to the xsl\common or xsl\content folders in the custom
+skins directory, and ensure that its name remains the same as it is in the DCTBase directory.
+3.In the custom skins file (the one you copied in Step 2), remove all templates you do not wish to override as well
+as all non-template elements (other than the <xsl:stylesheet> ) tags, such as <xsl:import> ,
+<xsl:output> ,<xsl:variabl e>, etc.
+4.Customize the templates you wish to override.
+130 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,36 @@
+_taskId ID of the task to modify.
+_entityId ID of the queue to assign the task to.
+_auserId ID of the user to assign the task to.
+_taskLockingTS Encoded binary value that indicates the last time the task data was read and prevents
+multiple users from modifying a task at the same time. This value is generated from the
+<Task.getRq> request or the <Task.listRq> request.
+EXAMPLE Server ®Request: Task.assignRq
+commit, commit2, audit
+These actions are intended for use with EXAMPLE TransACT ®1.0.
+Processes an out-of-sequencetransaction and commits all changes to the database. These actions reconcile all policy
+changes to subsequent transactions. (The system applies changes to and re-rates each subsequent transaction,
+recording both original and new premiums and charges.)
+•commit — Original action used with EXAMPLE TransACT ®1.0. This deprecated action is included for backwards
+compatibility.
+•commit2 — Commit action recommended for use with EXAMPLE TransACT ®1.0. This action contains additional
+logic for dealing with newer transaction properties, out-of-sequence renewals, and out-of-sequence cancellations.
+•audit — Action recommended for audit transactions with EXAMPLE TransACT ®1.0. This action causes the
+reconcile process to begin with the first transaction in the term rather than the transaction before the Audit
+transaction. This action causes all transactions in the term to be updated with the audit changes. In addition, the
+audit transaction will have its HistoryID replaced with a newer copy of the transaction. This newer HistoryID
+ensures the audit transaction retains a HistoryID greater than all inserted, modified transactions before the audit
+transaction.
+For these commands to work properly, session data must conform to the Policy Administration guidelines. The last
+element at the transactions path defined in the TransACTInfo.xml file must be the out-of-sequence transaction and be
+in an open state.
+These actions do not require any HTML form fields, but use the active session and EXAMPLE Express ®state
+information to determine the clientID and policyID to save.
+consumerConvertToPolicy
+Moves a quote from the DC_POL_ConsumerQuote table to the Quote and History tables. This action can be executed
+from a ManuScript or a system page.
+Parameters/HTML Form Fields:
+Field Description
+_consumerID ID for the consumer, stored in the DCT_PLT_ConsumerAccount database table.
+_consumerQuoteID (Optional) ID of the quote to move. This ID is stored in the DCT_POL_ConsumerQuote table.
+If not specified, the system will move the first quote for the specified consumer.
+197 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

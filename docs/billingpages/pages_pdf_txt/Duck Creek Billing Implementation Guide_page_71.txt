@@ -1,0 +1,47 @@
+2 2 - 3 Addenda
+type codeA 2-position character field which defines the specific interpretation and format
+for the addenda information contained in the same record. The valid type for
+Rejections is 99.
+3 4 - 6 Return
+reason
+codeA required 3-position character field which is a standard code used to describe
+the reason for returning an entry.
+15 7 - 21 Original
+entry trace
+numberA required 15-position character field which is the trace number that was
+originally included on the entry being rejected.
+6 22 - 27 Date of
+deathA 6-position character field which is the date of death for those entries being
+returned for reason of death.
+8 28 - 35 Original
+receiving
+DFI IDAn 8-position character field which is the receiving DFI Identification as originally
+included on the entry.
+44 36 - 79 Addenda
+informationA 44-position character field used to relay explanatory information required with
+the use of certain return reason codes.
+15 80 - 94 Trace
+NumberA 15-position numeric field which uniquely identifies each entry within a batch.
+The following table lists the value and content of the Detail Addenda Record for Change.
+Length PositionField
+NameDescription
+1 1 Record
+type codeA required 1-position character field which indicates the type of input record. The
+valid type is 7.
+2 2 - 3 Addenda
+type codeA 2-position character field which defines the specific interpretation and format
+for the addenda information contained in the same record. The code for Notices
+of Change is 98.
+3 4 - 6 Change
+codeA required 3-position character field which is used to relay corrected customer
+information back to the originator of that entry.
+15 7 - 21 Original
+entry trace
+numberA 15-position character field which is the trace number that was originally
+included on the entry being rejected.
+6 22 - 27 Reserved A 6-position character field which is reserved for use by the ODFI.
+8 28 - 35 Original
+receiving
+DFI IDAn 8-position character field which is the receiving DFI identification as originally
+included on the entry.
+71 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

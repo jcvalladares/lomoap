@@ -1,0 +1,28 @@
+•Using the New Quote home page module – This method allows new and infrequent users to easily see where
+and how to start a new quote.
+•Starting a new quote from the Client Information page – This method allows users to start a new quote for an
+existing client, without having to re-enter certain client information.
+•Duplicating an existing quote or policy – This method allows users to create a quote very quickly by
+duplicating information in another quote and then making the desired changes.
+When starting a new quote from the New Quote action in the main navigation, from the home page module, or from
+the Client Information page, users are presented with the ability to select the appropriate product before starting the
+quote. Out of the box, EXAMPLE Express ®uses a Duck Creek Technologies, Inc. New Quote Selection ManuScript for
+this process. The out-of-the-box New Quote Selection ManuScript presents two unique experiences for starting a
+quote: a basic process for agents, and an extended process for carrier users such as underwriters and managers. (Out
+of the box, these two processes are identical, but carriers can customize each process as desired to meet their unique
+needs.)
+Out of the box, the New Quote Selection ManuScript appears as follows.
+Out of the box, the New Quote page contains the following fields.
+Field Description
+Agency Specifies the entity with which to associate the quote. This list only includes entities that are not Task
+Queue entities and at which the user has the CreateQuotes privilege.
+Producer Specifies the producer with which to associate the quote. This list only includes producers at the
+specified agency.
+Product Specifies which product to quote. This list includes all lines of business specified in EXAMPLE
+UserAdmin™ for the selected agency.
+If desired, carriers can use the out-of-the-box New Quote Selection ManuScript, or they can modify their
+implementation to use a custom New Quote Selection ManuScript. If desired, carriers can also use an EXAMPLE
+Express ®system page (or a set of system pages) to help users start the new quote process.
+For instructions on customizing EXAMPLE Express ®to use a custom ManuScript for this page, see Configuring a New
+Quote Selection ManuScript . For instructions on customizing EXAMPLE Express ®to use system pages for this page,
+32 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,9 @@
+9.Select the destination folder for the installation. If needed, click Change… to browse to and select a different
+destination directory.
+10. Click Next .
+11. Enter the Web config settings, and then click Next . These settings allow the connection to the Pitney Bowes
+service.
+Verify that the correct user name, password, and URL are entered, as this data is not verified when it is
+entered. A system error displays at the time the user attempts to use Pitney Bowes Address Verification if the
+wrong credentials have been entered here.
+71 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

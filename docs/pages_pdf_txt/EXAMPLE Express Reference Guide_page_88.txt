@@ -1,0 +1,38 @@
+2.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+3.Under Mode , click Form .
+4.On the Web Config tab, in the list of settings, click XSLTDir .
+5.In the value text box, enter the relative path to the custom directory from the Global Root Directory \Express
+directory (for example, Skins\MySkins ).
+6.Click Save .
+7.Click Close .
+Overriding DCTBase Files
+Customizing skins sometimes requires that you override files in the DCTBase directory. To do this, you must create a
+custom skins directory, copy the desired templates or functions from the DCTBase files to that directory, and then
+make your customizations. Files in the custom skins directory are called after files in the DCTBase directory and
+therefore take precedence. For information about creating a custom skins directory, see Creating a Custom Skins
+Directory .
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTBase or AvantGarde2
+directories. All files in these directories are overwritten during upgrades. Instead, you must create a custom
+skins directory (copied from the AvantGarde2 directory) and modify the files within it.
+Overriding XSL Files
+To override DCTBase .xsl files:
+1.In the Content or Common folders in the C:Program Files\Duck Creek
+Technologies\Skins\DCTBase\Core\xsl\ directory, locate the file containing the template you wish to
+override.
+2.Copy the file containing the template you wish to override to the xsl\common or xsl\content folders in the custom
+skins directory, and ensure that its name remains the same as it is in the DCTBase directory.
+3.In the custom skins file (the one you copied in Step 2), remove all templates you do not wish to override as well
+as all non-template elements (other than the <xsl:stylesheet> ) tags, such as <xsl:import> ,
+<xsl:output> ,<xsl:variabl e>, etc.
+4.Customize the templates you wish to override.
+Overriding JavaScript Files
+To override DCTBase .js files:
+1.Locate the file containing the JavaScript function you wish to override in one of the following directories:
+◦DCTBase\Core\devscripts\Billing
+◦DCTBase\Core\devscripts\Policy
+◦DCTBase\Core\devscripts\common
+2.Copy the file containing the function you wish to override to the scripts folder in the custom skins directory and
+give it the same name as in the DCTBase directory.
+3.In the custom skin file, remove all functions you do not wish to override.
+4.Customize the function you wish to override.
+88 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

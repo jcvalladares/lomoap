@@ -1,0 +1,4 @@
+## Trust as a Workflow: How Risk Technology Supports CANDOR in Healthcare
+
+### Summary
+CANDOR (Communication and Optimal Resolution) is a healthcare risk management and patient safety framework developed by the Agency for Healthcare Research and Quality (AHRQ) to enhance communication and collaboration in the healthcare delivery chain. Trust is a key component of CANDOR, which involves building a culture of transparency, accountability, and follow-through. By integrating technology, organizations can streamline workflows, improve data collection, and enhance overall performance. This approach helps reduce risk and improve patient safety, ultimately leading to a more resilient and efficient healthcare system.

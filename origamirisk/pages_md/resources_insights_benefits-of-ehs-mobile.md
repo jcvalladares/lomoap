@@ -1,0 +1,4 @@
+## Title: The Benefits of Adopting EHS Mobile Technology
+
+### Summary:
+Mobile technology has revolutionized the way risk and safety professionals operate in the workplace. By providing real-time data, heightened engagement, increased efficiency, higher accuracy, standardized data entry, and proactive risk and safety initiatives, organizations can significantly improve workplace safety, reduce TRC, and attract safer, more consistent new hires. Companies that adopt mobile technology in their risk and safety efforts can expect improvements in workplace safety that boost employee morale, attract top talent, and improve retention. The addition of mobile technology also drives innovations that lead to a reduction in incidents, cost savings, and more focused safety team initiatives. Visit www.origamirisk.com/mobile or contact us to request a demo for more information.

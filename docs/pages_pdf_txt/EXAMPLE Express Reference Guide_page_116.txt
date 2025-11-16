@@ -1,0 +1,41 @@
+Grid editor
+controlsdctEditorComboFields.js
+dctEditorInputFields.js
+dctEditorNumberFields.js
+dctEdiorCheckBoxes.jsDCT.EditorComboField
+DCT.EditorInputField
+DCT.EditorNumberField
+DCT.EditorCheckBoxField•Extended from the base controls to
+process data within editable grids
+•Available only at the time a user edits
+data in a row or column field in an
+editable grid
+◦Controls will have limited
+functionality since they are
+temporary
+◦Combos are only selectable
+◦Input fields will have validation but
+not formatting
+•Controls are destroyed once the user
+leaves the field
+Integers dctInputIntFields.js DCT.InputIntField •Assigns the validation routine to
+validate integer value
+•Assigns formatter to format the number
+with commas once the user leaves the
+field
+•Assigns culture symbols to be used
+during formatting and validation
+•Assigns getter method for validation
+routine to strip culture symbols before
+validation checking
+•Sets debug information if Web.config
+key is on
+•Sets masking routine to mask invalid
+character for integer fields
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field recieves
+focus
+116 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

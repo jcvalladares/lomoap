@@ -1,0 +1,31 @@
+0 0 - Ignore the Web browser check.
+1 - Check the browser to determine whether to convert all controls to ExtJs.
+NextButtonDefaultType
+Defines the type of button to be used for the Next button.
+Default Valid
+N/A •Button
+•Hyperlink
+The following table lists some examples of default buttons available for use with EXAMPLE Express ®.
+Configuration Settings Buttons
+<Buttons>
+<PreviousButtonDefaultType></PreviousButtonDefaultType>
+<NextButtonDefaultType></NextButtonDefaultType>
+</Buttons>
+<Buttons>
+<PreviousButtonDefaultType>white</PreviousButtonDefaultType>
+<NextButtonDefaultType>blue</NextButtonDefaultType>
+</Buttons>
+<Buttons>
+<PreviousButtonDefaultType>hyperlink</PreviousButtonDefaultType>
+<NextButtonDefaultType>orange</NextButtonDefaultType>
+</Buttons>
+PreviousButtonDefaultType
+Defines the type of button to be used for the Previous button.
+Default Valid
+N/A •Button
+•Hyperlink
+This configuration setting allows developers to specify a default button type for the previous buttons throughout the
+interview screens.
+The following table lists some examples of default buttons available for use with EXAMPLE Express ®.
+Configuration Settings Buttons
+216 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

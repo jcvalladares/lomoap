@@ -1,0 +1,50 @@
+•Copies the DuckCreek.PitneyBowes.dll file to the Shared\Bin directory – Determines how to send and receive
+messages from Pitney Bowes.
+•Updates the IntegrationCatalog.xml file in the Shared directory – Instructs the system to use the
+PitneyBowes_GeoCodeReport.xml file.
+•Links the GeoCodeManuScript.xml file to Shared\ManuScriptCatalog.xml – Links the ManuScript to the system.
+•Copies the PitneyBowes_GeoCodeReport.xml file to the Reports\Pitney-Bowes\Geocoding directory – Contains
+mappings to get messages from the .dll file into the session XML.
+•Copies the GeoCodeManuScript.xml file to the Reports\Pitney-Bowes\Geocoding directory
+•Provides a sample ManuScript that contains two pages that call PBBI and scrub an address. This installs an
+inherited ManuScript (Sample Product – PBBI) on top of the Sample Product ManuScript that verifies addresses
+entered on the Account and Location pages.
+•Adds the following XML to theWeb\Web.config file:
+<!-- This file shows the XML configuration changes necessary to use the Pitney Bowes
+report(s).     The installer should make these changes automatically, but details are
+provided for reference.     Changes should be made to the %DCT Root%\web\web.config
+file. -->
+<configSections>
+<section name="PitneyBowes_DCT"
+type="System.Configuration.NameValueSectionHandler" />
+</configSections>
+<PitneyBowes_DCT>
+<add key="AccountID" value="user123" />
+<add key="AccountPassword" value="pass123" />
+</PitneyBowes_DCT>
+<system.serviceModel>
+<bindings>
+<basicHttpBinding>
+<binding name="GeocodeUSAddressSoapBinding" closeTimeout="00:01:00"
+openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+allowCookies="false" bypassProxyOnLocal="false"
+hostNameComparisonMode="StrongWildcard" maxBufferSize="65536"
+maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text"
+textEncoding="utf-8" transferMode="Buffered"
+useDefaultWebProxy="true">
+<readerQuotas maxDepth="32" maxStringContentLength="8192"
+maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384"
+/>
+<security mode="None">
+<transport clientCredentialType="None" proxyCredentialType="None"
+realm="" />
+<message clientCredentialType="UserName" algorithmSuite="Default"
+/>
+</security>
+</binding>
+</basicHttpBinding>
+</bindings>
+<client>
+<endpoint address="http://staging.g1.com:8080/services/
+GeocodeUSAddress" binding="basicHttpBinding"
+67 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,27 @@
+•EXAMPLE Forms™ – (Optional) EXAMPLE Express ®can work with EXAMPLE Forms™ to provide document
+generation capabilities. EXAMPLE Forms™ allows users to view, select, and generate policy forms.
+EXAMPLE Express ®and Other Systems
+Through EXAMPLE Server ®, data collected using EXAMPLE Express ®can be passed to downstream systems. In
+addition, EXAMPLE Express ®itself can be integrated with other systems using custom post actions and custom
+content pages.
+For information about EXAMPLE Server ®and options for integration, see the Guide to EXAMPLE Server® . For
+information about custom post actions and content pages, see OnDemand Framework andCustomizing EXAMPLE
+Express® .
+Policy Administration Interface
+EXAMPLE Express ®provides an online policy administration interface that allows users to view and work with policies,
+quotes, and clients. This interface includes the following:
+•Login
+•New Agency Signup
+•Policy Administration Dashboard
+•Notifications
+•Tasks
+•Batch Reports
+•Search
+•Policy pages
+•Client pages
+•New Quote
+•Underwriter's Workbench Toolbar
+Login
+The EXAMPLE Express ®Login page allows existing users to log in with a username and password, or new users to
+request an agency account. Out of the box, the EXAMPLE Express ®Login page appears as follows:
+5 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

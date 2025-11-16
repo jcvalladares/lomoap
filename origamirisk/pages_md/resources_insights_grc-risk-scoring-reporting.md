@@ -1,0 +1,113 @@
+### Title: Origami Risk GRC Risk Scoring & Reporting
+
+#### Summary:
+Origami Risk is an innovative platform designed to enhance operations with speed, scalability, and security. It offers a range of AI tools to boost speed, insight, and impact. Seamlessly integrate with data sources, expert system configuration and guidance, and customizable dashboards. Purpose-built solutions improve outcomes with configurable, integrated solutions for risk, safety, and insurance. Explore our solutions for P&C Insurance and other industries.
+
+#### Headings:
+1. **Platform One**
+   - Infinite Potential
+   - Enhance Operations with Speed, Scalability, and Security
+
+2. **Explore Our Platform**
+   - AI Tools for Boosting Speed, Insight, and Impact
+   - Seamless Integration with Data Sources
+   - Expert System Configuration and Guidance
+   - Customizable Dashboards
+   - Purpose-built Solutions
+   - Improve Outcomes with Configurable, Integrated Solutions
+
+3. **P&C Insurance Cloud-native Tools**
+   - Policy, Billing, and Claims
+   - Policy Administration
+   - Billing
+   - Claims
+   - Medical Professional Liability
+   - Workers' Compensation
+   - View All Risk Management Information Systems (RMIS)
+   - Centralize and Manage Insurable Risk Data
+   - TCOR Analytics
+   - Claims Management
+   - Incidents & Events Management
+   - Insurance Program Management
+   - Allocations
+   - Exposure Management
+   - View All Environment, Health & Safety (EHS)
+   - Power a Strong Safety Culture
+   - Operational Risk Management
+   - Governance, Risk & Compliance (GRC)
+   - Identify, Assess, and Mitigate Enterprise Risk
+   - Business Continuity Management
+   - Enterprise Risk Management
+   - Internal Audit
+   - Internal Controls Management
+   - Policy & Procedure Management
+   - Third-Party Risk Management
+   - View All Healthcare Solutions
+   - Integrated Solutions for Healthcare Providers
+   - Healthcare Provider Performance
+   - Integrated Risk Management (IRM)
+   - Unify Risk, Safety, and Compliance on One Platform
+   - Industries
+     - For Your Industry
+       - Empower Your Organization with Solutions That Streamline Operations and Turn Data into Action
+     - P&C Insurance
+     - Construction
+     - Government
+     - Healthcare
+     - Manufacturing
+     - Transportation
+   - Resources
+     - Resource Library
+       - Discover New Perspectives and Practical Insights to Drive Better Business Decisions, and Get Updates on What's Coming Next
+     - Case Studies
+       - Real-world Success Stories from Origami Risk Clients
+     - Insights
+       - Industry Reports, Articles, How-To Guides, and More
+     - Events
+       - Connect, Learn, and Network in Person or Online
+     - About
+       - About Origami Risk
+         - We Support the Risk and Insurance Ecosystem in Building More Resilient Businesses
+         - Learn More
+   - Leadership Careers
+   - News
+   - Partners
+   - Contact Us
+   - Log In
+   - Request a Demo
+   - Insights / Webinar
+     - GRC Risk Scoring & Reporting
+       - This solution showcase is designed for risk management professionals, leaders, and decision-makers who are looking to enhance their risk management practices and drive strategic decision-making.
+       - During the webinar, our experts will walk you through how Origami Risk’s GRC software provides a comprehensive view of organizational risks, enabling you to identify, assess, and prioritize risks more effectively.
+       - You’ll see firsthand how our risk-scoring solution can be configured to support your business objectives, offering unparalleled insights and supporting data-driven leadership.
+       - Don’t miss this chance to learn how to transform your risk management practices and stay ahead in a complex and dynamic environment.
+   - Related articles
+     - View more Webinars
+     - From Flintstones to Jetsons: Turning Construction Risk Data into Action
+     - 5 ERM Lessons You Don’t Have to Learn the Hard Way
+     - Driving Better Incident and Claims Management with Data, Technology & Strategic Collaboration
+   - Connect with us
+     - Whether you’re exploring solutions or ready to scale, our team is here to help build something great.
+     - Contact us
+   - Platform
+   - Origami Risk AI
+   - API Access
+   - Implementation and Support
+   - Origami Mobile
+   - Reporting and Analytics
+   - Solutions
+     - Purpose-built solutions
+     - Improve outcomes with configurable, integrated solutions for risk, safety, and insurance
+     - Explore our solutions for P&C Insurance and other industries
+   - Industries
+     - For your industry
+       - Empower your organization with solutions that streamline operations and turn data into actionable insights
+     - P&C Insurance
+     - Construction
+     - Government
+     - Healthcare
+     - Manufacturing
+     - Transportation
+   - Resources
+     - Resource library
+       - Discover new perspectives and practical insights to drive better business decisions, and get updates on what's coming

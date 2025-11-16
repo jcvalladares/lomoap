@@ -1,0 +1,36 @@
+Configuring the Disbursement Authorization Privilege
+The Disbursement Authorization feature allows Duck Creek Billing™ users to create a threshold for automatic
+disbursements, and requires a specific privilege to enable a user to authorize a disbursement.
+Disbursements can be processed automatically without any authorization. Out-of-the-box, the account authorization
+limit default is 0, which prevents automatic disbursements.
+For more information about using this feature, see Working with Disbursement Authorization in the Duck
+Creek Billing™ User Guide .
+Specifying the Automatic Disbursement Value
+To allow automatic disbursements up to a specific amount:
+•Change the value of the AutomaticDisbursementAuthorizationLimit field in the Disbursement_AccountPlan group
+in the Billing_Policy_Account_Common_1_0_0_0 ManuScript to the appropriate value.
+Automatic disbursements will now be processed up to and including this amount with no authorization required.
+Working with the Disbursement Authorization Privilege
+To create the required privilege for authorizing disbursements and associate that privilege with a user:
+Only one disbursement authorization limit may be designated for a user.
+1.Open EXAMPLE UserAdmin™, and in the left navigation panel, click Add a role .
+2.Enter a role name and description in the appropriate text boxes.
+3.Click Select General System and then select the appropriate privileges.
+4.Click Select Policy Administration and then select the appropriate privileges.
+5.Click Billing Administration and then select the appropriate privileges.
+6.Click Author Administration , select the appropriate privileges, and the click Finish .
+7.Click the View Entities Associated with this role button
+ for the newly created role.
+8.Click Add more entities to role .
+9.Enter a name in the Enter Name text box and then click Search .
+10. Select the appropriate entities, and then click Add roles to these entities .
+11. Click Manage role/privilege associations in the left navigation panel.
+12. In the Role list click the appropriate role, and then in the Privilege list, click BIL_AuthorizeDisbursement .
+13. Enter DisbursementAuthorizationLimit in the Name text box, enter the appropriate value in the Value text box,
+and then click Insert .
+14. To create a new user or associate this role with an existing user, see Working with Users .
+The Disbursements Pending Authorization report is accessible from the Billing Dashboard, and lists all pending
+disbursements awaiting authorization. This report can be used to verify and authorize disbursements for Duck Creek
+Billing™ accounts.
+The Disbursement Activity report, also accessible from the Billing Dashboard, lists all the processed disbursements.
+82 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

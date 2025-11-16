@@ -1,0 +1,33 @@
+Customizing Interview (ManuScript) Pages
+Carriers can control the appearance of interview (ManuScript) pages by defining the content and layout of each page in
+EXAMPLE Author ®. In addition, carriers can further control the appearance of these pages through custom styles and
+format masks.
+For instructions on creating and using custom styles in ManuScript pages, see Customizing CSS , and see Working
+with CSS Override Styles in the Guide to EXAMPLE Author® .
+For instructions on using format masks, see Format Masks andSetting Field Format Masks .
+Adding Custom Pages
+Custom content pages can be added to EXAMPLE Express ®by using the Edit Configuration Utility to extend the
+ContentMap.xml file.
+Do not customize the shipped ContentMap files. Instead, make customizations in custom ContentMap
+files to prevent changes from being lost during the upgrade process.
+You must reset EXAMPLE Express ®(run DCTReset.exe) for any customizations to OnDemand files
+(PostActionMap.xml, ContentMap.xml, and ApplicationLayoutMap.xml) to appear.
+Creating Custom ContentMap Files
+The ContentMap.xml file is configured so that a particular implementation of EXAMPLE Express ®can have multiple
+ContentMap.xml files at the path specified by the ContentFactory configuration setting in the Express\Web.config file. If
+desired, you can create a custom ContentMap file in addition to ContentMap.xml. At runtime, the system will use the
+following files at the path specified by the ContentFactory configuration setting. (For each of the following files,
+[MapFile] is the file name specified in the ContentFactory configuration setting.)
+•[MapFile].xml
+•[MapFile]*.xml
+•Custom[MapFile].xml
+Custom map files should adhere to the following naming convention: Custom[MapFile].xml , where [MapFile]
+is the text specified in the appropriate Express\Web.config setting (e.g., ContentMap, PostActionMap,
+ApplicationLayoutMap). The [MapFile]*.xml convention is reserved for Duck Creek Technologies, Inc. use
+only. If you have migrated your custom map files from a previous version of the EXAMPLE Platform ®, Duck
+Creek Technologies, Inc. recommends that you apply the Custom[MapFile].xml naming convention to your
+custom files.
+Because the EXAMPLE Platform ®combines all files that use the above naming conventions, keep the following tips in
+mind when using a custom ContentMap file:
+•Be sure no conflicts exist among any items defined in any ContentMap file.
+141 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

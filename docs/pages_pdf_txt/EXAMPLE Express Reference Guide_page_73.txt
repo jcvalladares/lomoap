@@ -1,0 +1,12 @@
+3.To make Pitney Bowes Address Verification required to complete an application, set the value of Required to1.
+To allow applications that use unverified addresses, set the value of Required to0.
+4.Save the changes.
+Address verification cannot be used for addresses stored under a parent group (such as, data). exportRq
+moves an address from a certain place in the session into a temporary session document for address
+verification, and exportRq cannot map to a ManuScript group that doesn’t have a parent.
+For more information about address verification:
+•SeeWorking with Addresses
+•SeePitney Bowes Address Verification
+Setting Up Underwriter's Workbench Toolbar
+Underwriter's Workbench Toolbar lets users view, create, and delete Notes and Attachments.
+73 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

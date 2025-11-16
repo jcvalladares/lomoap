@@ -1,0 +1,38 @@
+_keynameQueueAssigned Comma-delimited list of key fields to
+filter by.Comma-delimited list
+NOTE: Only certain fields are valid. To
+determine which are valid, consult the
+comments in the
+ApplicationLayoutMap.xml file.
+_keyvalueQueueAssigned Comma-delimited list of values to filter
+by.Comma-delimited list
+_keyopQueueAssigned Comma-delimited list of operators for
+the filter.Comma-delimited list. Options are:
+•contains
+•equals
+•greater than
+•less than
+NOTE: Only certain combinations
+of fields and operators are valid. To
+determine which are valid, consult
+the comments in the
+ApplicationLayoutMap.xml file.
+_keyconnectorQueueAssigned Comma-delimited list of connectors. Comma-delimited list. Options are:
+•and
+•or
+_showFilter Filter to use. Options are:
+•Open
+•New
+•DueToday
+•DueThisWeek
+•Overdue
+_entityID ID of the entity by which to filter the list.
+The null value of this variable is used to
+clear the entityID and prevent the list
+from filtering by entity.null
+_QuoteID ID of the quote or policy by which to
+filter the list. The null value of this
+variable is used to clear the quoteID
+and prevent the list from filtering by
+quote or policy.null
+157 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

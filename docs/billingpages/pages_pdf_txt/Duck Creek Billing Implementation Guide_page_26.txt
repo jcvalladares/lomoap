@@ -1,0 +1,63 @@
+Receivable
+Sub Type
+RollupDisplays the
+receivable sub type
+on the invoice.Select check box
+to allow.Not selected
+Receivable
+Type RollupDisplays each
+receivable on the
+invoice.Select check box
+to allow.Selected
+Transaction
+Type RollupDisplays the
+transaction type in
+the description box
+on the invoice.Select check box
+to allow.Not selected
+Unit Rollup Displays the unit on
+the invoice.Select check box
+to allow.Not selected
+Invoice
+MethodSpecifies the
+invoice type.•Paper
+•EFTPaper
+EFT Service
+Charge
+AmountSpecifies the
+service charge
+amount for EFT
+invoice.Any value. $1
+EFT Service
+Charge
+ActionDetermines whether
+the account will
+generate service
+charges for EFT
+invoices.•Fixed Service
+Charge
+•No Service
+Charge
+•Variable
+Service
+ChargeFixed Service Charge
+Invoice
+Service
+ChargeSpecifies the
+service charge
+amount.Any value. $1
+Paper Invoice
+Service
+Charge
+ActionDetermines whether
+the account will
+generate a service
+charge for paper
+invoices.•Fixed Service
+Charge
+•No Service
+Charge
+•Variable
+Service
+ChargeA
+26 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,21 @@
+•Clicking the View Policy Details button
+ for that quote or policy on the Client Information page for a given
+client or on the Search page.
+•Clicking View Policy Details in the left panel any time a quote or policy is open.
+The Policy Details page can be customized. For general information on customizing out-of-the-box EXAMPLE
+Express ®pages, see Customizing EXAMPLE Express ®Skins .
+Create Policy Documents
+On the Create Policy Documents page, users can generate quote or policy documents. They can print or save the
+documents, and—if desired—attach them to the quote or policy on the Policy Details page.
+Out of the box, the Create Policy Documents page appears as follows:
+The Create Policy Documents page for a given quote or policy can be accessed by clicking Create Policy Documents
+in the left panel any time a quote or policy is open. The Create Policy Documents page can be customized. For general
+information on customizing out-of-the-box EXAMPLE Express ®pages, see Customizing EXAMPLE Express ®Skins .
+Client Pages
+Users can view and work with individual clients through a series of client pages in EXAMPLE Express ®. Users can
+view and access these pages if they have the ViewClients privilege assigned at the entity with which the client is
+associated. These pages include:
+•Client Information page – Users can view client information, including contact information and a list of the
+client's portfolios, policies, and quotes. Users can also access the client's policies and quotes from this page. For
+more information about the Client Information page, see Client Information .
+30 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

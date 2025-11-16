@@ -1,0 +1,39 @@
+Item Value Explanation
+EFT Draw Offset
+Days10
+Target Draw Days 16
+Policy Effective
+DateJanuary
+16
+Draw Transmission
+Offset Days2
+Policy Issue/Entry
+DateJanuary
+6This example illustrates how scheduling works out of the box, without the Late Entered
+Strategy feature enabled, and without a late entered policy.
+The following scenario demonstrates the results of installment scheduling that uses the out-of-the-box settings with a
+late entered policy.
+Item Value Explanation
+EFT Draw
+Offset Days10
+Target Draw
+Days16
+Policy
+Effective
+DateJanuary
+16
+Draw
+Transmission
+Offset Days2
+Policy Issue/
+Entry DateJanuary
+7In this example, the policy is late entered because sufficient time (10 days) does not exist for the
+EFT draw between the Policy Issue/Entry Date, the Policy Effective Date, and the Target Draw
+Date. The installment will bill with the next scheduled installment on February 16, leaving no
+payment for coverage for between January 16 and February 16. Depending on the value for the
+Late Entered Strategy Code in the Policy Plan Setup , the missed installment will either be caught-
+up with the next installment or spread over subsequent installments.
+The following scenario demonstrates the results of installment scheduling that uses the Late Entered Strategy feature
+with a value of 0specified for the EFT Out of Cycle Next Draw Offset Days parameter.
+Item Value Explanation
+48 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

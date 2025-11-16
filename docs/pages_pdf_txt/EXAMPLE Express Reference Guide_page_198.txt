@@ -1,0 +1,32 @@
+EXAMPLE Server ®Request: Consumer.convertToPolicyRq
+consumerCreateAccount
+Creates a user account for the EXAMPLE Platform ®. This action should be used to register a consumer access user.
+This action can be executed from a ManuScript or a system page.
+Parameters/HTML Form Fields:
+Field Description
+_username Username for the account.
+_password Password for the account.
+_policyNumber (Required if _consumerQuoteNumber is not specified) Policy number of the policy to
+associate with the account. Use this field when creating an account for a consumer
+who already has a policy in the system.
+_consumerQuoteNumber (Required if _policyNumber is not specified) Number of the quote to associate with the
+account. Use this field when creating an account for a consumer who has no existing
+policies in the system.
+EXAMPLE Server ®Request: Consumer.createAccountRq
+consumerLoadQuote
+Loads a quote from the DC_POL_ConsumerQuote table. This action can be executed from a ManuScript or a system
+page.
+Parameters/HTML Form Fields:
+Field Description
+_consumerQuoteNumber (Required if _consumerQuoteID is not specified) ManuScript-generated number of the
+quote to load.
+_consumerQuoteID (Required if _consumerQuoteNumber is not specified) ID of the quote to load. This ID
+is stored in the DCT_POL_ConsumerQuote table.
+_consumerID ID for the consumer, stored in the DCT_PLT_ConsumerAccount database table.
+EXAMPLE Server ®Request: Consumer.loadQuoteRq
+consumerLogin
+Logs a user in under the proxy account used for consumer access. This action can be executed from a system page
+only.
+HTML Form Fields:
+Field Description
+198 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

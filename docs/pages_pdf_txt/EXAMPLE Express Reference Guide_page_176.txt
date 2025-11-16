@@ -1,0 +1,40 @@
+Look and feel Out-of-the-box Lila-based skins provide a different look and feel than out-of-the-box AvantGarde-
+based skins, with different color schemes, images, layouts, and text.
+Policy
+Administration
+DashboardOut-of-the-box Lila-based skins do not support a role-based dashboard. Instead, Lila-based skins
+include a Home page that displays the five most recently accessed quotes and policies.
+Task system Out-of-the-box Lila-based skins do not support the task system available with AvantGarde-based
+skins.
+Notification
+system
+(message
+system)Out-of-the-box Lila-based skins use a message and diary system instead of a notification system.
+Out of the box, Lila-based skins provide the ability to send, receive, and reply to messages, and to
+create messages (diary items) that can be attached to clients or policies.
+Search
+functionalityOut-of-the-box Lila-based skins do not incorporate the Quick Search feature available with
+AvantGarde-based skins. In addition, Lila-based skins use an Open page and a Client page to
+view and search for policies and clients (respectively), rather than a single search page.
+With EXAMPLE Express ®4.x, the System Administration section in EXAMPLE Express ®has been removed.
+If using existing Lila-based skins with EXAMPLE Express ®4.x, note that EXAMPLE Express ®will no longer
+support the features in the System Administration section. Instead of performing these actions in EXAMPLE
+Express ®, users can manage entities, roles, users, and the ExampleData database using EXAMPLE
+UserAdmin™.
+EXAMPLE Express® ManuScript Processing Flow
+The following EXAMPLE Express ®processing occurs when a user executes an action (clicks a button or hyperlink) on
+a ManuScript page in EXAMPLE Express ®:
+1.If anything on the ManuScript page has changed, the system stores the fields to the session. If the AutoSave
+configuration setting in the Express\Web.config file is set to 1, the system saves the session to the database.
+2.If a Pre-Action is defined, the system runs the Pre-Action.
+3.If an Express Action (also known as a post action) is defined and includes a savecommand, the system saves
+the session to the database.
+4.If an Express Action (also known as a post action) is defined, the system executes the action.
+5.If any requests are attached to the action, the system runs the requests.
+6.The system loads the requested page, if any, and calls the Post-Action (the post command) from within the
+<ManuScript.getPageRq> request.
+Express\Web.config Settings
+The EXAMPLE Express ®Web.config file contains a number of EXAMPLE Express ®configuration settings. To modify
+these settings, use the Edit Configuration Utility (located at Global Root Directory \Util\EditConfig.exe).
+Key Default Value
+176 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

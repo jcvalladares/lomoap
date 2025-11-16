@@ -1,0 +1,40 @@
+value Required Value of the form variable to be applied to the module. Varies per module. (See table
+below for more detail.)
+The following form variables are available for the out-of-the-box modules.
+Variable Description Valid Values
+newQuote
+_ManuScriptPageSet PageSet containing the page to use for
+the New Quote module.Name of a PageSet in the ManuScript
+specified by the
+NewQuoteManuScriptID setting in the
+Express\Web.config file.
+_ManuScriptPage Page to use for the New Quote
+module.Name of a page in the PageSet defined
+by the _ManuScriptPageSet variable.
+mruQuote
+pageSize Number of quotes/policies to display. Integer
+notifications
+displayCount Number of notifications to display. Integer
+showBody Boolean value indicating whether to
+show the body of the notification in the
+grid control.•0— Do not show body text
+•1— Show body text
+callbackForList Boolean value indicating whether to
+generate list items through an AJAX
+callback.•0— Do not generate list through
+an AJAX callback
+•1— Generate list through an AJAX
+callback
+taskQueue
+_queryFilterSubset Subset prefix name for the keyValue,
+keyName, keyConnector, and keyOp
+form fields that control the filtering of
+list content. Also specifies the
+SearchType.Options are:
+•QueueAssigned
+•QueueUnassigned
+•QueueAdmin
+start Record number to start the list from.
+Usually 1.Integer
+limit Maximum number of records to display. Integer
+156 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

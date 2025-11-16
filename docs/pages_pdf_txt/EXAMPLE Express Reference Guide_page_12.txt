@@ -1,0 +1,26 @@
+•Selected entity labels – The user can select from a list of entity labels. All users who belong to an entity with that
+entity label will receive the notification.
+EXAMPLE Express® System ManuScript
+Carriers can implement a custom Message Detail ManuScript. Using a custom ManuScript allows Carriers to define
+advanced editing and business rules, and to add features such as the ability to attach files to notifications.
+The Message Detail ManuScript replaces the New Notification system page and the Notification Details
+system page. For more information about the Notification Details page, see Notification Details Page .
+For instructions on customizing EXAMPLE Express ®to use a Message Detail ManuScript, see Configuring a Message
+Detail ManuScript . For more information about system ManuScripts in general, see System ManuScripts .
+Notification Details Page
+Users can view details of a notification by clicking that notification in a list of notifications. Like the New Notification
+page, the Notification Details page can easily be customized to meet each Carrier's unique needs through one of two
+approaches:
+•EXAMPLE Express ®system page – Carriers can implement a built-in Notification Details system page that
+allows users to view the following details about each notification.
+◦From – Who sent the notification. If the notification was system-generated, the value will be System .
+◦To– Recipients of the notification. This may include individual users or groups of users.
+◦Policy/Quote # – Number of the policy or quote with which the notification is associated and hyperlink to
+the policy or quote. If the notification is not associated with any policy or quote, this detail does not appear.
+◦Deleted – Date the notification was deleted by the logged in user. This detail only appears if the notification
+has been deleted by the logged in user.
+◦Attachments – Documents attached to the notification.
+◦Message – Text of the notification.
+This page provides a simple, straightforward method for viewing notification details, and requires very little
+customization.
+12 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

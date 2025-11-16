@@ -1,0 +1,36 @@
+2.In the ContentMap.xml file (or any custom ContentMap file), add a <content> entry for each desired New Quote
+Selection page. Perform one of the following actions:
+◦Within the class for each <content> entry, specify the PageSet and page to use for that content page.
+◦Configure the system to post the following HTML form fields to the New content page:
+◦_ManuscriptPageSet — PageSet containing the page to use for the New Quote Selection page.
+◦_ManuscriptPage — Page to use for the New Quote Selection page.
+If you do not specify a PageSet and page, the system will automatically use the first PageSet and
+page in the specified New Quote Selection ManuScript.
+3.In the ApplicationLayoutMap.xml file (or any custom ApplicationLayoutMap files), specify the desired new quote
+content page in each <applicationLayout> element.
+The out-of-the-box New Quote Selection ManuScript offers a basic and an extended page. Though these
+pages are identical out of the box, you can customize these pages if the New Quote page needs to function
+differently for different roles.
+Configuring a Client Detail ManuScript
+To configure EXAMPLE Express ®to use a custom ManuScript for the Client Details page:
+1.Use EXAMPLE Author ®to create the ManuScript you wish to use for the Client Details page. For instructions on
+creating ManuScripts in EXAMPLE Author ®, see the Guide to EXAMPLE Author® .
+2.Open the Edit Configuration Utility.
+3.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+4.Under Mode , click Form .
+5.On the Web Config tab, in the list of settings, click the ClientDetailsManuScriptID .
+6.In the value text box, enter the ManuScript ID of the ManuScript to use.
+7.Click Save .
+8.Click Close .
+Configuring a Message Detail ManuScript
+To configure EXAMPLE Express ®to use a customized ManuScript for the Send a Notification and Notification Details
+pages:
+1.Use EXAMPLE Author ®to create the ManuScript you wish to use for the Send a Notification and Notification
+Details pages. For instructions on creating ManuScripts in EXAMPLE Author ®, see the Guide to EXAMPLE
+Author® .
+2.Open the Edit Configuration Utility.
+3.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+4.Under Mode , click Form .
+5.On the Web Config tab, in the list of settings, click the MessageDetailsManuScriptID .
+6.In the value text box, enter the ManuScript ID of the ManuScript to use.
+139 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

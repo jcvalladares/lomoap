@@ -1,0 +1,34 @@
+setLanguage Sets the language property in the session and the EXAMPLE Express ®<state>
+node to the specified language.
+setPrintManuScript Sets the ManuScriptID to use when the Create Policy Documents link is clicked.
+This action should be used when a different ManuScript than the loaded interview
+ManuScript (state.ManuScriptID) is needed.
+setTaskComplete Sets the status of a task to Complete .
+setTaskDeclined Sets the status of a task to Closed , with a reason of Declined .
+setTaskDeleted Marks a task for delete. (Sets the status of the task to Deleted .)
+setTaskStatus Sets the status of a task.
+signup Creates an agency signup request and sends an e-mail to the recipient specified by
+theMailTo configuration setting in the Express\Web.config file.
+submit Saves the active quote or policy to the database using the
+<OnlineData.storeTransactionRq> request.
+switchUser Moves the active quote or policy to the specified agency and logs in as a different
+user to load the active policy.
+updateTask Updates a task in the database based on the task record located in the session at
+the path _TaskData/TaskRecord.
+upload Uploads a file from a ManuScript to the directory specified in the UploadDir
+configuration setting in the Express\Web.config file.
+validatePrintJob Verifies that no required fields on selected forms are empty.
+Configuring EXAMPLE Express®
+To configure EXAMPLE Express ®, you must:
+•Set up EXAMPLE Express® security
+•Set up event logging
+In addition, you can:
+•Set up the Exit Interview Field
+•Set up an EXAMPLE Express® proxy server
+•Secure IIS with a self-signed SSL certificate
+•Set up dynamic skin selection
+•Set up portfolio
+•Set up consumer access
+•Set up mass tasks
+•Set up Pitney Bowes address verification
+61 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

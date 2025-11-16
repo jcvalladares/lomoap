@@ -1,0 +1,45 @@
+20 21 - 40 Company
+discretionary
+dataA 20-position character field which allows originators to include codes of
+significance only to them, and to enable specialized handling of all subsequent
+entries in that batch.
+10 41 - 50 Company
+identificationA 10-position character field which identifies an originator.
+3 51 - 53 Standard
+entry class
+codeA required 3-position character field which permits the following entries to be
+distinguished:
+•RET for rejections
+•COR for changes
+•CCD for commercial deposit files
+•PPD for personal deposit account files
+10 54 - 63 Company
+entry
+descriptionA 10-position character field used to describe the purpose of the entry to be
+displayed back to the receiver.
+6 64 - 69 Company
+descriptive
+dateA 6-position character field used by the originator as the date it would like to
+see displayed to the receiver for descriptive purposes.
+6 70 - 75 Effective
+entry dateA required 6-position character field which is the date specified by the
+originator on which it intends a batch of entries to be debited.
+The format is MMDDYY for COR and RET.
+3 76 - 78 Settlement
+dateA 3-position numeric field which identifies the scheduled settlement date for a
+batch of entries.
+1 79 Originator
+status codeA 1-position character field which refers to the originating depository (financial
+institution) initiating the entry.
+8 80 - 87 Originating
+DFI
+identificationA required eight 8-position character field which identifies the DFI originating
+entries (bank routing transit number).
+7 88 - 94 Batch
+numberA required seven 7-position numeric field assigned in ascending sequence for
+each batch by the sending point in a given file of entries.
+The following table lists the value and content of the Detail record.
+Length Position Field Name Description
+1 1 Record type A required 1-character field which indicates the type of input record. The
+valid type is 6.
+69 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

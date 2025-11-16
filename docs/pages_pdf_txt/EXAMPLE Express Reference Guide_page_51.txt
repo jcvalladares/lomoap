@@ -1,0 +1,31 @@
+Float
+Format Mask Output
+Cn Field value with culture-appropriate (as determined in ManuScript properties) currency
+symbol and numeric separators, to nnumber of decimal places. With the base culture in a
+ManuScript set to en-US , the following are examples of output for the value 11.87:
+•C0 — $12
+•C1 — $11.9
+•C2 — $11.87
+The rounding that is applied when using this format mask occurs at the display level
+and is completely separate from any rounding defined in a ManuScript field.
+hide Always masks characters (displays an asterisk (*)) on entry and on display. An additional
+format mask can be added after the colon. (For example, hide:ssn.)
+This format mask only works with interview pages.
+hideOnEntry Masks characters (displays an asterisk (*)) as they are entered. An additional format mask
+can be added after the colon. (For example, hideOnEntry:ssn.)
+This format mask only works with interview pages and does not hide characters
+displayed as read-only.
+hideOnDisplay Always masks characters (displays an asterisk (*)) only on display, not on entry. An
+additional format mask can be added after the colon. (For example, hideOnDisplay:ssn.)
+This format mask only works with interview pages.
+Date
+Date field display (with no format mask applied) defaults to the short date format appropriate to the culture set
+in Web browser options. Format masks placed on Date fields will override this default. Input fields of a Date
+data type will assume dates are entered in the short date order appropriate to the browser settings and will
+accept hyphens (-), periods (.), or slashes (/) as separators.
+Applying format masks to date input fields can result in incorrect data collection and other errors. To
+avoid confusion, Duck Creek Technologies recommends indicating in the user interface which format
+the end user should use.
+Format
+MaskOutput
+51 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,34 @@
+selectAgencyControl Controls the agency drop-down lists on the new.xsl and search.xsl
+pages.
+buildPortfolioList Controls the portfolio list on the clientInfo.xsl page. This template calls
+the portfolioPolicyList template to build the table rows.
+policyList (matched template) Controls the header row of the HTML table for the quote/policy list on
+the clientInfo.xsl page. This template calls the policyList template to
+build the quote/policy list HTML table.
+portfolio Controls the header row of the HTML table for portfolio data.
+buildPolicyGridHeader Controls the header row of the HTML table for the policy list on the
+search.xsl and clientInfo.xsl pages.
+buildPolicyActions Controls the action icons that appear in the policy list on the
+clientInfo.xsl page.
+portfolioPolicyList This deprecated template is included for backwards compatibility.
+policyList Controls the quote/policy list on the clientInfo.xsl page.
+buildListPagingSection Controls the paging links on the print.xsl page.
+messagesListWidget Controls the Notifications lists on the messages.xsl and policy.xsl
+pages.
+buildMessagesListQueryBuilderDialog This deprecated template is included for backwards compatibility.
+clientDetailWidget Controls the Client Detail table on the clientInfo.xsl page. This template
+calls the buildClientDetailTable template.
+buildClientDetailTable Controls the Client Detail table on the clientInfo.xsl page.
+buildClientDetailAdditionalActionsSection Controls the action buttons available in the Client Details section of the
+clientInfo.xml page.
+buildCommonLayout Controls the rendering of ManuScript-driven system screens
+(clientDetail.xsl, editPrintJob.xsl/editPrintJobNew.xsl, and
+messageDetail.xsl).
+Other XSL Files
+The table below describes all other .xsl files that can be modified.
+File Description
+dctDocMode.xsl Controls the documentation pop-ups (annotations) for interview pages rendered
+with the interview.xsl file.
+dctGenericProcessFormat.xsl Controls display formatting for field values rendered during AJAX processing. This
+template calls the dctGenericSetFieldFormat.xsl file.
+86 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

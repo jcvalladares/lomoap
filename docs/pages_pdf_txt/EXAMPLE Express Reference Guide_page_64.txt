@@ -1,0 +1,36 @@
+•Verify configuration
+Installing EXAMPLE Express ®
+For instructions on installing EXAMPLE Express ®, see EXAMPLE Express® Installation .
+Setting Up a Proxy Directory
+To set up the proxy directory:
+1.In the desired location, create a new directory. Name the directory as desired.
+2.In the Global Root Directory \Shared\Bin directory, copy the Proxy.aspx file, and paste it into the newly created
+directory.
+3.Rename the Proxy.aspx file to Default.aspx .
+4.Copy the Default.aspx file.
+5.Paste the copied file into the same directory, and rename the file CheckSemaphoreStatus.aspx .
+6.In the Default.aspx file, change the value of the string url variable to the appropriate EXAMPLE Express ®URL
+(such as http://localhost/Express/Default.aspx ).
+7.Save and close the Default.aspx file.
+8.In the CheckSemaphoreStatus.aspx file, change the value of the string url variable to the appropriate EXAMPLE
+Express ®URL, changing the file name at the end of the URL from Default.aspx to
+CheckSemaphoreStatus.aspx .
+9.Save and close the CheckSemaphoreStatus.aspx file.
+10. Navigate to the Global Root Directory \Express\Skins directory.
+11. Perform one of the following actions:
+◦Copy your skins files to the proxy directory, placing them in a sub-directory named Skins .
+If your skins use the Next Generation Web Design, you must copy the DCTCore directory as well
+as your customized skin directory to the proxy directory.
+◦Copy the entire Skins directory and paste it into the proxy directory.
+Setting Up a Virtual Directory
+In IIS, create a virtual directory for the EXAMPLE Express ®proxy. Name the directory as desired, and point it to the
+proxy directory.
+Configuring Express\Web.config
+To configure the Express\Web.config file:
+1.Open the Edit Configuration Utility.
+2.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+3.Under Mode , click Form .
+4.On the Web Config tab, in the list of settings, click ProxyMode .
+5.In the value text box, enter 1.
+6.Click Save .
+64 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

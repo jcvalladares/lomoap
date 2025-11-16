@@ -1,0 +1,43 @@
+•The page navigation changes
+•TheRequired property of a field in a table layout changes
+Passthrough.config File
+In some cases, EXAMPLE Server ®requests need to be passed to EXAMPLE Server ®through EXAMPLE Express ®.
+This may occur, for example, when a PreEvent field on an action is executed, or when a collapsible section on a page
+is expanded.
+To accommodate the need for EXAMPLE Express ®to pass requests to EXAMPLE Server ®, aPassthrough.config file
+in the Duck Creek Technologies\Express directory defines the specific requests that can be passed through EXAMPLE
+Express ®to EXAMPLE Server ®. This file limits the requests that can be sent through EXAMPLE Express ®to a small
+number of specified requests. Limiting the requests that can be passed through EXAMPLE Express ®limits the security
+exposure that could result from all requests being available for execution through EXAMPLE Express ®.
+The Out-of-the-Box Passthrough.config File
+The Passthrough.config file that is installed with EXAMPLE Express ®includes the following EXAMPLE Server ®
+requests that are commonly used by EXAMPLE Express ®and that represent a very low security risk. Out of the box,
+this file appears as follows:
+<rulesets>
+<ruleset>
+<rule type="RequestName">Session.resumeRq</rule>
+</ruleset>
+<ruleset>
+<rule type="RequestName">Session.storeDataRq</rule>
+</ruleset>
+<ruleset>
+<rule type="RequestName">ManuScript.getValueRq</rule>
+</ruleset>
+<ruleset>
+<rule type="RequestName">ManuScript.getPageRq</rule>
+</ruleset>
+</rulesets>
+Customizing the Passthrough.config File
+If your EXAMPLE Express ®skins or ManuScripts must send additional requests through EXAMPLE Express ®, you can
+customize the Passthrough.config file. If an additional request is required, add the request to this file, and then bounce
+EXAMPLE Express ®to see your changes.
+Adding Parameters to EXAMPLE Server ®Requests
+To increase the security of server requests that are added or included in the Passthrough.config file, you can add
+Request Parameter rules. Request Parameter rules can be used to further restrict EXAMPLE Server ®requests through
+attributes. The following is an example of a Request Parameter ruleset for <ManuScript.getValueRq> request:
+<rulesets>
+<ruleset>
+<rule type=”RequestName”> ManuScript.getValueRq</rule>
+<rule type=”RequestParameter” name=”manuscript”>BaseProduct</rule>
+<rule type=”RequestParameter”
+55 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

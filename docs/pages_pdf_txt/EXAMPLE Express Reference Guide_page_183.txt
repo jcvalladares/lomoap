@@ -1,0 +1,30 @@
+ExitInterviewField
+Defines a ManuScript field to execute when a user completes an interview process in EXAMPLE Express ®. For more
+information about the Exit Interview Field, see Setting up the Exit Interview Field in the EXAMPLE Express® Reference
+Guide .
+Default Valid
+null Name of a ManuScript field. The name must be identical in all ManuScripts that may be accessed.
+FormsTempPath
+UNC path accessible from both EXAMPLE Server ®and EXAMPLE Express ®machines that has both read and write
+permissions. This allows the transfer of temporary data between EXAMPLE Server ®and EXAMPLE Express ®.
+Duck Creek Technologies, Inc. recommends that this path reside on the EXAMPLE Express ®machine in an
+unclustered environment, or in a shared storage location in a clustered environment.
+Default Valid
+C:\Program Files\Duck Creek Technologies 4.0\Express\Temp Any valid path.
+GetPageWaitTime
+Number of milliseconds for EXAMPLE Express ®to wait on asynchronous requests before loading a page. This setting
+increases the wait time on any request to EXAMPLE Server ®for page information whether or not the request is
+asynchronous, so use with caution.
+Default Valid
+0 Any positive integer or 0.
+GetPolicyAdminManuScriptID
+Boolean value indicating whether to look for a PolicyAdminManuScriptID field in the active ManuScript. If the field
+contains a valid ManuScript ID, EXAMPLE Express ®will use the specified ManuScript for Policy Administration.
+Otherwise, EXAMPLE Express ®will use the ManuScript ID specified by the PolicyAdminManuScriptID setting.
+Default Valid
+null •0— Use the ManuScript ID found in the PolicyAdminManuScriptID setting.
+•1— Use the ManuScript ID found in the specified PolicyAdminManuScriptID field.
+GuestPassword
+Password for guest access to EXAMPLE Express ®.
+Default Valid
+183 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,7 @@
+•Tasks – Users can only see tasks assigned to them or to their task queues.
+•Notifications – Users can see notifications if they have the ViewNotification privilege at the entity with which the
+policy is associated.
+•Documents – All users who can view a policy's details can view documents attached to that policy.
+Out of the box, the Policy Details page appears as follows:
+The Policy Details page for a given quote or policy can be accessed by:
+29 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

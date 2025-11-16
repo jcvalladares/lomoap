@@ -1,0 +1,38 @@
+EXAMPLE Express® Reference Guide
+This document contains information about the features and functions of EXAMPLE Express ®and instructions for
+configuring and customizing it.
+The information contained in this guide is based on an EXAMPLE Express ®implementation that uses Avant
+Garde–based skins. For differences that exist when running an EXAMPLE Express ®configuration that uses Lila-based
+skins, see the appendix Using Lila-Based Skins .
+EXAMPLE Express® Functionality
+EXAMPLE Express ®has the following important features:
+•An architecture that supports integration with other EXAMPLE Platform ®products and other systems
+•An out-of-the-box policy administration interface
+•Out-of-the-box consumer access screens and the ability to implement a custom consumer access system
+•Database management tools (through EXAMPLE UserAdmin™)
+•A portfolio feature that allows policies to share common information
+•Flexible, role-based security (through EXAMPLE UserAdmin™)
+•A framework that allows carriers to extend and customize the EXAMPLE Express ®system as needed
+Architecture
+EXAMPLE Express ®works with the EXAMPLE Platform ®and other downstream systems to provide carriers with a
+complete policy administration system.
+EXAMPLE Express ®in the EXAMPLE Platform ®
+EXAMPLE Express ®works with the following other EXAMPLE Platform ®products to facilitate policy administration
+through the web:
+•EXAMPLE ManuScripts ™ – EXAMPLE Express ®allows users to view and interact with insurance products
+defined through EXAMPLE ManuScripts™ (built in EXAMPLE Author ®). These ManuScripts contain the complete
+product definition that EXAMPLE Server ®uses to collect data, run rules and rating, and control product workflow.
+•EXAMPLE Server ® – EXAMPLE Express ®acts as a translator between the user and EXAMPLE Server ®,
+allowing users to send and receive XML data (policy data) and the requests and responses required for rating,
+underwriting, and other policy administration actions through a user-friendly interface. If desired, EXAMPLE
+Server ®can be extended to allow integration with third-party data services such as MVRs and credit checks, or
+with internal services that can perform tasks such as querying the claims system for number of losses, generating
+new policy numbers, or performing clearance.
+•EXAMPLE UserAdmin™ – EXAMPLE UserAdmin™ enables administrators to assign and regulate the privileges
+of EXAMPLE Express ®users using role-based security. With EXAMPLE UserAdmin™, carriers can define
+security permissions according to their distinct organizational needs.
+•EXAMPLE TransACT ® – (Optional) EXAMPLE Express ®can work with EXAMPLE TransACT ®to extend its
+policy processing capabilities through policy issuance and beyond. EXAMPLE TransACT ®allows users to
+perform endorsements, cancellations, and other transactions, and it supports out-of-sequence transactions, audit
+processing, and batch processing.
+4 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

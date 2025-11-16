@@ -1,0 +1,34 @@
+submit
+Saves the active quote or policy to the database using the <OnlineData.storeTransactionRq> request. This action
+allows issuance processes to be invoked from the request map. If an active history image exists, the
+<OnlineData.updateHistoryRq> request is called instead. This action uses the active EXAMPLE Express ®state
+information to determine the clientID and policyID to save.
+switchUser
+Moves the active quote or policy to the specified agency and logs in as a different user to load the active policy.
+Interview parameters:
+•username — Username of the account to log in under.
+•password — Password for the account.
+•agencyid — ID of the agency with which to associate the policy. If not specified, the system uses the
+<OnlineData.getUserDetailsRq> request to get the agency ID of the user.
+HTML Form Fields:
+Field Description
+_username Username of the account to log in under. Used if the username interview parameter is not specified.
+_password Password for the account. Used if the password interview parameter is not specified.
+updateTask
+Updates a task in the database based on the task record located in the session at the path _TaskData/TaskRecord.
+EXAMPLE Server ®Request: Task.updateRq
+upload
+Uploads a file from a ManuScript to the directory specified in the UploadDir configuration setting in the
+Express\Web.config file. If executing this action from a ManuScript, the filepath of the uploaded file will be saved to the
+session using the <OnlineData.autoSaveDataRq> request or the <Session.storeDataRq> request.
+HTML Form Fields:
+Field Description
+File form field Form field of type "file" that contains a reference to the file to upload.
+validatePrintJob
+Verifies that no required fields on selected forms are empty. This action executes the
+<FormsEngine.validatePrintJobRq> request, returning valid orinvalid . Ifinvalid is returned, a list of forms with missing
+fields is returned.
+Skin.config File
+The skin.config file is used with the Avant Garde 2 skin. The contents of this file are attached to the internal content
+XML document for the page XSL to reference during XSLT transforms.
+211 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

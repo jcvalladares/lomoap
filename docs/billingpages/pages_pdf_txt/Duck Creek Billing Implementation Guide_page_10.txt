@@ -1,0 +1,11 @@
+The Billing Dashboard
+From the Billing Dashboard page, a user can:
+•Search for a payment.
+•Enter a single payment from the Cash Management screen instead of within an account.
+•View summary information for payments automatically or manually entered that were not posted to a policy or
+account.
+•Create an account in the billing system without going through policy issuance.
+•View a list of recently created or accessed accounts.
+•Open an available report with one click.
+•View notifications and tasks.
+10 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

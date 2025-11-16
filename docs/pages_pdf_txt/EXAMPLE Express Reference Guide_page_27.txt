@@ -1,0 +1,34 @@
+Include
+deleted
+(optional)Indicates whether to search deleted policies and quotes or clients. Appears only if searching for
+specified policies, quotes, or clients.
+Out of the box, the Policy/quote number option searches the PolicyNumber column in the Quote table.
+When both andandoroperators are used in a search, andoperators take precedence over oroperators. For
+example, if using the following criteria to search for a policy:
+Client Name contains Smith AND
+Address is 4659 W. Brookside OR
+Address is 1544 Birmingham Dr.
+The system will return the following policies:
+1. All policies with a client name that contains the text Smith and an address of 4659 W. Brookside.
+2. All policies with an address of 1544 Birmingham Dr.
+Policy Pages
+Users can view and work with individual quotes and policies through a series of quote and policy pages in EXAMPLE
+Express ®. Users can access these pages if they have the ViewQuotes privilege assigned at the entity with which a
+given policy is associated. These pages include:
+•Policy data pages – Users can view and work with quote and policy data through pages defined by product
+ManuScripts created in EXAMPLE Author ®. For more information about these pages, see Policy Data .
+•Policy Details page – Users can view general details about a quote or policy, including client information,
+effective and expiration dates, agency and producer information, tasks and notifications associated with the quote
+or policy, and any documents attached to the quote or policy. For more information about the Policy Details page,
+seePolicy Details .
+•Create Policy Documents page – Users can generate and print new quote or policy documents from this page.
+For more information about the Policy Documents page, see Create Policy Documents .
+With EXAMPLE TransACT ®, users can also view a page that displays a policy's transaction history, including any
+transactions that have been completed or are pending on the policy. Users can also view details of existing
+transactions and perform new transactions on the policy. For more information about this page and others in
+EXAMPLE TransACT ®, see the EXAMPLE TransACT® 2.1 Overview .
+Policy Data
+Users can view and work with quote and policy data through pages defined by product ManuScripts created in
+EXAMPLE Author ®. These pages are controlled by ManuScript logic but are viewed through EXAMPLE Express ®.
+The following is an example of a policy data page.
+27 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

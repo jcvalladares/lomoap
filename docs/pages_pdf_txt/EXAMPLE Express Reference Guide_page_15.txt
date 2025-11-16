@@ -1,0 +1,7 @@
+From the My Tasks page, users can open individual tasks and view details or perform any of the following actions
+(based on the user's privileges):
+•Pick up the task (if not already assigned)
+•Complete the task (if assigned to the user)
+•Decline the task
+•Edit the task (if the user created the task, or if the task is assigned to the user), or add notes to the task
+15 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,52 @@
+Reminder
+Notice
+Threshold
+AmountDetermines the
+unpaid amount of
+the invoice that
+must remain unpaid
+to generate a
+reminder notice for
+an account. Any
+amount less that the
+threshold amount
+will not generate a
+reminder notice,
+and will be written
+off or billed with the
+next scheduled
+invoice. The value
+of the Reminder
+Notice Action
+setting must be
+Reminder.Any value. $10
+EFT Default
+Letter
+ManuScript
+IDSpecifies the
+ManuScript to be
+used.Any valid
+ManuScript ID.
+EFTPCN
+Evaluation
+DaysSpecifies the
+number of calendar
+days after an EFT
+invoice due date
+that a policy term
+will be evaluated for
+pending
+cancellation status.Any positive
+integer.0
+Commissions
+Commission
+Statement
+FormatSpecifies
+commission
+statement format.•Adobe PDF
+•Excel
+•Comma
+Separated
+Value (CSV)
+•XMLAdobe PDF
+33 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

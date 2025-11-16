@@ -1,0 +1,31 @@
+ClientDetailsManuScriptID
+ID of the ManuScript to use when editing or viewing client details.
+Default Valid
+null Valid ID of a ManuScript in an accessible catalog.
+ConsumerAccessManuScriptID
+ID of the ManuScript to use for guest and consumer quotes.
+Default Valid
+null Valid ID of a ManuScript in an accessible catalog.
+ConsumerAccessRole
+ID of the default role assigned to Consumer Access users. These roles must be created manually.
+Default Valid
+null Any valid role ID.
+ConsumerAgencyID
+ID of the default entity assigned to Consumer Access users. These entities must be created manually.
+Default Valid
+null Any valid Entity ID.
+ContentFactory
+Fully-qualified directory path to the ContentMap.xml file (and any custom ContentMap files). The path specifies the
+directory to use, and the file name (minus the file extension) specifies the base term to use to determine custom
+ContentMap files.
+Default Valid
+C:\Program Files\Duck Creek Technologies
+4.0\Express\App_Data\ContentMap.xmlValid path, including file name, to the
+ContentMap.xml file.
+DebugMode
+Integer setting (0,1,2,3) used to log the XML content of each request to the EXAMPLE Express ®system. Debug is
+turned on if the value of the setting is greater than 0. Each request is sent to the debugContent.xml file located in the
+EXAMPLE Express ®directory or to the directory indicated by the DebugOutputDir configuration setting. As a result,
+Duck Creek Technologies, Inc. recommends setting this value to 0 on a runtime system.
+This setting also determines whether to enable the Go Back button on the EXAMPLE Express ®error screen.
+181 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

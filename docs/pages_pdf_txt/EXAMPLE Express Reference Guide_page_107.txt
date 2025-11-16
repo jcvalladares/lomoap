@@ -1,0 +1,18 @@
+The Cutoff Inspector dialog box appears.
+•Skip Required Field Checking – Allows a developer to proceed to the next page without filling out required
+fields.
+•ExtJs Theme Previewer – Allows a developer to preview an ExtJs theme.
+•ManuScript ID – Displays the active ManuScript ID. Additional details about the ManuScript can be seen by
+using the Current Information tool.
+•Execute JavaScript – Allows a developer to execute JavaScript quickly and easily.
+•Ext.query Counter – Returns the length of the array returned by Ext.query("INPUT SELECTOR"); .
+The following table provides examples of some information returned by Ext.query("INPUT SELECTOR:); .
+Input Description
+div Returns a count of divs on a page.
+input[type=text] Returns a count of text inputs on a page.
+#main
+*[class^=x_]Returns a count of elements in main area with styles generated in EXAMPLE Author ®
+applied.
+The Duck Creek Developer Toolbar is comprised of two groups of tools.
+The following tools can be found on the left side of the toolbar:
+107 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,64 @@
+Payment
+Account Type
+CodeSpecifies the type of
+account.•Account
+•Agency LiteAccount
+NSF Charge
+ActionSpecifies whether a
+charge is assessed
+for non-sufficient
+funds (NSF).•A—Assess
+NSF fee.
+•N—Do not
+assess NSF
+fee.A
+NSF
+Reversal
+Charge
+AmountAmount of the NSF
+penalty.Any value,
+including 0.$25
+Payment
+Reversal Due
+Date Adjust
+ReasonWhen a payment is
+reversed, the
+system re-opens the
+bill items that were
+closed by the
+reversed payment.
+The system adjusts
+the due date for the
+closed items only
+when a payment
+reversal reason is
+indicated here.•CM—
+Company
+mistake.
+•NSF —Non-
+sufficient
+funds.CM
+Excess
+Payment On
+PolicyDefines how excess
+payment is handled
+when a payment
+allocation is directed
+to a specific policy
+with a zero balance.•A—Payment
+will be
+automatically
+allocated to
+other policies
+on the
+account that
+have a
+balance.
+•S—Suspend
+the payment
+on the policy
+it was
+intended for,
+and allow for
+disbursement.A
+23 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

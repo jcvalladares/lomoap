@@ -1,0 +1,34 @@
+<closedBy /> Username of the person who closed the notification. The out-
+of-the-box notifications model does not use this field.ClosedBy (50)
+<closedDate /> Date the notification was closed. The out-of-the-box
+notifications model does not use this field.ClosedDate (datetime)
+<notifyClosedDBy/> Username of the person who closed the notification. The out-
+of-the-box notifications model does not use this field.NotifyClosedBy (50)
+<notifyClosedDate/> Date when notification was closed. The out-of-the-box
+notifications model does not use this field.NotifyClosedDate
+(datetime)
+<purgeDate/> Date the notification should be purged. PurgeDate (datetime)
+<dueDate/> Date the notification is due for action. The out-of-the-box
+notifications model does not use this field.DueDate (datetime)
+<remindOnHideUntil/> Indicator:
+•If1, the notification is not visible until the Remind Date.
+•If omitted or 0, the notification is visible.
+The out-of-the-box notifications model does not use this
+field.RemindOnHideUntil (bool)
+<priority/> Numeric priority code. The out-of-the-box notifications model
+does not use this field.Priority (int 4)
+<body /> Body of the notification. Body (4096)
+<misc/> Extended data. XMLData (nvarchar)
+<attachments> List of notification attachments. [read-only]
+<attachment
+attachmentID=""Attachment ID. [read-only]
+moniker="" Location where the file is stored on EXAMPLE Server ®. [read-only]
+caption="" Caption of the attachment. [read-only]
+filename="" Name of the file when attached. [read-only]
+attachDate=""/> Date when the file was attached. [read-only]
+</attachments> Closing tag. [read-only]
+<policyID/> PolicyID of the associated policy. [read-only]
+<policyNumber/> Policy number of the associated policy. (Can be null.) [read-only]
+<effectiveDate/> Effective Date of the associated policy. (Can be null.) [read-only]
+<LOB/> LOB code of the associated policy. (Can be null.) [read-only]
+168 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

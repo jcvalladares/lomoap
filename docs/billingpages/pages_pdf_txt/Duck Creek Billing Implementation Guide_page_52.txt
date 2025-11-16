@@ -1,0 +1,37 @@
+2.Save the ManuScript changes.
+Working with Commissions
+Commission Plans
+Before premium is issued, an overall commission rate or amount must be specified. The commission can be a
+percentage or a flat amount, and it can vary by policy term or be the same across all policy terms. The commission
+plan can vary by the following policy attributes:
+•Agent Reference
+•Line Of Business
+•Master Company
+•Issue System
+•Product Code
+•Inception Date
+•Policy Term Effective Date
+•State
+Five customer-definable keys are also used to determine the correct commission plan. One of the keys can be used to
+indicate the selected coverage and premium class combination. The same definable key can be used for a separate
+line of business or product in more than one commission plan.
+When a policy is rated, the commission rate or flat amount is determined by performing a look-up based on policy
+attributes specified in the creation of the commission plan, including the customer definable keys. The search begins at
+the lowest level of the hierarchy to obtain the correct commission plan, as well as the overall rate of commission or flat
+amount.
+Commission plan changes are supported through the use of effective and expiration dates, which allows new policies
+to use new commission rates or flat amounts and commission distributions while existing policies use prior commission
+rates or flat amounts and distributions.
+The commission distribution specifies the entity type that will receive the commission distribution and the amount of the
+distribution. Using the entity tiers created in EXAMPLE UserAdmin™, commission plans can be inherited from a higher
+agent tier to a lower tier. A commission plan that is inherited from a higher tier can only be changed at the tier where
+the commission plan was created.
+Commission plans associated with an account are listed on two commission plans pages:
+•Active Commission Plans – Enables the user to add a plan, maintain an existing plan, and view all active
+commission plans associated with an agent's account.
+•Expired Commission Plans – Displays the details of expired commission plans that were previously associated
+with an agent's account.
+To view the commission plans associated with an account:
+1.In the left navigation panel of one of the following pages, click Commission Plans :
+◦Account Home
+52 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

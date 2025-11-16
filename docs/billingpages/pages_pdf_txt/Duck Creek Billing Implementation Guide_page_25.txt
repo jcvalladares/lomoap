@@ -1,0 +1,52 @@
+Invoice
+Account
+RollupDisplays the total
+amount due on the
+invoice.Select check box
+to allow.Selected
+Aggregation
+RollupDisplays the
+aggregation on the
+invoice.Select check box
+to allow.Not selected
+Bill Item
+RollupDisplays bill items
+on the invoice.Select check box
+to allow.Not selected
+Commission
+RollupDisplays
+commission on
+invoice.Select check box
+to allow.Not selected
+Coverage
+RollupDisplays coverage
+on invoice.Select check box
+to allow.Not selected
+Form MS Specifies forms
+ManuScript.Any valid
+ManuScript.BillingInvoice
+Line Type
+RollupDisplays line type
+on invoice.
+If this
+check box
+is not
+selected,
+no
+information
+will display
+on the
+invoice
+even if
+other
+check
+boxes are
+selected.Select check box
+to allow.Selected
+Policy Rollup Displays the amount
+due on each policy
+below the Premium
+heading on the
+invoice.Select check box
+to allow.Selected
+25 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

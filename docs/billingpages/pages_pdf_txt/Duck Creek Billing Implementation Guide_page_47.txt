@@ -1,0 +1,56 @@
+Item DescriptionValid
+Entries
+EFT Draw
+Offset DaysThe number of days between the EFT invoice date and the due date. This value is specified in
+the Account Settings.Any
+positive
+number
+between
+1 and 31.
+Target Draw
+DateThe day of the month that the EFT draft is drawn from the specified account. This value is
+specified in the Account Settings.Any
+positive
+number
+between
+1 and 31.
+EFT
+Transmission
+OffsetThe number of days between the EFT Draw Date and the actual draw. This value is specified in
+the DC_BIL_BankDetails.Any
+positive
+number
+between
+1 and 31.
+Policy
+Effective
+DateThe date the policy is effective. Specified in the policy management system. Any valid
+date.
+Policy Issue/
+Policy Entry
+DateThe date the policy is issued or entered into the policy management system. This value is
+specified in the policy management system.Any
+valid
+date.
+EFT Out of
+Cycle Draw
+Due to Late
+EntryAllows the user to insert an out-of-cycle draw for an EFT invoice account for late entered new
+business policies to collect payment before the next scheduled EFT draw. This value is specified
+in the Billing_AccountPlanSetup_Base_1_0_0_0 ManuScript.True or
+False.
+EFT Out of
+Cycle Next
+Draw Offset
+DaysThe number of days before the next regularly scheduled draw date that an out-of-cycle draw can
+be made. This prevents an out-of-cycle draw from being too close to the regularly scheduled
+draw. If the value of the parameter is not met, the out-of-cycle draw is not scheduled. This value
+is specified in the Billing_AccountPlanSetup_Base_1_0_0_0 ManuScript.Any
+positive
+number
+between
+0 and
+31.
+The following scenairo demonstrates the results of installment scheduling that uses the out-of-the-box settings with no
+late entered policy.
+47 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

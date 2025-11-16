@@ -1,0 +1,40 @@
+Field Description Value
+CultureCode Standard culture code (e.g., en-US). Allows for
+localized variations of codes.Enter the desired culture code for
+the search option.
+CodeType Value used to group related records in the table into a
+logical list. When adding search options, use
+POL_SRCHPOLFILTER.Enter POL_SRCHPOLFILTER .
+Code Key value for the entry. This value must be a column
+in the Quote table.Enter Quote.[ColumnName] ,
+where [ColumnName] is the name
+of the desired column.
+SortSequence Default sort order of entries in a list of related
+records. Number each entry 1–x to specify the order
+in which the items will appear in the list.Null, or enter the desired number.
+Description Caption that will display in EXAMPLE Express ®. This
+value can be any unique character string, 20
+characters or less.Enter the desired caption.
+BaseCodeIndicator Indicator for whether the record has been
+customized.Enter FALSEfor any record you
+add or modify.
+4.Save and close Management Studio.
+Modifying or Removing Operators
+To modify or remove the operators available to users when defining search criteria:
+1.Open Microsoft SQL Server Management Studio and navigate to the ExampleData database.
+2.In the ExampleData database, navigate to the DC_PLT_Support_CodeLists table.
+3.Modify or remove the records for the out-of-the box operators (indicated by the CodeType
+POL_SRCHFILTEROPT ). Specify the following fields for each record:
+Field Description Value
+CultureCode Standard culture code (e.g., en-US). Allows for localized
+variations of codes.Enter the desired
+culture code for the
+operator option.
+CodeType Value used to group related records in the table into a logical
+list. For operator options, the value is POL_SRCHFILTEROPT.Do not modify this field.
+Code Key value for the entry. Do not modify this field. Do not modify this field.
+SortSequence Default sort order of entries in a list of related records. Number
+each entry 1–x to specify the order in which the items will
+appear in the list.Null, or enter the
+desired number.
+171 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,65 @@
+Receivable
+Sub Type
+(Paper Only)Specifies the
+receivable sub type
+items to exclude
+from the variable
+service charge
+calculation.(None)
+PREV
+DBRB
+N
+L
+S
+(All)(All)
+Transaction
+Type (Paper
+Only)Specifies the
+transaction type for
+the items to exclude
+from the variable
+service charge
+calculation.(None)
+Endorsement
+Flat Cancellation
+New Business
+Pro Rata
+Cancellation
+Monthly Report
+(All)(All)
+Use
+Projected
+Service
+ChargeDetermines if the
+projected service
+charge is displayed
+on the Installment
+Schedule.Select the check
+box to utilize.Selected
+Target Due
+DaysDetermines the day
+of the month that
+invoices for the
+account are due.Any positive
+number between
+1 and 31.1
+Suspense
+Disbursement
+Maximum
+AmountSpecifies the
+suspended amount
+that can be
+disbursed
+automatically at the
+time the
+Disbursement Write
+Hold Days is
+reached. If the
+amount is more
+than the
+Disbursement
+Maximum Amount,
+the money is held in
+suspense.Any positive
+value.$99,999.99
+29 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

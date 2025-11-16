@@ -1,0 +1,37 @@
+Requesting an Ad Hoc Statement
+Commission statements are produced on a specified scheduled, usually monthly. Commission statement periods do
+not have overlapping days. For example, the dates included in the commission begin with January 1, 2011, at 12:00
+a.m. and ends with January 31, 2011 at 11:59 p.m.
+The statement period for an ad hoc statement is specified by when the statement is generated. Ad hoc statements
+include all the activity that has occured since the previous statement was produced. After an ad hoc commission
+statement is produced, the next commission statement is produced according to the original schedule.
+An ad hoc statement does not appear for viewing, but is produced in the format or formats specified in the commission
+plan setup, and is automatically placed in the appropriate statement folder. An Archive folder is also created and
+contains a copy of each statement format generated for an account. By default, this folder location is: C:\Program
+Files\Duck Creek Technologies\DirectBillCommissionStatements .
+To request an ad hoc statement:
+•On the Commission Statement Maintenance page, click Request Ad Hoc Statement .
+The statement is automatically placed in the archive folder and all other appropriate folders, based on statement
+format.
+Adjusting the Commission Statement
+Commission adjustments can be made at the account or policy level. New entries can be added to a pending
+commission statement, including both negative and positive entries.
+•A negative entry reflects a new claw back authorized commission. A claw back is associated with a specific
+policy.
+•A positive entry reflects payables that are not generated from anywhere, but rather are created and result in
+additional commission for the agent can be added. Examples could include a bonus or repayment of an expense
+incurred by the agent.
+Adjustments can be made only on pending commission statements. A commission statement that has been paid
+cannot be adjusted. Any necessary adjustment must be made on a subsequent statement.
+Adjustments to a pending commission statement are recorded in the General Ledger report which is accessible from
+the Billing Dashboard. The Commission Activity report is also available from the Billing Dashboard.
+To adjust a commission plan:
+Commission Adjustment is selected by default in the Reason list.
+1.On the Commission Statement Maintenance page, enter the appropriate policy number in the Policy Number
+textbox below the Statement Entries heading, and then click Search .
+The account number, policy holder name and policy term information appear.
+2.Click Add Commission Adjustment .
+The Add Commission Adjustment window appears.
+3.Enter the appropriate date, or use the calendar button calendar button.png to select a date in the Authorization
+Date list.
+62 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

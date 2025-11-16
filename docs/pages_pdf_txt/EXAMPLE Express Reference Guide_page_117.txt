@@ -1,0 +1,39 @@
+IP Address dctInputIPFields.js DCT.InputIPField •Sets the validation type process to
+mask the field for correct characters
+and validation
+◦Checks for numbers and periods
+•Sets debug information if Web.config
+key is turned on
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+Phone dct.InputPhoneFields.js DCT.InputPhoneField •Assigns the validation routine to
+validate and mask phone fields
+•Sets the formatter to handle formatting
+if formatmask has been set
+◦Formats for U.S. format
+•Sets the validation type process to
+mask the field for correct characters
+and validation
+◦Checks for numbers, parentheses,
+and dashes
+•Sets debug information if Web.config
+key is turned on
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+Progress
+BardctProgressBar.js DCT.ProgressBar •Handles creating progress bar control
+•Sets width of control
+•Sets the text displayed within the
+control
+•Assigns control to the progress bar
+collection to help manage multiple
+controls
+117 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

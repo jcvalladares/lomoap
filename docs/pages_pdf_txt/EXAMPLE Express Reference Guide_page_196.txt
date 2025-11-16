@@ -1,0 +1,28 @@
+_caption Caption for the attachment.
+_quoteID ID of the policy or quote to attach the file to.
+File form field Form field of type "file" that contains a reference to the file to be attached.
+EXAMPLE Server ®Request: OnlineData.addAttachmentRq
+admin
+Updates administration information.
+HTML Form Fields:
+Field Description
+_pageType Tabbed page of the admin page against which to operate. Valid pages are:
+•password
+_adminAction Sub-command of the admin process to invoke. Valid sub-commands (described below) are:
+•change
+change
+Updates password information.
+HTML Form Fields:
+Field Description
+_newpassword New password text.
+_confirmpassword New password text. This text must match _newpassword or the change is rejected.
+_oldpassword Old password used to verify security.
+EXAMPLE Server ®Request: Session.changePasswordRq
+assignTask
+Updates the queue and/or user to which a task is assigned. This action has two modes:
+•When executed from a ManuScript — The system uses the task record in the session at _TaskData/
+TaskRecord to obtain the task ID, queue ID, assigned user ID, and task locking code from the paths defined in
+the schemas for the <Task.getRq> request response.
+•When executed from a system page — The system requires the following HTML form fields.
+Field Description
+196 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

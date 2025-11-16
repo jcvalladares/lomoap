@@ -1,0 +1,2 @@
+The integration process from Duck Creek Billing™ back to the policy administration system is illustrated below.
+17 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

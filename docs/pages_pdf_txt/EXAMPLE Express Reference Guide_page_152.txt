@@ -1,0 +1,33 @@
+default Optional Boolean value indicating whether the <applicationLayout> should be the default
+application when the user first logs in. This attribute is applicable when a particular role
+has access to multiple <applicationLayout> elements (for different applications). A value
+of1will cause the system to default to this application when the user logs in.
+image Optional Path to the image to use to denote the specific application in the system-level navigation.
+This path is relative to the skins directory. This attribute also specifies the image to be
+used as an icon on the left side of the menu item. Image icons can be found in the icons
+folder in the C:\Program Files\Duck Creek
+Technologies\Express\Skins\AvantGarde2\images directory.
+xsltDir Optional Relative path to the skins directory to use for the <applicationLayout>.
+culture Optional Culture-code identifier that can be used to identify the intended culture of the given
+<applicationLayout>.
+Defining the <menu> and <menuItem> Elements
+Each <applicationLayout> element must contain a <menu> element that defines the <menuItems> that should appear
+in EXAMPLE Express ®. Use the table below to help you customize existing <menu> and <menuItem> elements or
+create new ones.
+You can configure EXAMPLE Express ®to use multi-level navigation by nesting <menu> and <menuItem>
+elements within each other.
+The <menu> Element
+The <menu> element uses the following attributes.
+AttributeRequired/
+OptionalDescription
+name Required Unique ID for the <menu>.
+startPage Optional Default start page. If not specified, the first <menuItem> element will be used.
+logoutPage Optional Page to be displayed after logging out. If not specified, contentLogin will be used.
+logoutURL Optional URL to be displayed after logging out. If specified, this attribute will override the
+logoutPage specified.
+The <menuItem> Element
+The <menuItem> element uses the following attributes.
+AttributeRequired/
+OptionalDescription
+id Required Unique ID for the <menuItem>.
+152 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

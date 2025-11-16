@@ -1,0 +1,30 @@
+View billing disbursements pending
+authorization report
+View billing general ledger report
+View Billing payment batch report
+View transactional balancing report
+View unidentified cash report
+Request a disbursement up to a specified
+limitx
+Resuspsend a pending disbursement x x
+Reverse a payment x
+Submit monthly payroll reports x x
+Suspend an allocated payment x
+Transfer cash from suspense x x
+Transfer a policy between accounts x
+Transfer a polciy terem to a collections
+accountx
+View image associated with an invoice x x x
+Access reports x x
+Write off cash in suspense x
+Write off or waive receivables x x
+Selecting Billing Account Options
+Billing plans may be configured by specifying the values for Billing Account Options. The available options control all
+automated billing and collection processes, including account type, installment scheduling and invoicing and collection
+follow-up activities. The options Duck Creek Billing™ users see is determined by the ManuScript configuration.
+Any modifications to existing Billing Account Option configurations will affect all billing accounts and policies
+which reference the configuration.
+The following table includes all the possible options, and may include options that are not configured in your selected
+ManuScript.
+Category Option Definition Valid Entries Default
+22 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

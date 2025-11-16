@@ -1,0 +1,6 @@
+Using Task Management Filters
+To filter the lists of tasks that display, select from the following list of filters and click Show me tasks :
+•Queues – Click the button to the right of the selection box to display a list of queues. Select all of the queues you
+want to search by selecting one or more checkboxes. Up to ten queues display on each page of the Queues
+selection box; page through the box to select additional queues not shown on page one.
+17 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

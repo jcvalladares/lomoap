@@ -1,0 +1,27 @@
+Out of the box, the search page contains the following options.
+Item Description
+I'm
+looking
+forSpecifies whether to search for policies and quotes or for clients, and whether to list all policies/quotes
+or clients, or whether to return specific policies/quotes or clients.
+I want to
+search
+bySpecifies search criteria. Appears only if searching for specified policies, quotes, or clients.
+Search
+in
+(optional)Entity to search. This list contains only entities at which the user has the ViewQuotes privilege (when
+searching for quotes and policies) or the ViewClients privilege (when searching for clients). If an entity
+is specified, the search results will include only quotes/ policies or clients for that entity. Appears only if
+searching for specified policies, quotes, or clients.
+Out of the box, users with access to 15 or fewer agencies can select the desired agency from
+a list. For users with access to more than 15 agencies, users can click the Select an Agency
+link to view the list of agencies in a paginated table the user can filter and sort. You can
+customize the number of agencies required for the list to be displayed in a table by modifying
+theSelectAgencyLimit configuration setting in the Express\Web.config file. For more
+information about this configuration setting, see SelectAgencyLimit .
+Include
+previous
+terms
+(optional)(Policies and quotes only) Indicates whether to search previous policy terms when searching for
+policies and quotes by policy/quote number. Appears only if searching for specified policies or quotes.
+26 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

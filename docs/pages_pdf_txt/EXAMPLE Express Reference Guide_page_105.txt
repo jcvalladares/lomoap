@@ -1,0 +1,43 @@
+You must create a custom theme before defining custom containers.
+2.In the cssfolder in your custom theme directory, open the custom-cc.css file.
+3.In the customContainers.css file, copy the code for an existing container. The following is an example of a
+container definition:
+.cc_CustomExample > .cc-bubble-tl {background: transparent url(../images/cc/
+CustomExample/cc-tl.png) no-repeat left top;}
+.cc_CustomExample > div > .cc-bubble-tr {background: transparent url(../
+images/cc/CustomExample/cc-tr.png) no-repeat right top;}
+.cc_CustomExample > div > div > .cc-bubble-tc {background: transparent
+url(../images/cc/CustomExample/cc-t.png) repeat-x 0 top; height:15px;}
+.cc_CustomExample > div > div > div > .cc-bubble-title
+{padding-top:0px;padding-bottom:12px;}
+.cc_CustomExample > div > div > div > .cc-bubble-title > span
+{font-weight:bold;}
+.cc_CustomExample > .cc-bubble-bwrap {background: transparent;}
+.cc_CustomExample > div > .cc-bubble-ml {background: transparent url(../
+images/cc/CustomExample/cc-l.png) repeat-y 0 0;}
+.cc_CustomExample > div > .cc-bubble-ml {padding-left:10px;zoom:1;}
+.cc_CustomExample > div > div > .cc-bubble-mr {background: transparent
+url(../images/cc/CustomExample/cc-r.png) repeat-y right 0;}
+.cc_CustomExample > div > div > .cc-bubble-mr {padding-right:10px;zoom:1;}
+.cc_CustomExample > div > div > div > .cc-bubble-mc {background: #fff;}
+.cc_CustomExample > div > div > div > div > .cc-bubble-body {background:
+transparent;}
+.cc_CustomExample > div > .cc-bubble-bl {background: transparent url(../
+images/cc/CustomExample/cc-bl.png) no-repeat 0 bottom;}
+.cc_CustomExample > div > div > .cc-bubble-br {background: transparent
+url(../images/cc/CustomExample/cc-br.png) no-repeat right bottom;}
+.cc_CustomExample > div > div > div > .cc-bubble-bc {background:
+transparent url(../images/cc/CustomExample/cc-b.png) repeat-x 0 bottom;}
+4.In the custom-cc.css file, paste the code.
+5.Replace the the container name (CustomExample in this case) with the name of the folder where your custom
+container images are stored.
+6.Modify the value of the bottom padding in the following line of code from the example above:
+.cc_CustomExample > div > div > div > .cc-bubble-title
+{padding-top:0px;padding-bottom:12px;}
+To adjust the horizontal position of a container:
+•In EXAMPLE Author ®, add an alignHeader custom parameter and enter left,center , orright as the value.
+By default, all container titles align to the left.
+Developer Toolbar
+The Duck Creek Developer Toolbar is designed to provide easy access to information and actions that are helpful for
+debugging and development.
+105 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

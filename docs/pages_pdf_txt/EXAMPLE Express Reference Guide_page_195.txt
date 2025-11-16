@@ -1,0 +1,31 @@
+updateTask Updates a task in the database based on the task record located in the
+session at the path _TaskData/TaskRecord.
+upload Uploads a file from a ManuScript to the directory specified in the UploadDir
+configuration setting in the Express\Web.config file.
+validatePrintJob Verifies that no required fields on selected forms are empty.
+activatePolicy
+This action is intended for use with consumer access features available before EXAMPLE Platform ®4.0.
+Creates a consumer account; returns a clientID, quoteID, and LOB; and then loads the specified quote or policy.
+Interview parameters:
+•userName — Username to assign to the user.
+•password — Password to assign to the user.
+•passwordExpires — Expiration date for the specified password.
+•fullName — Full name of the user.
+•email — E-mail address of the user.
+HTML Form Fields:
+Field Description
+_username Username to assign to the user. Used if the userName interview parameter is not found.
+_password Password to assign to the user. Used if the password interview parameter is not found.
+_agencyID ID of the agency with which to associate the quote or policy.
+EXAMPLE Server ®Requests: OnlineData.createConsumerAccountRq, Session.loginRq,
+OnlineData.getUserDetailsRq, Security.listAssignedRolesRq, OnlineData.getAgencyDetailsRq
+addTaskAttachment
+Adds an attachment to a task. This action has two modes:
+•When executed from a ManuScript — The system uses the task record in the session at _TaskData/
+TaskRecord to obtain the task ID, object code (generally the quote ID), and object type code (generally POL for
+quotes/policies) from the paths defined in the schemas for the <Task.getRq> request response. It also obtains the
+attachment caption from AttachmentRecord/Caption.
+•When executed from a system page — The system requires the following HTML form fields.
+Field Description
+_taskId ID of the task to attach the file to.
+195 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

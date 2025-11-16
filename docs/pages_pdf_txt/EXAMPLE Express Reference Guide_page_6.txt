@@ -1,0 +1,10 @@
+The Login page can be customized. For general information on customizing out-of-the-box EXAMPLE
+Express ®pages, see Customizing EXAMPLE Express ®Skins .
+If desired, EXAMPLE Express ®can bypass the Login page using credentials passed from another system.
+For information on this capability and other authentication methods, see the EXAMPLE Server ™ User Guide .
+New Agency Signup
+The New Agency Signup page (accessed by clicking Get an Agency Account on the Login page) allows new agents
+to request an account. Requested accounts are not activated until they are approved by a system administrator in
+EXAMPLE UserAdmin™.
+Out of the box, the New Agency Signup page appears as follows:
+6 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

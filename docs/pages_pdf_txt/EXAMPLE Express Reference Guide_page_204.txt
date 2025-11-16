@@ -1,0 +1,33 @@
+messageDetail
+Updates the active notification in the database using the interview content of a Message Detail ManuScript. This action
+calls the <OnlineData.SaveMessageRq> request with the resulting XML image. The following two items in the
+notification XML are used:
+•//messages/message — Updated notification text.
+•//messages/recipients — Recipients for the message.
+newMessage
+Displays a New Message page (message.xsl, or—if a Message Detail ManuScript is used—messageDetail.xsl).
+Performs no database action. Out-of-the-box pages for EXAMPLE Express ®4.0 are not designed to use this action.
+HTML Form Fields:
+Field Description
+_messageID If the message is a reply, ID of the message to be replied to. If the message is not a reply, no ID is
+specified.
+newNotification
+Displays a Send a Notification page (messageNew.xsl, or—if a Message Detail ManuScript is
+used—messageDetail.xsl). Performs no database action. This action sets the message flag in the EXAMPLE Express ®
+<state> node to new and opens the Send a Notification page.
+HTML Form Fields:
+Field Description
+_messageID If the notification is a reply, ID of the notification to be replied to. If the notification is not a reply, no
+ID is specified. Out-of-the-box pages for EXAMPLE Express ®4.0 are not designed to use this field.
+newQuote
+Creates a new quote in the active session, invoking the interview process of the specified ManuScript. Performs no
+database action. If desired, users can specify the PageSet and page to open by including a ManuScriptEditingID field
+in the specified ManuScript. This field must contain a comma-delimited list of ManuScriptID ,PageSet ,Page that
+indicates which ManuScript PageSet and page to load.
+HTML Form Fields:
+Field Description
+_manuscriptLOB Combined string of the ManuScriptID and LOB code for the new quote. The syntax of this string
+isManuScriptID |LOBCode . The two elements are separated by the pipe (|) character.
+_clientID (Optional) ID of the client to which to add the new quote. Specifying the _clientID will cause the
+quote to be pre-populated with any relevant client information.
+204 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

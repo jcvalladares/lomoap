@@ -1,0 +1,33 @@
+<message
+messageID=" " />(Optional) Repeated sub-messages or comments (replies).
+The out-of-the-box notifications model does not use this field.[read-only]
+(Custom data here) Custom elements, if defined. [custom columns]
+(updated from inside
+XMLData area)
+</message> Closing tag. [read-only]
+<recipients id=""> Controlling tag that enumerates recipients. [read-only]
+<recipient Entry for each recipient of the notification, found in the
+MessageLinks table. The content of these records resets the
+links for the notification.
+name="" Enumeration: global, clientID, quoteID, userName, agencyID,
+agencyGroupID(MessageLinks.LinkType)
+value="" /> Value of the key based on the name enumeration. (MessageLinks.LinkValue)
+</recipients> Closing tag.
+</messages> Closing tag.
+</data> Closing tag.
+</session> Closing tag.
+When using the same Message Detail ManuScript with multiple product ManuScripts, the Message
+Detail ManuScript and all product ManuScripts must share the same structure. Make sure that all
+product ManuScripts share a common mapping for any information used by the Message Detail
+ManuScript. There is no system-defined schema for this shared information, but each implementation
+must use the same schema paths for the data to be accessed.
+Notifications and Batch Processing
+Management of notifications can be automated using EXAMPLE Platform ®batch processing. Using the Batch Script
+Editor (Extended) tool provided with the EXAMPLE Platform ®, batch scripts can be created to query the notification
+system or execute defined rules or processes. These scripts can then be set to run at scheduled times or initiated
+manually using the BatchExecute.exe utility, or initiated manually using the <BatchProcess.processByScriptIdRq>
+request.
+For information about using the Batch Script Editor (Extended) to define batch scripts for notifications, see Using the
+Extended Batch Script Editor .
+For information about manually initiating batch scripts using the BatchExecute.exe utility, see BatchExecute.exe .
+169 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

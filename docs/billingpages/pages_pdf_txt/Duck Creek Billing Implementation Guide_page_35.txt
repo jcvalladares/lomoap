@@ -1,0 +1,41 @@
+New Business
+Earliest Bill
+Offset DaysDetermines the maximum number of
+days from the effective date of the new
+business policy term that the first
+installment is due.
+Changing this setting after
+policy issuance will cause
+rescheduling activity to occur.Any positive number, including
+0.45
+Last Available
+Due Date
+DisplacementDetermines the minimum number of days
+prior to the expiration date of a policy
+term that an invoice can be due.
+Changing this setting after
+policy issuance will cause
+rescheduling activity to occur.Any positive number, including
+0.30
+Renewal
+Business
+Earliest Bill
+OffsetDetermines the maximum number of
+days from the effective date of the
+renewal policy term that the first
+installment can be due.Any positive number, including
+0.20
+Rescind
+Redistribution
+StrategyDetermines what to do with installments
+that did not invoice due to a rescission
+because the policy was in a pending
+cancellation status.•Catchup
+•SpreadCatchup
+Reinstatement
+Charge
+AmountDetermines the policy term charge
+created in billing that is assessed when a
+policy term is reinstated.Any positive value. $5
+Commission
+35 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,33 @@
+dctGenericSetFieldFormat.xsl Controls display formatting for field values rendered by a full screen change or
+refresh.
+dctGenericSetFieldMask.xsl Displays ID string for HTML form fields. Facilitates custom format mask validation
+by allowing the user to modify the fieldItems attribute of the appropriate HTML form
+field.
+Custom format mask validation will also require the appropriate custom
+JavaScript be added to the custom.js file in the Global Root
+Directory \Express\Skins\ CustomSkin \scripts directory.
+dctGenericSetMaxLength.xsl Controls the max length for input fields (for example, for custom format masks).
+dctShared.xsl Controls HTML element generation for version 1 interview pages rendered with the
+interview.xsl file.
+htmlFooter.xsl Controls the EXAMPLE Express ®footer.
+htmlMeta.xsl Controls meta tags for EXAMPLE Express ®.
+htmlTitle.xsl Controls the title that appears in the browser title bar for EXAMPLE Express ®.
+Customizing Avant Garde 2 Skins
+ByCreating a Custom Skins Directory andOverriding DCTBase Files , you can modify the XSL, CSS, and JavaScript
+files to customize the Avant Garde 2 skin to best suit your needs.
+Creating a Custom Skins Directory
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTBase or AvantGarde (all
+versions) directories. All files in these directories are overwritten during upgrades. Instead, you must create a
+custom skins directory (copied from your version of the AvantGarde directory) and modify the files in this
+directory.
+To create a custom skins directory:
+1.In the Global Root Directory \Express\Skins directory, copy the correct version of the AvantGarde directory and
+paste it in the desired location within the Express directory.
+2.Rename the directory.
+3.Make any desired customizations in the new directory. Use the information in this section to help you customize
+the system.
+Once you have created a custom skins directory, you must configure EXAMPLE Express ®to run using your
+customized skin.
+To configure EXAMPLE Express ®to use your customized skin:
+1.Open the Edit Configuration Utility.
+87 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

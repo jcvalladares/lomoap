@@ -1,0 +1,30 @@
+SMTPServerPort
+Port number to use for the SMTP Server during the agency sign-up process. If the setting is incorrect, an error
+message is displayed. N.o notification is sent to the address found in the MailTo setting to notify the administrator that
+an agency has requested sign up.
+Default Valid
+25 Integers between 1 and 65535.
+TaskDetailManuScriptID
+ID of the ManuScript to use for editing or viewing task details.
+Default Valid
+Carrier_TaskDetailEditing Valid ID of a ManuScript in an accessible catalog.
+TimeOut
+Number of milliseconds EXAMPLE Express ®will wait for a response from EXAMPLE Server ®before timing out.
+To force EXAMPLE Express ®to never time out when making calls to EXAMPLE Server ®, set this value to -1.
+TheexecutionTimeout attribute of the ASP.NET <httpRuntime> element must be greater than or equal to the
+Express\Web.config Timeout value. If the executionTimeout attribute of the ASP.NET <httpRuntime>
+element is less than the Express\Web.config Timeout value, ASP.NET could time out before EXAMPLE
+Express ®and not provide the user any indication that this happened. For more information on the
+<httpRuntime> element, see http://msdn.microsoft.com/en-us/library/e1f13641.aspx .
+Default Valid
+360000 •Any positive integer — Number of milliseconds to wait before timing out of EXAMPLE Express ®.
+•-1— Disable EXAMPLE Express ®timeout.
+•null— System will use a value of 90000 milliseconds
+UploadDir
+Global path to the directory where files are uploaded and downloaded. The specified path should be used for all
+servers in a cluster that are accessible from the EXAMPLE Express ®server. It should be a shared or network path that
+all machines in a configuration can access. The path must have security access rights to allow the Web user to read
+and write files to the selected directory.
+Default Valid
+C:\Program Files\Duck Creek Technologies 4.0\Express\Upload Any valid file path.
+190 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

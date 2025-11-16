@@ -1,0 +1,29 @@
+Email dctInputEmailFields.js DCT.InputEmailField •Assigns the validation routine to
+validate email values
+•Sets the validation type process to
+mask the field for correct characters
+and validation
+•Sets debug information if Web.config
+key is turned on
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+Extended
+dropdownsdctExtendedDropDown.js DCT.ExtendedComboField •Extension of a regular dropdown
+•No Auto-filtering
+•Selection of an item will fire the
+selection event for processing
+•Hover Help for items in the list
+•Hover Help for a selected item
+•Handles focus notification
+•Sets debug information if the
+Web.config key is turned on for the list
+and input field
+•Handles optimum sizing based on
+items in the list
+•Defines a template layout for styling
+the data for the user
+114 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

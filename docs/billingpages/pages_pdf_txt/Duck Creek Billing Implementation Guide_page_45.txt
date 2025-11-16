@@ -1,0 +1,27 @@
+Default Valid
+C:\Program Files\Duck Creek Technologies\Temp Any valid location.
+Use3rdPartyPayments
+This setting specifies whether to allow 3rd party payments in Duck Creek Billing™.
+Default Valid
+False •False — Do not allow.
+•True — Allow.
+UseExternalDocumentInterface
+This setting specifies whether to use an external document interface.
+Default Valid
+False •True — Use and external document interface.
+•False — Do not use an external document interface.
+UseExternalDocumentInterfaceInBatchMode
+This setting specifies whether to use an external document interface for batch processing.
+Default Valid
+False •True — Use and external document interface for batch processing.
+•False — Do not use an external document interface for batch processing.
+Working with Invoices and Installments
+Customizing an Invoice
+The ManuScript to use for billing forms must be specified in the Invoice Section of the Billing Account Options. For
+details on how to specify the ManuScript for use, see Selecting Billing Account Options in the Duck Creek Billing™
+User Guide .
+See the EXAMPLE Forms™ Reference Guide for detailed information about customizing forms in general.
+Specifying Non-Processing Days
+Non-processing, or blackout days, are specified in the ProcessingBlackoutDates database table. This information is
+used when determining Target Due Days and Target Draw Days for invoices.
+45 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

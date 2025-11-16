@@ -1,0 +1,35 @@
+Overriding JavaScript Files
+To override DCTBase .js files:
+1.Locate the file containing the JavaScript function you wish to override in one of the following directories:
+◦DCTBase\Core\devscripts\Billing
+◦DCTBase\Core\devscripts\Policy
+◦DCTBase\Core\devscripts\common
+2.Copy the file containing the function you wish to override to the scripts folder in the custom skins directory and
+give it the same name as in the DCTBase directory.
+3.In the custom skin file, remove all functions you do not wish to override.
+4.Customize the function you wish to override.
+Using the Localization Framework
+Using the localization framework in the EXAMPLE Platform ®, you can configure the EXAMPLE Platform ®for use with
+multiple languages. Depending on your installation of the EXAMPLE Platform ®, you may have to localize any of the
+following by using lookup tables:
+•XSLT
+•JavaScript
+•Images
+In these sources, lookups should be performed instead of hard-coding the strings so that the system can
+react to the current language.
+XSLT
+To assist in looking up a string, you can use the dctLocalizedDirectory.xsl template found in one of the following
+directories (depending on the skin you are using):
+•Skins\DCTCore\xsl\ (AvantGarde)
+•Skins\DCTBase\Core\xsl\common\ (AvantGarde2)
+For example, to use one of the lookup templates:
+•In the dashboardHome.xsl file in the Skins\DCTBase\Core\xsl\content\ directory, locate the XSLT code
+that resembles the following code sample, and adjust accordingly:
+<div id="pageInstruction">
+<xsl:text> Welcome to the Policy Administration Dashboard, </xsl:text>
+<xsl:value-of select="/page/state/user/fullName"/>
+<xsl:text>. </xsl:text>
+</div>
+All base .xsl files in the EXAMPLE Platform ®(including the dashboardHome.xsl file) have been localized.
+Files mentioned on this page are referred to as examples only.
+131 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

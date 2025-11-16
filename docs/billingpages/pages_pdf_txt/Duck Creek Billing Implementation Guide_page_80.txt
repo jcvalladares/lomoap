@@ -1,0 +1,20 @@
+This is the same as the LockBoxInterface/LockBoxFiles/LockBox/@name.
+Following is an example of the Watch Directory Service xml:
+<Interfaces>
+<FileWatcherService>
+<WatchDirectory path="C:\Platform\Lockboxfiles\Bank1"
+action="PaymentProcessing.processPaymentsRq lockboxFile=&quot;Bank1&quot; " />
+<WatchDirectory path="C:\Platform\Lockboxfiles\*"
+action="PaymentProcessing.processPaymentsRq lockboxFile=&quot;""&quot; " />
+</FileWatcherService>
+</Interfaces>
+Working with the Disbursement Service Interface
+The Disbursement Service Interface integrates Duck Creek Billing™ with external check writing/disbursement systems.
+It is accessible to users from the Billing Administration tab in Duck Creek Billing™, but must be configured for use.
+Working with the Disbursement Interface Service
+The Disbursement Interface Service uses the EXAMPLE Scheduled Request Queue to run a server request and
+process pending disbursements that have been requested in Duck Creek Billing™. The server request processes a
+pre-defined quantity of disbursements, and then reschedules itself for processing future disbursements based on the
+configuration settings specified.
+The Disbursement Service Interface does the following:
+80 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,22 @@
+•Client Details page – Users can drill down into additional client details. As a ManuScript-driven page, this page
+can be easily customized. For more information about the Client Details page, see Client Details .
+Client Information
+Users can view client information and access a client's policies and quotes from the Client Information page. This page
+will display all quotes and policies from all entities where the user has the ViewQuotes privilege. Out of the box, the
+Client Information page appears as follows:
+The Client Information page for a given client can be accessed by clicking the client name on the Search page, or by
+clicking the client name in the Recently Accessed section of the Policy Administration Dashboard. This page can be
+customized. For general information on customizing out-of-the-box EXAMPLE Express ®pages, see Customizing
+EXAMPLE Express ®Skins .
+Client Details
+From the Client Information page, users can drill down into additional client details. The Client Details page is a
+ManuScript-driven page that can collect and display any number of client details. Using a customized Client Detail
+ManuScript, Carriers can define advanced editing and business rules.
+This ManuScript can be easily customized. For instructions on customizing the Client Detail ManuScript, see
+Configuring a Client Detail ManuScript . For information about system ManuScripts in general, see System
+ManuScripts .
+New Quote
+The EXAMPLE Express ®policy administration interface provides the following methods for starting a new quote:
+•Clicking New Quote in the upper right corner of the application – This method allows users to easily start a
+new quote from anywhere in the application.
+31 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

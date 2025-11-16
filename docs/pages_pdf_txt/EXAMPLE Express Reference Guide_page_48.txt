@@ -1,0 +1,42 @@
+Grid
+widgetsThe following grids and grid features are available for use with the Avant Garde 2 skin:
+•Array –Array grids do not have any paging function. All of the data for the grid appears when
+the page initially displays.
+•Paging – Paging grids display a portion of the overall data to limit how much the user can view at
+one time. By default, most pages only display 20 items at a time. The user can view additional
+information by selecting the next page or specifying the page they would like to view. Paging
+grids go back and retrieve data once the initial page displays.
+•Editable – The EXAMPLE Platform ®uses editable grids for interview pages to allows the user to
+click a cell within the row to modify the data. Once the data is modified, the updated information
+is stored.
+•Column Filtering – Column filters are used primarily by Duck Creek Billing™ and are only
+available for paging grids. They allow users to filter lists of data based on the column. To enable
+this feature, the user must click the header for the column and then select column filtering.
+Column filtering can be based on strings, dates, or lists of items.
+•Grouping – Groupings are used with Duck Creek Billing™ to allow grids to group similar rows
+together and organize the data for the user. For example, a user may wish to group the changes
+to a policy term together.
+Column
+tree
+widgetsColumn tree widgets are only used within Duck Creek Billing™ to display an installment schedule.
+This widget looks like a directory structure to help organize information for the user.
+Popup
+widgetsPopup widgets are used throughout the EXAMPLE Platform ®. A couple of uses for popup widgets
+include:
+•Modal popups used within the interview pages.
+•Popups to capture user information, such as notes for Duck Creek Billing™.
+Accordion
+panelsAccordion panels allow multiple sections to be grouped together. With accordion panels, only one
+section can be open at a time.
+Collapsible
+panelsCollapsible panels are used in:
+•Duck Creek Billing™ in the navigation area to display high-level information for the account. They
+allow sections to be open or closed based on the user preference.
+•EXAMPLE Express ®to make sections within the interview pages collapsible.
+Sliders Sliders are widgets that allow the user to slide a bar back and forth to increase or decrease some
+value.
+QuickTips QuickTips are small popup windows (usually attached to headers and lables) that display helpful
+information about an item on the page. Annotation hover help is an example of a QuickTip.
+Charts Chart widgets allow data to be displayed in various types of charts. Currently, the EXAMPLE
+Platform ®supports the use of pie charts, line charts, and bar charts.
+48 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

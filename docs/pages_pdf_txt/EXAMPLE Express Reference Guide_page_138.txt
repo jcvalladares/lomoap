@@ -1,0 +1,35 @@
+Using EXAMPLE Express® System ManuScripts
+The content, appearance, and behavior of certain system pages can be customized by using customized EXAMPLE
+ManuScripts™. The following EXAMPLE Express ®system pages can use a customized ManuScript:
+•New Quote Selection – Replaces the the XSL versions of the New Quote Selection page (new.xsl, newBasic.xsl,
+and newExtended.xsl). See Configuring a New Quote Selection ManuScript .
+•Client Details – No XSL equivalent. See Configuring a Client Detail ManuScript .
+•Send a Notification/Notification Details – Replaces the XSL versions of the Send a Notification and the
+Notification Details pages (messageNew.xsl and message.xsl). When using the Message Detail ManuScript, the
+system also uses the messageDetail.xsl page to render part of the page content. See Configuring a Message
+Detail ManuScript .
+•New Task/Task Details – No XSL equivalent. Uses the Task Detail ManuScript shipped with EXAMPLE Server ®
+and the taskDetail.xsl page. See Customizing the Task Detail ManuScript .
+For a description of each of the above system ManuScripts, see System ManuScripts .
+Configuring a New Quote Selection ManuScript
+To configure EXAMPLE Express ®to use a custom ManuScript for the New Quote Selection page:
+1.Use EXAMPLE Author ®to create the ManuScript you wish to use for the New Quote Selection page. For
+instructions on creating ManuScripts in EXAMPLE Author ®, see the Guide to EXAMPLE Author® .
+When customizing the New Quote Selection ManuScript pages, do not modify the
+DuckCreekTech_NewQuoteSelectionManuScript (located in the Global Root
+Directory \ManuScripts\Admin\US directory). This ManuScript will be overwritten during upgrade
+installations. Modifications should be made at the carrier-level.
+An out-of-the-box New Quote Selection ManuScript (NewQuoteSelectionPortfolio.xml) is located in the
+Global Root Directory \ManuScripts\Admin\NewQuote directory. If desired, you can modify this
+ManuScript to meet your individual needs for working at the carrier-level.
+2.Open the Edit Configuration Utility.
+3.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+4.Under Mode , click Form .
+5.On the Web Config tab, in the list of settings, click the NewQuoteManuScriptID .
+6.In the value text box, enter the ManuScript ID of the ManuScript to use.
+7.Click Save .
+8.Click Close .
+If desired, you can configure unique New Quote Selection pages for different types of users. To do so:
+1.In the New Quote Selection ManuScript, create a unique PageSet and page for each New Quote Selection page
+desired.
+138 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

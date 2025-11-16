@@ -1,0 +1,35 @@
+As the installation executes each process, that process becomes shaded.
+2.Upon completion, the system displays a message indicating whether configuration was successful. Click OK, and
+then do one of the following:
+◦If the configuration was not successful, a View Errors button appears. Click View Errors to open a text file
+with the installation errors listed. When finished, click Close , and then continue with step 4.
+◦If the configuration was successful, click Close .
+3.(Optional) If necessary, click Back to return to the previous window and select or clear any check boxes.
+4.If the installation opens another InstallShield Wizard dialog box, click Finish .
+Configuring Services for Duck Creek Billing™
+Services configuration files are located at: C:\Program Files\Duck Creek Technologies\Shared\Bin\DuckCreek.Utility.
+To edit these files, open them in a text editor program.
+The following services must be configured:
+•MSMQBillingListenerSvc.exe.config
+•ScheduledRequestSvc.exe.config
+MSMQBillingListenerSvc.exe.config
+The Microsoft Message Queue (MSMQ) Billing Listener is a message store that enables messages to be read or
+written. When a message is read, it is removed from the queue. The MSMQ is accessible via an API.
+Key Definition Default
+ServerConfig The location of the Server.config file. C:\Program Files\Duck Creek
+Technologies\Shared\Server.config
+Request Url The URL of the EXAMPLE Server ®that the
+service will post requests to.http://localhost:8080/DuckCreek/
+DCTServer.aspx
+DuckCreekUserID The user ID. admin
+DuckCreekPassword The user password. admin
+ErrorLog Specifies the name of the Event Log to log
+errors for this service.DCTMSMQBillingListener
+OverwriteErrorLog This setting forces old event entries to be
+overwritten as the Event Log fills up.1 (True)
+When moving from testing to production, it is recommended the message queue be cleared and the
+DuckCreek_MSMQBillingListener_EXAMPLE SERVER be restarted to ensure that only valid production
+messages are in the queue.
+ScheduledRequestSvc.exe.config
+The ScheduledRequestSvc specifies the frequency to check for scheduled requests.
+8 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

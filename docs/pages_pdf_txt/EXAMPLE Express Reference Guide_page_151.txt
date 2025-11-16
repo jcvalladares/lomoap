@@ -1,0 +1,40 @@
+Defining the Attributes of an <applicationLayout> Element
+Each <applicationLayout> element should reside under the <applicationLayoutRoot> element. When a user logs in, the
+system loads ApplicationLayoutMap files in the order specified above, combining the content of those files. The
+system then uses the last <applicationLayout> that has a default attribute of 1 and a role attribute containing any of the
+roles or contexts assigned to that user's home entity. If no matching <applicationLayout> has a default attribute of 1,
+the system uses the last <applicationLayout> with a role attribute containing any of the roles or contexts assigned to
+that user's home entity. Using the last matching <applicationLayout> enables custom <applicationLayout> elements to
+override out-of-the-box <applicationLayout> elements.
+Use the table below to help you customize existing <applicationLayout> elements or create new ones.
+When modifying the ApplicationLayoutMap.xml file or any custom ApplicationLayoutMap file,
+be sure that no two <applicationLayout> elements for the same application in any
+ApplicationLayoutMap file are applicable for the same role. If more than one
+<applicationLayout> element (for the same application) is defined for a single role, the system
+will not be able to determine which <applicationLayout> to use.
+The <applicationLayout> element uses the following attributes.
+AttributeRequired/
+OptionalDescription
+id Required Unique ID for the <applicationLayout>.
+caption Optional Caption of the <applicationLayout>.
+application Optional Identity of the target application. Options are:
+•PAS
+•Billing
+•Party
+Ifapplication="PAS ", the autoSave function will occur for the policy.
+roles Required
+(if
+excluded
+roles is
+not
+specified)Comma-delimited list of the roles and contexts (custom privileges) that should use the
+<applicationLayout>. Any user who has one or more of the specified roles or contexts will
+use this layout. Use an asterisk (*) to indicate all roles and contexts.
+excluded
+rolesRequired
+(ifroles is
+not
+specified)Comma-delimited list of the roles and contexts (custom privileges) that can NOT use the
+<applicationLayout>. Any user who does NOT have any of the specified roles or contexts
+will use this layout. If a roles attribute exists, this attribute's values will be ignored.
+151 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,13 @@
+Copyright © 2000-2011 Duck Creek Technologies, Inc. All rights reserved.
+The software contains proprietary information of Duck Creek Technologies. It is provided under a license agreement
+containing restrictions on use and disclosure and is also protected by copyright law. Reverse engineering of the
+software is prohibited.
+Due to continued product development, this information may change without notice. The information and intellectual
+property contained herein is confidential between Duck Creek Technologies and the client and remains the exclusive
+property of Duck Creek Technologies. If you find any problems in the documentation, please report them to us in
+writing. Duck Creek Technologies does not warrant that this document is error-free.
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any
+means—electronic, mechanical, photocopying, recording or otherwise—without the prior written permission of Duck
+Creek Technologies, Inc.
+Duck Creek Technologies. http://www.duckcreektech.com
+3 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

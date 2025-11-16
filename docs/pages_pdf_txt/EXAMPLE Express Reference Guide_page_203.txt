@@ -1,0 +1,30 @@
+specified. If not specified, the system will use the PageSet and page specified by the ManuScriptEditingID field, if one
+exists. If this field does not exist, the system will load the first PageSet and page in the specified ManuScript. This
+action is intended for use with EXAMPLE TransACT ®2.1.
+The following fields in the session are modified based on the history image loaded:
+•data/policyAdmin/ActiveTransaction
+•data/policyAdmin/OSETransaction
+•data/policyAdmin/ValidTransaction
+•data/policyAdmin/AdminManuScriptID
+Interview parameters:
+•historyID — ID of the history record to load.
+•historyEdit — Boolean flag indicating whether the history record is editable.
+HTML Form Fields:
+Field Description
+_QuoteID ID of the quote or policy to load.
+loadPortfolio
+Loads the specified porfolio into the session and invokes the interview process of the associated ManuScripts. If
+desired, users can specify the ManuscriptID, PageSet and page to open. This field must contain a comma-delimited list
+ofManuScriptID ,PageSet ,Page that indicates which ManuScript PageSet and page to load. If no search item is
+specified, the current page is refreshed.
+HTML Form Fields:
+Field Description
+_usingPortfolio ID of the ManuScript to load.
+_PortfolioID clientID of the ManuScript to load.
+login
+Logs the user into EXAMPLE Server ®and begins a new EXAMPLE Express ®session.
+HTML Form Fields:
+Field Description
+_username Username under which to log in.
+_password Password for the account.
+203 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,12 @@
+•Attach items to the task (if the user has attachment privileges and created or has been assigned the task)
+•Send the task back to the queue (if assigned to the user)
+•Reassign the task
+•Delete the task
+For more information about the Task Details page and the actions available on that page, see Task Details Page .
+Task Management
+The Task Management page is intended for users who must be able to view and manage task workloads. This page
+displays all tasks in all queues the user has permission to work with. On this page, users can filter tasks by queue, due
+date, assignee, status, category, or the date created. Users can then use a shortcut to reassign tasks, or open task
+details to view or perform other task actions. Out of the box, this page is visible to Underwriter Managers only, and it
+appears as follows:
+16 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

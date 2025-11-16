@@ -1,0 +1,25 @@
+To override the source of payment for a refund:
+The Items in Suspense page appears.
+To perform the same action on multiple items in suspense, select all the appropriate check boxes.
+The disburse funds page appears and displays each select suspense item, the amount, and the refund method.
+The Refund To Source page appears with the selected payee displayed.
+The party data system search appears.
+The Refund To Source page appears.
+The amount entered cannot exceed the Available Amount.
+The Items In Suspense page appears with the Items Pending Disbursement list displayed.
+1.From the Account Home page, click Items in Suspense .
+2.Select the check box for the appropriate item in suspense.
+3.In the Select An Action list, click Disburse .
+4.Select one of the following check boxes:
+◦Refund To Check
+◦Refund To EFT
+5.Click Submit .
+6.(Optional) Click Select Another Payee to name a different payee for the disbursement.
+7.Select the appropriate party.
+8.(Optional) In the Disbursement Amount text box, enter an amount other than the default to disburse less than
+the full amount.
+9.Click Refund .
+10. (Optional) Click the View Details link to see the details of the item pending disbursement.
+Working with External Payment Processing
+The integration between Duck Creek Billing™ and external payment processing/lock box systems is illustrated below.
+73 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

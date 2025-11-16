@@ -1,0 +1,48 @@
+Underwriter •View and update quotes and policies, and
+create quotes
+•View and update client information, and
+create clients
+•View and update portfolio information, and
+create portfolios
+•View and create notifications
+•Create and work with tasks, and close and
+delete tasks created or owned by the
+underwriter
+•Add and remove attachments•Last Accessed module — Contains the last
+five quotes or policies accessed.
+•Notifications module — Contains the last five
+notifications received.
+•Tasks module — Contains assigned tasks
+due today.
+Underwriter
+Manager•View and update quotes and policies, and
+create quotes
+•View and update client information, and
+create clients
+•View and update portfolio information, and
+create portfolios
+•View and create notifications
+•Create and work with tasks, assign tasks,
+and close and delete any task
+•Add and remove attachments•Last Accessed module — Contains the last
+five quotes or policies accessed.
+•Notifications module — Contains the last five
+notifications received.
+•Tasks module — Contains assigned tasks
+due today.
+OnDemand Framework
+EXAMPLE Express ®uses the OnDemand Framework to facilitate extensions to the application layer. This framework
+allows customers to extend and customize EXAMPLE Express ®in a way that facilitates easy adoption of Duck Creek
+Technologies, Inc. updates without overwriting their extensions and customizations.
+The OnDemand Framework uses a factory model to specify the objects that handle various parts of the system. This
+model allows users to extend the framework without changing original framework code. Using the assembly loading
+facilities of the Microsoft .NET framework and reflection, customers can extend the ContentMap.xml,
+PostActionMap.xml, and ApplicationLayoutMap.xml files as desired.
+Three mapping files define the out-of-the-box content of the OnDemand Framework:
+•ContentMap.xml — Defines content pages.
+•PostActionMap.xml — Defines Express Actions that users can perform.
+•ApplicationLayoutMap.xml — Defines navigation elements and dashboard pages for different types of users.
+The flow of the OnDemand Framework—which begins when a user does anything in EXAMPLE Express ®that triggers
+a post to the OnDemand Framework—is as follows:
+1.The system authenticates the request.
+38 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,34 @@
+2.Edit the copy of the DefaultDictionary.resources file you just created. For information about editing resource files,
+see Editing Resource Files.
+3.Add or edit the REQD_FIELD_NOT_BLANK string, and give it a unique value such as “Ceci est un champ
+obligatoire et ne peut pas être blanc." in French.
+4.Modify your browser language settings and verify that the dashboard now reads “Ceci est un champ obligatoire et
+ne peut pas être blanc.” in French. For information about changing browser languages, see Changing Browser
+Languages .
+Images
+Some images in the EXAMPLE Express ®skins contain text, and will need to be localized if being used with a language
+other than English. For example, assume that a business requirement exists to display a different logout icon for
+French users in EXAMPLE Express ®.
+Using the example above, adhere to the following steps to replace the padlock image with another image:
+1.Localize the image found at Skins/AvantGarde2/images/icons/lock_open.png for the French culture (fr-
+FR).
+2.Locate the desired image file, and save it as lock_open.png in the Skins/AvantGarde2/images/icons/fr-
+FR/directory.
+Localized image files can be saved as .jpg, .gif, and .png files.
+3.Change your browser language settings and then verify in EXAMPLE Express ®that the changes have been
+implemented. For information about changing browser language settings, see Changing Browser Languages .
+Changing Browser Languages
+Localizing EXAMPLE Express ®skins requires that you change your browser language settings. You can change your
+browser language settings by:
+•Changing the language in your Web browser. For more information, see Changing Your Browser Language in a
+Web Browser .
+•Modifying the value of the appSettings configuration setting in the Express\web.config file. For more information,
+seeChanging Your Browser Language Using a Configuration Setting .
+Using a configuration setting to modify your browser language settings is recommended when changing
+the browser language on multiple machines at once.
+Changing Your Browser Language in a Web Browser
+Using a Web browser, you can change the language to be used by the EXAMPLE Platform ®.
+Changing Your Browser Language in Internet Explorer
+To change your browser language in Internet Explorer:
+1.On the Tools menu, click Internet Options .
+134 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

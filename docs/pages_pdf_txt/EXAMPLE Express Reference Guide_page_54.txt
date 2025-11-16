@@ -1,0 +1,35 @@
+regex:[regular expression]:[message (opt’l)]:[attributes (opt’l)] –The most common attribute value for this
+type of regex is ifor case sensitive.
+The following are examples of additional regex format masks:
+•regex:^\\d+$:Please enter a number – This forces the user to use only digits, or the message Please
+enter a number is displayed. The d,written as \\d, specifies that only digits can be entered. The +
+specifies one or more digits, and the ^ and $ symbols specify the beginning and end of the string (this will
+prevent other characters from being entered before or after the digits).
+Escape backslashes by using double backslashes (\\) instead of a single backslash(\).
+•regex:^\\d{5}$:Please enter five digits – This forces the user to enter exactly 5 digits, or they receive
+the message, Please enter five digits.
+•regex:^(\\$)?\\d+$:Please enter the cost – Any number of digits, with or without a leading dollar sign.
+The dollar sign should be “escaped” by putting backslashes in front of it because without them, the $
+character signifies the end of the line. The ?character means that the dollar sign is optional.
+•regex:^\\d{0,5}\\.\\d{1,3}$:Please enter a number with a decimal – A number with 0-5 digits followed by
+a decimal and 1-3 digits must be entered. A double backslash is necessary in front of the decimal
+because a period in regexes is a special wildcard character that will allow any character to be used.
+•regex:^((?!(p\\.?o\\.? box)).)*$:Cannot enter a PO box:i – This would prevent a user from entering P.O.
+Boxin any combination of uppercase or lowercase characters, with or without periods, in the field.
+A colon (:) cannot be used in the regular expression or message. Colons are used as delimiters of
+format mask sections.
+Format masks do not run a check on empty fields, so a user is not forced to enter a value. Instead use
+therequired attribute .
+Ajax Refreshes
+EXAMPLE Express ®leverages Ajax refresh techniques to provide a more streamlined user experience. Using Ajax,
+communication between the browser and EXAMPLE Server ®can often be performed asynchronously, enabling the
+partial refreshes of EXAMPLE Express ®pages instead of entire page refreshes.
+Even with the use of Ajax, full page refreshes will occur in EXAMPLE Express ®under some circumstances. For
+example, full refreshes will occur when:
+•An item is added to the page
+•Buttons are added or removed (or are shown/hidden)
+•A required item is removed from the page
+•Rating messages exist on the page
+•A widget exists on the page
+•The header or footer changes
+54 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

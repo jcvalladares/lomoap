@@ -1,0 +1,35 @@
+theme.css Imports the custom-cc.css, custom-buttons.css, and custom-ext.css files.
+custom-cc.css Used for custom container definitions.
+custom-buttons.css Used for custom button definitions.
+custom-ext.css Used for theme-specific ExtJs CSS overrides.
+2.In the theme.css file in the C:\Program Files\Duck Creek Technologies\Express\Skins\[CUSTOM
+SKIN]\themes\[CUSTOM THEME]\css \ directory, add the following import statements to the beginning of the
+file:
+@import url(custom-ext.css);
+@import url(custom-cc.css);
+@import url(custom-buttons.css);
+3.Save the file.
+If the skin.config file is configured to use a custom theme, the theme.css file will automatically be used.
+The custom-cc.css, custom-buttons.css, and custom-ext.css files must be imported at the beginning of
+the theme.css file.
+4.In the skin.config file for the custom skin, change the value of the <Theme name> setting to the name of your
+custom theme.
+5.Save the file.
+The custom theme is enabled, custom style definitions can be applied to it, and custom images can be added to
+the custom theme's Images directory.
+Customizing Avant Garde 2.1 Skins
+EXAMPLE Express ®5.0 includes Avant Garde 2.1 skins. Avant Garde 2.1 skins continue Accenture Duck Creek
+Technologies, Inc. effort to move toward an object oriented model using the Ext JS 3.4 Framework. Moving towards an
+object oriented model, the following enhancements have been made:
+•All Ext JS features are availble for customizations
+•Customizations are easier through overrides and extensions
+•Maintenance is easier
+•Code duplication is eliminated
+•Page rendering is more efficient
+Avant Garde 2.1 skins configure controls as objects based on class attributes (DCT.InputIntField or
+DCT.InputFloatField). Each control is built based on its type. Each DCT class individually validates, formats, sets
+focus, and handles events based on its class. Classes can be globally extended or overridden at the base class or
+specific child input class for any property or method. All Ext JS methods or properties may be available to be extended
+or overridden. For Avant Garde 2.1 skin customizations that do not affect JavaScript controls, see Customizing Avant
+Garde 2 Skins .
+109 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

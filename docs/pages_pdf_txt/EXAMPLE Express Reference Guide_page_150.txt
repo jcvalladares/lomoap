@@ -1,0 +1,37 @@
+•For any <applicationLayout> elements in the ApplicationLayoutMap.xml file that you do not wish to use, set the
+default attribute to a value of 0.
+•If you create backup copies of ApplicationLayoutMap files, move those files to a different directory, or do not
+include the specified text in the file name.
+•The system loads map files in the following order:
+◦[MapFile].xml
+◦[MapFile]*.xml
+◦Custom[MapFile].xml
+Customizing ApplicationLayoutMap Files
+The ApplicationLayoutMap.xml file contains <applicationLayout> elements that define unique implementations of the
+EXAMPLE Express ®interface. These <applicationLayout> elements contain the following child elements:
+•<menu> and <menuItem> elements — These elements control the navigation elements that appear in
+EXAMPLE Express ®and which content page each element loads.
+•<pageLayout> elements — These elements control the content of dashboard pages in EXAMPLE Express ®,
+such as the Policy Administration dashboard.
+When customizing <applicationLayout> elements, you must define a separate <applicationLayout> element for each
+role or group of roles that will have a distinct EXAMPLE Express ®configuration. To define these <applicationLayout>
+elements, you can modify the out-of-the-box <applicationLayout> elements in the ApplicationLayoutMap.xml file
+and—if desired—create new ones.
+To modify or create an <applicationLayout> element, you must:
+Step Description
+1 Define the attributes of the <applicationLayout> element.
+2 Define the <menu> and <menuItem> elements for the <applicationLayout>.
+3 Define any desired <pageLayout> elements.
+For instructions on these three procedures, see:
+•Defining the Attributes of an <applicationLayout> Element
+•Defining the <menu> and <menuItem> Elements
+•Defining <pageLayout> Elements
+Custom XML can be defined for each application layout using the <customLayout> XML element. Whn debug mode is
+enabled (greater than 0), the custom XML is returned in the debugContent.xml file. For example:
+</module>
+</pageLayout>
+<customLayout>
+<myElem>Hello World</myElem>
+</customLayout>
+</applicationLayout>
+150 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

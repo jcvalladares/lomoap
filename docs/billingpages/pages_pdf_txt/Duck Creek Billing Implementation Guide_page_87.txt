@@ -1,0 +1,34 @@
+•The queries the reports are based on should be highly optimized for performance because many reports run
+against the transactional database.
+To create a custom report:
+1.Create the report using Microsoft SQL Server Business Intelligence Development Studio.
+2.Save the report.
+Duck Creek Technologies, Inc. recommends saving the report to the base folder where the out-of-the-
+box Duck Creek Billing™reports are located.
+3.Verify that the custom report can be opened using SQL Server Reporting Services.
+4.Run SQL Server Management Studio and connect to the Example Data database.
+5.Execute the following SQL statement:
+INSERT INTO DC_PLT_Reports (Name, FullPath)
+VALUES ('Display Name', 'Report path');
+6.Change the Display Name to the report name you wish to display on the Billing Dashboard.
+7.To change the Report Path to the path of the report within SQL Server Reporting Services, perform one of the
+following actions:
+◦If the report is located in the base folder, specify a relative path (for example, ./Billing/Monthly/Aged
+Receivables ).
+◦If the report is not located in the base folder but is still on the ReportServerUrl, specify the report path,
+starting at the root folder level (for example, /Example Server/Billing/Monthly/Aged
+Receivables ).
+◦If the report is located on a server other than ReportServerUrl, specify the full URL (for example,
+http://localhost/ReportServer/?/EXAMPLE Server/Billing/Monthly/Aged
+Receivables ).
+The custom report appears in the Reports list on the Billing Dashboard.
+Out-of-the-Box Reports
+The following table lists the out-of-the-box reports installed with Duck Creek Billing™.
+Report Name Description
+Aged
+ReceivablesLists all aged receivables.
+Cash in
+SuspenseLists all cash in suspense.
+Daily Cash
+JournalThe daily cash journal.
+87 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

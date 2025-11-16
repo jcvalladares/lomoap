@@ -1,0 +1,33 @@
+Using the ApplicationLayoutMap.xml file, you can add external content to a module. For information
+about using external content with EXAMPLE Express ®, see Using External Content in
+EXAMPLE Express® .
+10. Save and close ApplicationLayoutMap.xml .
+Adding Custom Express Actions
+You can add custom Express Actions to EXAMPLE Express ®by using the Edit Configuration Utility to extend the
+PostActionMap.xml file.
+Do not customize the shipped PostActionMap files. Instead, make customizations in custom
+PostActionMap files to prevent changes from being lost during the upgrade process.
+You must reset EXAMPLE Express ®(run DCTReset.exe) for any customizations to OnDemand files
+(PostActionMap.xml, ContentMap.xml, and ApplicationLayoutMap.xml) to appear.
+Creating Custom PostActionMap Files
+The PostActionMap.xml file is configured so that a particular implementation of EXAMPLE Express ®can have multiple
+PostActionMap.xml files at the path specified by the PostActionFactory configuration setting in the Express\Web.config
+file. If desired, you can create a custom PostActionMap file in addition to PostActionMap.xml. At runtime, the system
+will use the following files at the path specified by the PostActionFactory configuration setting. (For each of the
+following files, [MapFile] is the file name specified in the PostActionFactory configuration setting.)
+•[MapFile].xml
+•[MapFile]*.xml
+•Custom[MapFile].xml
+Custom map files should adhere to the following naming convention: Custom[MapFile].xml , where
+[MapFile] is the text specified in the appropriate Express\Web.config setting (e.g., ContentMap,
+PostActionMap, ApplicationLayoutMap). The [MapFile]*.xml convention is reserved for Duck Creek
+Technologies, Inc. use only. If you have migrated your custom map files from a previous version of
+the EXAMPLE Platform ®, Duck Creek Technologies, Inc. recommends that you apply the
+Custom[MapFile].xml naming convention to your custom files.
+Because the EXAMPLE Platform ®combines all files that use the above naming conventions, keep the following tips in
+mind when using a custom PostActionMap file:
+•Be sure no conflicts exist among any items defined in any PostActionMap file.
+•If you create backup copies of PostActionMap files, move those files to a different directory, or do not include the
+specified text in the file name.
+•The system loads map files in the following order:
+145 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

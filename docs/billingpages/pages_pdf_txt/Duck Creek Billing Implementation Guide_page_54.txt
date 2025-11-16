@@ -1,0 +1,35 @@
+TheSave New Plan option will not appear until the values entered in the Commission Percentage or
+Amount text box balances with the sum of the distribution percentage or amount.
+The Active Commission Plans page appears.
+The Save All Changes option is not enabled unless the plan has been changed.
+14. Click Save All Changes to save the plan changes.
+15. (Optional) Click Edit Plan to edit the new plan.
+16. (Optional) Click Delete Plan to delete the new plan.
+To add a renewal term:
+The Terms section of the page refreshes, and displays separate Commission Rate and Commission Distribution
+options for new business and renewal terms.
+1.Click Add Renewal Term .
+2.In the new business section, below the Commission Rate heading, click one of the following options in the Type
+list:
+◦Percentage
+◦Flat Amount
+3.In the Value text box, enter the appropriate amount.
+4.Below the Commission Distribution heading, click one of the available options in the Entity Type list.
+5.In the Percentage orAmount text box, enter the appropriate amount.
+6.After entering the value, click the page outside of the text box to refresh the page, or tab outside the text box.
+7.(Optional) Click Add New Distribution to add another entity type.
+8.In the Percentage orAmount text box, enter the appropriate amount.
+9.After entering the value, click the page outside of the text box to refresh the page.
+10. Click Save New Plan.
+11. Click Save All Changes to save the plan changes.
+12. (Optional) Click Edit Plan to edit the new plan.
+13. (Optional) Click Delete Plan to delete the new plan.
+To edit an existing agent specific plan:
+1.Click Edit Plan .
+The Commission Plan Details page appears.
+2.Edit the desired details.
+3.Click Save Changes.
+4.(Optional) Click Discard Changes to restore the previously saved plan.
+5.Click Return To Plan List to return to the Active Commission Plans page.
+6.Click Save All Changes to save the changes made on the previous page.
+54 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

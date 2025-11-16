@@ -1,0 +1,37 @@
+◦Using New Quote Selection System Pages
+◦Customizing the System Loading Message
+◦Enabling Top Navigation
+◦Enabling Help Link Tab Indexes
+◦Setting Up Navigation Classes
+Customizing EXAMPLE Express Skins
+The content, behavior, and look and feel of EXAMPLE Express ®can be customized through EXAMPLE Express ®skins
+(composed of XSL, JavaScript, and CSS files). EXAMPLE Express ®skins isolate the customizable look and feel of
+EXAMPLE Express ®from core EXAMPLE Express ®functionality. Static .xsl and. js files that define core EXAMPLE
+Express ®behavior are stored in either the DCTCore or DCTBase (depending on which skin you are using) directories
+in the Duck Creek root directory (for example, C:\Program Files\Duck Creek Technologies\ ). These files
+handle rendering of the HTML layout structure and the main JavaScript processing. Files in the Avant Garde,
+AvantGarde2, AvantGarde 2.1, DCTCore, and DCTBase directories are overwritten during Duck Creek Technologies,
+Inc. installations and upgrades, and should NOT be altered.
+By contrast, customizable .xsl, .js, and .css files that define the look and feel of EXAMPLE Express ®are stored in the
+Global Root Directory \Express\Skins\ CustomSkin\ directory (where CustomSkin is the name of a
+customized skins directory ). These files can be customized. For information about creating a custom skins directory,
+seeCreating a Custom Skins Directory .
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTCore, DCTBase,
+AvantGarde (all versions) directories. All files in these directories are overwritten during upgrades. Instead, to
+override these files, you must create a custom skins directory (copied from the appropriate AvantGarde
+directory) and modify the files in this directory. For instructions on creating a custom skins directory and
+overriding DCTCore or DCTBase files, see Creating a Custom Skins Directory ,Overriding DCTCore Files , or
+Overriding DCTBase Files .
+All EXAMPLE Express ®skins use the DCTCore or DCTBase directories (depending on the skin being used) in
+conjunction with a customizable directory that defines the unique look and feel of EXAMPLE Express ®.
+Out of the box, all skins directories and files are located in the Global Root Directory \Express\Skins
+directory\ . EXAMPLE Express ®is shipped with the DCTCore and DCTBase directories and a sample directory
+(AvantGarde, AvantGarde2 or AvantGarde2.1) that defines the out-of-the-box EXAMPLE Express ®look and feel.
+During upgrade installations, the DCTCore or DCTBase and AvantGarde or AvantGarde2 directories are overwritten.
+Files in a carrier's custom skins directory, however, will NOT be overwritten during an upgrade installation and may be
+customized extensively.
+Follow the general instructions in this section to customize EXAMPLE Express ®skins.
+Customizing Avant Garde Skins
+ByCreating a Custom Skins Directory andOverriding DCTCore Files , you can modify the XSL, CSS, and JavaScript
+files to customize the Avant Garde skin to best suit your needs.
+76 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

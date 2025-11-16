@@ -1,0 +1,31 @@
+A value of true (1) for this configuration setting will force EXAMPLE Express ®to use HTTPS for login and
+administration functions. All other pages will use HTTP. A value of true (1) requires that the Web server has a valid
+security certificate for the secure protocal.
+Default Valid
+0 •0— Use current protocol for all requests.
+•1— Enter HTTPS upon login or administration requests.
+SelectAgencyLimit
+Specifies the threshold number of agencies required to display the agency list in large list mode. Out of the box, an
+agency list with a number of agencies less than or equal to the number specified for this setting will appear in a drop-
+down list in EXAMPLE Express ®. An agency list with a number of agencies greater than the number specified in this
+setting will appear in a grid in EXAMPLE Express ®and no longer uses a link to redirect to an agency list.
+Default Valid
+15 Any positive integer.
+ServerConfig
+Fully-qualified directory path to the OnDemand.config file.
+Default Valid
+C:\Program Files\Duck Creek Technologies
+4.0\Express\App_Data\OnDemand.ConfigValid path, including file name, to the
+OnDemand.config file.
+ServerDomain
+Domain name for Microsoft Windows domain user Single Sign On. If null, mixed mode authentication will not be used.
+(This setting is not included in the out-of-the-box Express\Web.config file, but it can be added manually.)
+Default Valid
+N/A Text string.
+SMTPServer
+SMTP mail server used by EXAMPLE Express ®or EXAMPLE Server ®when generating e-mail messages. The SMTP
+mail service need not be on the same machine as EXAMPLE Express ®or EXAMPLE Server ®.
+Default Valid
+null •null— No e-mail service.
+•Fully qualified name of the SMTP Server to which to route service when sending an e-mail message.
+189 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

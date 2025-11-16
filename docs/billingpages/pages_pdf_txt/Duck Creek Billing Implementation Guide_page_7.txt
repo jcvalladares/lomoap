@@ -1,0 +1,33 @@
+To configure reporting services:
+Options are:
+1.On the Configure Reporting Services screen, select the credentials to use for Installation/Maintenance.
+◦Connect using your current credentials — Connect to the report server as the user running the install.
+◦Connect using the EXAMPLE Server ®credentials (DCTWP User) — Connects to the report server as
+the DCTWP User or whatever is specified in the Worker Process login ID during database credential
+configuration.
+At runtime the credentials for the DCTWP User are used.
+2.In the Report Server field, enter the name of the server to use for the SQL Reporting Services web service
+3.(Optional) Click Test to test the reporting server.
+4.In the Deploy reports to this report server folder field, enter the name of the folder to store the reports in.
+5.Click Next .
+Executing the Duck Creek Billing™ Installation
+When the installation is ready to configure your system for Duck Creek Billing™, the following list of installation items
+appears:
+•XML Files
+•Manuscripts
+•Database Setup
+•Reporting Setup
+By default, the installation executes all items in this list. If you do not wish the installation to execute an item, clear the
+check box beside that item.
+Clearing a check box causes the installation to notexecute a process and may prevent Duck Creek Billing™
+from running correctly.
+During installation, if a database does not exist, the installation creates that database and executes all selected
+processes. If the database already exists, however, the installation compares the existing database structure to the
+appropriate scripts. (You can view a list of differences between the existing structure and these scripts by clicking the
+Preview Changes button.) If the Database Setup check box is selected, the installation then makes the appropriate
+changes to the existing database tables and columns.
+To see changes to the XML Files andDatabase Setup items, click Preview Changes beside the
+appropriate item.
+To execute the selected installation items:
+1.Click Finish .
+7 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

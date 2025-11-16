@@ -1,0 +1,55 @@
+Commission
+Statement
+FrequencySpecifies
+commission
+statement frequency
+and day of the
+month for
+processing.•Monthly
+•Any number
+between 1
+and 31.•Monthly
+•31
+Commission
+Statement
+Payment/
+Collection
+MethodSpecifies the
+method for paying
+and collecting
+commissions.•Check
+•EFTCheck
+Selecting Policy Plan Options
+Policy plan options may be specified by determining the values for policy plan options. At the policy-level, these options
+control invoice frequency, commission scheme, follow up for pending cancel, payment allocation and down payments.
+The table below specifies what policy options are available for configuration. ManuScript configuration determines
+which options are available to Duck Creek Billing™ users.
+The following table includes the policy options available.
+Category Option Definition Valid Entries Default
+Scheduling
+Frequency Determines the planned installment
+frequency code for invoicing.•Monthly
+•Quarterly
+•Annually
+•Semi-Annually
+•Bi-MonthlyMonthly
+Installment
+Plan
+DescriptionSpecifies a free-form description of the
+installment plan.•None
+•One less than term
+•Two less than termOne
+less
+than
+term
+Late Entered
+Strategy CodeDetermines whether to catch up or
+spread the premium when a bill item is
+posted to billing after its effective date.•Catch up
+•Spread
+•NoneNone
+Max Number
+of InstallmentsDetermines the maximum number of
+installments for a policy term based on
+frequency.12 invoices 12
+34 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

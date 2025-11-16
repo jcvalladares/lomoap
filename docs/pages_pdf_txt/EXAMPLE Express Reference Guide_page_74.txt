@@ -1,0 +1,31 @@
+New Installations and Upgrades
+Underwriter's Workbench Toolbar installs as part of an EXAMPLE Express ®upgrade or new installation without
+manual configuration.
+Underwriter's Workbench Toolbar is supported only for AvantGarde 2.1 and later skins.
+Configuring Underwriter's Workbench Toolbar
+Users can enable and disable Underwriter's Workbench Toolbar and configure it to match current skins and
+localization.
+The Underwriter’s Workbench Toolbar is built on top of the new MVC Extension Framework. As a new technology, this
+framework is expected to experience significant growth and change in upcoming releases as the feature set expands
+and the implementation matures. As such, supported customization options for the Workbench Toolbar are limited to
+localization based label changes and styling changes using theme based overrides.
+It is recommended that items in the Assets directory are not changed, as these will be overridden by future
+installations and updates.
+Enabling and Disabling Underwriter's Workbench Toolbar
+By default, Underwriter's Workbench Toolbar is fully enabled. However, the user can disable or configure Underwriter's
+Workbench Toolbar by editing the skin.config file in the main Skins directory (such as, C:\Program Files\Duck Creek
+Technologies\Express\Skins\AvantGarde2).
+To configure skin.config:
+1.Open skin.config in a text editor.
+2.Within the <controls> section, locate the section, <workbench toolbar enabled=" 1" />
+3.By default, workbench toolbar is enabled and all items are present, including Notes and Attachments. Set
+enabled=" 0" to turn off workbench toolbar, and then save your changes.
+Customizing Underwriter's Workbench Toolbar
+The toolbar can be configured to match your skins and localization.
+•For style changes, see Working with CSS Override Styles .
+•For localization changes, see Using the Localization Framework .
+Out-of-the-box, Underwriter's toolbar does not manipulate data on the main page, default.aspx.
+For more information, see:
+•Working With Underwriter's Workbench Toolbar
+•Underwriter's Workbench Toolbar
+74 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

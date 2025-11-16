@@ -1,0 +1,37 @@
+Tab panels dctTabs.js DCT.TabPanel •Handles creating tabs per section that
+is identified through
+EXAMPLE Author ®
+•Sets the tab panel items to the control
+and assigns the panel that should be
+shown first
+•Assigns a listener to handle the before
+tab change
+Text area dctTextAreaFields.js DCT.TextAreaField
+•Assigns required, regular expression,
+and max length validation checking
+•Sets debug information if the
+Web.config key is turned on
+•Sets event listeners for blur, change,
+focus, keypress, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+•Styles the width and height based on
+the formatmask configuration
+Time dctInputTimeFields.js DCT.InputTimeField •Assigns the validation routine to
+validate and mask time fields
+•Sets the validation type process to
+mask the field for correct characters
+and validation
+◦Checks for military time or
+standard time format
+•Sets debug information if Web.config
+key is turned on
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+120 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

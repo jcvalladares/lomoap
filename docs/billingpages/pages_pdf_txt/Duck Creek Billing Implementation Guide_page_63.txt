@@ -1,0 +1,29 @@
+The adjustment date must be the current date or later.
+4.Enter the adjustment amount in the Authorized Amount textbox.
+For dollar and cents amounts, enter the full amount including the decimal point.
+For a debit, enter a minus sign (-) before the amount. Entering a dollar sign ($) is not required.
+5.Click Add.
+Details of the adjustment appear on the Commission Statement page, and the commission statement summary at the
+top of the page is updated based on the adjustment amount.
+Multi Format Commission Statements
+Commission statements are available in the following formats:
+•Adobe PDF (PDF)
+•Microsoft Excel (XLS)
+Compatible versions of Microsoft Excel and SQL Server are required. SQL Server 2005 requires
+Microsoft Excel 2003.
+•Comma Separated Value (CSV)
+•XML
+To provide flexibility, more than one format may be selected for the same commission statement. For example, by
+selecting both PDF and XLS formats, the user can print the PDF statement for mailing, and attach the XLS statement
+to an email without additional work.
+When a statement is produced, a folder is automatically created for each selected statement format. An Archive folder
+that includes a copy of each statement format is also created. By default, the folder location is C:\Program
+Files\Duck Creek Technologies\DirectBillCommissionStatements\ . The commission statement folder
+location is specified during the Duck Creek Billing™ installation process, and is configurable.
+To specify the statement format:
+1.From the Account Home page, in the left navigation panel, click Account Settings .
+2.In the Commission Statement Format section, click the appropriate options.
+TheAdobe PDF format check box is automatically selected, and cannot be cleared because it is
+required to enable the ability to view commission statements online.
+3.Click Save Changes .
+63 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

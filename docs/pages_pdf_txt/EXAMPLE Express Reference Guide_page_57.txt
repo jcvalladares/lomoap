@@ -1,0 +1,39 @@
+Express Action Syntax
+Express Actions are applied to page actions (buttons and links) in Page Designer using the Express Action property.
+TheExpress Action property syntax is as follows:
+postActionCommand:targetPage
+ThepostActionCommand portion of the Express Action syntax is the action to perform, and the targetPage portion
+is the EXAMPLE Express ®system page to load. If no targetPage is specified, the system continues with the
+ManuScript-defined interview.
+If desired, you can also instruct the system to save the active policy before taking action by adding an optional save
+element before the postActionCommand . This syntax appears as follows:
+save,postActionCommand:targetPage
+Express Action Processing
+For each post-back to EXAMPLE Express ®, the following actions are performed on the HTML form. The interview
+action may also be peeked into if specified in the field referenced by the _action form field.
+When an Express Action requires HTML form fields, the HTML form from which the action is executed must
+contain those fields. For details about each Express Action and any HTML form fields required, see the
+appendix Express Actions .
+1.EXAMPLE Express ®loads the two primary action fields, _submitAction and_targetPage ._submitAction contains
+the specified Express Action, and _targetPage contains the name of the EXAMPLE Express ®system page to
+load. If _submitAction is empty, the system will take no action unless an action is specified in the interview action
+below. If _targetPage is blank, the system does not load an EXAMPLE Express ®system page, but continues with
+the interview content.
+2.EXAMPLE Express ®looks for the interview action name in the form field _action .
+3.EXAMPLE Express ®looks at the _fieldChanged form field. If _fieldChanged="1", then the data fields on the form
+have been modified by the user and the session must be updated. Also, if auto-save is turned on, any field that
+does not begin with an underscore (_) is stored using the <Session.storeDataRq> request. If fields have changed
+and auto-save is on, then the quote or policy is stored using the <OnlineData.storePolicyRq> request.
+Auto-save is also executed when the interview action has an add, delete, mark-for-delete, or duplicate
+command in the interview action, even if no fields have been modified.
+4.EXAMPLE Express ®peeks into the <ManuScript.getPageRq> request of the interview action for certain
+parameter conditions. There are two activities performed on the interview action: peek andextract .Peek looks for
+the value of the interview action, while extract pulls the attribute from the <ManuScript.getPageRq> request
+attribute list, if it exists. The interview action has a request that may have some of the following attributes:
+<ManuScript.getPageRq manuscript="" postAction="" eventField=""
+preCommand="", etc>
+◦Peek for postAction attribute, and set it as the post action to be performed before the interview content is
+rendered. This attribute will override the Express Action set by the _submitAction HTML form field, though it
+will preserve the save if specified previously.
+◦Peek for resetManuScriptID andresetLOB . If either exists, perform them.
+57 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

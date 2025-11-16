@@ -1,0 +1,34 @@
+For information about the <BatchProcess.processByScriptIdRq> request, see the EXAMPLE Server® Object
+Reference .
+Customizing Search Options
+When customizing search options, you can customize the Quick Search available on every page, or the advanced
+search options available on the Search page.
+Customizing QuickSearch Options
+If desired, you can customize the options available in the Quick Search.
+To customize the Quick Search:
+1.In the Global Root Directory \Express\ CustomSkin \xsl directory, open dctCommonControls.xsl .
+2.Modify the buildQuickSearch template as desired. Be careful to modify the <when> case that is for the pas
+portal type.
+3.In the Global Root Directory \Express\DCTCore\scripts directory, open DCTPAS.js .
+4.Copy the runQuickSearch() function.
+5.Navigate to the Global Root Directory \Express\ CustomSkin \scripts directory, and open custom.js .
+6.Paste the copied function into custom.js.
+7.Modify the runQuickSearch() function as desired.
+Customizing Search Page Options
+If desired, you can customize the options available on the Search page by:
+•Adding, modifying, or removing the criteria users can search by (e.g., policy number, named insured, phone
+number, etc.)
+•Modifying or removing the operators available to users when defining search criteria (e.g., contains, is, is not,
+etc.)
+•Modifying or removing the options for handling multiple search filters (i.e., and, or)
+Adding, Modifying, or Removing Criteria
+To add, modify, or remove options for users to search by:
+1.Open Microsoft SQL Server Management Studio and navigate to the ExampleData database.
+2.In the ExampleData database, navigate to the DC_PLT_Support_CodeLists table.
+3.Modify or remove the records for the out-of-the box search options (indicated by the CodeType
+POL_SRCHPOLFILTER ), or add a new record for each option you wish to add.
+A database column in the Quote table must exist for each record with the CodeType
+POL_SRCHPOLFILTER . For instructions on extending the database to include custom columns, see the
+Guide to EXAMPLE Server® .
+Specify the following fields for each record:
+170 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

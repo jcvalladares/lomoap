@@ -1,0 +1,35 @@
+Adding or Customizing Modules
+You can customize the out-of-the-box modules available for the Policy Administration Dashboard (or any other page),
+or create new ones.
+Customizing an Out-of-the-Box Module
+You can customize an out-of-the-box module by overriding it with a customized version of the module in the
+dctCustomModules.xsl file.
+To override an out-of-the-box module:
+1.In the Global Root Directory \Express\Skins\DCTCore\xsl directory, open dctDashboard.xsl .
+2.Copy the XSL template with the match attribute that matches the ID of the module you wish to override:
+◦New quote module — newQuote
+◦Recently Accessed module — mruQuote
+◦Notification module — notifications
+◦Task module — taskQueue
+3.In the Global Root Directory \Express\Skins\ CustomSkin \xsl directory, open dctCustomModules.xsl.
+4.Paste the copied template into dctCustomModules.xsl.
+5.Make any desired changes to the module.
+6.Save and close dctCustomModules.xsl.
+Creating a New Module
+To create a custom module:
+1.In the Global Root Directory \Express\Skins\ CustomSkin \xsl directory, open dctCustomModules.xsl .
+2.Add an XSL template with a match attribute that looks for a specific <module> element by ID. Specify a unique
+ID. (This ID will be assigned to the module during its creation in Step 4.)
+For example: match="module[@id='myID']"
+3.Set the mode attribute on the template to content .
+4.Add a <div> element as a child of the XSL template, and give it an idattribute with the value of the ID specified in
+Step 2.
+5.Add a class attribute with a value of x-hide-display .
+(This allows the ExtJS objects in the dctDashboard.js file to move the content to the correct location based on the
+page layout definition without requiring it to initially load elsewhere.)
+6.Add custom XSL code to the <div> element to create the module content.
+7.Save and close dctCustomModules.xsl.
+8.In the Global Root Directory \Express\App_Data directory, open ApplicationLayoutMap.xml .
+9.Configure any desired <pageLayout> elements to specify the new module by ID. Give the module specified a
+content attribute with the identifier for a content page that will load the required content.
+144 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

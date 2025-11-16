@@ -1,0 +1,35 @@
+If using EXAMPLE TransACT ®, you can generate and manage tasks automatically using an infrastructure that already
+exists in the out-of-the-box EXAMPLE TransACT ®ManuScripts.
+EXAMPLE Server ®Requests
+You can use the following EXAMPLE Server ®requests to execute task logic from within a ManuScript. For more
+information about each request and their attributes, see the EXAMPLE Server® Object Reference .
+•<Task.addRq>
+•<Task.assignRq>
+•<Task.getRq>
+•<Task.listRq>
+•<Task.listQueuesRq>
+•<Task.listQueueUsersRq>
+•<Task.setStatusRq>
+•<Task.updateRq>
+Express Actions
+You can use the following Express Actions to execute task logic from within a ManuScript. For more information about
+each action or about Express Actions in general, see Express Actions .
+Express Action Description
+addTaskAttachment Adds an attachment to a task.
+assignTask Updates the queue and/or user to which a task is assigned.
+deleteTaskAttachment Removes an attachment from a task.
+newTask Adds a new task based on the task record located in the session at the path _TaskData/
+TaskRecord.
+setTaskComplete Sets the status of a task to Complete .
+setTaskDeclined Sets the status of a task to Closed , with a reason of Declined .
+setTaskDeleted Marks a task for delete. (Sets the status of the task to Deleted .)
+setTaskStatus Sets the status of a task.
+updateTask Updates a task in the database based on the task record located in the session at the
+path _TaskData/TaskRecord.
+Using EXAMPLE TransACT ®
+When using EXAMPLE TransACT ®, you can use the AttachTaskRule (part of the StatusSet event) to automatically
+generate and manage tasks. Out of the box, EXAMPLE TransACT ®uses this rule to handle task management when a
+transaction's status changes. This logic works in the following way:
+When the StatusSet event is executed, the system checks the PolicyAdminData.UseDCTTasks field in the Basic
+Transaction Rules ManuScript. This boolean field is set by a field in the product ManuScript and indicates whether to
+163 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

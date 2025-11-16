@@ -1,0 +1,35 @@
+•Set up underwriter's workbench toolbar
+Setting Up EXAMPLE Express® Security
+EXAMPLE Express ®security is controlled through authentication (provided through any of five authentication methods
+available for the EXAMPLE Platform ®) and authorization (provided through EXAMPLE UserAdmin™). For instructions
+on setting up security for EXAMPLE Express ®, see the following documents:
+•Authentication —EXAMPLE Authentication Server™ User Guide
+•Authorization —EXAMPLE UserAdmin™ User Guide
+Setting Up Event Logging
+You can use the Microsoft Windows Application Event Log to log exception conditions and notifications in the
+EXAMPLE Platform ®.
+To set up event logging:
+1.Open the Edit Configuration Utility.
+2.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+3.Under Mode , click Form .
+4.On the Web Config tab, in the list of settings, click EventLog .
+5.In the value text box, click one of the following options:
+◦Errors — Logs errors that occur in the EXAMPLE Express ®system.
+◦All— Logs both errors and notifications.
+6.Click Save .
+7.Click Close .
+Using the EventLog configuration setting requires an addition to the machine registry for the configured identity of the
+EXAMPLE Express ®application. Usually, this identity is ASPNET local user, unless a configured identity is used for
+EXAMPLE Express ®.
+There may be multiple instances of these processes on the machine, and each instance may execute as a
+unique user.
+1.Add the key name "Express" under
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application.
+2.Grant write access to the EXAMPLE Express ®entry
+(HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\Express) for the user
+associated with the ASPNET_WP or WPW3 process (usually ASPNET).
+This key is optional and must be added manually.
+Setting Up the Exit Interview Field
+When a user completes an interview process, EXAMPLE Express ®executes an Exit Interview field. This field can
+modify session data or execute additional ManuScript logic when the user leaves the final page of the interview. It can
+62 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

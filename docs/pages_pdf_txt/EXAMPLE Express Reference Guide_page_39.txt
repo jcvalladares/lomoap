@@ -1,0 +1,41 @@
+2.The system processes the requested Express Action (if any). If an Express Action is specified, the _submitAction
+HTML form field must contain the name of the action to process. If the _submitAction field is blank or not found,
+no Express Action is performed.
+3.The system develops the requested content. The _targetPage HTML form field must contain the desired content
+page. At times, the _submitAction may override the _targetPage. If no _targetPage is specified, the last visited
+_targetPage is used.
+4.The system builds navigation elements based on the requested content.
+5.The system uses an XSLT file to transform the requested content into HTML for output to the browser.
+Steps 2, 3, and 4 use the map files listed above. EXAMPLE Express ®uses these map files to determine which code to
+use to process each request. The configured class is instantiated so the request can process the activities.
+In addition to the out-of-the-box map files, customers can use their own custom map files. To support custom map
+definitions, any .xml file in the directories specified by the ContentFactory ,PostActionFactory , and
+ApplicationLayoutFactory configuration settings in the Express\Web.config file with a name that includes the word
+custom and the text also specified in those settings (out of the box, this is ContentMap ,PostActionMap, or
+ApplicationLayoutMap ) will load into EXAMPLE Express ®as map files. (For example: CustomContentMap.xml .)
+Custom map files should adhere to the following naming convention: Custom[MapFile].xml , where [MapFile]
+is the text specified in the appropriate Express\Web.config setting (e.g., ContentMap, PostActionMap,
+ApplicationLayoutMap). The [MapFile]*.xml convention is reserved for Duck Creek Technologies, Inc. use
+only. If you have migrated your custom map files from a previous version of the EXAMPLE Platform ®to
+EXAMPLE Platform ®4.0, Duck Creek Technologies, Inc. recommends that you apply the
+Custom[MapFile].xml naming convention to your custom map files.
+The system loads map files in the following order:
+1.[MapFile].xml
+2.[MapFile]*.xml
+3.Custom[MapFile].xml
+For more information on customizing the OnDemand Framework, see the following topics:
+•ContentMap.xml —Adding Custom Pages
+•PostActionMap.xml —Adding Custom Express Actions
+•ApplicationLayoutMap.xml —Customizing the EXAMPLE Express® Experience
+ContentMap.xml
+The ContentMap.xml file contains a list of all content pages that EXAMPLE Express ®may process. Each <content>
+entry is identified by a unique name that specifies the content to be processed when that content is requested. The
+OnDemand Framework creates a new instance of the specified class for the requested content item. Each
+implementation may provide a unique assembly and class for each named content and add any additional content
+needed. The custom content classes must inherit from the DuckCreek.OnDemand.ContentPage class found in the
+DuckCreek.OnDemandLib assembly and must override the Process() method:
+public override void Process(PageState state,
+System.Collections.Specialized.NameValueCollection requestForm)
+Each content page must have an .xsl file of the same name in the Global Root Directory \Express\Skins\ CustomSkin \xsl
+directory. The XSLT uses this file to build the content page.
+39 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,37 @@
+•ContentTitle (optional)
+•ContentBorder (optional)
+•ContentFrame (optional)
+•ContentCollapsible (optional)
+•ContentScrollable (optional)
+•ContentHeight (optional)
+•ContentName (optional)
+For information about these configuration settings, see Skin.config Settings .
+Adding External Content to Dashboard Modules
+You can customize the out-of-the-box modules available for the Policy Administration Dashboard (or any other page),
+or create new ones. One way to customize these modules is by adding external content to them. For more information
+about adding or customizing dashboard modules, see Adding or Customizing Modules .
+Customizing Specific EXAMPLE Express® Features
+A number of specific features and functions in EXAMPLE Express ®can be customized, including:
+•The Policy Administration Dashboard
+•Tasks
+•Notifications
+•Search options
+•The new quote process
+•The system loading message
+•The navigation
+•Help link tab indexes
+•Navigation classes
+Customizing the Policy Administration Dashboard
+If desired, you can customize the Policy Administration Dashboard that appears for each type of user. To customize
+the Dashboard, you must modify <pageLayout> elements in the ApplicationLayoutMap.xml file. For information about
+customizing the ApplicationLayoutMap.xml file, see Customizing ApplicationLayoutMap.xml . For information about
+<pageLayout> elements, see Defining <pageLayout> Elements .
+Customizing Tasks
+When customizing the EXAMPLE Express ®task system, you can customize:
+•Task categories — If desired, carriers can customize categories for tasks. Out of the box, EXAMPLE Express ®
+comes with a single task category: General. For instructions on customizing task categories, see Customizing
+Task Categories .
+•Reason codes — If desired, carriers can customize reason codes for closing a task. Out of the box, EXAMPLE
+Express ®comes with a single reason code: Decline. For instructions on customizing reason codes, see
+Customizing Task Reason Codes .
+160 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

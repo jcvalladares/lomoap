@@ -1,0 +1,24 @@
+<Buttons>
+<PreviousButtonDefaultType></PreviousButtonDefaultType>
+<NextButtonDefaultType></NextButtonDefaultType>
+</Buttons>
+<Buttons>
+<PreviousButtonDefaultType>white</PreviousButtonDefaultType>
+<NextButtonDefaultType>blue</NextButtonDefaultType>
+</Buttons>
+<Buttons>
+<PreviousButtonDefaultType>hyperlink</PreviousButtonDefaultType>
+<NextButtonDefaultType>orange</NextButtonDefaultType>
+</Buttons>
+RatingMessage showBar
+Defines whether to display a rating message bar at the bottom of the browser that can be used to display a popup with
+the rating messages displayed.
+The following image illustrates the dynamic rating message indicator.
+Default Valid
+1 •1– Displays the rating message.
+•0– Does not display the rating message.
+StaticPanelContent
+Defines the location(s) where external content should be added.
+Default Valid
+leftPanel Any valid page panel.
+217 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

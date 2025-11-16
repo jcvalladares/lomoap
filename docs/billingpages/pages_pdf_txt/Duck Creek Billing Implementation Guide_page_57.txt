@@ -1,0 +1,49 @@
+Table
+NameDefinition Setting
+Paid on
+WrittenPayment is not required before commission is released. The entire commission amount is
+authorized when the receivable is posted. The commission authorization date is the activity
+date of the policy transaction. Debit receivables create an authorization record. Credit
+receivables generate a de-authorization record.POW1
+Paid on
+EffectiveThe commission is authorized for each policy transaction at issuance. Payment is not required
+before the commission is released. The commission authorization date is the latter of the
+effective date or the activity date of the policy transaction.POE1
+Paid on
+Paid Pro
+RataPayment is required before commission is released. The amount of commission that has been
+paid to date for a given receivable is evaluated. Next, based on the payment activity, the
+amount of commission that should have been paid is evaluated. The difference is the
+commission amount that is authorized. The activity date of the payment is used as the
+commission authorization date for all debit policy transactions. All other policy transactions
+use the activity date of the policy transaction as the commission authorization date .When
+premiums are written off, the corresponding commission amount is still authorized.POP1
+Paid on
+Paid
+First
+PaymentThe entire commission amount is paid when the first payment is applied to the receivable.
+Receiving one valid payment on the policy term releases the commission for that policy term.
+The activity date of the payment is used as the commission authorization date for a new
+business or a renewal policy transaction. All other policy transactions use the activity date of
+the policy transaction as the commission authorization date.POP2
+Paid on
+First
+PaidThe commission is released following the receipt of one valid payment on the policy term. The
+latter of the policy transaction effective date or the activity date of the payment is used as the
+commission authorization date for a new business or renewal policy. All other policy
+transactions use the latter of the policy transaction effective date or the activity date of the
+policy transaction as the commission authorization date.POP4
+Working with Agent Commissions
+Agent Commission accounts are used to specify how commissions are paid to the various levels that are determined
+when the commission account is created. The commissions features in Duck Creek Billing™ can be customized
+through ManuScript configuration to accommodate a variety of commission plans and payment schemes.
+The first step for working with agent commission is creating the multi-level commission feature using the role-based
+security features in EXAMPLE UserAdmin™. Next, a Direct Bill Commission account is created to contain the details
+for how and when the commission is collected and distributed to the agent. Part of the account creation includes
+specifying the format that will be used to generate commission statements for the account. After the hierarchy is
+created, the agent's account is setup, and statement format is specified, the final step for working with agent
+commission is actually creating commission plans to associate with the agent's account. Commission plans can be
+created, edited, or deleted using the Commission Statement Maintenance page. Commission plans can be inherited
+through the hierarchy created in EXAMPLE UserAdmin™. The following topics explain each of these required steps in
+detail.
+57 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

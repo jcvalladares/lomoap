@@ -1,0 +1,40 @@
+use the out-of-the-box task management infrastructure available on the StatusSet event. If the value of
+PolicyAdminData.UseDCTTasks istrue, the system executes the AttachTaskRule. (The
+PolicyAdminData.UseDCTTasks field defaults to false .)
+The AttachTaskRule executes a field in the product ManuScript containing the desired task logic that should execute
+upon a transaction status change. This logic can include adding a task, reassigning a task, updating a task, or
+performing any other function available with the various task requests.
+If you wish to use the AttachTaskRule:
+1.In the desired product ManuScript, add a boolean field pathed to data/policyAdmin/UseDCTTasks . Set the
+desired logic to determine whether the system should use the AttachTaskRule upon transaction status change.
+2.Also in the product ManuScript, create an additional field called StatusChangeTask.Attach . Set the field to
+execute the desired task requests that should execute upon transaction status change.
+Tasks and Batch Processing
+Management of tasks can be automated using EXAMPLE Platform ®batch processing. Using the Batch Script Editor
+(Extended) tool provided with the EXAMPLE Platform ®, batch scripts can be created to query the task system or
+execute defined rules or processes. These scripts can then be set to run at scheduled times or initiated manually using
+the BatchExecute.exe utility, or initiated manually using the <BatchProcess.processByScriptIdRq> request.
+For information about using the Batch Script Editor (Extended) to define batch scripts for tasks, see Using the
+Extended Batch Script Editor .
+For information about manually initiating batch scripts using the BatchExecute.exe utility, see BatchExecute.exe .
+For information about the <BatchProcess.processByScriptIdRq> request, see the EXAMPLE Server® Object
+Reference .
+Customizing Notifications
+When customizing the EXAMPLE Express ®notification system, you can customize:
+•Notification types — If desired, carriers can customize types of notifications. Out of the box, EXAMPLE
+Express ®comes with five notification types: Cancellation, Invalid Territory, Miscellaneous, Policy Notice, and
+Renewal Activity. For instructions on adding notification types, see Customizing Notification Types .
+•Notification generation/management — If desired, carriers can use ManuScript logic to generate and manage
+notifications automatically during policy processing. For instructions on setting up ManuScripts to generate
+notifications automatically and using policy data, see Generating and Managing Notifications Automatically .
+•Use of policy data — If desired, notifications can access and use policy data for various operations. For
+instructions on using policy data when creating or modifying notifications, see Notifications and Policy Data .
+•Batch processing — If desired, carriers can set up batch processes to query the notification system or execute
+defined rules or processes. For information about setting up batch processing, see Notifications and Batch
+Processing .
+Customizing Notification Types
+If desired, you can customize types of notifications. Out of the box, EXAMPLE Express ®comes with five notification
+types: Cancellation, Invalid Territory, Miscellaneous, Policy Notice, and Renewal Activity. If desired, you can change
+these types or add new ones.
+To customize notification types:
+164 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

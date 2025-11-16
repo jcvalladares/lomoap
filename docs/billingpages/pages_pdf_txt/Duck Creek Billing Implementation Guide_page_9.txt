@@ -1,0 +1,34 @@
+Key Definition Default
+ServerConfig The location of the Server.config file. C:\Program Files\Duck Creek
+Technologies\Shared\Server.config
+RequestIntervalInMilliseconds Specifies the time in milliseconds between
+checking for requests.60000 (one minute)
+DuckCreekUserID The user ID. admin
+DuckCreekPassword The user password. admin
+RequestUrl URL of the EXAMPLE Server ®responsible
+for working with the specified web site to
+ensure the correct application pool is
+recycled.http:/localhost:8080/DuckCreek/
+DCTServer.aspx
+AppLogSource The source description used by the service
+when logging an error to the Event Log.DCTSchedRequestSvc
+AppLogName The name of the Event Log to log errors for
+this service.Application
+RequestFile The XML containing the request. ScheduledRequests.xml
+RequestToCheckForSuccess The name of the request to check for
+successful activity scheduling.ScheduledActivity.queueListRq
+RequestTimeoutInMilliseconds The amount of time in milliseconds the
+service watis for EXAMPLE Server ®to
+respond when sending a request to the
+URL.120000 (two minutes)
+The User Interface
+Duck Creek Billing™ is for real-world people performing real-world tasks. The intuitive user interface offers quick,
+functional access to the information and processes that users access most frequently. Key elements of the user
+interface include:
+•The Billing Dashboard
+•The Account Home page
+•The Policy Term Summary page
+•Controls (grids, dates, and validation)
+Duck Creek Billing is a highly customizable and configurable product. Not all pages may appear as described
+in this user guide, which is based on out-of-the-box settings.
+9 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

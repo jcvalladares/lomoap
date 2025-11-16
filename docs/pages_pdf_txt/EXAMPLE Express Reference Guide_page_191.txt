@@ -1,0 +1,30 @@
+UserDetailsManuScriptID
+Obsolete for EXAMPLE Platform ®4.0. This functionality is now available for use in EXAMPLE UserAdmin™. See the
+UserDetailsManuScriptID configuration setting in the UserAdmin\Web.config file.
+XmlNamespaceUri
+Value to use for transformation. (This setting is not included in the out-of-the-box Express\Web.config file, but it can be
+added manually.)
+Default
+null
+XSLTDir
+Relative path from the GlobalRootPath \Express directory to the appropriate custom skins directory (for example,
+"Skins\Custom").
+Default Valid
+Skins\AvantGarde2 Valid relative directory path.
+SSOErrorMsg
+Error message displayed when a user has been authenticated by a single-sign-on tool but does not have a valid
+EXAMPLE Server ®authorization account.
+Default Valid
+You do not have access to Example Express. Please contact your administrator or login. Any text string
+Express Actions
+Out of the box, the PostActionMap.xml file contains the following Express Actions.
+When an Express Action requires HTML form fields, the HTML form from which the action is executed must
+contain those fields. For details about each Express Action and any HTML form fields required, see the
+description of each action (below).
+Express Action Description
+activatePolicy Creates a consumer account; returns a clientID, quoteID, and LOB; and
+then loads the specified quote or policy.
+addTaskAttachment Adds an attachment to a task.
+admin Updates administration information.
+assignTask Updates the queue and/or user to which a task is assigned.
+191 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

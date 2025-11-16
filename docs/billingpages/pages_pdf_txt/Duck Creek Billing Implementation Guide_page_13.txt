@@ -1,0 +1,39 @@
+This page provides answers to the most frequently asked questions concerning policy account terms. All tasks related
+to policy terms are quickly launched from this page.
+From the Policy Term Summary page, the user can:
+•Transfer a policy term to another policy.
+•View or edit policy term settings.
+•Update renewal information.
+•Hold billing activity for the policy term.
+•View policy term details.
+•View detailed information for the insured and the agent.
+•Access a list of other policy terms associated with the account.
+Working with Controls
+The Duck Creek Billing™ user interface incorporates ExtJs2.2, making available a diverse set of GUI-based form
+controls (widgets) including:
+•Grids and filters
+•Date fields
+•Validation functions
+Grids and Filters
+In Duck Creek Billing™, users can change the items displayed in a grid using filters or special options on the grid.
+Items that are displayed in a list may be determined by using the Support_CodeListExclusion database table. If the
+user selects an item from the grid that is not displayed, that selection will override the exclusions, and the item will
+appear on the page. See Working with Grids and Filters in the Duck Creek Billing™ User Guide .
+Grids in Duck Creek Billing™ integrate a wide variety of tools that allow users to easily view customized information.
+These grid types include:
+•Grid Types
+◦Grouping grids – Group items within the grid. Common rows are grouped together based on the grid's
+configuration.
+◦Preview grids – Display an extra information row per item. This information row can be collapsed or
+expanded (for a single row or for all rows) using a button in the grid toolbar.
+•Check box grid – Display a check box on each row, based on a row rule check. These grids can store all
+selected rows in a paging grid, storing the items selected on each page until the user is ready to submit the
+selections.
+•Grid toolbar – Allow users to display or hide items according to their preferences.
+•Column filtering – Allows users to filter grid data within each column. Data is displayed based on all filters the
+user has selected. Filtering types include:
+◦Dates – Allows less than or equal to ,greater than or equal to , and equal filtering.
+◦Text – Allows text searches.
+◦Amounts – Allows less than or equal to ,greater than or equal to , and equal filtering.
+◦Support table values – Loads selectable items using check boxes.
+13 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

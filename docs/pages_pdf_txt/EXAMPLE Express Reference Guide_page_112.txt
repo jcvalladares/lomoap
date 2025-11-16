@@ -1,0 +1,29 @@
+Checkboxes dctCheckboxes.js DCT.CheckboxGroup
+DCT.CheckboxField•Establishes the checkbox group and
+checkbox items
+•Sets debug information if Web.config
+key is turned on
+•Creates the checkbox group as vertical
+or horizontal based on the
+configuration passed
+•Sets event listeners for check, focus,
+and afterrender
+•Fires field processing if the field is
+checked or unchecked
+•Notifies focus is set if the field is
+selected
+Dates dctInterviewDates.js DCT.InterviewDate •Setting whether Today button is
+available based on minimum or
+maximum dates
+•Sets debug information if Web.config
+key is turned on
+•Sets maxlength if passed
+•Assigns event listeners for blur,
+change, focus, and afterrender
+•Sets date format
+•Handles U.K. and U.S. formats
+•Validation is done by the ExtJs control
+Display
+(read only)dctDisplayFields.js DCT.DisplayField •Sets debug information if the
+Web.config key is turned on
+112 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

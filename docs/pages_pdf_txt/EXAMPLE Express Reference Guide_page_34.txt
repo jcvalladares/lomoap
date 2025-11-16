@@ -1,0 +1,14 @@
+For more information, see:
+•Setting up Underwriter's Workbench Toolbar
+•Working with Notes
+•Working with Attachments
+Consumer Access Interface
+EXAMPLE Express ®provides an out-of-the-box consumer access screen that allows consumers to access their
+policies and quotes online. Carriers can integrate this screen with custom ManuScripts, their own billing system, and
+their own web site to create a complete Consumer Access experience.
+The account summary page can be used for policyholders or for prospective customers who have multiple quotes in
+the system. This page is controlled by the Consumer Dashboard ManuScript. If desired, carriers can use the out-of-
+the-box Consumer Dashboard ManuScript, or they can modify their implementation to use a custom Consumer
+Dashboard ManuScript.
+From the account summary page, policyholders can:
+34 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,34 @@
+•Account Home
+•Installment Schedule
+•Make A Payment
+•Items in Suspense
+•Hold Billing Activities
+Viewing a Pending Commission Statement
+The following information appears in the Summary section of the Commission Statement Maintenance page:
+•Agent Reference Number
+•Agent Name
+•Statement Period
+•Previous Statement Balance
+•Payments Made/Received
+•Current Activity
+•Current Statement Balance
+Holding or Resuming Statement Production
+When the production of a commission statement is placed on hold, it is for an indefinite period of time. The hold must
+be manually released to resume the commission statement production. Holding and resuming statement production is
+added to the Recent Account Activity list for the agent's account, but not all the details are listed. If an agent is
+terminated or canceled, commission statement generation does not automatically stop, but can be manually
+suspended using the hold statement feature.
+To place a commission statement on hold:
+1.On the Commission Statement Maintenance page, in the Hold Reason list, click the appropriate option.
+Out of the box, the available options are:
+•Reason 1
+•Reason 2
+•Reason 3
+The text for available options may be customized in the
+Carrier_Billing_Commission_Statement_Authorization_Maintenance_1_0_0_0.xml ManuScript.
+TheHold Statement button appears.
+2.Click Hold Statement .
+The statement will remain on hold until statement activity is manually resumed.
+To resume statement production:
+•Click Resume Statement .
+61 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

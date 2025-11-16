@@ -1,0 +1,34 @@
+matched to characters in the Value parameter or are inserted into the Value string. The third part of the
+mask is the character used to represent missing characters in the mask.
+The following are the special characters used in the first field of the mask.
+Character Meaning in mask
+> If a greater than symbol appears in the mask, all aformat characters that follow are in upper
+case until the end of the mask or until a < character is encountered.
+< If a less than symbol appears in the mask, all aformat characters that follow are in lower case
+until the end of the mask or until a > character is encountered.
+<> If the less than and greater than symbols appear together in a mask, no case checking is
+done. This turns off the > or <, while > or < will turn it back on. (sequentially)
+a Requires an alphabetical character in this position, and the case is based upon the presence
+of one of the case indicators (>,<,<>) in the mask previous to the 'a' format character.
+L Requires an alphabetic character in this position.
+A Requires an alphanumeric character in this position.
+C Requires an upper-case alphabetic character in this position.
+c Requires a lower-case alphabetic character in this position.
+0 Allows a numeric character in this position.
+9 Requires a numeric character or a positive or negative sign (+ or -) in this position.
+# Requires a numeric character or a positive or negative sign (+ or -) in this position.
+- Inserts spaces into the returned string.
+* Requires a character in this position in a format mask. This can be any character allowed by
+the interface.
+^ The character that follows a caret is a literal character. Use this character before any mask
+characters used as a literal. For example, in the mask @LL^xAAthe third character of the entry
+must be x.
+Any character that does not appear in the preceding table can appear in the first part of the mask as a literal
+character. Literal characters are inserted automatically if the second field of the mask is 0, or matched to
+characters in the Value parameter if the second field is any other value. The special mask characters can also
+appear as literal characters if preceded by a back slash character (\).
+Using Regular Expressions (Regexes) to Create Custom Format Masks
+Regular expressions (regexes) can be used to create custom format masks. Using a regex, a user can create
+custom format masks that will display a message for invalid field values. The most common regex structure for
+this type of format mask is:
+53 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

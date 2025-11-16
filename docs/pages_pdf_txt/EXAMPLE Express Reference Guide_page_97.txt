@@ -1,0 +1,15 @@
+2.On the General Tab, click Languages .
+The Languages dialog box appears.
+3.In the Language Preference dialog box, click Add.
+The Add Language dialog box appears.
+4.In the Add Language dialog box, select a language from the list, and then click OK.
+You can change the order of preference of the browser languages by selecting a language and then
+clicking Move Up orMove Down . To remove a language from the list, select the language you wish to
+remove, and then click Remove .
+5.Repeat steps four and five until you have added all of the languages you wish to use.
+6.Click OKtwice.
+The expected behavior of the platform is to use the first language listed. If dictionaries are not available
+for that language, the system will default back to English (the invariant culture).
+Changing Your Browser Language in Mozilla Firefox
+To change your browser language in Mozilla Firefox:
+97 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

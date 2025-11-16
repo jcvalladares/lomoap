@@ -1,0 +1,32 @@
+3.Click Select General System and then select the appropriate privileges.
+4.Click Select Policy Administration and then select the appropriate privileges.
+5.Click Billing Administration and then select the appropriate privileges.
+6.Click Author Administration , select the appropriate privileges, and the click Finish .
+7.Click the View Entities Associated with this role button
+ for the newly created role.
+8.Click Add more entities to role .
+9.Enter an entity name in the Enter Name text box and then click Search .
+10. Select the appropriate entities, and then click Add roles to these entities .
+11. Click Manage role/privilege associations in the left navigation panel.
+12. In the Role list click the appropriate role, and then in the Privilege list, click BIL_EftMaintenance .
+13. Enter EFTMaintenance in the Name text box, enter the appropriate value in the Value text box, and then click
+Insert .
+14. To create a new user or associate this role with an existing user, see Working with Users .
+Working with an Automated Notice of Change
+The bank account information used by EFT invoice accounts is automatically updated or created in Duck Creek
+Billing™ in response to messages from a bank or payment processing service.
+When Duck Creek Billing™ receives a message to change the bank details for an account, the changes are made
+automatically. When the changes are successfully processed, a message is added to the Recent Account Activity list
+for the account.
+To prevent disclosure of confidential information, details are not included in the message on the Recent
+Account Activity list. For example, a routing number change would not include the actual routing number,
+but instead would only indicate the routing number has changed.
+An error message is created in the Billing Error Queue if bank account changes are not processed by Duck Creek
+Billing™.
+Changes are effective when they are processed and do not affect any previous transactions. If an account is on hold
+when a change message is received, Duck Creek Billing™ processes the message and the account is updated. Details
+can be edited after they are automatically updated.
+The following table lists the specific ACH file format requirements for the records affected by an Automated Notice of
+Change.
+Record Name ACH File Format Requirements
+67 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

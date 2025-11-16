@@ -1,0 +1,33 @@
+login Optional Boolean value indicating whether the menu item is valid only if the user is logged in. A
+value of 1indicates the menu item is valid only if logged in.
+edit Optional Value indicating whether to display the menu item based on session content. Options
+are:
+•0— Ignore session content
+•1— Hide when no session
+•2— Show when session exists
+•3— Show if session is "dirty"
+security Optional Bit-mask (additive) value of the security levels for which the menu item is applicable.
+•0— All users
+•1— Agent
+•2— Underwriter
+•4— Carrier
+•8— Admin
+multiAgency Optional Boolean value indicating whether the menu item is valid only when the user belongs
+to multiple agencies. A value of 1indicates the menu item is valid only when the user
+belongs to multiple agencies.
+hideInPortfolio Optional Boolean value indicating whether the menu item should be hidden when in a portfolio.
+A value of 1indicates the menu item should be hidden when in a portfolio.
+Defining <pageLayout> Elements
+If desired, the <applicationLayout> element can contain <pageLayout> elements that define dashboard pages. These
+dashboard pages can be called by the content attribute of a <menuItem> element. Use the table below to help you
+customize existing <pageLayout> elements or create new ones.
+The <pageLayout> element uses the following elements and attributes.
+AttributeRequired/
+OptionalDescription
+id Required Unique ID of the <pageLayout>.
+<zone> (child of <pageLayout>)
+<column> (child of <zone>)
+width Required Decimal value from 0 to 1 that specifies the percentage of the page width that the column
+should consume.
+<module> (child of <column>)
+154 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

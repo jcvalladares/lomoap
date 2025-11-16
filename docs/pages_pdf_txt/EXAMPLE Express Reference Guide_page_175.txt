@@ -1,0 +1,35 @@
+•Caution — Halt sign to the left of the page name on the page tab. (
+ )
+You can assign page classes in EXAMPLE Author ®Page Designer using the Navigation Class property available for
+each page. This property is defined using a ManuScript field, usually containing rules that determine when each class
+should be assigned. Out of the box, this property will only accept the above three values (Complete, Incomplete, and
+Caution), but custom skin implementations can be configured to recognize additional classes.
+Customizing the Out-of-the-Box Navigation Classes
+To customize the styles associated with the out-of-the-box navigation classes:
+1.In the Global Root Directory \Express\Skins\ CustomSkin \css directory, open the style.css file.
+2.Modify the following classes as desired:
+◦activeTabComplete
+◦activeTabCaution
+◦activeTabIncomplete
+◦inactiveTabComplete
+◦inactiveTabCaution
+◦inactiveTabIncomplete
+Adding Additional Navigation Classes
+To add additional navigation classes:
+1.In the Global Root Directory \Express\Skins\ CustomSkin \css directory, open the style.css file.
+2.Add two CSS classes for each desired navigation class: activeTab[NavigationClass] and
+inactiveTab[NavigationClass] .
+Appendixes
+This section contains information about:
+•Using Lila-Based Skins
+•EXAMPLE Express ®ManuScript Processing Flow
+•Express\Web.config Settings
+•Express Actions
+•Skin.config File
+Using Lila-Based Skins
+If desired, the Lila-based skins delivered with EXAMPLE Express ®3.x can be used with EXAMPLE Express ®4.0.
+However, substantial differences will exist between an implementation of EXAMPLE Express ®4.0 that uses Lila-based
+skins and an implementation that uses Avant Garde–based skins. The table below describes the major differences that
+exist between Lila-based and AvantGarde-based skins in EXAMPLE Express ®4.x.
+Difference Description
+175 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

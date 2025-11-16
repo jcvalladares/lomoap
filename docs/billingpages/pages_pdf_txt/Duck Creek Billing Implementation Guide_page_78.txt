@@ -1,0 +1,51 @@
+</BillingCashManagement.processCreateBatchRq>
+</xsl:template>
+Example 2: XSL for the <BillingCashManagement.processAddBatchPaymentRq> Request
+<xsl:template match="@* | node()">
+<BillingCashManagement.processAddBatchPaymentRq>
+<PaymentBatchEntryRecord>
+<PaymentBatchEntryId></PaymentBatchEntryId>
+<AccountId>
+</AccountId>
+<AccountReference>
+<xsl:value-of select="LockBoxRecord:getSubString(2,14)"/>
+</AccountReference>
+<PolicyReference>
+<xsl:value-of select="LockBoxRecord:getSubString(16,14)"/>
+</PolicyReference>
+<PaymentBatchId>
+<xsl:value-of select="LockBoxRecord:getBatchId()"/>
+</PaymentBatchId>
+<PaymentReference>
+</PaymentReference>
+<Amount>
+<xsl:value-of select="LockBoxRecord:getSubStringDecimal(36,10)"/>
+</Amount>
+<EntryUserId>Admin</EntryUserId>
+<CurrencyCulture>en-US</CurrencyCulture>
+<PaymentMethodCode>CK</PaymentMethodCode>
+<AllocationClassCode>P</AllocationClassCode>
+<PostMarkDate></PostMarkDate>
+<EntryDate>
+<xsl:value-of select="LockBoxRecord:getProcessedDate()"/>
+</EntryDate>
+<PaymentBatchEntryLockingTS>
+</PaymentBatchEntryLockingTS>
+<ProcessedTimestamp>
+</ProcessedTimestamp>
+<PaymentMethodDetail>
+</PaymentMethodDetail>
+<UnidentifiedRecord>
+</UnidentifiedRecord>
+</PaymentBatchEntryRecord>
+</BillingCashManagement.processAddBatchPaymentRq>
+</xsl:template>
+Example 3: XSL for the <BillingCashManagement.processBatchRq> Request
+<xsl:template match="@* | node()">
+<BillingCashManagement.processBatchRq>
+<PaymentBatchRecord>
+<PaymentBatch>
+<PaymentBatchId>
+<xsl:value-of select="LockBoxBatch:getBatchId()"/>
+</PaymentBatchId>
+78 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

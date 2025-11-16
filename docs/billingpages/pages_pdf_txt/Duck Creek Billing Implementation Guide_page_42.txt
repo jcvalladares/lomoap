@@ -1,0 +1,28 @@
+DebitChangeNoticePath C:\Program Files\Duck Creek
+Technologies\DebitChangeNotices
+ExternalDocumentsFolderRootPath C:\Program Files\Duck Creek Technologies\ExternalDocuments
+UseExternalDocumentInterface False
+UseExternalDocumentInBatchMode False
+ScheduledActivityDelay 600000
+AgencyStatementsFolderRootPath
+Default location for Agency Billing statements.
+Default Valid
+C:\Program Files\Duck Creek Technologies\Statements Any valid location.
+AgencyStatementsFromEmailAddress
+This setting is the email address used to send Agency Billing statements.
+Default Valid
+from@domain.com Any valid email address.
+AgencyStatementsPassword
+This setting is the default password that allows a user to unlock the Excel spreadsheet containing an Agency Billing
+statement.
+Default Valid
+password55 Any valid Excel password
+DebitChangeNoticePath
+Specifies the path for debit change notices.
+Default Valid
+C:\Program Files\Duck Creek Technologies\DebitChangeNotices Any valid directory path.
+DirectBillCommissionStatementsFolderRootPath
+This setting specifies the location of the commission statements in Duck Creek Billing™.
+Default Valid
+C:\Program Files\Duck Creek Technologies\DirectBillCommissionStatements Any valid file location.
+42 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

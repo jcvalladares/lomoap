@@ -1,0 +1,38 @@
+<attribute name="limit" value="100"/>
+<attribute name="_entityId" value=""/>
+</module>
+</column>
+</zone>
+</pageLayout>
+</applicationLayout>
+</applicationLayoutRoot>
+Any .xml file in the directory specified by the ApplicationLayoutFactory configuration setting in the
+Express\Web.config file with a name that includes the word custom and the text also specified in that setting
+(out of the box, this is ApplicationLayoutMap ) will load into EXAMPLE Express ®as a map file containing
+application layout information. For more information, see Customizing ApplicationLayoutMap.xml .
+For information about customizing the ApplicationLayoutMap.xml file, see Customizing ApplicationLayoutMap.xml .
+EXAMPLE Express® Skins
+The content, behavior, and look and feel of EXAMPLE Express ®can be customized through EXAMPLE Express ®
+skins. EXAMPLE Express ®skins are composed of .xsl, .css, .xml, custom .js files, and open source JavaScript
+frameworks. Carriers can customize the appearance and behavior of EXAMPLE Express ®by overriding files in the
+DCTCore (Avant Garde skins) and DCTBase (Avant Garde 2 skins) directories. Customizations can include:
+•Changing the look and feel of EXAMPLE Express ®
+•Adding custom pages
+•Overriding core behavior
+•Adding additional JavaScript
+•Changing certain HTML features, such as the browser title bar, meta tags, and HTML footer text
+For instructions on customizing EXAMPLE Express ®skins, see Customizing EXAMPLE Express ®Skins .
+Avant Garde
+The Avant Garde skins delivered with EXAMPLE Platform ®4.0.0 provide users with some great new features in
+EXAMPLE Express ®including:
+•A new task system
+•Dashboard home page capabilities
+•Enhanced search capabilities
+•Improved New Quote process
+•Notifications
+The table below describes the major differences that exist between Lila-based (3.x line) and AvantGarde-based (4.x
+line) skins.
+Difference Description
+Look and feel Out-of-the-box Lila-based skins provide a different look and feel than out-of-the-box AvantGarde-
+based skins, with different color schemes, images, layouts, and text.
+43 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

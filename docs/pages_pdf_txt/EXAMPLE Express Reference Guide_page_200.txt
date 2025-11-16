@@ -1,0 +1,30 @@
+delete
+Marks or un-marks the specified quote or policy for deletion from the database. The specified item is not removed from
+the database until a purge is performed.
+HTML Form Fields:
+Field Description
+QuoteID ID of the quote or policy to delete.
+showDeleted Boolean flag indicating whether the content page is displaying deleted items.
+•Iftrue(that is, the content page isdisplaying deleted items), then the system marks the
+specified policy as undeleted.
+•Iffalse (that is, the content page is notdisplaying deleted items), the system marks the
+specified policy as deleted.
+deleteClient
+Marks the specified client for deletion from the database. The client is not removed from the database until a purge is
+performed.
+HTML Form Fields:
+Field Description
+_ClientID ID of the client to mark for deletion.
+deleteMessage
+Deletes the specified notification from the database.
+HTML Form Fields:
+Field Description
+_messageID ID of the notification to be removed.
+deleteTaskAttachment
+Removes an attachment from a task. This action has two modes:
+•When executed from a ManuScript — The system uses the task record in the session at _TaskData/
+TaskRecord to obtain the attachment ID from AttachmentRecord/AttachmentId.
+•When executed from a system page — The system requires the following HTML form fields.
+Field Description
+_attachmentId ID of the attachment to delete.
+200 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

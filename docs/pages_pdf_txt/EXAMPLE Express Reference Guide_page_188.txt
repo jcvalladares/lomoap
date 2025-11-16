@@ -1,0 +1,31 @@
+ProcessAsyncFormWaitTime
+Value specifying whether EXAMPLE Express ®should process requests asynchronously and what the delay time
+should be (in miliseconds) between checks to see if asynchonous requests have been completed.
+Default Valid
+1 0— Process all requests synchronously.
+Any positive integer — Process requests asynchronously, and wait this number in milliseconds
+between checks for request completion.
+ProxyMode
+Boolean value that, if pertaining to an EXAMPLE Express ®proxy, allows responses to successfully return to the client.
+Default Valid
+0 0— EXAMPLE Express ®responses may not successfully return to the client.
+1— EXAMPLE Express ®responses will successfully return to the client.
+RefreshClientOnLoad
+Setting that causes the <OnlineData.loadPolicyRq> request to overwrite client information in the policy data with values
+from the client record.
+A setting of 1 or 0 turns the client information refresh on or off globally. The value for this setting can be a comma-
+delimited list of the policy statuses that refresh the client information on load, usually Quote .
+Default Valid
+Quote •0— Do not refresh client information.
+•1— Refresh client information on each <OnlineData.loadPolicyRq> request made.
+•Comma-delimited list of policy statuses that should refresh client information.
+SaltValue
+Encryption key used for authentication in EXAMPLE Express ®and EXAMPLE Server ®. The value of this setting must
+be identical when used in multiple config files. (This setting is not included in the out-of-the-box Express\Web.config
+file, but it can be added manually.)
+Default Valid
+N/A Any ASCII text string.
+SecureLogin
+Boolean value indicating whether EXAMPLE Express ®uses the secure socket layer when accessing the login or
+administration features of the system.
+188 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

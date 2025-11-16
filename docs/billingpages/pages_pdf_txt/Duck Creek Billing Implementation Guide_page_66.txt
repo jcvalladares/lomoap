@@ -1,0 +1,18 @@
+EFT works on a negative response basis which means payment is assumed unless the bank returns a rejection notice.
+EFT payments are based on the following assumptions:
+•The account is not in a stop or hold status
+•Policies under the account that are in a pending cancel status are not included in the draw amount being billed for
+the current billing period.
+•The account is in an active EFT status or pending EFT status.
+Customization is required to use this feature. For more information about integrating EFT payments and Duck Creek
+Billing™, contact your Account Manager.
+Configuring the EFT Maintenance Privilege
+A user must be authorized to change EFT draw dates or cancel a pending EFT draw. The following procedure details
+the steps required to create and associate this privilege with a Duck Creek Billing™ user. If a user does not have the
+required permission or the draw amount exceeds the user's limit, the EFT pages are read-only.
+For information about using this feature, see Working with EFT Maintenance in the Duck Creek Billing™ User
+Guide .
+To create the required privilege for authorizing disbursements and associate that privilege with a user:
+1.Open EXAMPLE UserAdmin™, and in the left navigation panel, click Add a role .
+2.Enter a role name and description in the appropriate text boxes.
+66 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

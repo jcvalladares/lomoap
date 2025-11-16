@@ -1,0 +1,20 @@
+Typically, a lock box is a post office box that is accessible by a bank or payment processor. The bank or processor
+retrieves the payments, processes them, and deposits them directly into the company's account. Payments are
+converted to electronic data, and the Duck Creek Billing™ lock box interface parses the incoming payment files using
+XSL extensions. The Duck Creek Billing™ Lock Box Interface handles the processing of incoming lock box files by
+creating and submitting payment batches into the system. The actual implementation is configurable by XSL templates
+used to map the lock box file to internal Duck Creek Technologies, Inc. Server requests.
+The Duck Creek Billing Watch Directory Service monitors lock box directories and submits corresponding EXAMPLE
+Server ®requests based on incoming files. A customer can implement a new lock box format by altering the XSL, or
+overriding the request with a custom implementation.
+The lock box interface uses the following EXAMPLE Server ®requests:
+•<PaymentProcessing.processPaymentsRq> request
+•<PaymentProcessing.testProcessPaymentsXSL> request
+The following table includes the attributes of the <PaymentProcessing.processPaymentsRq> request.
+Request NameRequest
+NameType Required Description
+<PaymentProcessing.processPaymentsRq> lockboxFile String Yes Specifies the lockbox file to
+execute. The file is listed in the
+BillingInterfaces.xml configuration
+file.
+74 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

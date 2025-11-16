@@ -1,0 +1,34 @@
+</PaymentBatch>
+</PaymentBatchRecord>
+</BillingCashManagement.processBatchRq>
+</xsl:template>
+Using the Watch Directory Service
+The Duck Creek Watch Directory Service is designed to execute requests for inbound lock box files. The file hits the
+watch directory and then executes the corresponding lock box request with the lock box name.
+To configure the DCT Watch Directory Service:
+1.Browse to the DuckCreek.Utility.WatchDirectorySvc.exe.config located in the existing Shared directory at
+C:\Program Files\Duck Creek Technologies\ Shared\Bin.
+2.Configure the Watch Directory Service using the required configuration settings contained in the following table.
+Name Type Description
+ServerConfig String Specifies the location of the Server.config file.
+RequestUrl String Specifies the URL of the EXAMPLE Server ®to execute requests.
+DuckCreekUserID String Specifies the User Id to execute the requests.
+DuckCreekPassword String Specifies the User password.
+Following is an example of the configuration xml:
+<configuration>
+<appSettings>
+<add key="InterfacesConfigPath" value="C:\Program Files\Duck Creek Technologies
+\Shared\BillingInterfaces.xml"/>
+</appSettings>
+</configuration>
+Configuring the Watch Directory
+After the lockbox configuration is complete, each watch directory must be created.
+To configure a watch directory:
+1.Open the Edit Configuration utility.
+2.Click the BillingInterfaces tab.
+3.Browse to FileWatcherService .
+4.In the path attribute, specify the path to the lock box watch directory.
+This is the same as the LockBoxInterface/LockBoxFiles/LockBox/@path value.
+5.In the action attribute, enter the < PaymentProcessing.processPaymentsRq> request command with the
+lockboxFile attribute set to the name of the lock box instance.
+79 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

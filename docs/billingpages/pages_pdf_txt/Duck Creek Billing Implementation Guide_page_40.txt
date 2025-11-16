@@ -1,0 +1,36 @@
+The Account Home page appears and when the MPR form is generated for an account, the activity is included in the
+Recent Account Activity list for the account.
+Producing the Form
+A forms ManuScript must be created for each line of business. Copy the Billing_MPR_Forms_Line1 ManuScript and
+adjust the keys and IDs for the target line of business. This ManuScript can be customized with your specific form and
+data. The EXAMPLE Server ®code calls the <billing.printFormsRq> request to initiate the production of the form and
+creating the activity log entry.
+After the first MPR form is created, the next form is automatically scheduled along with a scheduled activity to evaluate
+PCNR for non-reporting or PCNP for non-payment of a report. EXAMPLE Server ®schedules the next MPR activity by
+using the due day of the account, subtracting the MPRPrdOffset value, and backing up the date if necessary for non-
+processing days.
+To prevent scheduling conflicts, verify the calculated production date is before the last allowed date
+(LastAvailMPRDtDisp value).
+Processing the Returned MPR Form
+MPR Report data is entered from the Policy Term Summary page for the appropriate account in Duck Creek Billing™.
+SeeWorking with Monthly Premium Reporting in the Duck Creek Billing™ User Guide . The collection ManuScript must
+be created, and can be modeled after the out-of-the-box sample MPR Collection Line 1 ManuScript that works with
+BaseProduct.
+Pending Cancel for Non-Reporting
+A PCNR follow-up is similar to a regular PCN for non-payment. Policy term parameters control whether the policy can
+PCNR for non-reporting or PCNP for non-payment of the MPR receivable.
+Final Audit
+When a Final Audit transaction is received for an MPR policy by Duck Creek Billing™, a new receivable transaction for
+the entire premium amount replaces any existing premium receivables for the policy term.
+The only transactions valid in Duck Creek Billing™ following a Final Audit are Revised Audit or Void Final
+Audit.
+For details about entering MPR Report information, see Working with Monthly Premium Reporting in the Duck Creek
+Billing™ User Guide .
+For more information about configuring an MPR policy, contact your Account Representative.
+Integrating with Commerical Lines ManuScripts
+The following three ManuScripts are needed to integrate Duck Creek Billing™ with Commercial Lines:
+•The Carrier Product Base Workflow ManuScript, which is shipped with Duck Creek Billing™, should be changed
+to inherit from the DCT_BillingProductBase_Workflow_1_0_0_0.
+•The Carrier Product Base Data 7.0.0.0 ManuScript should be changed to inherit from the
+DuckCreekTech_ProductBaseBilling_Data_7_0_0_0 ManuScript.
+40 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

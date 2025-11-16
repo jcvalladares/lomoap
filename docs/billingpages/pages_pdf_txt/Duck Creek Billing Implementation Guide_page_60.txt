@@ -1,0 +1,37 @@
+9.Click Create New Account .
+10. In the Commission Statement Format list, click the appropriate statement format or formats.
+11. In the Commission Statement Frequency list, click the appropriate day.
+12. In the Commission Statement Payment/Collection Method list, click one of the following options:
+◦Check
+◦EFT
+13. (Optional) Enter bank account details for EFT payments.
+14. Click Complete .
+15. (Optional) Click Commission Plans in the left navigation panel of the Account Home page to create a
+commission plan for this account.
+16. (Optional) Click Account Settings in the left navigation panel of the Account Home page to change account
+settings.
+Working with the Commission Statement Maintenance Page
+The Commission Statement Maintenance page provides quick user access for working with commission statements for
+an account.
+The Commission Statement Maintenance page allows the user to:
+•View the details of a pending commission statement
+•Stop or resume the production of a pending commission statement
+•Create an ad hoc (on demand) commission statement
+•Manually adjust amounts on the pending commission statement
+The commission statement includes the following information:
+•Policyholder Name
+•Gross Premium Amount
+•Commission Rate or Flat Amount
+•The Seller (Producer) Reference
+•Seller (Producer) Name
+•Authorized commission that has not been paid for the current commission statement period
+•Authorized commission that has been reversed, or clawed back, either manually or automatically
+(An automatic adjustment is triggered in response to a policy premium transaction)
+(A m anual adjustment is initiated by a user and is not triggered in response to a policy premium transaction)
+•Authorized commission that has been paid, but the payment was returned
+The Commission Statement Maintenance page includes only items associated with the current statement period. A
+debit balance carries forward as a single entry into the next commission statement period. To reduce or eliminate a
+debit balance, an agent payment can be entered from the Make A Payment page for the appropriate account, or be
+entered as a single payment from the Billing Dashboard.
+The Commission Statement Maintenance page is accessible from the left hand navigation panel of the following pages:
+60 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

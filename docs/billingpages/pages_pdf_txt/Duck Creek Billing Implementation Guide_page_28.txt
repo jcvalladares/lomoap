@@ -1,0 +1,59 @@
+Account
+Number
+(EFT Only)Specifies the bank
+account number.Any valid entry. None
+Target Draw
+Days
+(EFT Only)Determines the day
+of the month the
+EFT draft is drawn
+from the specified
+account.Any positive
+number between
+1 and 31.1
+Paper
+Variable
+Service
+Charge
+ExclusionsSpecifies items
+excluded from the
+variable service
+charge calculation.Any valid
+selection.None
+Invoice Line
+Type
+(Paper Only)Specifies the items
+to exclude from the
+variable service
+charge calculation.(None)
+Earned Premium
+First Invoiced
+Premium
+Missed Invoice
+Premium
+Prior Invoiced
+Premium
+Past Due
+Premium
+First Invoiced
+Charges
+Prior Invoiced
+Charges
+Past Due Charges
+(All)None
+Receivable
+Type
+(Paper Only)Specifies the
+receivable type for
+the items to exclude
+from the variable
+service charge
+calculation.(None)
+Premium
+Tax
+Fee
+Surcharge
+ERPM
+Deposit
+(All)Deposit
+28 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

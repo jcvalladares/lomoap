@@ -1,0 +1,42 @@
+Dropdowns/
+CombosdctComboField.js DCT.ComboField •Auto filtering to allow a user to filter a
+list
+•Selection of an item will fire selection
+event for processing
+•Hover Help for items in a list
+•Hover Help for a selected item
+•Handles focus notification
+•Sets debug information if the
+Web.config key is turned on for list
+and input fields
+•Handles optimum sizing based on the
+items in the list
+Editor grids dctBaseGrids.js DCT.EditorGridPanel •Defines the datastore information to
+process the list of data that displays
+◦Includes defining the record
+structure and the URL proxy to
+use to obtain the data. If
+processing is through an Ajax call,
+the data will be displayed based
+on the data returned for the page
+instead of retrieving it again.
+•Defines and assigns the selection
+model to use for highlighting and
+selecting rows
+•Defines the grid view to use for the grid
+•Creates the paging toolbar if there are
+more items to display than the user
+can view
+•Defines and assigns the column model
+definition for the column headers
+•Assigns the listeners for row clicks,
+sorting change, after editing, and
+before editing
+◦Before editing event will handle
+creating the specific form field
+control for editing data
+◦After editing will handle
+processing the Ajax call for the
+entered data and assignment of
+data to a hidden field on the page
+113 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

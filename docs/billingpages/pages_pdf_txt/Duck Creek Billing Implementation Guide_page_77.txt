@@ -1,0 +1,48 @@
+<xsl:stylesheet
+xmlns:LockBoxBatch="urn:LockBoxBatch"/>String Required Specifies the XSL extension prefix
+required to map to the LockBoxBatch
+object.
+<xsl:value-of
+select="LockBoxBatch:getBatchNumber()"/>String Required Gets the string for the batch number
+specified in the lock box configuration
+by LockBox/@currencyCulture &
+LockBox/@batchLength
+<xsl:value-of
+select="LockBoxBatch:getProcessedDate()"/>String Required Gets the current processing date
+<xsl:value-of
+select="LockBoxBatch:getBatchId()"/>Integer Required Maps the BatchId created in
+createBatchRq to subsequent requests
+(batchRq)
+<xsl:stylesheet
+xmlns:LockBoxRecord="urn:LockBoxRecord"/>Integer Required XSL extension prefix required to map to
+the LockBoxRecord object
+<xsl:value-of
+select="LockBoxRecord:getSubString(#,#)"/>String Required Gets a substring from the lock box
+directory format given the string start
+position and length. (Extends .NET
+substring() function)
+<xsl:value-of
+select="LockBoxRecord:getSubStringDecimal
+(#,#)"/>Decimal Optional Returns the same value as
+getSubString() but formats the return
+value as a decimal
+<xsl:value-of
+select="LockBoxRecord:getBatchId()"/>String Required Maps the BatchId created in
+createBatchRq to LockBoxRecords
+<xsl:value-of
+select="LockBoxRecord:getProcessedDate()"/>String Required Gets the current processing date
+Example 1: XSL for the <BillingCashManagement.processCreateBatchRq> request
+<xsl:template match="@* | node()">
+<BillingCashManagement.processCreateBatchRq>
+<PaymentBatchRecord>
+<BatchNumber>
+<xsl:value-of select="LockBoxBatch:getBatchNumber()"/>
+</BatchNumber>
+<ControlTotal>0</ControlTotal>
+<Description>
+LockBox Transmission <xsl:value-of select="LockBoxBatch:getProcessedDate()"/>
+</Description>
+<EntryUserId>Admin</EntryUserId>
+<CurrencyCulture>en-US</CurrencyCulture>
+</PaymentBatchRecord>
+77 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

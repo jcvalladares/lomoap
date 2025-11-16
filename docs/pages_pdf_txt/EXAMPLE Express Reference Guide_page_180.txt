@@ -1,0 +1,31 @@
+ApplicationLayoutFactory
+Fully-qualified directory path to the ApplicationLayoutMap.xml file (and any custom ApplicationLayoutMap files). The
+path specifies the directory to use, and the file name (minus the file extension) specifies the base term to use to
+determine custom ApplicationLayoutMap files.
+Default Valid
+C:\Program Files\Duck Creek Technologies
+4.0\Express\App_Data\ApplicationLayoutMap.xmlValid path, including file name, to the
+ApplicationLayoutMap.xml file.
+AutoSave
+Boolean value indicating whether the interview process should automatically save changes upon page change. The
+system creates a history only when a save action is performed.
+AutoSave saves quote information but does not initiate shredding. Shredding occurs only upon user-initiated
+save. If a user exits a quote without explicitly saving, the quote may be saved to the ExampleData database
+but not to the shredding database. This can prevent a 1-to-1 correlation between the two databases.
+For Duck Creek Templates™ or EXAMPLE TransACT ®2.1 to function properly, AutoSave must be enabled
+(1).
+Default Valid
+1 •0— Do not save quote on page change.
+•1— Save quote on page change.
+BypassSSLHostAuthentication
+Boolean value indicating whether to ignore SSL certificate validation errors between machines running EXAMPLE
+Express ®and EXAMPLE Server ®. This setting is only meaningful if the EXAMPLE Server ®URL uses https: protocol.
+Default Valid
+0 •0— Do not ignore certificate validation errors.
+•1— Ignore certificate validation errors.
+CarrierName
+Descriptive name of the carrier. This value is used in the EXAMPLE Express ®browser window title bar, captions, and
+other locations, depending upon your custom skin.
+Default Valid
+Demo National Insurance Any text string.
+180 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

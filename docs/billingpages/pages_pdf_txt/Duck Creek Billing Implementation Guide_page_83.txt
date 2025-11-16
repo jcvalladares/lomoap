@@ -1,0 +1,37 @@
+The Disbursement Interface Service processes all Duck Creek Billing™ disbursements whether they originate from
+within Duck Creek Billing™ or are paid using a system that is external to Duck Creek Billing™. External disbursements
+are subject to the same authorization rules as internal disbursements.
+A disbursement cannot be requested and authorized by the same Duck Creek Billing™ user.
+Configuring the Disbursement Interface Service
+Configuration settings must be specified to control the function of the disbursement interface.
+By default, the Disbursement Interface will return an error unless the disbursement interface has been written.
+The following table lists the configuration settings for the disbursement interface, and these settings are typically
+overridden by a custom request.
+Configuration
+SettingDefinition Default
+StartTime Specifies the earliest time in the day the interface will check for
+disbursements.08:00:00
+An empty node means no
+restriction.
+InterfaceWindow Specifies the number of minutes from the start time that
+requests can be processed. Using duration rather than a
+specific time makes it easier to process through midnight.600
+Frequency Specifies in seconds how often the interface will check for
+unprocessed pending disbursements.600
+RecordsPerCycle Specifies the maximum number of disbursements that will be
+processed per cycle.100
+An empty node or value of 0
+means unlimited
+disbursements processed per
+cycle.
+For information about using the disbursement interface, see Working in the Billing Administration Area in the Duck
+Creek Billing™ User Guide . For more information about customization and integration, contact your Account Manager.
+The Disbursement Interface
+The following structure details the data available from the standard Duck Creek Billing Disbursement Interface.
+<BillingDisbursement.getDisbursementDetailRs status="success">
+<Disbursement>
+<AccountId>1</AccountId>
+<DisbursementId>1</DisbursementId>
+<DisbursementRequestDate>2009-10-06</DisbursementRequestDate>
+<DisbursalDate xsi:nil="true"/>
+83 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

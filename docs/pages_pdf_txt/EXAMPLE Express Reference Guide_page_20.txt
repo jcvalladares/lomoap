@@ -1,0 +1,19 @@
+The New Task page is controlled by the Task Detail ManuScript. If desired, carriers can use the out-of-the-box Task
+Detail ManuScript, or they can modify their implementation to use a custom Task Detail ManuScript.
+For instructions on using a custom Task Detail ManuScript or customizing the out-of-the-box Task Detail ManuScript,
+seeCustomizing the Task Detail ManuScript . For information about system ManuScripts in general, see System
+ManuScripts .
+Task Details Page
+Users can view details of a task by clicking that task in the list of tasks. Out-of-the-box, tasks have the following details.
+Item Description
+Title Title of the task.
+Policy/
+Quote #Number of the policy or quote with which the task is associated and hyperlink to the policy or quote.
+Category Type of task. Options for the category are Carrier-defined. For instructions on defining task
+categories, see Customizing Task Categories .
+Due Date Date the task is due.
+State State of the task. Options are Open, Completed, Closed (Carrier-defined reason codes are
+available), or Deleted. Out of the box, EXAMPLE Express ®comes with a reason code of "Declined"
+for the Closed state. For instructions on defining additional reason codes, see Customizing Task
+Reason Codes .
+20 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

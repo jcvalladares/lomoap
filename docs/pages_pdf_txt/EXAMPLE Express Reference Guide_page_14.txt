@@ -1,0 +1,9 @@
+For information about customizing tasks, generating tasks automatically, setting up task queues, or setting up batch
+processes for tasks, see Customizing Tasks . For general information about customizing EXAMPLE Express ®pages,
+seeCustomizing EXAMPLE Express ®Skins .
+My Tasks
+The My Tasks page is divided into two sections:
+•My Tasks displays all tasks assigned directly to the user
+•Tasks Available for Pickup displays all tasks the user can pick up
+Out of the box, this page is visible to all users, and it appears as follows:
+14 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

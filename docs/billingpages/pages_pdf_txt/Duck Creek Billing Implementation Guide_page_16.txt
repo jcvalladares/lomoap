@@ -1,0 +1,6 @@
+General Ledger systems can be interfaced with Duck Creek Billing™ using database tables. For more information
+about this feature, contact your Duck Creek Account Manager.
+Integrating with Policy Administration Systems
+The integration between Duck Creek Billing™ and policy administration systems is bi-directional. Data flows from the
+policy administration system to Duck Creek Billing™, as illustrated below.
+16 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,49 @@
+Disbursement
+Minimum
+AmountSpecifies the
+suspended amount
+that can be
+disbursed
+automatically at the
+time the
+Disbursement Write
+Hold Days is
+reached. If the
+amount is less than
+the Disbursement
+Minimum Amount,
+the money is written
+off.Any positive
+value.$10
+Disbursement
+Write Off
+Hold DaysSpecifies the
+number of days
+money will be held
+in suspense before
+it is evaluated for
+disbursement or
+write off.Any value
+including 0.30
+Cash With
+Application
+Disbursement
+Write Off
+Hold DaysSpecifies the
+number of days
+payments marked
+with "Cash with
+App" payment type
+will be held in
+suspense before
+evaluation for
+disbursement or
+write off.Any value
+including 0.30
+Follow Up
+Late Charge
+ActionDetermines whether
+the account will be
+charged late fees.•Charge
+•NoneCharge
+30 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,34 @@
+Working with Multi-level Commisisons
+The multi-level commission feature is enabled by using the role-based security features in EXAMPLE UserAdmin™.
+Recommended Reading:
+TheEXAMPLE UserAdmin™ Overview describes the basic concepts of role-based security and how the
+EXAMPLE Platform ®uses EXAMPLE UserAdmin™, and the "Initial Setup" in the EXAMPLE UserAdmin™
+User Guide , which describes the process of working with entities, roles, and users.
+EXAMPLE UserAdmin™ may be used to set up and define the entities, roles, users and hierachy (parent/child
+relationships for commission distribution and plan inheritance. Commissions may be distributed at one or multiple
+levels in the hierarchy as specified in the commission plan that is created for an account. Commission plans can be
+created at one tier, and then be inherited by a lower tier, but they cannot be created at a lower tier and then be
+inherited at a higher tier.
+A policy's commission plan is determined when the policy is entered. The policy administration system retrieves the
+commission plan ID and sends it to Duck Creek Billing™ where it is stored in each BillItem record. When the
+commission is distributed, it pulls the appropriate commission plan using the commission plan ID. The necessary keys
+are used to search from the lowest tier of the hierarchy to obtain the correct commission plan and distribution. The
+commission distribution includes each recipient ID, as well as the recipients’ distributed commission percentage.
+When a search for a commission plan begins, it is based on both the fixed and variable policy attributes specified in the
+commission plan. The search begins at the lowest level of the hierarchy and moves upward. If no match is found at the
+first level, the search moves to the next tier in the hierarchy. If a match is found at this tier, the commission plan is
+returned. The search process continues through all the tiers, and if no match is found at the highest tier, an error is
+returned.
+For a given commission plan, the user may also specify different rates and distributions for new business and
+renewals.
+Overview for Creating a Multi-Level Commission Plan
+The following table includes the process for creating a multi-level commission plan.
+Step Description
+1 Determine the required hierarchy.
+2 Determine whether to use existing entity types or create new entity types for your commission structure.
+3 To create new entity types, see Working with Entity Types .
+4 Determine what entities need to be added to the entity types.
+5 To create new entities, see Working with Entities .
+6 Associate the required roles with each entity.
+7 If additional roles are needed, see Working with Roles to create new roles.
+58 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,40 @@
+.cc_CustomExample > .cc-bubble-bwrap {background: transparent;}
+.cc_CustomExample > div > .cc-bubble-ml {background: transparent url(../
+images/cc/CustomExample/cc-l.png) repeat-y 0 0;}
+.cc_CustomExample > div > .cc-bubble-ml {padding-left:10px;zoom:1;}
+.cc_CustomExample > div > div > .cc-bubble-mr {background: transparent
+url(../images/cc/CustomExample/cc-r.png) repeat-y right 0;}
+.cc_CustomExample > div > div > .cc-bubble-mr {padding-right:10px;zoom:1;}
+.cc_CustomExample > div > div > div > .cc-bubble-mc {background: #fff;}
+.cc_CustomExample > div > div > div > div > .cc-bubble-body {background:
+transparent;}
+.cc_CustomExample > div > .cc-bubble-bl {background: transparent url(../
+images/cc/CustomExample/cc-bl.png) no-repeat 0 bottom;}
+.cc_CustomExample > div > div > .cc-bubble-br {background: transparent
+url(../images/cc/CustomExample/cc-br.png) no-repeat right bottom;}
+.cc_CustomExample > div > div > div > .cc-bubble-bc {background:
+transparent url(../images/cc/CustomExample/cc-b.png) repeat-x 0 bottom;}
+4.In the custom-cc.css file, paste the code.
+5.Replace the the container name (CustomExample in this case) with the name of the folder where your custom
+container images are stored.
+6.Modify the value of the bottom padding in the following line of code from the example above:
+.cc_CustomExample > div > div > div > .cc-bubble-title
+{padding-top:0px;padding-bottom:12px;}
+To adjust the horizontal position of a container:
+•In EXAMPLE Author ®, add an alignHeader custom parameter and enter left,center , orright as the value.
+By default, all container titles align to the left.
+Customizing CSS
+You can customize CSS for EXAMPLE Express ®by:
+•Customizing a set of global .css files that apply across the entire EXAMPLE Express ®application.
+•Customizing individual override files (indicated by the filename x_pagename.css ) that apply to single pages or
+portions of the EXAMPLE Express ®application.
+•Applying custom CSS styles to specific page elements in a ManuScript. These styles are defined in a single
+override file ( x_interview.css ), and are applied to individual fields and page elements in EXAMPLE Author ®. For
+more information about creating and applying custom CSS styles in EXAMPLE Author ®, see Working with CSS
+Override Styles in the Guide to EXAMPLE Author® .
+The x_interview.css file is automatically modified by EXAMPLE Author ®any time styles are edited using
+the CSS Manager in Page Designer. This file does not need to be edited by hand.
+The table below describes the customizable .css files in the Global Root Directory \Express\Skins\ CustomSkin \css
+directory. Use this table to determine which files to modify when customizing CSS.
+File Description
+127 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

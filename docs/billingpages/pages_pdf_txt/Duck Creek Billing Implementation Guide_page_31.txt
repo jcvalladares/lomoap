@@ -1,0 +1,28 @@
+Late Charge
+AmountDetermines the
+amount of the late
+charge. Valid only
+when the value of
+the Late Charge
+Action setting is
+Charge. Late
+charges appear on
+the next scheduled
+invoice, and are not
+included in the
+current amount due.Any value. $10
+Late Charge
+DaysDetermines the
+number of days past
+the due date the
+late charge is
+assessed if the
+unpaid invoice
+amount meets or
+exceeds the Late
+Charge Threshold
+Amount. Valid only
+when the Late
+Charge Action
+setting is C.Any value. 3
+31 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

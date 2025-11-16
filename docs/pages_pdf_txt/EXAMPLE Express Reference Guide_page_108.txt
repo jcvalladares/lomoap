@@ -1,0 +1,17 @@
+The following tools can be found on the right side of the toolbar:
+Enabling the Duck Creek Developer Toolbar
+To enable the Duck Creek Developer Toolbar:
+•In the Express\Web.config file, set the value of the ShowDeveloperTools configuration setting to 1.
+The toolbar displays at the bottom of the browser.
+Themes
+Avant Garde 2 skins include a theme system designed to provide an additional layer to which users can apply style
+customizations.
+Creating a Custom Theme
+To create a custom theme:
+1.In the C:\Program Files\Duck Creek Technologies\Express\Skins\[CUSTOM SKIN]\themes \
+directory, create the following files in the following folders:
+File name Description
+images
+cc Used for custom container images.
+css
+108 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

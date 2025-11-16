@@ -1,0 +1,28 @@
+AddFieldInfo This setting reserved for future use.
+AddPartyManuScriptID null
+AgencyDetailsManuScriptID N/A
+AllowMultiLanguageScreens False
+ApplicationLayoutFactory C:\Program Files\Duck Creek Technologies
+4.0\Express\App_Data\ApplicationLayoutMap.xml
+AutoSave 1
+BypassSSLHostAuthentication 0
+CarrierName Demo National Insurance
+ClientDetailsManuScriptID null
+ConsumerAccessManuScriptIDnull
+ConsumerAccessRolenull
+ConsumerAgencyID null
+ContentFactory C:\Program Files\Duck Creek Technologies
+4.0\Express\App_Data\ContentMap.xml
+DebugMode 0
+DebugOutputDir C:\Program Files\Duck Creek Technologies 4.0\Express
+EventLog Errors
+EXAMPLEServerURL http://localhost:80/DuckCreek40/dctserver.aspx
+ExitInterviewField null
+FormsTempPath C:\Program Files\Duck Creek Technologies 4.0\Express\Temp
+GetPageWaitTime 0
+GetPolicyAdminManuScriptID null
+GuestPassword null
+GuestUserName null
+HomeBlockListBulletins 0
+HomeBlockListMessages 0
+177 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

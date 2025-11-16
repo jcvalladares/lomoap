@@ -1,0 +1,21 @@
+seeUsing New Quote Selection System Pages . For more information about system ManuScripts in general, see
+System ManuScripts .
+Pitney Bowes Address Verification
+Pitney Bowes Address Verification allows users to send a single address to the Pitney Bowes data service for
+verification and to receive a response that includes latitude, longitude, validated address, percentage of confidence in
+the match, and a match code.
+All requests receive a date and time stamp, and the user has the option to accept the Pitney Bowes' verified address or
+reject it and use the original address for quotation purposes. Optionally, Pitney Bowes Address Verification can be set
+up as a requirement for all addresses, so that only verified addresses can be used when binding a policy.
+For more information, see:
+•Setting Up Pitney Bowes Address Verification
+•Working with Addresses
+Underwriter's Workbench Toolbar
+Underwriter's Workbench Toolbar is available in EXAMPLE Express ®to allow users with appropriate permissions to
+view, create, or delete notes and attachments related to the policy or quote currently displayed in the main window.
+The toolbar appears attached to the bottom of your browser window on top of the EXAMPLE Express ®screen.
+Previously, the user had to navigate away from their current page in EXAMPLE Express ®and view the Policy Details
+page to access this information. Now, the Underwriter's Workbench Toolbar provides a toolbar at the bottom of the
+browser window that allows users to access Attachments and Notes (to which they have permission) without leaving
+the page they are on.
+33 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

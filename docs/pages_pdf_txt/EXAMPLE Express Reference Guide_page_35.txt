@@ -1,0 +1,38 @@
+•View and access their quotes and policies
+•Start new quotes
+•Update account information (username and password)
+•Update billing and contact information
+•Update policy information (perform endorsements)
+•View and print quote and policy documents
+From the account summary page, prospective customers can:
+•View and access their quotes
+•Start new quotes
+•View and print quote documents
+For more information about the Consumer Access feature, see Consumer Access in the EXAMPLE Platform® .
+Database Management Tools
+The quotes and policies that users create and work with in EXAMPLE Express ®are stored in the ExampleData
+database. System administrators can perform database maintenance related to these quotes and policies using
+EXAMPLE UserAdmin™. In EXAMPLE UserAdmin™, administrators can:
+•Manage quote and policy number blocks — With the Number Blocks tool, administrators can add, delete, and
+update quote and policy number blocks in the system.
+•Delete quotes —With the Old Quotes Deletion tool, administrators can select quotes to delete by date range.
+Quotes that have been marked for deletion remain in the system until erased with the Purge tool.
+•Purge database records — With the Purge tool, administrators can permanently remove quotes and policies
+that have been marked for deletion from the database.
+•Move policies between agencies — With the Move Policies tool, administrators can reassign policies from one
+entity to another.
+For more information about the database management tools in EXAMPLE UserAdmin™, see the EXAMPLE
+UserAdmin™ User Guide .
+Portfolio
+The Portfolio feature offers agents and underwriters the ability to easily view, update, and perform simultaneous
+transactions on a client's quotes and policies. Designed to work with product ManuScripts, portfolios present a
+consolidated view of a customer's associated quotes and policies. Functionally, a portfolio enables transaction
+events and business rules to be applied to sets of associated information.
+Using Portfolio, users may:
+•View an at-a-glance presentation of all quotes and policies for a customer's account
+•Easily enter or update information shared across multiple quotes and policies
+•Perform simultaneous transactions on multiple policies
+•Print portfolio policy packages with a consolidated billing page for all coverages
+•Apply discount credits for multiple policies
+For more information about the Portfolio feature, see Portfolio in the EXAMPLE Platform® .
+35 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

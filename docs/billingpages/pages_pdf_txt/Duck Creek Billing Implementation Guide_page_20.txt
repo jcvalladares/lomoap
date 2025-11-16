@@ -1,0 +1,30 @@
+perform within Duck Creek Billing™ is determined through the roles granted to that person using EXAMPLE
+UserAdmin™.
+The BillingLogin Role allows the user to login to Duck Creek Billing™, and is required for all users other than
+those with system administration privileges.
+Privilege Out-of-the-Box Roles
+BillingAdmin BillingAgent BillingSeniorCSR BillingStandardCSR
+Access Billing Account Summary page x x x
+Access Account Summary page for
+Commission Accounts
+Access Disbursement Detail page x x
+Access to the Installment Schedule page x x x
+Items in Suspense page x x
+Payment Detail page x x
+Policy Summary page x x x
+Receivable Write off/Waive Detail page x x
+Unidentified Payment page and assign
+payments to an accountx
+Allows the user to do anything in billing x
+Batch cash management facilities x
+Add notes to an account x x x
+Authorize disbursements x
+Hold billing and follow up activities x x
+Update the target due date of an account x x
+Change payor or paynee on an account x x x
+Change policy plan settings x x
+Change policy plan settings for a renewal
+termx x
+Change the hold type on an item in
+suspensex x
+20 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

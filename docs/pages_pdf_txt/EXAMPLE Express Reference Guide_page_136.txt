@@ -1,0 +1,17 @@
+1.On the Tools menu, click Options .
+The Options dialog box appears.
+2.On the Content tab, in the Languages section, click Choose .
+The Languages dialog box appears.
+3.Select the language you wish to use from the Select a langauge to add... drop-down list, ant then click Add.
+The language is added to the list of preferred languages.
+You can change the order of preference of the browser languages by selecting a language and then
+clicking Move Up orMove Down . To remove a language from the list, select the language you wish to
+remove, and then click Remove .
+4.Repeat step three until you have added all of the languages you wish to use.
+5.Click OKtwice.
+The expected behavior of the EXAMPLE Platform ®is to use the first language listed. If dictionaries are
+not available for that language, the system will default back to English (the invariant culture).
+Changing Your Browser Language Settings Using a Configuration Setting
+Using a configuration setting, you can change the language to be used by the EXAMPLE Platform ®.
+To change the browser language to be used by the EXAMPLE Platform ®using a configuration setting:
+136 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

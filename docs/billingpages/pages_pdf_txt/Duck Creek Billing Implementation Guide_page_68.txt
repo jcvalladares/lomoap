@@ -1,0 +1,33 @@
+Batch Header •Entry class code
+•Debit date
+•Bank routing transit number
+•Batch header number
+There is only one batch header record for each debit date
+processed, but there may be multiple batch header records per
+tape.
+Detail Record •Amount
+•Trace number for each EFT rejection
+There is one detail record for each transaction being rejected.
+Detail Addenda Record (Includes
+Rejection and Change Records)•Rejection records support rejections of assumed payments and
+prenotes.
+•Change records support change transactions.
+Each record must include a detail addenda for either rejection or
+change.
+Batch Control Record •Number of detail records within a batch
+•Total debit amount
+•Bank routing transit number
+•Batch number
+There is one batch control record for each batch header record.
+The following table lists the value and content of the Batch Header record.
+Length Position Field Name Description
+1 1 Record type A required 1-character field which indicates the type of input record. The valid
+type is 5.
+3 2 - 4 Service
+class codeA 3-position numeric field which identifies the general classification of dollar
+entries to be exchanged. For example, debits, credits, or mixed debits and
+credits.
+16 5 - 20 Company
+nameA 16-position character field established by the originator for further identifying
+the source of the entry, and for descriptive purposes for the receiver.
+68 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

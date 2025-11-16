@@ -1,0 +1,4 @@
+7.When prompted by the Setup Wizard, click Next .
+8.Scroll to read the terms of the End-User License Agreement. After reading the agreement, enable the I accept
+the terms in the license agreement checkbox, and then click Next . (The Next button remains disabled until the
+69 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

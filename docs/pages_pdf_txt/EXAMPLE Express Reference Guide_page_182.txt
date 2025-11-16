@@ -1,0 +1,29 @@
+Default Valid
+0 •0— Do not store EXAMPLE Express ®debug information.
+•1— Save EXAMPLE Express ®debug information to the debugContent.xml file. Enable the Go Back
+button on the EXAMPLE Express ®error screen.
+•2— Save EXAMPLE Express ®debug information to the debugContent.xml file, appending the
+<ManuScript.getPageRs> response (with session information). Enable the Go Back button on the
+EXAMPLE Express ®error screen.
+•3— Save EXAMPLE Express ®debug information to the directory specified by the DebugOutputDir
+configuration setting. Enable the Go Back button on the EXAMPLE Express ®error screen.
+DebugOutputDir
+Location for the debug content file.
+Default Valid
+C:\Program Files\Duck Creek Technologies 4.0\Express Any valid file path.
+EventLog
+Enables use of the Application Event Log in EXAMPLE Express ®, which logs exception conditions and registers when
+the user receives a notification message.
+Default Valid
+Errors •null— Do not log errors or notifications.
+•Errors — Log errors thrown in the EXAMPLE Express ®system.
+•All— Log errors and notifications.
+EXAMPLEServerURL
+URL of the EXAMPLE Server ®to be used by the EXAMPLE Express ®system. Specify the DCTServer.aspx target if
+requests to the EXAMPLE Server ®are to use HTTP.
+If the EXAMPLE Express ®system resides on the same machine as the EXAMPLE Server ®, this setting can be left
+blank to indicate that the communication with the EXAMPLE Server ®is to be local. This increases performance of each
+request but requires the EXAMPLE Express ®installation to co-exist on the same server with the EXAMPLE Server ®.
+Default Valid
+http://localhost:80/DuckCreek40/dctserver.aspx URL of an existing EXAMPLE Server ®.
+182 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,44 @@
+setValidator: function(config) {
+config.validator = this.checkstring;
+},
+setFormatter: function(config) {
+switch (config.dct.JSFormatter)
+{
+case: 'upper':
+config.formatter = this.formatUpper;
+break;
+case 'lower' :
+config.formatter = this.formatLower;
+break;
+case 'string':
+config.formatter = this.formatString;
+break;
+}
+}
+To make changes across fields, customize the Ext JS at the base class. The following is a code sample of the base
+class available for customizations in the Ext JS controls.
+Ext.override (Ext.BoxComponent,   {
+skipRequiredChecking: false,
+customOnBlur:  function ()   {
+},
+customOnChange: function ()    {
+},
+customFieldFormat: function ()   {
+},
+fieldChanged: function ()  }
+fieldChanged.set () ;
+this.customOnChange () ;
+},
+The following is a list of source files and features that are available.
+Control Source File Class Name Features
+Accordian
+panelsdctAccordians.js DCT.Accordian
+DCT.AccordianItem•Handles creating accordian parent and
+accordian panel items
+•Sets the accordian items to the control
+and assigns the panel that should be
+expanded
+•Assigns listeners to handle the Ajax
+processing before the primary panel is
+expanded
+111 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,5 @@
+# Origami Risk Recognized in the 2025 Gartner Magic Quadrant for SaaS P&C Core Platforms, North America
+
+## Summary
+
+Origami Risk, the industry-leading risk, safety, and insurance software as a service (SaaS) firm, has been recognized in the 2025 Gartner® Magic Quadrant SaaS P&C Core Platforms, North America. The company's core platform earns high marks from numerous widely respected industry analysts, indicating its continued success and growth. Origami Risk offers a full suite of end-to-end, integrated SaaS solutions for policy, rating, billing, loss control, claims administration, reporting and analytics. It also offers a full-service ISO and NCCI bureau content management solution and a comprehensive digital engagement experience for all internal and external stakeholders. This recognition underscores the company's commitment to delivering innovative solutions that help organizations improve their risk management processes and drive better decision-making.

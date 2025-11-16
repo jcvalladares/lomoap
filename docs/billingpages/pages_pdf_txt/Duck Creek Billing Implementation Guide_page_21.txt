@@ -1,0 +1,30 @@
+Allows user to change the system date
+Create an account without a policy x x
+Schedule disbursement service interface
+requestsx
+Edit scheduled EFT requests
+View the Error Queue
+Hold Billing and Follow up Activity
+Enter a payment inside an account x x
+Enter a payment outside an account,
+including unidentified paymentsx x
+Manage Hold Events x
+Manually redistribute installments x x x
+Manually allocate money in suspense x x
+Manually rescind a policy in PCN status x
+Manually re-suspend a previously disbursed
+disbursement
+View, create, edit, delete, and process
+payment batchesx x
+Search for a payment x x
+Re-bill disbursements x
+Manually override the refund to source
+check
+Reprint an invoice x x
+View the billing aged receivables report
+View all billing reports
+View billing cash in suspense report
+View billing commission activity report
+View billing daily cash journal report
+View Disbursement Activity report
+21 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

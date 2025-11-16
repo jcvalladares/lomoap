@@ -1,0 +1,40 @@
+2 2 - 3 Transaction
+codeA required 2-position character field which identifies various types of debit
+and credit entries.
+Valid codes are:
+•21 – DDA Credit
+•26 – DDA Debit
+•31 – Savings Credit
+•36 – Savings Debit
+•27 – DDA Prenote
+•37 – Saving Prenote
+8 4 - 11 Receiving DFI
+identificationAn 8-position character field which is the standard routing number.
+1 12 Check digit A 1-position character field which is a sub- field within individual DFI
+identification.
+17 13 - 29 DFI account
+numberA 17-position character field which identifies the receiving depository
+financial institution’s customer identification.
+10 30 - 39 Amount A required 10-position numeric field which contains the amount associated
+with the detail record.
+15 40 - 54 Individual
+identification
+numberA 15-position character field which contains the accounting number by
+which the receiver is known to the number originator.
+22 55 - 76 Individual name A 22-position character field which provides additional identification for the
+receiver.
+2 77 - 78 Discretionary
+dataA 2-position character field used by the originating depository financial
+institution to include codes used for specialized handling of the entry.
+1 79 Addenda record
+indicatorA 1-position numeric field used to indicate the existence of the addenda
+record.
+15 80 - 94 Trace number A required 15-position numeric field which uniquely identifies each entry
+within a batch.
+The following table lists the value and content of the Detail Addenda Record for Rejection.
+Length PositionField
+NameDescription
+1 1 Record
+type codeA required 1-position character field which indicates the type of input record.
+The valid type is 7.
+70 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

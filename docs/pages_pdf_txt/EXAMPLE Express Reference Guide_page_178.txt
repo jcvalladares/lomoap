@@ -1,0 +1,29 @@
+HomeBlockListMRU 0
+InitVector N/A
+InstantShred 0
+LogoutURL null
+MailTo support@mycompany.com
+MenuMapFactory N/A
+MessageDetailsManuScriptID null
+NewQuoteLimitRequests 0
+NewQuoteManuScriptID NewQuoteSelectionPortfolio
+OverrideLanguageForScreens null
+PartySearchManuScriptID null
+PassPhrase N/A
+PerformanceLogging 0
+PostActionFactory C:\Program Files\Duck Creek Technologies
+4.0\Express\App_Data\PostActionMap.xml
+PolicyAdminManuScriptID null
+PolicyBlockListAttachments 0
+PolicyBlockListMessages 0
+PolicyBlockListTasks 0
+PrintJobAsyncMode 2
+PrintJobAutoRefresh 1
+PrintPreviewDownloadMode 0
+ProcessAsyncFormWaitTime 1
+ProxyMode 0
+RefreshClientOnLoad Quote
+SaltValue N/A
+SecureLogin 0
+SelectAgencyLimit 15
+178 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

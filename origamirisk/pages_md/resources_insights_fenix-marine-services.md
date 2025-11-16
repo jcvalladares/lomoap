@@ -1,0 +1,4 @@
+## Title: Improving Safety at Fenix Marine Services with Origami Risk
+
+### Summary:
+Origami Risk, a cloud-based platform, revolutionized the way Fenix Marine Services manages incident investigations, inspections, and safety audits. By integrating Origami Risk into its existing operations, the company reduced time-consuming tasks, improved data accuracy, and enhanced employee engagement. The platform's mobile app allowed managers to collect data on the go, leading to more efficient safety audits and a safer working environment. This success demonstrates the importance of modern technology in enhancing operational efficiency and safety in the maritime sector.

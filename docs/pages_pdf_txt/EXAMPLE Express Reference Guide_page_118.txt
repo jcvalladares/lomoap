@@ -1,0 +1,31 @@
+Radio
+buttonsdctRadiobuttons.js DCT.RadioGroup
+DCT.RadioField•Establishes the radio group and radio
+items
+•Sets debug information if the
+Web.config key is turned on
+•Creates the radio group as vertical or
+horizontal based on the configuration
+passed
+•Calculates widths of each radio button
+to span the group width correctly
+•Sets event listeners for check, focus,
+and afterrender
+•Fires field processing if the field is
+checked or unchecked
+•Notifies focus is set if the field is
+selected
+•Radio field is reused for Extended
+radios
+Slider dctSliders.js DCT.ComparisonSlider •Handles creating slider control
+•Sets width of the control
+•Sets the maximum value for the control
+to calculate the tick values
+•Sets the listeners to handle
+changecomplete and change events
+•Assigns initial value for the display
+•Creates the datastore object for
+available values
+•Displays comparison values above the
+slider
+118 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

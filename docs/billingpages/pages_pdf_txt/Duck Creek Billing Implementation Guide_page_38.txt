@@ -1,0 +1,38 @@
+Because manual reconciliation is required for each statement and for the creation of commission records,
+agency lite accounts are not recommended for large numbers of agents or for agents with more than 50
+policies per statement.
+Important considerations for agency lite accounts include:
+•Net payments indicate that the agent is retaining the commission.
+•Gross payments indicate that the commission should be paid to the agent.
+•Manual data entry is not required if the statement is paid in full.
+•Once an account setting is specified as gross or net, it cannot be changed.
+•Net and gross commission payments cannot be mixed within an account.
+Commission authorization records in direct bill are usually written to the CommissionAuthorization database table
+based on rules in the commission scheme specified in the Policy Plan Setup Options. For agency lite accounts, no
+commission scheme is specified, so no commission records are written.
+The balances in direct bill always represent gross amounts. If payment is made in the net amount, an open balance
+representing the commission the agent has retained will remain.
+Configuring Agency Lite Accounts
+To configure the Agency Lite option:
+1.In the Billing Account Options settings in the Account Type section, make the following selections:
+◦In the Account Type Code list, click Agency Lite .
+◦In the Gross/Net Indicator list, click the appropriate commission option.
+2.Click Save Changes .
+3.In the Policy Plan Settings , in the Follow Up section, clear the PCNAllow check box to prevent the Agency Lite
+policies from going into PCN status.
+4.Click Save Changes .
+5.Open the appropriate ManuScript.
+6.In the Commission_PolicyPlan.Scheme field in the policy plan ManuScript, clear the default value to prevent
+commission authorization records from being written.
+For information about entering payments for an Agency Lite account or for writing off commission adjustments, see
+Working with Agency Lite Accounts in the Duck Creek Billing™ User Guide .
+Working with Monthly Reporting
+Monthly Premium Reporting allows a business to pay higher premiums during the time the business is more active,
+and lower premiums during times of reduced activity. Pricing for an MPR policy is based on the annual estimated
+exposure or payroll subject to the rates, the exposure modification, and other factors the carrier has in the filing. By
+reporting the actual exposure, the premium due can be accurately calculated. Businesses that may benefit from MPR
+include construction contractors, amusement parks, and ski resorts.
+Policy Setup
+The Carrier_Billing_Policy_Account_Common_1_0_0_0 ManuScript defines the interface between policy and billing.
+This ManuScript contains earned annual premium (EAP), net rate, and exposure information. This information is
+38 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,32 @@
+setActiveAgency
+Updates the active agency for the logged in user in the EXAMPLE Express ®<state> node.
+HTML Form Fields:
+Field Description
+_ddlAgencies Agency ID to set in the EXAMPLE Express ®<state> node.
+EXAMPLE Server ®Requests: Session.setActiveAgencyRq, OnlineData.getAgencyDetailsRq
+setLanguage
+Sets the language property in the session and the EXAMPLE Express ®<state> node to the specified language.
+HTML Form Fields:
+Field Description
+_language Language to set in the session and the EXAMPLE Express ®<state> node.
+setPrintManuScript
+Sets the ManuScriptID to use when the Create Policy Documents link is clicked. This action should be used when a
+different ManuScript than the loaded interview ManuScript (state.ManuScriptID) is needed. (For example, Duck Creek
+Templates™ CPP policies will have the CPP ManuScript stored as the interview ManuScript. When printing policy
+documents, however, the system may need to run a specific product ManuScript.)
+Interview parameter:
+•printManuScriptID — ID of the ManuScript to use for the print page.
+If the printManuScriptID parameter is empty, the system will use the state.ManuScriptID .
+setTaskComplete
+Sets the status of a task to Complete . This action has two modes:
+•When executed from a ManuScript — The system uses the task record in the session at _TaskData/
+TaskRecord to obtain the task ID and task locking code from the paths defined in the schemas for the
+<Task.getRq> request response.
+•When executed from a system page — The system requires the following HTML form fields.
+Field Description
+_taskId ID of the task to complete.
+_taskLockingTS Encoded binary value that indicates the last time the task data was read and prevents
+multiple users from modifying a task at the same time. This value is generated from the
+<Task.getRq> request or the <Task.listRq> request.
+EXAMPLE Server ®Request: Task.setStatusRq
+208 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

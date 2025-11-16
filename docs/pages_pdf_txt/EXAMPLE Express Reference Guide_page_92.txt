@@ -1,0 +1,33 @@
+•Accordion control
+•Collapsible panels
+•Popups
+•Sliders
+•Progress bar control
+•Quick tips
+•Charts
+•Alert messages, confirmation messages, Yes/No save messages, and modal pop-ups
+Customizing ManuScript Processing
+To customize system behavior during ManuScript processing, modify the following variables and functions in the
+custom.js file in the Global Root Directory \Express\Skins\ CustomSkin \scripts directory.
+Item Description
+Variables
+_loadingWaitTime Time to elapse (in milliseconds) before displaying a "loading" message when
+performing system actions.
+Functions
+customOnload() Executed when pages are displayed or when any AJAX process causes the container
+(the area containing the header, footer, and page tabs) to be redrawn.
+skipRequiredChecking() Executed before the doCheck event is called. This function must return a value of true
+to skip required checking.
+customOnSubmit() Executed before the page or AJAX process is called.
+customFieldFormat() Executed before the onBlur and prevent functions. This function allows for field format
+changes before submitting a page.
+customOnBlur(field) Executed when an onBlur event is executed.
+customOnKeyPress(field) Executed when an onKeyPress event is executed (for multi-line text boxes).
+customOnClick(field) Executed when an onClick event is executed.
+customOnChange(field) Executed when an onChange event is executed.
+customOnKeyUp(field) Executed when an onKeyUp event is executed (for multi-line text boxes).
+Interview Page Styles
+Avant Garde 2 skins control interview page styling using the following two CSS files:
+•x_interview – Contains styles applied to a page through EXAMPLE Author ®.
+•x_interview_main – Contains styles applied to interview pages through XSL.
+92 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,37 @@
+change session values, store data to the database, or operate conditionally based on the final page of the interview
+process for a particular user.
+To define an Exit Interview field, you must define the field in EXAMPLE Author ®, and then specify the field in the
+ExitInterviewField setting in the Express\Web.config file.
+If an Exit Interview field does not exist in a ManuScript that contains the final page of an interview, EXAMPLE
+Express ®will continue processing as normal. However, any value specified in the ExitInterviewField
+configuration setting will cause an additional round trip request to EXAMPLE Server ®at the end of each
+interview process.
+Defining the Field in EXAMPLE Author ®
+To define the Exit Interview field in EXAMPLE Author ®, create a field that executes the desired logic. In some cases,
+an Exit Interview field may need to execute conditionally based on which EXAMPLE Express ®system page a user has
+requested when leaving an interview. To accommodate this situation, EXAMPLE Express ®sets a value in the session
+properties that contains the name of the page the user has requested. If desired, a ManuScript can use this value to
+build conditional logic by using the <Session.getPropertyRq> request as follows:
+<Session.getPropertyRq name="ExitInterviewTarget" />
+The value of the ExitInterviewTarget property can be the name of any valid content page defined in the
+ContentMap.xml file (or any custom ContentMap.xml file).
+Identifying the Field in Express\Web.config
+To define the Exit Interview field in the Express\Web.config file:
+1.In each ManuScript, add a field that specifies which page ends the interview process. This page can be in
+EXAMPLE TransACT ®, in the product ManuScript, or in any other ManuScript called during the interview process.
+Give the field the same name in each ManuScript using the same EXAMPLE Express ®configuration.
+2.Open the Edit Configuration Utility.
+3.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+4.Under Mode , click Form .
+5.On the Web Config tab, in the list of settings, click ExitInterviewField .
+6.In the value text box, enter the name of the ManuScript field defined in Step 1 .
+7.Click Save .
+8.Click Close .
+Setting Up an EXAMPLE Express® Proxy Server
+If you wish to add an additional layer of security to EXAMPLE Express ®, you can configure an EXAMPLE Express ®
+proxy server. To set up an EXAMPLE Express ®proxy server, you must:
+•Install EXAMPLE Express ®
+•Set up a proxy directory
+•Set up a virtual directory
+•Configure the Express\Web.config file
+63 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

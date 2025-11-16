@@ -1,0 +1,17 @@
+Quote and policy pages are accessed by:
+•Clicking the quote or policy number for a given quote or policy in the Recently Accessed list on the Policy
+Administration Dashboard.
+•Clicking the View Policy button
+ for a given quote or policy on the Client Information page for a given client or
+on the Search page.
+•Clicking View Policy in the left panel any time a quote or policy is open.
+The content and appearance of the product pages through which policies are viewed is completely customizable
+through EXAMPLE ManuScripts™.
+Policy Details
+On the Policy Details page, users assigned viewing privileges at the associated entity can view general details about a
+quote or policy, including:
+•Client information (name, phone number, address)
+•Policy information (policy number, line of business, effective and expiration dates)
+•Agency and producer names
+In addition, the Policy Details page includes:
+28 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

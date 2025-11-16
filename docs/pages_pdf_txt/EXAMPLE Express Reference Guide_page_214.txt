@@ -1,0 +1,27 @@
+Default Valid
+blank Any valid string.
+ContentBorder
+Displays or hides the section border.
+Default Valid
+Hide •Show – Displays the panel border.
+•Hide – Hides the panel border.
+ContentCollapsible
+Displays or hides the ability to collapse a section.
+Default Valid
+False •True – Allows the panel to be collapsed.
+•False – Prevents the panel from being collapsed.
+ContentFrame
+Displays or hides the section frame.
+Default Valid
+Hide •Show – Displays the panel border.
+•Hide – Hides the panel border.
+ContentHeight
+Height of a panel in pixels.
+ContentName
+Applies a name to an iFrame, if specified.
+ContentScrollable
+Enables content scrolling within a section.
+Default Valid
+False •True – Enables content scrolling.
+•False – Disables content scrolling.
+214 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

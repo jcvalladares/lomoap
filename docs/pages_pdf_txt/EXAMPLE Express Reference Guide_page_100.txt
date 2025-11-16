@@ -1,0 +1,32 @@
+directories). Instead, it is recommended that you create a custom skin and modify its
+DefaultDictionary.resources file.
+.resx files must be converted back to .resources format prior to being used in a runtime environment.
+Buttons
+You can create custom buttons for use with the Avant Garde 2 skin using the following files:
+•buttonDefaults.css – Sets the default styles for buttons. For more information, see buttonDefaults.css .
+•buttons.css – Contains style definitions for 15 built-in button types. For more information, see buttons.css .
+•custom-buttons.css – File where all custom buttons are defined. For more information, see custom-buttons.css .
+•globalButton.psd – Pre-divided template for creating buttons. For more information, see globalButton.psd .
+buttonDefaults.css
+The buttonDefaults.css file sets default styles for buttons. These default styles can be overwritten in the buttons.css
+and custom-buttons.css files.
+The following table list some notable classes you can use with the buttonDefaults.css file.
+Class Description
+g-btn-bar Forces multiple buttons contained in a <div> to align side-by-side instead of stacking vertically.
+g-btn Sets default button height to 24px and right margin to 10px. Applied to every button file.
+g-btn-l, g-
+btn-m, g-
+btn-rCorresponds to the left, middle, and right sections of a button. Background images are set to g-btn-
+slice.png. By default, the background position is set to the position of the green button in g-btn-
+slice.png.
+g-btn-left,
+g-btn-rightDetermines the position of icons.
+g-btn-text Sets the default font size to 0.9em , font weight to bold, and font color to #333333 .
+buttons.css
+The buttons.css file contains style definitions for 15 built-in button types. The name of each button can be specified as
+the value of the button type parameter in EXAMPLE Author ®.
+This file imports the defaults from the buttonDefaults.css file.
+custom-buttons.css
+The custom-buttons.css file is used to define custom buttons. To effectively use the custom-buttons.css file:
+1.Create a custom theme. For information about creating a custom theme, see Themes .
+100 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

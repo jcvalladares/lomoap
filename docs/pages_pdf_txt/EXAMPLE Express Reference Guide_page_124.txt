@@ -1,0 +1,27 @@
+Once you have created a custom skins directory, you must configure EXAMPLE Express ®to run using your
+customized skin.
+To configure EXAMPLE Express ®to use your customized skin:
+1.Open the Edit Configuration Utility.
+2.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+3.Under Mode , click Form .
+4.On the Web Config tab, in the list of settings, click XSLTDir .
+5.In the value text box, enter the relative path to the custom directory from the Global Root Directory \Express
+directory (for example, Skins\MySkins ).
+6.Click Save .
+7.Click Close .
+Custom Containers
+You can create custom containers (elements containing other HTML elements) for use with the Avant Garde 2 skin
+using the following files:
+•customContainers.css – Contains style definitions for seven built-in custom containers. For more information,
+seecustomContainers.css .
+•ccTemplate.psd – Pre-divided template for creating a custom container. For more information, see
+ccTemplate.psd .
+•custom-cc.css – Location where custom containers are defined. For more information, see custom-cc.css .
+customContainers.css
+The customContainers.css file contains style definitions for the following built-in custom containers.
+The name of each custom container can be specified as the value of the Custom Container parameter in
+EXAMPLE Author ®.
+The following table displays the seven custom containers stored in the customContainers.css file.
+Custom Container Image
+GrayPanel
+124 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

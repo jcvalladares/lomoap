@@ -1,0 +1,16 @@
+3.After tasks are selected, click Reassign .
+4.Use the Mass Reassign page to reassign the selected tasks.
+Mass Reassign Page
+Users can reassign more than one task to more than one person at a time.
+To reassign tasks:
+1.Use the Task Assignment page to select the tasks to reassign.
+2.On the Mass Reassign page, select the queue where the reassigned tasks should be placed.
+3.In the Assignee list, click the appropriate assignee.
+4.Click OKto reassign all the previously selected tasks to the new queue and assignee, or Cancel to exit without
+reassigning the tasks.
+New Task Page
+Users can create new tasks using the New Task page. On this page, users can enter information for a new task,
+including the title, type of task, due date, and description. Users can then assign the task to the appropriate queue and,
+if they have the appropriate permissions, to an individual within the specified queue.
+Out of the box, the New Task page appears as follows:
+19 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

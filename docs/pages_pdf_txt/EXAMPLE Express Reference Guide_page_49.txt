@@ -1,0 +1,35 @@
+Minified JavaScript Files
+Avant Garde 2 skins include new compressed and minified JavaScript files to help boost performance during runtime.
+Two versions of each JavaScript file are added during installation:
+•Minified – Compressed version of the JavaScript file used at runtime (for example, Dct-base.js).
+•Debug – Debug version of the JavaScript file that allows skin developers to debug a given JavaScript file (for
+example, Dct-base-debug.js). Debug files are created with the files located in the DCTBase\Core\devscript
+directory.
+To enable debug mode, ensure that the value of the debugMode configuration setting in the
+Express\Web.config file is set to a positive integer.
+Custom Styles and Format Masks
+In general, the look and feel of EXAMPLE Express ®should be governed by general style rules defined in the
+EXAMPLE Express ®skins. At times, however, the appearance of specific page elements may depend upon criteria
+specified in a ManuScript. To accommodate this, ManuScripts allow you to apply custom styles and format masks to
+page elements. These custom styles and format masks can be configured in the EXAMPLE Express ®skins to provide
+the desired appearance and behavior.
+Custom Styles
+In EXAMPLE Express ®skins, carriers can define styles across the entire EXAMPLE Express ®application or across
+only parts of it. If desired, carriers can also apply custom CSS styles to specific page elements in a ManuScript. These
+styles are defined in a single file in the skins directory, and can be applied to individual fields and page elements in
+EXAMPLE Author ®.
+For information about customizing CSS styles, including custom styles for ManuScript pages, see Customizing CSS .
+Format Masks
+In EXAMPLE Author ®, users can apply format masks to fields. Format masks can apply to user input or display output.
+To function properly, format masks must be supported in the EXAMPLE Express ®skins.
+With out-of-the-box EXAMPLE Express ®skins, you can apply the following format masks to fields. In most cases, only
+one format mask can be applied to any given field. If the text entered does not match the corresponding format, an
+alert box informs the user that the value is invalid, and the focus is set to the offending field. All format masks are case-
+sensitive.
+Ensure that a format mask is supported by EXAMPLE Express ®skins before applying it to a field. A
+format mask must be supported by each installation of EXAMPLE Express ®in order to function
+properly. For additional information, see Format Masks in the EXAMPLE Express® Reference Guide .
+Labeled Format Masks
+Labeled format masks must be supported by each installation of EXAMPLE Express ®in order to function
+properly. The following labeled format masks are supported by EXAMPLE Express ®out of the box.
+49 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

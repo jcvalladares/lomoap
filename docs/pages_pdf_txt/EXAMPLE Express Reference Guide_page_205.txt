@@ -1,0 +1,37 @@
+newTask
+Adds a new task based on the task record located in the session at the path _TaskData/TaskRecord.
+EXAMPLE Server ®Request: Task.addRq
+previewAsyncPrintJob
+Executes the <Session.getPropertyRq> request and the <FormsEngine.initPrintJobRq> request asynchronously, and
+loads the Policy Forms page. This action causes the <FormsEngine.initPrintJobRq> request to be executed with the
+forceInit attribute set to 3if the PrintJobAutoRefresh configuration setting in the Express\Web.config file is set to 1, or
+with the forceInit attribute set to 0if the PrintJobAutoRefresh configuration setting is set to 0.
+previewPrintJob
+Executes the <Session.getPropertyRq> request and the <FormsEngine.initPrintJobRq> request, and loads the Policy
+Forms page. This action causes the <FormsEngine.initPrintJobRq> request to be executed with the forceInit attribute
+set to 3if the PrintJobAutoRefresh configuration setting in the Express\Web.config file is set to 1, or with the forceInit
+attribute set to 0if the PrintJobAutoRefresh configuration setting is set to 0.
+readMessage
+Displays the Notification Details page (message.xsl, or—if a Message Detail ManuScript is used—messageDetail.xsl)
+for the specified notification. This action sets the message flag in the EXAMPLE Express ®<state> node to readOnly
+and opens the Notification Details page for the specified message.
+refreshAsyncPrintJob
+Executes the <Session.getPropertyRq> request and the <FormsEngine.initPrintJobRq> request asynchronously, and
+loads the Policy Forms page. This action causes the <FormsEngine.initPrintJobRq> request to be executed with the
+forceInit attribute set to 3. It also executes the <FormsEngine.setPrintJobItemsRq> request with an autoMark attribute
+set to markDefault .
+rescind
+This action is intended for use with EXAMPLE TransACT ®1.0.
+Reverts the current policy image back to the state of the specified history image, retaining records of any transactions
+that are removed. This action copies the specified history image as the current policy or session image, but preserves
+the transaction records of the (previous) current image in the active session.
+Interview parameter:
+•historyID — ID of the history record to load.
+resetManuScriptID
+Resets the associated ManuScript for the active quote. This action uses the resetManuScriptID attribute or the
+manuscript attribute on the <ManuScript.getPageRq> request initiated by the interview to determine the new
+ManuScriptID to use. The system looks first at the resetManuScriptID attribute. If none is found or if it is empty, the
+system uses the manuscript attribute. If either is defined, EXAMPLE Express ®resets the associated ManuScript for the
+active quote to the specified ManuScript ID. Once the quote or policy is saved, the database is also updated to
+associate the quote or policy with the specified ManuScriptID.
+205 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

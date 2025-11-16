@@ -1,0 +1,64 @@
+Suppress
+FirstDetermines if the
+first invoice should
+be suppressed.Select check box
+to allow.Not selected
+Paper Invoice
+Service
+Charge
+PercentSpecifies the
+service charge
+percentage.Any value. 8.00 (8%)
+EFT Invoice
+Service
+Charge
+PercentSpecifies the
+service charge
+percentage.Any value. 8.00 (8%)
+Service
+Charge
+Minimum
+AmountSpecifies the
+minimum service
+charge amount
+assessed.Any amount. $5.00
+Service
+Charge
+Maximum
+AmountSpecifies the
+maximum service
+charge amount
+assessed.Any amount. $20.00
+EFT Variable
+Service
+Charge
+ExclusionsSpecifies items
+excluded from the
+variable service
+charge calculation.Any valid
+selection.None
+First Name
+(EFT Only)Specifies the first
+name on bank
+account used for the
+EFT draw.Any valid entry. None
+Last Name
+(EFT Only)Specifies the last
+name on bank
+account used for the
+EFT draw.Specifies the last
+name on bank
+account used for
+the EFT draw.None
+Bank Name
+(EFT Only)Bank Name
+(EFT Only)Any valid entry. None
+Account Type
+(EFT Only)Specifies the
+account type.Checking
+SavingsNone
+Routing
+Number
+(EFT Only)Specifies the bank
+routing number.Any valid entry. None
+27 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

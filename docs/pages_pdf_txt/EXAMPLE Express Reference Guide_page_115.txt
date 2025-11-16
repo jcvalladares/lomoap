@@ -1,0 +1,33 @@
+File upload dctInputFileFields.js DCT.InputFileField •Assigns the validation routine for
+required checking
+•Sets debug information if the
+Web.config key is turned on
+•Sets event listeners for blur, change,
+focus, keypress, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+•Creates a control that looks the same
+across all browsers
+Floats dctInputFloatFields.js DCT.InputFloatField •Assigns the validation routine to
+validate float values
+•Assigns formatter to format the field
+with commas and currency symbol
+once the user leaves the field
+•Assigns culture symbols to be used
+during formatting and validation
+•Assigns getter method for validation
+routine to strip culture symbols before
+validation checking
+•Sets debug information if Web.config
+key is turned on
+•Sets masking routine to mask invalid
+characters for the float field
+•Sets event listeners for blur, change,
+focus, and afterrender
+•Fires field processing if the field loses
+focus
+•Notifies focus is set if the field receives
+focus
+115 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

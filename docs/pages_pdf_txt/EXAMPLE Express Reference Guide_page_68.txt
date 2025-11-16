@@ -1,0 +1,15 @@
+bindingConfiguration="GeocodeUSAddressSoapBinding" contract="GeocodeUSAddress"
+name="GeocodeUSAddressPort" />
+</client>
+</system.serviceModel>
+</configuration>
+Installing Pitney Bowes Address Verification
+To install Pitney Bowes Address Verification:
+1.Make sure EXAMPLE Server ®and EXAMPLE Express ®are installed before installing Pitney Bowes Address
+Verification.
+2.Download the appropriate installation file from the Duck Creek Technologies, Inc. Customer Support Site.
+3.Double-click the installation file.
+4.Select an existing installation instance to modify it, or choose to install a new instance.
+5.Name the instance of Pitney Bowes Address Verification.
+6.Click Next .
+68 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

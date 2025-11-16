@@ -1,0 +1,19 @@
+2.Use the 7-pixel wide slice on the left side of the image as a guide for creating the left, middle, and right slices of
+the button.
+3.On the Filemenu, click Save for Web and Devices .
+The Save dialog box appears.
+4.Navigate to the C:\Program Files\Duck Creek
+Technologies\Express\Skins\AvantGarde2\images\ directory, name the file g-btn-slice.png , and then
+click Save .
+The slice will now be used in the buttons.css file as the background image for your new button style.
+Custom Containers
+You can create custom containers (elements containing other HTML elements) for use with the Avant Garde 2 skin
+using the following files:
+•customContainers.css – Contains style definitions for seven built-in custom containers. For more information,
+seecustomContainers.css .
+•ccTemplate.psd – Pre-divided template for creating a custom container. For more information, see
+ccTemplate.psd .
+•custom-cc.css – Location where custom containers are defined. For more information, see custom-cc.css .
+customContainers.css
+The customContainers.css file contains style definitions for the following built-in custom containers.
+102 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

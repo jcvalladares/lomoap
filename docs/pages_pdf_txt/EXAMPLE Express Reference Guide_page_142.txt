@@ -1,0 +1,45 @@
+•If you create backup copies of ContentMap files, move those files to a different directory, or do not include the
+specified text in the file name.
+•The system loads map files in the following order:
+◦[MapFile].xml
+◦[MapFile]*.xml
+◦Custom[MapFile].xml
+Customizing ContentMap Files
+To create a new content page, you must:
+1.Add the new class to a class library to build the custom XML content. For more information about adding a new
+class, see Adding a New Class (below).
+2.In the Global Root Directory\Express\Skins\CustomSkin\xsl directory, create an .xsl file to handle the content of
+the page.
+3.Publish the new content to the ContentMap.xml file. For a description of the attributes of each <content> entry,
+see<content> Attributes (below).
+4.(Optional) Extend the ApplicationLayoutMap.xml file to contain the new content item. For information about
+customizing this file, see Customizing ApplicationLayoutMap.xml .
+Adding a New Class
+The base class for any content page is based on the following class. Each derived content page overrides the
+Process() method to build the XML content for the page:
+namespace DuckCreek.OnDemand
+{
+/// <summary>
+/// Base Class for each content page in the OnDemand framework
+/// </summary>
+public class ContentPage
+{
+public ContentPage()
+{
+}
+public virtual void Process(PageState state,
+System.Collections.Specialized.NameValueCollection requestForm)
+{
+}
+public virtual string MenuName(ContentFactory factory, string ContentName)
+{
+// default will get menu name from the factory map file, derived classes may
+override for special behavior.
+XmlElement Elem = factory.GetEntry(ContentName);
+return (Elem == null)? "" : Elem.GetAttribute("menu");
+}
+}
+}
+The following is an example of a new class in a class library. The class should be derived from the ContentPage and
+implement an override to the Process() method that creates the XML content for the page. In this example, the
+142 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,37 @@
+Creating a Custom Skins Directory
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTCore or AvantGarde
+directories. All files in these directories are overwritten during upgrades. Instead, you must create a custom
+skins directory (copied from the AvantGarde directory) and modify the files in this directory.
+To create a custom skins directory:
+1.In the Global Root Directory \Express\Skins directory, copy the AvantGarde directory and paste it in the desired
+location within the Express directory.
+2.Rename the directory.
+3.Make any desired customizations in the new directory. Use the information in this section to help you customize
+the system.
+Once you have created a custom skins directory, you must configure EXAMPLE Express ®to run using your
+customized skin.
+To configure EXAMPLE Express ®to use your customized skin:
+1.Open the Edit Configuration Utility.
+2.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+3.Under Mode , click Form .
+4.On the Web Config tab, in the list of settings, click XSLTDir .
+5.In the value text box, enter the relative path to the custom directory from the Global Root Directory \Express
+directory (for example, Skins\MySkins ).
+6.Click Save .
+7.Click Close .
+Overriding DCTCore Files
+Customizing skins sometimes requires that you override files in the DCTCore directory. To do this, you must create a
+custom skins directory, copy the desired templates or functions from the DCTCore files to that directory, and then
+make your customizations. Files in the custom skins directory are called after files in the DCTCore directory and
+therefore take precedence. For information about creating a custom skins directory, see Creating a Custom Skins
+Directory .
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTCore or AvantGarde
+directories. All files in these directories are overwritten during upgrades. Instead, you must create a custom
+skins directory (copied from the AvantGarde directory) and modify the files within it.
+Overriding XSL Files
+To override DCTCore .xsl files:
+1.Create a custom skins directory. For information about creating a custom skins directory, see Creating a Custom
+Skins Directory .
+2.Copy the templates you wish to change from DCTCore to the appropriate files in the custom skins directory.
+3.Make customizations to the templates in the custom skins directory.
+77 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,19 @@
+2.Use the 7-pixel wide slice on the left side of the image as a guide for creating the left, middle, and right slices of
+the button.
+3.On the Filemenu, click Save for Web and Devices .
+The Save dialog box appears.
+4.Navigate to the C:\Program Files\Duck Creek
+Technologies\Express\Skins\AvantGarde2\images\ directory, name the file g-btn-slice.png , and then
+click Save .
+The slice will now be used in the buttons.css file as the background image for your new button style.
+Creating a Custom Skins Directory
+When customizing EXAMPLE Express ®skins, do not modify any files in the DCTBase or AvantGarde2.1
+directories. All files in these directories are overwritten during upgrades. Instead, you must create a custom
+skins directory (copied from the AvantGarde2 directory) and modify the files in this directory.
+To create a custom skins directory:
+1.In the Global Root Directory \Express\Skins directory, copy the AvantGarde2 .1directory and paste it in the
+desired location within the Express directory.
+2.Rename the directory.
+3.Make any desired customizations in the new directory. Use the information in this section to help you customize
+the system.
+123 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

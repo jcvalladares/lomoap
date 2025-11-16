@@ -1,0 +1,46 @@
+The following is an excerpt from a ContentMap.xml file:
+<contentMap>
+<content name="admin" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentAdmin" menu="" useXmlPage="false" loadCache="1"/>
+<content name="adminDetail" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentAdminDetailEdit" menu="" useXmlPage="false"
+loadCache="1"/>
+<content name="messages" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentMessages" menu="" useXmlPage="false"
+loadCache="1"/>
+<content name="message" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentMessage" menu="" useXmlPage="false"
+loadCache="1"/>
+<content name="messageNew" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentMessageNew" menu="" useXmlPage="false"
+loadCache="1"/>
+<content name="messageUserList" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentMessageUserList" menu="" useXmlPage="false"
+responseType="text/xml" loadCache="1"/>
+<content name="messageDetail" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentMessage" menu="" useXmlPage="false"
+loadCache="1"/>
+<content name="client" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentClient" menu="" useXmlPage="false" loadCache="1"/>
+<content name="clientInfo" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.ContentClient" menu="" useXmlPage="false" loadCache="1"/>
+</contentMap>
+Any .xml file in the directory specified by the ContentFactory configuration setting in the Express\Web.config
+file with a name that includes the word custom and the text also specified in that setting (out of the box, this is
+ContentMap ) will load into EXAMPLE Express ®as a map file containing content functions. For more
+information, see Adding Custom Pages .
+For information about customizing the ContentMap.xml file, see Adding Custom Pages .
+PostActionMap.xml
+The PostActionMap.xml file contains a list of all Express Actions available in EXAMPLE Express ®. Each <action> entry
+is identified by a unique name that specifies the action to be processed when that action is requested. The OnDemand
+Framework creates a new instance of the specified class for the requested action item. Each implementation may
+provide a unique assembly and class for each named action and add any additional actions necessary. The custom
+action classes must inherit from the DuckCreek.OnDemand.PostAction class found in the DuckCreek.OnDemandLib
+assembly and must override the Process() method:
+public override void Process(PageState state,
+System.Collections.Specialized.NameValueCollection requestForm)
+The following is an excerpt from a PostActionMap.xml file:
+<actionMap>
+<action name="login" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.PostLoginGuest" />
+40 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

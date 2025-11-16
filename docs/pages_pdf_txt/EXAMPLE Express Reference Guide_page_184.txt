@@ -1,0 +1,29 @@
+null Text string.
+GuestUserName
+Username for guest access to EXAMPLE Express ®.
+Default Valid
+null Text string.
+InitVector
+Encryption key used for authentication in EXAMPLE Express ®and EXAMPLE Server ®. The value of this setting must
+be identical when used in multiple config files. (This setting is not included in the out-of-the-box Express\Web.config
+file, but it can be added manually.)
+Default Valid
+N/A Any ASCII text string. Should be 16 characters long for maximum encryption strength.
+InstantShred
+Boolean value that indicates whether information entered into EXAMPLE Express ®should be immediately distributed.
+Default Valid
+0 •0— Write information to the queue for later distribution.
+•1— Immediately distribute data to the database (if UseShredding is also set to 1). This option uses
+the <OnlineData.storePolicyRq> request or the <OnlineData.storeTransactionRq> request to
+distribute the data.
+LogoutURL
+This setting determines the page to which EXAMPLE Express ®sends a user upon logging out.
+Default Valid
+null •null— Send the user to the EXAMPLE Express ®Login page.
+•Valid URL — Send the user to the specified URL.
+MailTo
+E-mail address to which support issues should be directed. If a user selects to send a support e-mail from EXAMPLE
+Express ®, the e-mail is sent to the recipient specified by this setting.
+Default Valid
+support@mycompany.com Any valid e-mail address.
+184 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

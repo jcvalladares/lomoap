@@ -1,0 +1,13 @@
+Installing the Accenture Duck Creek Claim Components
+With the 4.3.2 release, the EXAMPLE Platform ®integration with Accenture Claim Components covers Commercial
+Property, Personal Auto, Workers Comp, and General Liability. Other lines of business will be included with future
+releases.
+When the EXAMPLE Platform ®is installed to use the Claim Components, the installation is done in two steps. The first
+is an EXAMPLE Server ®install that contains the Claim Components Requestmap, DLL files, <Get.LossHistoryRq>
+request, and Web.config entries added for the call to the Claim Components . The second is a content install that will
+include the necessary ManuScripts and XSL transforms to generate the Loss History page in EXAMPLE Express ®. For
+information on installing the EXAMPLE Server ®Claim Components integration, see EXAMPLE Server ®Installation . For
+information about obtaining and installing the Claim Components content files, please contact your Account Manager.
+Information about the Accenture Claim Components can be found at http://www.accenture.com/us-en/Pages/service-
+insurance-claim-components-summary.aspx .
+219 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

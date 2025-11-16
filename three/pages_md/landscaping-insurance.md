@@ -1,0 +1,4 @@
+# Berkshire Hathaway Three Landscaping Insurance
+
+## Summary
+Berkshire Hathaway Three provides a comprehensive coverage package for landscaping businesses, covering liability, general liability, professional liability (E&O), employment practices liability, cyber liability, data compromise, incident response, property & business interruption, fire, theft, flood & water damage, wind & hail, tools & equipment, business auto collision, comprehensive, auto liability, hired & non-owned workers compensation, lost wages, and medical expenses. The policy is designed to be simple and cost-effective, with few exclusions and no fine print. It backs its coverage by the financial strength and reputation of Berkshire Hathaway. The company offers a convenient online quoting system, allowing customers to quickly obtain their quote and start setting up their business.

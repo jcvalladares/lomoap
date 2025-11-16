@@ -1,0 +1,28 @@
+EXAMPLE Server ®Request: OnlineData.deleteAttachmentRq
+details
+Updates the details of a quote or policy in the database.
+HTML Form Fields:
+Field Description
+_SaveReason User-entered comment in the History table.
+_clientName Data placed at client/name
+_contactName Data placed at client/contactName
+_phoneNumber Data placed at client/phoneNumber
+_phoneExtension Data placed at client/phoneExtension
+_status Data placed at policy/status
+_LOB Data placed at policy/LOB
+_policyNumber Data placed at policy/policyNumber
+_effectiveDate Data placed at policy/effectiveDate
+_expirationDate Data placed at policy/expirationDate
+_currentPremium Data placed at policy/currentPremium
+_address1 Data placed at mailingAddress/address1
+_address2 Data placed at mailingAddress/address2
+_city Data placed at mailingAddress/city
+_state Data placed at mailingAddress/state
+_ZIP Data placed at mailingAddress/ZIP
+EXAMPLE Server ®Request: OnlineData.setDetailsRq
+download
+Sends a copy of the XML image of the specified quote or policy to the browser.
+HTML Form Fields:
+Field Description
+_QuoteID ID of the quote or policy to download.
+201 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

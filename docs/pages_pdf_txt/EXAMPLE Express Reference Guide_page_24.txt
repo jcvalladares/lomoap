@@ -1,0 +1,36 @@
+Delete
+In the list of notes for a given quote or policy, click Delete
+ . This will remove the note from the
+users list and set the status to Mark for Delete in the database. Deleting a note will not remove the it
+from the database.
+Users must have the Security Level CarrierAdmin (SecLevel_CarrierAdmin) security level to
+delete a note. The delete icon will not display for other users.
+In addition to viewing notes from the Notes page, users can add and view notes associated with a specific policy from
+the Policy Details page. For information about additional functionality Policy Details page and its notes section, see
+Policy Details . For general information about customizing EXAMPLE Express ®pages, see Customizing EXAMPLE
+Express ®Skins .
+Batch Reports
+The Batch Reports page provides the ability to view results of batch processes performed by the system. Users can
+drill down into individual batch reports and view the policies or notifications involved in a particular batch process, and
+whether the actions performed on each policy or notification succeeded or failed. From this page, EXAMPLE Express ®
+users can open any policy or notification listed and perform any necessary actions.
+When viewing a batch report for policies, the user can only see those policies for which he or she has the
+ViewQuotes privilege.
+The Batch Reports page can be customized. For general information on customizing out-of-the-box EXAMPLE
+Express ®pages, see Customizing EXAMPLE Express ®Skins .
+Search
+EXAMPLE Express ®provides two types of searches for clients, quotes, and policies: a Quick Search feature available
+from anywhere in the system, and a more advanced Search page.
+Both the Quick Search feature and the Search page can be customized. For information, see Customizing Search
+Options . For general information on customizing out-of-the-box EXAMPLE Express ®pages, see Customizing
+EXAMPLE Express ®Skins .
+Quick Search
+The Quick Search feature is available from anywhere in the system and allows users to search for policies and quotes
+by policy or quote number, or for clients by client name or phone number. When searching by policy or quote number
+or by client name, users can enter any part of the policy/quote number or client name. When searching by phone
+number, users must enter the entire number.
+When searching for a policy or quote, the search results will include policies and quotes from all entities where the user
+has the ViewQuotes privilege. When searching for a client, the search results will include all clients from all entities
+where the user has the ViewClients privilege and where the client has a quote for an entity to which the user belongs.
+The Quick Search feature appears as follows:
+24 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

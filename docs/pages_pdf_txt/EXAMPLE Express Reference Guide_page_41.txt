@@ -1,0 +1,45 @@
+<action name="loginGuest" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.PostLoginGuest" />
+<action name="switchUser" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.PostSwitchUser" />
+<action name="load" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.PostLoadQuote" />
+<action name="newQuote" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.PostNewQuote" />
+<action name="save" assembly="DuckCreek.dctPASLibrary.DLL"
+typeName="DuckCreek.OnDemand.PostSaveQuote" />
+</actionMap>
+Any .xml file in the directory specified by the PostActionFactory configuration setting in the
+Express\Web.config file with a name that includes the word custom and the text also specified in that setting
+(out of the box, this is PostActionMap ) will load into EXAMPLE Express ®as a map file containing Express
+Actions. For more information, see Adding Custom Express Actions .
+For information about customizing the PostActionMap.xml file, see Adding Custom Express Actions .
+ApplicationLayoutMap.xml
+The ApplicationLayoutMap.xml file contains all navigation elements and dashboard pages for each type of user.
+Out of the box, the ApplicationLayoutMap.xml file defines navigation elements and dashboard pages for the following
+groups of users:
+•Agent
+•Underwriter Assistant
+•Underwriter/Underwriter Manager
+The following is an excerpt from an ApplicationLayoutMap.xml file:
+<applicationLayoutRoot>
+<applicationLayout id="AgentPAS" caption="Policy" roles="Agent" image="Nav/
+topNavPolicy.gif" application="PAS" default="1">
+<menu name="PAS" startPage="dashboardHome">
+<menuItem id="Home" caption="Policy Dashboard" content="dashboardHome"
+action="" java="submitPage" location="header" consumer="0" guest="0" login="1"
+edit="0" security="15" roleBased="1" multiAgency="0" hideInPortfolio="0"/>
+<menuItem id="Diary" caption="Notifications" content="messages" action=""
+java="submitPage" location="header" consumer="0" guest="0" login="1" edit="0"
+security="15" roleBased="1" multiAgency="0" hideInPortfolio="0"/>
+<menuItem id="TaskMngmt" caption="Tasks" content="taskInfo" action=""
+java="submitPage" location="header" consumer="0" guest="0" login="1" edit="0"
+security="15" roleBased="1" multiAgency="0" hideInPortfolio="0">
+</menuItem>
+<menuItem id="Batch" caption="Batch Reports" content="batchProcess" action=""
+java="submitPage" location="header" consumer="0" guest="0" login="1" edit="0"
+security="15" roleBased="1" multiAgency="0" hideInPortfolio="0">
+<menu name="Default" portal="PAS">
+<menuItem id="BatchPolicy" caption="Batch Policy" content="batchPolicy"
+action="" java="batchSelectTab" location="header" consumer="0" guest="0" login="1"
+41 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

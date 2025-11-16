@@ -1,0 +1,65 @@
+Scheduling
+Planned
+Installment
+Frequency
+CodeThe frequency at
+which billing occurs
+on the account
+level.Monthly Monthly
+Bill
+Production
+Offset DaysThe number of days
+between the invoice
+date and the due
+date. Determines
+when the invoice is
+generated.Any positive
+number between
+1 and 31.20
+EFT Draw
+Offset DaysThe number of days
+between EFT
+invoice date and the
+due date. This value
+is added to the EFT
+invoice date to
+determine the EFT
+draw date.Any positive
+number between
+1 and 31.3
+Out of Cycle
+Bill Allowed
+IndicatorDetermines whether
+an out of cycle bill is
+allowed.Select check box
+to allow.Not selected
+EFT Pre Note
+IndicatorDetermines whether
+the account sends
+pre-notes when it is
+first set up on EFT.Select check box
+to allow.Not selected
+Default Policy
+Plan
+Manuscript IDSpecifies the ID of
+ManuScript being
+used.Any valid
+ManuScript ID.Billing_PolicyPlanSetup_TemplateFull_1_0_0_0
+Disbursement
+Disbursement
+Method CodeDetermines the
+method by which
+disbursements will
+be sent to the payee
+on the account.•Check
+•EFT
+•Credit CardCheck
+Hold
+Disbursement
+IndicatorDetermines whether
+the account allows
+for automatic
+disbursement
+requests.Select check box
+to allow.Not selected
+24 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

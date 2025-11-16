@@ -1,0 +1,37 @@
+4.Verify that the EXAMPLE Express ®home page says “Welcome to the Policy Administration Dashboard, Express
+Admin”.
+5.In the Skins\AvantGarde2\xsl\localization\ directory, create a copy of the
+DefaultDictionary.resources file and name it DefaultDictionary.fr.resources.
+6.Edit the DefaultDictionary.fr.resources file you just created as desired. For information about editing resource
+files, see Editing Resource Files .
+7.Add or edit the WELCOME_PAS_DB string, and give it a unique value such as “Welcome to the Policy
+Administration Dashboard,” in French.
+8.Modify your browser language settings and verify that the Policy Administration dashboard now reads, "Welcome
+to the Policy Administration Dashboard," in French. For information about changing your browser language, see
+Changing Browser Languages .
+JavaScript
+JavaScript code uses the same resource files as XSLT code, but those resource files are available in a format that is
+natural to the JavaScript language. All strings stored in the resource file are converted into globally available string
+variables. For example, the DefaultDictionary.resources file gets converted at runtime to these lines of JavaScript
+code:
+DCT.Strings.TEST = "Test";
+DCT.Strings.WELCOME_PAS_DB = "Welcome to the Policy Administration Dashboard,";
+As a result, hard-coded strings throughout the JavaScript code can be replaced with references to these string
+variables to achieve localization. The skins will automatically set the variable appropriately based on the language
+specified in the browser.
+To make accessing string variables easier, you can use the T() function. This function, declared in EXAMPLE Express ®
+skins, translates values by finding its value in the DCT.String namespace. For example:
+T('TEST')
+T('WELCOME PAS DB')
+One benefit of using the T() function is that if the key is not present in the DCT.Strings namespace, it is returned as if it
+were the value.
+The following table displays some examples of keys and the values returned by each.
+Key Value Returned
+T('TEST') // Test
+DCT.Strings.TEST Test
+T('MISSING KEY') // MISSING KEY
+DCT.Strings.MISSING KEY Undefined
+To use these strings:
+•Use the DCT.Strings namespace or the T() function as desired in any JavaScript in the skin.
+The Avant Garde 2 skins are configured to make these string variables available on any page.
+94 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

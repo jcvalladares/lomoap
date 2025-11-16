@@ -1,0 +1,44 @@
+EFT Draw
+Offset Days10
+Target Draw
+Days16
+Policy
+Effective
+DateJanuary
+16
+Draw
+Transmission
+Offset Days2
+Policy Issue/
+Entry DateJanuary
+31
+EFT Out of
+Cycle Draw
+Due to Late
+EntrySelected
+EFT Out of
+Cycle Next
+Draw Offset
+Days7The policy is late entered because sufficient time (10 days) does not exist for the EFT
+draw between the Policy Issue/Entry Date and the Policy Effective Date. Because the
+value of the EFT Out of Cycle Next Draw Offset Days is 7, there is not sufficient time for
+the EFT draw before the next scheduled draw on February 16, so no out of cycle
+installment is inserted. Depending on the value for the Late Entered Strategy Code in
+thePolicy Plan Setup , the missed installment will either be caught-up with the next
+installment or spread over subsequent installments.
+Late Entered Strategy can be used for both single and multiple policy accounts. Missed installments are included in the
+Installment Schedule, which is accessible from the left navigation panel from the Account Home page.
+Change the date filter on the Installment Schedule page to view missed installments. Depending on the value
+for the Late Entered Strategy Code in the Policy Plan Setup , the missed installment will either be caught-up
+with the next installment or spread over subsequent installments.
+To use the Late Entered Strategy feature:
+1.In the Billing Account Plan Setup Base 1.0.0.0 ManuScript, specify the following values:
+If the value in the EFT Out of Cycle Next Draw Offset Days is not met, the out-of-cycle draw is not
+processed. Depending on the value for the Late Entered Strategy Code in the Policy Plan Setup , the
+missed installment will either be caught-up with the next installment or spread over subsequent
+installments.
+◦Set the EFT Out of Cycle Draw Due to Late Entry parameter to True (1).
+◦Set the EFT Out of Cycle Next Draw Offset Days parameter to specify the number of days before the next
+scheduled draw that the out-of-cycle draw should be processed. This setting can be 0which does not
+specify a number of days and means the installment is automatically processed.
+51 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

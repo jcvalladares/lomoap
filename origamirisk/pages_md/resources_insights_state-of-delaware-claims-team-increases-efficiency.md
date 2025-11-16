@@ -1,0 +1,4 @@
+# Origami Risk's Impact on the State of Delaware's Claim Team
+
+## Summary
+Origami Risk significantly improved the State of Delaware's claim team's efficiency with its cloud-based platform. The company's intuitive interface and streamlined workflows reduced data entry errors, eliminated double-entry processes, and enabled efficient communication with third parties. The unique workflows for mailbox claims further enhanced the claims management experience. The company has since implemented similar improvements in other departments, demonstrating its ability to adapt to changing requirements and improve operational efficiency.

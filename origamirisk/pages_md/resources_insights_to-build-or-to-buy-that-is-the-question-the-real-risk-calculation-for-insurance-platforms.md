@@ -1,0 +1,4 @@
+### Title: **Origami Risk: The Real Risk Calculation for Insurance Platforms**
+
+### Summary:
+Insurance companies are facing rapid changes driven by technological advancements, regulatory scrutiny, and evolving customer expectations. This paper explores the decision between building or buying a modern insurance platform, focusing on five key dimensions: control, cost, agility, scalability, and risk. The authors highlight the benefits and drawbacks of each approach, emphasizing the importance of aligning with the right strategy based on an understanding of the company's needs and goals. The guide provided, "From Legacy to AI: The Insurance Platform Modernization Playbook," offers stakeholder-specific tips to help build alignment across the C-suite.

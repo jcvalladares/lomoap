@@ -1,0 +1,33 @@
+deleteMessage Deletes the specified notification from the database.
+deleteTaskAttachment Removes an attachment from a task.
+details Updates the details of a quote or policy in the database.
+download Sends a copy of the XML image of the specified quote or policy to the browser.
+duplicate Duplicates the specified quote or policy in the database.
+initAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit attribute
+set to 1. Loads the Policy Forms page.
+initPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request with the forceInit attribute set to 1. Loads
+the Policy Forms page.
+issue Saves the active quote or policy to the database using the
+<OnlineData.storeTransactionRq> request.
+load Loads the specified quote or policy into the session and invokes the interview
+process of the associated ManuScript.
+loadHistoryTx2 Loads the specified history image of a quote or policy into the session and invokes
+the interview process of the associated ManuScript.
+loadPortfolio Loads the specified Portfolio into the session and invokes the interview process of
+the associated ManuScript.
+login Logs the user into EXAMPLE Server ®and begins a new EXAMPLE Express ®
+session.
+messageDetail Updates the active notification in the database using the interview content of a
+Message Detail ManuScript.
+newMessage Displays a New Message page (message.xsl, or—if a Message Detail ManuScript
+is used—messageDetail.xsl). Performs no database action. Out-of-the-box pages
+for EXAMPLE Express ®4.0 are not designed to use this action.
+newNotification Displays a Send a Notification page (messageNew.xsl, or—if a Message Detail
+ManuScript is used—messageDetail.xsl). Performs no database action.
+newQuote Creates a new quote in the active session, invoking the interview process of the
+specified ManuScript. Performs no database action.
+newTask Adds a new task based on the task record located in the session at the path
+_TaskData/TaskRecord.
+59 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,22 @@
+In addition to viewing notifications from the Notifications page, users can also view notifications associated with a
+specific policy on that policy's Policy Details page. For more information about the Policy Details page and its
+notifications section, see Policy Details .
+For information about customizing notifications, generating notifications automatically, or setting up batch processes for
+notifications, see Customizing Notifications . For general information about customizing EXAMPLE Express ®pages,
+seeCustomizing EXAMPLE Express ®Skins .
+New Notification Page
+Users can create and send new notifications using the New Notification page (accessed by clicking Send a
+Notification on the main Notifications page). This page can easily be customized to meet each Carrier's unique needs
+through one of two approaches:
+•A system page
+•A system ManuScript
+You can send a notification that will be associated with a specific policy from the Policy Details page. All
+users with the ViewNotifications privilege at the entity associated with that policy will be able to view the
+notification on the Policy Details page.
+EXAMPLE Express® System Page
+Carriers can use a built-in New Notification system page that allows users to specify recipients for the notification, the
+type of notification, a subject for the notification, and the text of the notification. This page provides a simple,
+straightforward method for creating notifications, and requires very little customization.
+Out of the box, EXAMPLE Express ®uses the New Notification system page, but Carriers can modify their
+implementation to use a Message Detail ManuScript.
+10 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

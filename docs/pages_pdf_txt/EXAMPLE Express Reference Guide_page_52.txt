@@ -1,0 +1,32 @@
+mm-dd-
+yyyymonth-day-year format
+dd-mm-
+yyyyday-month-year format
+yyyy-mm-
+ddyear-month-day format
+MMMM d,
+yyyyLong date format such as January 1, 2007 .
+d Short date format (such as 01-01-2007 ) appropriate to the culture as determined by browser
+settings.
+D Long date format (such as Monday, January 1, 2007 ) appropriate to the culture as
+determined by browser settings.
+This mask should only be applied to read-only fields.
+Boolean
+The default display for a Boolean field is a check box.
+Format Mask Output
+radio Displays a Boolean field as side-by-side Yes and No option buttons.
+radio:1 Displays a Boolean field as above/below Yes and No option buttons.
+Other (with options)
+The default display for defined options is a combo box.
+Format Mask Output
+radio Displays each as an option button in a single row.
+blankOption:(select) (select) will appear as a default in a drop-down list of options, and may be replaced
+in the mask with any text.
+Custom Format Masks
+There are two types of custom format syntax: numeric and character. The first character of the format indicates
+the type of formatting:
+•Numeric format is indicated by a first character of # or 0.
+•Character formatting is indicated by the @ character. The edit mask string immediately follows the @
+character, and consists of three fields separated by semicolons. The first part of the mask is the mask
+itself. The second part is the character that determines whether the literal characters of the mask are
+52 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

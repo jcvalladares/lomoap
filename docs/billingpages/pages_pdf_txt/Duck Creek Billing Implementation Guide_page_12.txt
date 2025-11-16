@@ -1,0 +1,10 @@
+•Payment and payment allocation details.
+•A list of any Items in Suspense for the account.
+•Transferring payments from one account to another.
+•Transferring policy terms from one account to another.
+•Manually allocating payments.
+•Adding notes to an account.
+The Policy Term Summary Page
+The Policy Term Summary page design echoes that of the Account Home page, and provides easy-to-use access for
+policy term details.
+12 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

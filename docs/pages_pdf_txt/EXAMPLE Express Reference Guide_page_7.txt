@@ -1,0 +1,13 @@
+The New Agency Signup page can be customized. For general information on customizing out-of-the-box EXAMPLE
+Express ®pages, see Customizing EXAMPLE Express ®Skins .
+Policy Administration Dashboard
+The Policy Administration Dashboard provides a summary view of everything going on in the policy administration
+system and quick access to frequently performed activities (such as starting a new quote). Summary information can
+include:
+•Recently accessed quotes and policies – The dashboard displays the last five policies and quotes that the
+logged-in user has accessed.
+•Recent notifications – The dashboard displays the five most recent notifications that were sent to all users, sent
+to the logged-in user, or sent to any entities at which the user has been assigned ViewNotifications privileges.
+•Tasks – The dashboard displays tasks assigned to the user that are due soon from all task queues at which the
+user has been assigned ViewTasks privileges.
+7 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

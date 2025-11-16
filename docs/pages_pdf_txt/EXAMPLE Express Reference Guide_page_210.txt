@@ -1,0 +1,35 @@
+_taskStatusCode Status to set the task to. Options are:
+◦OPN — Open
+◦COM — Complete
+◦CLS — Closed
+◦DEL — Deleted
+_taskStatusReasonCode (Optional) Reason code for the status. This field can be any status listed in the
+DC_PLT_SupportCodeLists table in the ExampleData database. Out of the box, the
+only valid option is declined (DEC).
+_percentageComplete (Optional) Integer from 0 to 100 describing the percentage of the task that is
+complete.
+_taskLockingTS Encoded binary value that indicates the last time the task data was read and
+prevents multiple users from modifying a task at the same time. This value is
+generated from the <Task.getRq> request or the <Task.listRq> request.
+EXAMPLE Server ®Request: Task.setStatusRq
+signup
+Creates an agency signup request and sends an e-mail to the recipient specified by the MailTo configuration setting in
+the Express\Web.config file.
+HTML Form Fields:
+Field Description
+_email E-mail address of the person requesting the account.
+_userName Username for the account.
+_password Initial password for the account.
+_fullName
+_email
+_name
+_contact
+_phone
+_extension
+_address1
+_address2
+_city
+_state
+_zipAgency sign-up XML record.
+EXAMPLE Server ®Request: OnlineData.addAgencySignupRq
+210 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

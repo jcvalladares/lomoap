@@ -1,0 +1,35 @@
+Enabling the Automated Letter Generation Feature
+To use this feature following ManuScript customization:
+1.Navigate to the Edit Configuration Utility (located at Global Root Directory\Util\EditConfig.exe), select the
+appropriate Virtual Directory, and open the Server.config file.
+2.In the ExternalDocumentsFolderRootPath section, locate the UseExternalDocumentInterface section and change
+the default value of False toTrue .
+3.Click Save , and then click Bounce.
+The Automated Letter Generation feature is now enabled.
+For more information, contact your Account Manager.
+Troubleshooting
+Troubleshooting Scheduled Activities
+Duck Creek Billing™ uses two services for scheduled activities processing:
+•The Duck Creek Scheduled Requests EXAMPLE Billing Components 0
+•The DuckCreek_Async_Request_Queue_ EXAMPLE AsynceQueue 0
+If scheduled activities do not work as expected, verify that the Duck Creek Scheduled Requests EXAMPLE
+Billing Components 0 and the DuckCreek_Async_Request_Queue_ EXAMPLE AsynceQueue 0 services are
+running.
+To verify the services are running:
+1.From the Start menu, click Control Panel .
+2.Click Administrative Tools .
+3.Click Services .
+4.Locate and click Duck Creek Scheduled Requests EXAMPLE Billing Components O .
+5.Do one of the following:
+◦Click Start .
+◦Click Restart .
+6.Locate and click DuckCreek_Async_Request_Queue_EXAMPLE AsyncQueue 0 .
+7.Repeat Step 5 .
+Following are the steps involved in scheduled activities processing:
+1.The Duck Creek Scheduled Requests EXAMPLE Billing Components 0 service queries for outstanding scheduled
+activities in the DC_BIL_ScheduledActivities table.
+2.Any outstanding activities are set to process, and a request to process the appropriate activities is sent to the
+server.
+3.The request is processed by the server, and asynchronous activity is scheduled if required.
+4.Any scheduled asynchronous activity is sent to the Semaphore table.
+90 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

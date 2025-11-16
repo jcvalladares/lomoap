@@ -1,0 +1,40 @@
+Customizing Skins Per Role
+While roles and privileges in EXAMPLE UserAdmin™ control server-level permissions, when
+customizing EXAMPLE Express ®to display or hide interface elements for each user, you must modify
+EXAMPLE Express ®skins.
+In EXAMPLE Express ®skins, the system privileges available in EXAMPLE UserAdmin™ are mapped to XSLT
+variables defined in the dctSecurity.xsl file (located in the Global Root Directory \Express\Skins\DCTCore directory).
+This file is imported into the dctContainer.xsl file (also located in the DCTCore directory), where the variables are
+available to any EXAMPLE Express ®page.
+To modify EXAMPLE Express ®skins to hide or display features as appropriate for each type of user:
+•Using the variables specified in the dctSecurity.xsl file, modify each XSL page (located in the Global Root
+Directory \Express\Skins\ CustomSkin \xsl directory) as desired to specify the privileges required for each feature to
+display by referencing those privileges in an xpath expression.
+For example, to conditionally render an element based on the canViewQuotes privilege, wrap its rendering XSL
+statements in an xsl:ifstatement, such as the following:
+<xsl:if test="$canViewQuotes">
+...xsl statements that render the page element …
+</xsl:if>
+To conditionally change the CSS class defined on an element based on a privilege, use an xsl:choose statement,
+such as the following:
+<div id="exampleElement">
+<xsl:attribute name="class">
+<xsl:choose>
+<xsl:when test="$canUpdateClient">
+<xsl:text>elementEnabled</xsl:text>
+</xsl:when>
+<xsl:otherwise>
+<xsl:text>elementDisabled</xsl:text>
+</xsl:otherwise>
+</xsl:choose>
+</xsl:attribute>
+</div>
+Duck Creek Technologies, Inc. reserves the right to change privilege names and how they map to variables in
+future versions. To facilitate future migration processes, use variables to identify the logical right to perform
+the described action instead of literal privilege names.
+Using External Content in EXAMPLE Express®
+Using EXAMPLE Author ®, you can embed content from external URLs in EXAMPLE Express ®to display useful
+information such as:
+•Advertisements on EXAMPLE Express ®pages. Once on the page, the user can make modifications to those
+advertisements without having access to the EXAMPLE Express ®server.
+158 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

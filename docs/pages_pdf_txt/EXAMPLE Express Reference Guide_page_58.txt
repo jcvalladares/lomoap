@@ -1,0 +1,33 @@
+◦Peek for eventField . IfeventField="" , extract preCommand="" from the request and treat it as the
+eventField.
+This scenario will cause the preCommand to execute before the page is rendered and then
+remove that action from the <ManuScript.getPageRq> request. This allows some actions to
+execute completely before the page content is rendered.
+◦If an eventField is specified, peek for the manuscript attribute and execute the field through the
+<ManuScript.getValueRq> request in the specified ManuScript of the interview action. Also, peek for the
+contextPath attribute (if specified) to use as the context path for the <ManuScript.getValueRq> request.
+◦Process any postAction specified in the _postAction form field or the postAction attribute of the
+<ManuScript.getPageRq> request.
+◦Render the content page, using the newly modified interview action request.
+Express Action Commands
+Express Action Description
+activatePolicy Creates a consumer account; returns a clientID, quoteID, and LOB; and then loads
+the specified quote or policy.
+addTaskAttachment Adds an attachment to a task.
+admin Updates administration information.
+assignTask Updates the queue and/or user to which a task is assigned.
+commit, commit2, audit Processes an out-of-sequencetransaction and commits all changes to the
+database.
+consumerConvertToPolicy Moves a quote from the DC_POL_ConsumerQuote table to the Quote and History
+tables.
+consumerCreateAccount Creates a user account for the EXAMPLE Platform ®.
+consumerLoadQuote Loads a quote from the DC_POL_ConsumerQuote table.
+consumerLogin Logs a user in under the proxy account used for consumer access.
+consumerNewQuote Creates a new quote in the DC_POL_ConsumerQuote table.
+consumerReLogin From within EXAMPLE Express ®, logs a consumer user out of the proxy account
+and logs them in to an existing full user account.
+delete Marks or un-marks the specified quote or policy for deletion from the database. The
+specified item is not removed from the database until a purge is performed.
+deleteClient Marks the specified client for deletion from the database. The client is not removed
+from the database until a purge is performed.
+58 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

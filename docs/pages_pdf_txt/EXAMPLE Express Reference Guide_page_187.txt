@@ -1,0 +1,30 @@
+PostActionFactory
+Fully-qualified directory path to the PostAction.xml file (and any custom PostActionMap files). The path specifies the
+directory to use, and the file name (minus the file extension) specifies the base term to use to determine custom
+PostActionMap files.
+Default Valid
+C:\Program Files\Duck Creek Technologies
+.40\Express\App_Data\PostActionMap.xmlValid path, including file name, to the
+PostActionMap.xml file.
+PrintJobAsyncMode
+Controls the asynchronous behavior for the previewAsyncPrintJob and the initAsyncPrintJob Express Actions.
+Default Valid
+2 •2— Asynchronous with a semaphore.
+•3— Place the request in the Asynchronous queue.
+•4— Place the request in the Asynchronous queue and flag it to Auto Close so the session closes
+when the request completes.
+PrintJobAutoRefresh
+Boolean value indicating whether EXAMPLE Express ®should automatically regenerate the forms list (while saving
+previous user selections) when the user loads the Policy Forms page.
+Default Valid
+1 •0— Do not automatically regenerate the forms list.
+•1— Automatically regenerate the forms list.
+PrintPreviewDownloadMode
+This setting determines whether the preview of a form opens a pop-up window with a preview of the form or an Open/
+Save dialog box.
+If the value of this setting is 1, the EXAMPLE Express ®Web site must be in the client browser's list of trusted
+sites for the form to download properly.
+Default Valid
+0 •0— Opens the form in a pop-up window.
+•1— Opens an Open/Save dialog box.
+187 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

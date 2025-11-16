@@ -1,0 +1,4 @@
+## The 80/20 Advantage: Accelerating Insurance Transformation with the Right Balance of Standards and Custom Configuration
+
+### Summary
+The article discusses the importance of a balanced approach to insurance platform transformation, emphasizing the need for a core platform that includes proven out-of-the-box capabilities and allows for customization where necessary. The 80/20 model suggests that 80% of the system should be pre-configured with best practices, while 20% should remain flexible for custom configurations. This approach helps in reducing rework, improving efficiency, and ensuring alignment with industry standards. The article also highlights the benefits of using out-of-the-box standards and provides tips for identifying and leveraging customization where it adds value. Overall, the article emphasizes the critical role of a well-designed core platform in driving successful insurance transformations.

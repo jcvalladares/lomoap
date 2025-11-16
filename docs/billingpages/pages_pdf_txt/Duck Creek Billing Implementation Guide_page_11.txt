@@ -1,0 +1,10 @@
+The Account Home Page
+The Account Home page is the primary workhorse for the Duck Creek Billing™ system, and provides a direct path for
+accessing and managing billing activities at the account level.
+The Account Home page provides quick access to view and work with:
+•The most recent invoice.
+•The account history, sortable by date, activity type, or policy term in the Recent Account Activity list.
+•A list of all policy terms associated with the account, with a link for quick access to the Policy Term Summary
+page for each term.
+•A summary of the account ledger and account details, providing a quick look at the account status.
+11 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

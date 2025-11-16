@@ -1,0 +1,35 @@
+7.Click Save .
+8.Click Close .
+When using the same Message Detail ManuScript with multiple product ManuScripts, the Message
+Detail ManuScript and all product ManuScripts must share the same structure. Make sure that all
+product ManuScripts share a common mapping for any information used by the Message Detail
+ManuScript. There is no system-defined schema for this shared information, but each implementation
+must use the same schema paths for the data to be accessed.
+Customizing the Task Detail ManuScript
+When customizing the New Task and Task Details pages, you can customize the out-of-the-box Task Detail
+ManuScript or configure EXAMPLE Express ®to use a custom Task Detail ManuScript.
+If customizing the New Task and Task Details pages, do not modify the
+DuckCreekTech_TaskDetailManuScript (located in the Global Root Directory \ManuScripts\Admin\US
+directory). Changes made in this ManuScript will be overwritten during upgrade installations. Modify
+the Carrer_TaskDetailManuScript (located in the Global Root Directory \ManuScripts\CarrierAdmin\US
+directory) instead. For additional information, see Customizing the Task Detail ManuScript in
+EXAMPLE Express® Reference Guide .
+Customizing the Out-of-the-Box Task Detail ManuScript
+To customize the out-of-the-box Task Detail ManuScript:
+•In EXAMPLE Author ®customize the Carrier_TaskDetailManuScript as desired. For instructions on creating
+ManuScripts in EXAMPLE Author ®, see the Guide to EXAMPLE Author® .
+Using a Custom Task Detail ManuScript
+To configure EXAMPLE Express ®to use a custom Task Detail ManuScript:
+1.Use EXAMPLE Author ®to create the ManuScript you wish to use for the New Task and Task Details pages. For
+instructions on creating ManuScripts in EXAMPLE Author ®, see the Guide to EXAMPLE Author® .
+An out-of-the-box Carrier Task Detail ManuScript (Carrier_TaskDetailManuScript.xml) is located in the
+Global Root Directory \ManuScripts\CarrierAdmin\US directory. If desired, you can modify this
+ManuScript to contain the desired logic.
+2.Open the Edit Configuration Utility.
+3.In the Virtual Directory list, click the desired EXAMPLE Express ®directory.
+4.Under Mode , click Form .
+5.On the Web Config tab, in the list of settings, click the TaskDetailManuScriptID .
+6.In the value text box, enter the ManuScript ID of the ManuScript to use.
+7.Click Save .
+8.Click Close .
+140 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

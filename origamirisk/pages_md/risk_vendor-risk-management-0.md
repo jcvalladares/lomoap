@@ -1,0 +1,4 @@
+### Title: Origami Risk's Third-Party Risk Management Solution
+
+#### Summary:
+Origami Risk offers a comprehensive third-party risk management solution that centralizes vendor data and workflows, reducing risk, improving collaboration, and acting on insights to protect brands and operations. The solution includes automated processes, due diligence evaluations, ongoing monitoring, and Argos Risk integration, providing real-time visibility and role-based workflows that align with organizational standards. The company is recognized in the 2025 Gartner® Magic Quadrant™ for Governance, Risk and Compliance Tools, Assurance Leaders, demonstrating its effectiveness in managing third-party risk across various industries.

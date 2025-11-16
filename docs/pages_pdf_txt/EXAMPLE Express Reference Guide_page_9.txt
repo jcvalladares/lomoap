@@ -1,0 +1,18 @@
+Out of the box, the notification system provides one-way communication from management (or the system) to
+users. If desired, the notification system can be modified to support two-way communication between users.
+Out of the box, the Notifications page appears as follows:
+From the Notifications page, users can:
+•View received notifications – Users can view notifications sent to them, to all users, or to entities at which the
+user has been assigned the ViewNotifications privilege. Out of the box, most users can only view notifications
+sent to them or to the entities where they have the ViewNotifications privilege. Users with system administrator
+privileges in EXAMPLE UserAdmin™ (the Security Level CarrierAdmin privilege), however, can view all
+notifications in the database by selecting the View Entire Database check box. All users can open individual
+notifications and view details. For more information, see Notification Details Page .
+•Create and send new notifications – Users can create new notifications using an EXAMPLE Express ®system
+page or a customized EXAMPLE ManuScript™. For more information, see New Notification Page .
+•Delete old notifications – Administrators can delete old notifications (if granted the appropriate privilege in
+EXAMPLE UserAdmin™. Deleting a notification removes the notification from the database and from all other
+users' lists of notifications.
+Use caution when deleting notifications. Deleting a notification deletes the notification from the
+database. The notification will be removed from all users’ lists of notifications.
+9 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

@@ -1,0 +1,37 @@
+previewAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit attribute
+set to 0or3. Loads the Policy Forms page.
+previewPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request with the forceInit attribute set to 0or3.
+Loads the Policy Forms page.
+readMessage Displays the Notification Details page (message.xsl, or—if a Message Detail
+ManuScript is used—messageDetail.xsl) for the specified notification.
+refreshAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit attribute
+set to 3. Loads the Policy Forms page and executes the
+<FormsEngine.setPrintJobItemsRq> request with an autoMark attribute set to
+markDefault .
+rescind Reverts the current policy image back to the state of the specified history image,
+retaining records of any transactions that are removed.
+resetManuScriptID Resets the associated ManuScript for the active quote.
+resetSession Clears all session information.
+rollbackHistory Rolls back the transaction records of a policy to the specified history image,
+removing any subsequent transactions and making the specified history image the
+current image. This action then loads the (new) current policy image into the active
+session and invokes the interview process of the associated ManuScript.
+runRulesAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit attribute
+set to 2. Loads the Policy Forms page.
+runRulesPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request with the forceInit attribute set to 2. Loads
+the Policy Forms page.
+save Saves the active quote or policy to the database using the
+<OnlineData.storePolicyRq> request.
+saveMessage Updates the specified message in the database from the HTML form fields on the
+New Message page (message.xsl). Out-of-the-box pages for EXAMPLE Express ®
+4.0 are not designed to use this action.
+saveNotification Updates the specified notification in the database from the HTML form fields on the
+New Message page (messageNew.xsl).
+setActiveAgency Updates the active agency for the logged in user in the EXAMPLE Express ®
+<state> node.
+60 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

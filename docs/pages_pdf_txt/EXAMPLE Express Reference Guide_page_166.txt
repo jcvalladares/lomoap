@@ -1,0 +1,33 @@
+Express Actions
+You can use the following Express Actions to execute notification logic from within a ManuScript. For more information
+about each action or about Express Actions in general, see Express Actions .
+Express
+ActionDescription
+deleteMessage Deletes the specified notification from the database.
+messageDetail Updates the active notification in the database using the interview content of a Message Detail
+ManuScript.
+newMessage Displays a New Message page (message.xsl, or—if a Message Detail ManuScript is
+used—messageDetail.xsl). Performs no database action. Out-of-the-box pages for EXAMPLE
+Express ®4.0 are not designed to use this action.
+newNotification Displays a Send a Notification page (messageNew.xsl, or—if a Message Detail ManuScript is
+used—messageDetail.xsl). Performs no database action.
+readMessage Displays the Notification Details page (message.xsl, or—if a Message Detail ManuScript is
+used—messageDetail.xsl) for the specified notification.
+saveMessage Updates the specified message in the database from the HTML form fields on the New Message
+page (message.xsl). Out-of-the-box pages for EXAMPLE Express ®4.0 are not designed to use
+this action.
+saveNotification Updates the specified notification in the database from the HTML form fields on the New
+Message page (messageNew.xsl).
+Notifications and Policy Data
+When notifications associated with a particular policy are edited using a Message Detail ManuScript, the Message
+Detail ManuScript can access policy data at runtime. This is because the policy data already exists in the session when
+a user creates the policy-specific notification.
+When a user creates a policy-specific notification, the system appends a <messages> element to the policy data.
+EXAMPLE Express ®will update the database with the data in this <messages> element when the notification is saved.
+While the Message Detail ManuScript can pull and use policy data from the session, the EXAMPLE Express ®
+system will only update the database with data in the <messages> element.
+The table below describes the data contained in the <messages> element. For more information about pathing
+notification details, see the MessageDetailSchema.xml file available in the Global Root Directory \Schemas directory.
+Any changes to items marked as read-only in this element are discarded. (Read-only items are extracted
+when the notification content is retrieved from EXAMPLE Server ®and are used for display purposes only.)
+166 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

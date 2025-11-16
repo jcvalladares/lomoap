@@ -1,0 +1,38 @@
+Security
+EXAMPLE Express ®security is controlled through authentication (provided through any of five authentication
+methods available for the EXAMPLE Platform ®) and authorization (provided through EXAMPLE UserAdmin™).
+Authentication
+Authentication is the process that determines whether a user can access the EXAMPLE Platform ®. The
+EXAMPLE Express ®application does not authenticate users itself, but instead can use any of the following five
+authentication methods:
+•EXAMPLE Authentication Server™
+•Database authentication
+•Windows authentication
+•Mixed mode authentication (combines database and Windows authentication)
+•Third party authentication
+EXAMPLE Express ®can be configured to accommodate single sign-on through some of these methods. For
+more information about EXAMPLE Platform ®authentication, single sign-on options, and how to set up each
+authentication method, see the EXAMPLE Authentication Server™ User Guide .
+Authorization
+Authorization is the process that determines what actions a user can perform in the EXAMPLE Platform ®.
+EXAMPLE Express ®authorization is controlled through EXAMPLE UserAdmin™, a powerful, easy-to-use tool
+that allows carriers to organize access permissions according to their distinct organizational needs. EXAMPLE
+UserAdmin™ provides role-based security for EXAMPLE Express ®by allowing administrators to assign system
+privileges and product permissions to users based on their association with one or more entities within a
+carrier's corporate hierarchy. Administrators can grant system and custom privileges to users through the
+assignment of specified roles (underwriter, agent, administrator, etc.) that are specific to each entity.
+EXAMPLE Express ®permissions that can be controlled by EXAMPLE UserAdmin™ include:
+•Which items (policies and quotes, clients, etc.) users can see in the system
+•Which actions users can perform in the system
+•Which products an entity's users can access
+EXAMPLE UserAdmin™ also provides the ability to specify custom privileges that can be used by EXAMPLE
+ManuScripts™ to control properties of individual fields (visibility, limits, defaults, options, workflow, etc.)
+according to the identity of the current user.
+For more information about the security provided through EXAMPLE UserAdmin™, see the EXAMPLE
+UserAdmin™ Overview or the EXAMPLE UserAdmin™ User Guide .
+Though EXAMPLE UserAdmin™ privileges control the actions users can perform on the EXAMPLE
+Platform ®, the pages and features that actually display for each user are controlled through EXAMPLE
+Express ®configuration and skins files. When configuring the EXAMPLE Platform ®, determine what the
+EXAMPLE Express ®display needs are for your users, then modify the EXAMPLE Express ®configuration files
+and skins to display those features as appropriate for each role you have defined in EXAMPLE UserAdmin™.
+36 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

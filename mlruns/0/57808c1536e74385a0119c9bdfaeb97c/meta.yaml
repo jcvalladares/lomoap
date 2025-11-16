@@ -1,0 +1,15 @@
+artifact_uri: file:///home/devuser/projects/coder/mlruns/0/57808c1536e74385a0119c9bdfaeb97c/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 57808c1536e74385a0119c9bdfaeb97c
+run_name: string
+run_uuid: 57808c1536e74385a0119c9bdfaeb97c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763171074039
+status: 1
+tags: []
+user_id: devuser

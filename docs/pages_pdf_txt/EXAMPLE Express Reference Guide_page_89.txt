@@ -1,0 +1,36 @@
+Customizing XSL
+When customizing XSL files, follow the guidelines below.
+Interview Pages
+When customizing interview (ManuScript-driven) pages:
+•Modify the interview.xsl file and follow the guidelines found in Overriding DCTBase Files .
+System Pages
+When customizing or creating system pages, follow the sequence of template calls below for building a page.
+1.Include a template that matches the root of the content for the page.
+2.Within this template, start the process of building the container by calling the buildContainer template in the
+dctContainer.xsl file (located in the Global Root Directory \Express\Skins\DCTBase\xsl\ directory).
+3.Set up the following templates. (These templates will be called by the process begun in Step 2.)
+◦processPageHeader – Controls the header content for the page.
+◦buildLeftPanelContent – Controls the content of the left panel area of the container.
+◦buildPageContent – Controls the main page content.
+4.(Optional) In the buildLeftPanelConten t template, call any of the following component templates:
+◦buildPolicyLeftNavHeader – Controls the header of the left panel.
+◦createSubMenuArea – Renders the left navigation (such as the sub navigation for certain pages).
+◦buildPolicyRelatedTasks – Controls the Policy Actions in the left panel.
+◦buildPolicyLogonItems – Controls the Login Options in the left panel.
+Customizing CSS
+You can customize CSS for EXAMPLE Express ®by:
+•Customizing a set of global .css files that apply across the entire EXAMPLE Express ®application.
+•Customizing individual override files (indicated by the filename x_pagename.css ) that apply to single pages or
+portions of the EXAMPLE Express ®application.
+•Applying custom CSS styles to specific page elements in a ManuScript. These styles are defined in a single
+override file ( x_interview.css ), and are applied to individual fields and page elements in EXAMPLE Author ®. For
+more information about creating and applying custom CSS styles in EXAMPLE Author ®, see Working with CSS
+Override Styles in the Guide to EXAMPLE Author® .
+The x_interview.css file is automatically modified by EXAMPLE Author ®any time styles are edited using
+the CSS Manager in Page Designer. This file does not need to be edited by hand.
+The table below describes the customizable .css files in the Global Root Directory \Express\Skins\ CustomSkin \css
+directory. Use this table to determine which files to modify when customizing CSS.
+File Description
+buttonDefaults.css Contains default styles for buttons. These can be overwritten by defining specific button
+styles in buttons.css.
+89 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

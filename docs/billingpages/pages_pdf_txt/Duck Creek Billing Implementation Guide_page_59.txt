@@ -1,0 +1,34 @@
+8 Select the required Lines of Business for each entity.
+For more information, see Working with Product Authorizations .
+9 Select the parent for the entity. For more information, see Working with Entities .
+This step is not required for the top tier of the hierarchy.
+Creating an Agent Commission Account
+Users create a Direct Bill Commission account type specifically to collect and distribute agent commission. This
+account contains information for each specific agent about that agent's preferred statement format and commission
+payment method.
+The following ManuScripts are used in the customization of the available account options:
+•Billing_Policy_Account_Common_1_0_0_0.xml
+•Billing_Commission_Plans_1_0_0_0
+•Carrier_Billing_Commission_Plans_1_0_0_0
+•Billing_AccountPlanSetup_TemplateDirectBillCommission_1_0_0_0
+•Agent_Plans_1_0_0_0
+•Carrier_ Agent_Plans_1_0_0_0
+Commission payments to agents can be made by check or EFT. When payments are made by check, a file is
+automatically created for use with the Duck Creek Billing™ disbursement interface. When the EFT option is selected,
+the user must enter bank details for the agent, and a commission payment is processed like any other disbursement.
+Any amount that is not paid by EFT or check is returned and applied back to the agent's commission statement to be
+included with the next payment.
+The Commission Account privilege is required for access to the Account Home page for a direct bill
+commission account. For more information, see Creating a Billing User .
+Creating an Agent Account
+To create an agent account:
+1.On the Billing Dashboard, click Create A New Account .
+2.In the Bill Account Class list, click Direct Bill Commission .
+3.Click Search For An Existing Party .
+4.In the I'm looking for list, click Agency .
+5.In the I want to search by list, click Reference Number .
+6.Enter the reference number for the appropriate EXAMPLE UserAdmin™ entity.
+7.Click Search For Party .
+8.Click the appropriate existing party.
+The Create New Account page appears.
+59 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

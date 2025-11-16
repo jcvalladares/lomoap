@@ -1,0 +1,39 @@
+<xsl:variable name="DisableHelpTabbing">
+<xsl:text>1</xsl:text>
+</xsl:variable>
+to:
+<xsl:variable name="DisableHelpTabbing">
+<xsl:text>0</xsl:text>
+</xsl:variable>
+3.Save and close interviewNew.xsl .
+In Lila-based skins, help links are included in the Tabkey navigation by default.
+Setting Up Navigation Classes
+EXAMPLE Express ®skins contain the ability to assign classes to interview (ManuScript) pages created in
+EXAMPLE Author ®Page Designer. These classes, called navigation classes , provide the ability to assign certain styles
+to pages under certain conditions. Because these assigned classes are exposed in the page definition XML, if desired,
+custom skin implementations can also define logic that associates certain behaviors with certain classes. These
+features can be used to implement custom functionality such as stoplight functionality, which can be used to alert users
+to unfinished or unverified work, or to prevent them from moving forward in a business workflow before completing
+specified fields or pages.
+Out of the box, EXAMPLE Express ®includes three preset classes that may be assigned to pages in Page Designer:
+•Complete — All required fields on the page are complete.
+•Incomplete — Required fields on the page are not complete.
+•Caution — All required fields on the page are complete, but verification is recommended before proceeding.
+While users define rules in EXAMPLE Author ®to determine when a page should be associated with each of the above
+classes, the system determines at runtime whether an assigned class is being applied to an active or inactive page. As
+a result, the skin defines a total of six classes: one for each of the above classes when the page is active, and one for
+each of the above classes when the page is inactive. Thus, the skin contains style definition for the following six
+classes:
+•activeTabComplete
+•inactiveTabComplete
+•activeTabIncomplete
+•inactiveTabIncomplete
+•activeTabCaution
+•inactiveTabCaution
+Out of the box, the following styling is associated with each of the out-of-the-box classes. At runtime, the system
+determines whether the page is active or inactive.
+•Complete — Thumbs up sign to the left of the page name on the page tab. (
+ )
+•Incomplete — Thumbs down sign to the left of the page name on the page tab. (
+ )
+174 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

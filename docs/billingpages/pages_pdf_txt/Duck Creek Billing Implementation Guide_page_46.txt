@@ -1,0 +1,34 @@
+Manually Redistributing Installments
+Manual installment redistribution allows customers to have additional time to pay a large amount due, such as final
+audit premiums. When configured, this feature is accessible from the Installment Schedule page as a link in the
+Balance column. The link is only available when the Installment Schedule view is expanded, an open balance exists,
+and the Account Type Code does not equal Agent .
+Installments can be manually redistributed outside the current policy term dates, and any items that have been
+redistributed outside the policy term are catch-up items on the next installment.
+To have the required permissions to manually redistribute an installment, the logged in user must be
+assigned the role of BillingAgent with the BIL_ManualInstallmentRedistribution privilege. This is an out-of-the-
+box privilege assigned to the BillingAgent role. For more information on billing roles and privileges, see
+Creating a Billing Role in the Duck Creek Billing™ User Guide .
+Creating a New EXAMPLE Server ®Request
+The <BillSchedule.redistributeInstallmentBalanceRq> request must be created to control the redistribution. This
+request must specify the BillItemScheduleID , the earliest installment date for the redistribution, and the number of new
+installments to create.
+Redistributed installments will have a different installment type code than regular installments so they can be easily
+identified in the database tables. This change also allows credit allocation to work correctly since the usual method of
+matching debits based on effective and expiration dates will not work with redistributed installments.
+The existing credit allocation processing will be changed to search for debits that could be outside the range of
+installment dates based on their effective and expiration dates.
+Working with a Late Entered Policy
+Through ManuScript configuration, the Late Entered Strategy feature allows a Duck Creek Billing™ user to insert an
+out-of-cycle draw for an EFT invoice account for a late entered new business policy. Out of the box, without the Late
+Entered Strategy feature enabled, when the scheduled invoice day has already been passed in the current month, a
+late entered new business policy installment is added to the next scheduled installment for the account, resulting in as
+much as 31 days of coverage without premium payment.
+TheLate Entered Strategy feature has a positive effect on cash flow and commission authorization, in addition to
+protecting policy equity by minimizing the amount of time coverage is provided without payment.
+TheLate Entered Strategy is valid for a new business premium by EFT invoice only. Other transactions, such
+as endorsements and renewals, are scheduled based on the Late Entered Strategy Code value on the policy
+plan associated with the policy. For more information, see Selecting Policy Plan Options .
+The following table lists the settings that determine the behavior of a late entered new business policy on the
+installment schedule.
+46 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

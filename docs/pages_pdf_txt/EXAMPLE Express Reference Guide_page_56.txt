@@ -1,0 +1,41 @@
+name=”field”>Bind.PreEventField,Billing.SetupBillingPreEventField</rule>
+</ruleset>
+<ruleset>
+<rule type=”RequestName”>ManuScript.getPageRq</rule>
+</ruleset>
+</rulesets>
+If more than one parameter is needed for a particular request, additional parameters can be added by separating them
+with commas, as shown above in the Bind.PreEventField andBilling.SetupBillingPreEventField fields. Rulesets are
+processed in the order they are placed in the Passthrough.config file. The request will pass for the first ruleset that it
+matches and will not continue searching through additional rulesets once a match is found.
+When adding requests to the Passthrough.config file, be aware that adding additional requests may increase
+security risks. Evaluate the risk of each request and consider alternate strategies for achieving the desired
+result.
+System ManuScripts
+Carriers can customize the content, appearance, and behavior of certain EXAMPLE Express ®system pages by using
+customizable EXAMPLE ManuScripts™. The following EXAMPLE Express ®system pages can use a ManuScript:
+•New Quote Selection page – This page appears when a user selects to start a new quote. It is used to provide a
+user-friendly process for selecting the appropriate product ManuScript for a quote. This ManuScript can also be
+displayed as a module on the EXAMPLE Express ®home page. The New Quote Selection ManuScript replaces
+the XSL versions of the New Quote Selection page (new.xsl, newBasic.xsl, and newExtended.xsl).
+•Client Details page – This page appears when a user selects to add a new client or update existing client
+information. This ManuScript gathers and displays all details about a client. There is no XSL version of the Client
+Details page.
+•Send a Notification/Notification Details pages – These pages appear when a user selects to view or create a
+notification. These pages gather and display (respectively) all details of a notification. The Message Detail
+ManuScript replaces the XSL versions of the Send a Notification and the Notification Details pages
+(messageNew.xsl and message.xsl). When these pages are driven by the Message Detail ManuScript, the
+system uses both the Message Detail ManuScript and the messageDetail.xsl page to render the page content.
+•New Task/Task Details pages – These pages appear when a user selects to view or create a task. These pages
+gather and display (respectively) all details of a task. There is no XSL version of the New Task and the Task
+Details pages, but the system uses both the Task Detail ManuScript and the taskDetail.xsl page to render the
+page content.
+For instructions on using system ManuScripts, see Using EXAMPLE Express® System ManuScripts .
+Express Actions
+Users can execute specific EXAMPLE Express ®actions from EXAMPLE ManuScripts™ using Express Actions.
+Express Actions are system-defined actions (defined in the PostActionMap.xml file) that are applied to ManuScript
+pages in Page Designer. Specifically, Express Actions are applied to page actions (buttons and links). Users can
+specify the Express Action to take when the button or link is clicked using the Express Action property of the action.
+For a list of all Express Actions available in the out-of-the-box PostActionMap.xml file or for details about each Express
+Action, see the appendix Express Actions .
+56 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

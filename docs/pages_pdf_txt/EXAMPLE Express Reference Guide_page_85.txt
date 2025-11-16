@@ -1,0 +1,39 @@
+Task
+ManagementtaskManagement.xsl N/A
+New Task Task Detail ManuScript,
+taskDetail.xslThe system uses both the Task Detail ManuScript and
+taskDetail.xsl.
+Task Details Task Detail ManuScript,
+taskDetail.xslThe system uses both the Task Detail ManuScript and
+taskDetail.xsl.
+Other Screens
+Search search.xsl N/A
+Batch Reports batchProcess.xsl,
+x_batchProcess.cssN/A
+Error screen errors.xsl, x_errors.css N/A
+Help
+(annotation
+pop-ups)documentation.xsl N/A
+Account
+summary
+screen for
+consumersConsumer Dashboard
+ManuScript,
+consumerDashboard.xslThis page is used for Consumer Access and is driven by the
+Consumer Dashboard ManuScript. The system also uses
+consumerDashboard.xsl.
+For more information about the Consumer Access feature, see
+Consumer Access in the EXAMPLE Platform® .
+Customizing Shared Components
+To customize components shared by multiple system pages, modify the following .xsl files (in the Global Root
+Directory \Express\Skins\ CustomSkin \xsl directory).
+dctCommonControls.xsl
+The dctCommonControls.xsl file contains the following templates.
+Template Description
+buildActiveSessionSection Controls the active session information that displays in page headers.
+buildPageHeaderSection This deprecated template is included for backwards compatibility.
+processPageHeader Controls page header content.
+buildCurrentFiltersTable This deprecated template is included for backwards compatibility.
+buildOperationsDropdown This deprecated template is included for backwards compatibility.
+bulletinListWidget This deprecated template is included for backwards compatibility.
+85 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

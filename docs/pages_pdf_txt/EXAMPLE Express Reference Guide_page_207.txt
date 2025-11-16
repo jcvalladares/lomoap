@@ -1,0 +1,30 @@
+_subject Subject of the message.
+_parentMessageID If non-zero, message to which this message is a reply.
+_remind Reminder date.
+_userList or _users Array field containing list of user recipients.
+_agencyList or _agencies Array field containing list of agency IDs as recipients.
+_agencyGroupList or _agencyGroups Array field containing list of agency group IDs as recipients.
+_useGlobal or _global Flag indicating whether to use global recipients.
+_clientID If non-zero, client to which the message should be attached.
+_quoteID If non-zero, quote or policy to which the message should be attached.
+_thisSecurityLevel or _securityLevel Security level mask for who can view the message (bit field).
+saveNotification
+Updates the specified notification in the database from the HTML form fields on the New Message page
+(messageNew.xsl).
+HTML Form Fields:
+Field Description
+_messageID ID of the notification to be updated (or 0 for a new notification).
+_sender Username of the sender.
+_body Body of the notification.
+_messageType Type of notification.
+_clientID If non-zero, client to which the notification should be attached.
+_quoteID If non-zero, quote or policy to which the notification should be attached.
+_sendToOption Ifall, indicates to send the notification to all users. Otherwise, system uses the
+_gridSelectionArray field.
+_gridSelectionArray Comma-delimited list of user IDs, entity IDs, or entity group IDs, depending on the value of
+the _pageType field.
+_pageType Type of recipient. Options are:
+•users
+•entities
+•entityGroup
+207 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

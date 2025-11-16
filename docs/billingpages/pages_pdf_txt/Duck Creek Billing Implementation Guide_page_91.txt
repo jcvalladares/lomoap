@@ -1,0 +1,38 @@
+5.The DuckCreek_Async_Request_Queue_EXAMPLE AsyncQueue 0 reads the Semaphore table and executes
+the request.
+6.After the request is completed, the scheduled activity item is set to a status of C (Complete) in the
+DC_BIL_ScheduledActivities table.
+If the scheduled activities fail to process, try the following troubleshooting tips.
+Checking Configuration Files
+Verify that the settings in the DuckCreek.Utility.ScheduledRequestSvc.exe.config and the
+AsyncQueueService.exe.config file are correct. In the Duck Creek root directory (for example, C:\Program Files\Duck
+Creek Technologies\) navigate to the appropriate file.
+The following table lists the configuration settings in the DuckCreek.Utility.ScheduledRequestSvc.exe.config file. To
+modify these settings, open the Edit Config Utility located by default at C:\Program Files\Duck Creek
+Technologies\Util\EditConfig.exe or another text editor program.
+Key Default Value Definition
+ServerConfig C:\Program Files\Duck Creek
+Technologies\Shared\Server.ConfigThe location of the Server.config file.
+RequestIntervalInMilliseconds 60000 Specifies the time in milliseconds between
+checking for requests.
+DuckCreekUserID admin The user ID.
+DuckCreekPassword admin The user password.
+RequestUrl http://localhost:8080/DuckCreek/
+dctserver.aspxURL of the EXAMPLE Server ®responsible
+for working with the specified web site to
+ensure the correct application pool is
+recycled.
+AppLogSource DCTSchedRequestSvc The source description used by the service
+when logging an error to the Event Log.
+AppLogName DCTSchedRequestLog The name of the Event Log to log errors for
+this service.
+RequestFile ScheduledRequests.xml The XML containing the request.
+RequestToCheckForSuccess ScheduledActivity.queueListRq The name of the request to check for
+successful activity scheduling.
+RequestTimeoutInMilliseconds 120000 The amount of time in milliseconds the
+service waits for EXAMPLE Server ®to
+respond when sending a request to the
+URL.
+The following table lists the configuration settings in the AsyncQueueService.exe.config file. To modify these settings,
+open the Edit Config Utility that is located by default at C:\Program Files\Duck Creek Technologies\Util\EditConfig.exe.
+91 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

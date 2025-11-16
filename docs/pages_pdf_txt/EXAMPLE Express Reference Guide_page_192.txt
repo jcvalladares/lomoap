@@ -1,0 +1,34 @@
+commit, commit2, audit Processes an out-of-sequencetransaction and commits all changes to the
+database.
+consumerConvertToPolicy Moves a quote from the DC_POL_ConsumerQuote table to the Quote and
+History tables.
+consumerCreateAccount Creates a user account for the EXAMPLE Platform ®.
+consumerLoadQuote Loads a quote from the DC_POL_ConsumerQuote table.
+consumerLogin Logs a user in under the proxy account used for consumer access.
+consumerNewQuote Creates a new quote in the DC_POL_ConsumerQuote table.
+consumerReLogin From within EXAMPLE Express ®, logs a consumer user out of the proxy
+account and logs them in to an existing full user account.
+delete Marks or un-marks the specified quote or policy for deletion from the
+database. The specified item is not removed from the database until a
+purge is performed.
+deleteClient Marks the specified client for deletion from the database. The client is not
+removed from the database until a purge is performed.
+deleteMessage Deletes the specified notification from the database.
+deleteTaskAttachment Removes an attachment from a task.
+details Updates the details of a quote or policy in the database.
+download Sends a copy of the XML image of the specified quote or policy to the
+browser.
+duplicate Duplicates the specified quote or policy in the database.
+initAsyncPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request asynchronously with the forceInit
+attribute set to 1. Loads the Policy Forms page.
+initPrintJob Executes the <Session.getPropertyRq> request and the
+<FormsEngine.initPrintJobRq> request with the forceInit attribute set to 1.
+Loads the Policy Forms page.
+issue Saves the active quote or policy to the database using the
+<OnlineData.storeTransactionRq> request.
+load Loads the specified quote or policy into the session and invokes the
+interview process of the associated ManuScript.
+loadHistoryTx2 Loads the specified history image of a quote or policy into the session and
+invokes the interview process of the associated ManuScript.
+192 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

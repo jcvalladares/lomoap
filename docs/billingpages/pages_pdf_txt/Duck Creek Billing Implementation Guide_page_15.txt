@@ -1,0 +1,10 @@
+Systems integrated with Duck Creek Billing™ include:
+•Policy administration systems
+•General Ledger
+•EFT Payments
+•External Payment Processing
+•Third Party Payment Interface
+•Disbursement Interface
+Integrating with the General Ledger
+The integration process between Duck Creek Billing™ and a general ledger system is illustrated below.
+15 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

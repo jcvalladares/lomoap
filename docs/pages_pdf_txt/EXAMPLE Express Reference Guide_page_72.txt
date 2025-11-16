@@ -1,0 +1,17 @@
+12. When prompted, click Install .
+13. Click Finish .
+Uninstalling Pitney Bowes Address Verification
+To uninstall Pitney Bowes Address Verification:
+1.On the Windows taskbar, click Start , and then click Control Panel .
+2.Click Uninstall a program .
+3.Click the instance of EXAMPLE Pitney-Bowes Integration to uninstall, and then click Uninstall .
+4.The Programs and Features dialog box appears and asks if users are sure they want to uninstall the program.
+Click Yesto complete the uninstallation process.
+Enabling Pitney Bowes Address Verification
+Pitney Bowes Address Verification can be implemented in several ways, depending on the user's customizations. For
+example, it could be added to a ManuScript as shown here:
+1.In Tables View in EXAMPLE Author ®, click IntegrationControl to access the PBBIGeocoding fields.
+2.To enable Pitney Bowes address verification, in the PBBIGeocoding field, set the value of the Enabled setting to
+1.
+To disable the functionality, set the value of the Enabled setting to 0.
+72 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

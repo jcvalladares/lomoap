@@ -1,0 +1,35 @@
+You can also:
+From the left navigation panel on the Policy Summary page, click Policy Workflow .
+A list of available letters appears.
+2.Click the appropriate item in the list.
+3.Click Print to print the selected letter, or click Cancel to return to the Account Home page.
+For information about this feature contact your Duck Creek Technologies Account Representative.
+Working with Automatic Letter Generation
+When implemented, the Automatic Letter Generation feature allows users to integrate a third-party forms provider to
+manage letters that are generated automatically.
+Out of the box, generated letters (in the form of XML) are placed in the following directory: C:\Program Files\Duck
+Creek Technologies\External Documents.
+The appropriate letter is generated automatically when one of the following events occur:
+•Billing_PostPaymentReversalEvent
+•Billing_EFT_RepresentEvent
+•Billing_ReversePaymentEvent
+•Billing_EFT_RejectEvent
+•Billing_PostDisbursementEvent
+•Billing_EFT_ChangeEvent
+Each event triggers a specific ManuScript which automatically generates the appropriate letter for the event. The form
+data is generated as XML, and can be sent to a third-party forms provider. The conditions that trigger the events can
+be configured or specified to provide additional flexibility. For example, the system could automatically create an EFT
+payment rejection letter the same day the payment is reversed in the billing system. This provides the benefit of prompt
+notification to the payor regarding the status of their payment, and provides information regarding the action required to
+prevent cancellation of the associated policy or policies.
+Other letters that could be automatically generated include notification of:
+•Representment of an EFT payment following an initial rejection.
+•EFT or other payment type rejection.
+•Disbursement from the account.
+•Changes to the EFT information held for the account.
+When a letter is automatically generated for an account, the Recent Account Activity list is updated to include the
+form name, the name of the third-party provider, a date and time stamp, a success or failure message, and link that
+opens the letter for viewing.
+The DCT_DocumentInterface section in the Server.config file contains the parameters used by the component map
+and must be customized for each carrier's needs.
+89 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

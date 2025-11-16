@@ -1,0 +1,33 @@
+Duck Creek Billing™ Implementation Guide
+The Duck Creek Billing™ Implementation Guide takes the billing user from installation to a customer implementation
+ready for the hands-on billing user. The guide is organized by feature, and includes the appropriate configuration,
+customization, and integration work needed to use each feature.
+For more information about using billing, see the Duck Creek Billing™ User Guide . For more information about the
+features included in billing, see the Duck Creek Billing ™Features Overview .
+Duck Creek Billing™ Installation
+Duck Creek Billing™ requires installation of the following EXAMPLE Platform ®products:
+•EXAMPLE Server ®must be installed first
+•EXAMPLE TransACT ®
+•EXAMPLE Asynchronous Request Viewer
+•EXAMPLE Forms™
+Installation of EXAMPLE Express ®is also recommended, and is required for the installation of the Billing On
+Demand Components. Without EXAMPLE Express ®, Duck Creek Billing™ pages will not be viewable out of
+the box.
+System requirements for Duck Creek Billing™ are:
+•Microsoft Internet Explorer 8 or higher
+•Microsoft Message Queuing
+•Internet Information Service (IIS) v.7
+When installing IIS for the first time, the uninstall .NET Framework must be uninstalled first. After
+successfully installing IIS, reload .NET Framework
+•Microsoft .NET Framework v3.5 (SP 1)
+•Microsoft SQL Server 2005 (SP 3) with Full Text Search (FTS) and Reporting Services enabled.
+New SQL Server 2005 users should install FTS when installing Microsoft SQL Server 2005. Users who
+are upgrading should check in Control Panel>Administrative Tools>Services to see if FTS is installed
+and is started. If it is not shown in the Services folder, install it from the SQL 2005 CD.
+The following services must be started to run Duck Creek Billing™:
+◦DuckCreek_MSMQBillingListener_EXAMPLE SERVER
+◦DuckCreek_Async_Request_Queue_EXAMPLE Async Queue O
+◦DuckCreek Scheduled Requests EXAMPLE Billing Components O
+•Microsoft Excel 2003 for generating Excel format agent commission statements (EXAMPLE Platform ®4.2.2. or
+later)
+4 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

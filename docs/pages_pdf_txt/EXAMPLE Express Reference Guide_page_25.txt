@@ -1,0 +1,10 @@
+Search Page
+The Search page provides the ability to search for clients, policies, and quotes using a variety of search options.
+When searching for a policy or quote, the search results will include policies and quotes from all entities
+where the user has the ViewQuotes privilege. When searching for a client, the search results will include all
+clients from all entities where the user has the ViewClients privilege and where the client has a quote for an
+entity to which the user belongs.
+Out of the box, the Search page appears as follows:
+If the Specific Policies and Quotes option or Specific Clients option is selected, the search page expands to allow
+the user to enter specific search criteria.
+25 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

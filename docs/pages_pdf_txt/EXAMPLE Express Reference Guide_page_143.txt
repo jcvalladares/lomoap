@@ -1,0 +1,41 @@
+assembly is the DLL file name of the class library in which it resides. The type name of the above example would be
+typeName="MyCompany.Express.SpecialContent" .
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Xml;
+using DuckCreek.OnDemand;
+// namespace is used to publish the class name to the content factory.
+namespace MyCompany.Express
+{
+// class name is used to publish the class name to the content factory.
+public class SpecialContent: ContentPage
+{
+public override void Process(PageState state,
+System.Collections.Specialized.NameValueCollection requestForm)
+{
+// get <content> node from ResponseDoc (XmlDocument) to place XML on this page
+XmlNode content = state.ResponseDoc.DocumentElement.SelectSingleNode("content");
+// TODO: build your custom content here
+XmlDocument MyContent = new XmlDocument();
+MyContent.LoadXml("<myContent><todo>Build your content here</todo></myContent>");
+// insert into the <content> for this page (may be repeated if more content
+needed)
+content.AppendChild(content.OwnerDocument.ImportNode(MyContent.DocumentElement,
+true));
+}
+}
+}
+<content> Attributes
+The following table describes the attributes of each <content> entry in the ContentMap.xml file.
+Node Description
+name Unique name for the content page. This name should also be the name of an .xsl file in the Global
+Root Directory \Express\Skins\ CustomSkin \xsl folder.
+assembly Assembly DLL name. The assembly should reside in the directory defined in the runtimeRoot
+configuration setting in the Server.Config file.
+typeName Class name in the assembly that is the ContentPage-based class for the provided overridden
+Process() method.
+menu ID of the menu in the ApplicationLayoutMap.xml file (or any custom ApplicationLayoutMap file) that
+defines which menu to display with the content page. If the value of this attribute is null, the system will
+use the menu defined by the active portal.
+143 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

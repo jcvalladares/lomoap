@@ -1,0 +1,34 @@
+29 36 - 64 Corrected
+dataA required 29-position character field which is used to relay corrected customer
+information back to the originator of that entry.
+15 65 - 79 Reserved A 15-position character field which is reserved for use by the ODFI.
+15 80 - 94 Trace
+NumberA 15-position numeric field which uniquely identifies each entry within a batch.
+Working with a Bank Details Modulus Check
+Through customization and integration with Duck Creek Billing™ Automated Clearing House (ACH) and Banker's
+Automated Clearing Services (BACS) verification can be utilized to reduce the number of rejected transactions.
+Users can design a custom workflow using the Modulus Check Request and Account Setup provided in Duck Creek
+Billing™
+For more information about specific customization and integration, contact your Duck Creek Account Manager.
+Working with Refunding to a Payment Source
+The Refund to Payment Source feature allows refunds to be made automatically to the source of payment. It requires
+configuration and integration with custom interfaces.
+To utilize the Refund to Source feature:
+1.From the Account Home page for the appropriate account, click Account Settings in the left navigation panel.
+2.In the Disbursement section, select the Refund To Source check box.
+3.Clear the Hold Disbursement Indicator check box to allow automatic disbursements.
+Although no report of rejected refunds is available, a list or report can be created by the return file or a transmission
+from the bank. Regardless of the reason, all rejected refunds are placed in the Items In Suspense list. The refund
+must be manually re-suspended in the associated bill account, and can either be resubmitted to the source for
+refunding or be refunded manually.
+This feature supports both the ACH EFT format which is utilized in the United States, and the BACS EFT format which
+is utilized in the United Kingdom.
+The following table lists the custom interfaces required for refund processing.
+Method Interface
+Check Disbursement Interface
+Credit Card or Debit Card Electronic Payment Interface
+EFT EFT Transmission Builder
+Only a user with the Override Refund To Source privilege can specify that a refund be made in a format other
+than the payment source or group multiple payments into a single refund.
+If the user has the required permissions, the Refund to Check and Refund to EFT check boxes are enabled.
+72 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

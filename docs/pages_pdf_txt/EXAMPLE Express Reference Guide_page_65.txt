@@ -1,0 +1,33 @@
+7.Click Close .
+Verifying Configuration
+To verify EXAMPLE Express ®proxy configuration:
+•In a Web browser, navigate to EXAMPLE Express ®using the proxy (for example, http://localhost/
+ExpressProxy ).
+The EXAMPLE Express ®login page should appear.
+Securing IIS with a Self-Signed SSL Certificate
+You can secure your IIS configuration using the SelfSSL.exe file to generate and install a self-
+signed SSL certificate. However, because this tool generates a self-signed certificate that
+does not come from a trusted source, Duck Creek Technologies, Inc. recommends that it only
+be used in the following situations:
+•When creating a security-enhanced private channel from a server to a limited, known
+user group
+•When troubleshooting third-party certificate issues
+To generate a self-signed SSL certificate:
+1.Download the SelfSSL.exe file from a trusted site such as www.Microsoft.com , or acquire it from the IIS resource
+kit.
+2.Because there will likely be more than one Web site on the IIS machine, execute the following command in a
+command prompt to determine the site ID:
+cscript iisweb.vbs/query
+3.Run the SelfSSL.exe file to generate a self-signed certificate, and put it in the personal store on the server using
+the following command:
+Selfssl.exe/s:3 (where 3 is the site ID)
+To secure your IIS configuration with a self-signed SSL certificate:
+1.In IIS, right-click the EXAMPLE Express ®Web site, and then click Properties .
+2.On the Directory Security tab, click Edit.
+3.Ensure that the Require Secure Channel check box is selected.
+Setting Up Dynamic Skin Selection
+If desired, you can override the XSLTDir configuration setting in the Express\Web.config file and determine which
+EXAMPLE Express ®skin to use at runtime.
+When overriding the XSLTDir configuration setting, the following skin selection priority rules are used:
+•If there is an “xslt” option on the URL request string or if an HTML form field named xsltexists, select that skin.
+65 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

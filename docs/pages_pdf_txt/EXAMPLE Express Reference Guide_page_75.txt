@@ -1,0 +1,44 @@
+Customizing EXAMPLE Express®
+EXAMPLE Express ®can be customized extensively to meet each carrier's unique needs. Carriers can customize
+EXAMPLE Express ®by:
+•Customizing skins — Carriers can customize the content, look and feel, and behavior of EXAMPLE Express ®
+pages through XSL, JavaScript, and CSS changes. For general instructions on customizing these files, see
+Customizing EXAMPLE Express Skins .
+•Using EXAMPLE Express ®system ManuScripts — Carriers can customize the content, appearance, and
+behavior of certain system pages by replacing XSL pages with customized EXAMPLE ManuScripts™. For
+information about which pages can be replaced with system ManuScripts and instructions on using them, see
+Using EXAMPLE Express® System ManuScripts .
+•Customizing the appearance of interview (ManuScript) pages — Carriers can control the appearance of
+interview (ManuScript) pages by defining the content and layout of each page in EXAMPLE Author ®. In addition,
+carriers can further control the appearance of these pages through custom styles and format masks. For
+instructions on customizing the appearance of ManuScript pages through custom styles and format masks, see
+Customizing Interview (ManuScript) Pages .
+•Adding custom pages — Carriers can add custom pages to EXAMPLE Express ®through the ContentMap.xml
+file available with the OnDemand Framework. For instructions on adding custom pages, see Adding Custom
+Pages .
+•Adding or customizing modules — Carriers can customize the out-of-the-box modules available for the Policy
+Administration Dashboard (or any other page) or create their own. For instructions on adding custom modules,
+seeAdding or Customizing Modules .
+•Adding custom Express Actions — Carriers can define custom Express Actions that can be used in EXAMPLE
+Express ®pages or interview (ManuScript) pages using the PostActionMap.xml file available with the OnDemand
+Framework. For instructions on adding custom Express Actions, see Adding Custom Express Actions .
+•Customizing the EXAMPLE Express ®experience — Carriers can customize the total EXAMPLE Express ®
+experience by customizing which pages are available in EXAMPLE Express ®and what each page contains using
+the ApplicationLayoutMap.xml file available with the OnDemand Framework. If desired, through the OnDemand
+Framework and EXAMPLE Express ®skins files, carriers can specify a unique EXAMPLE Express ®experience for
+each type of user. For instructions on customizing the total EXAMPLE Express ®experience, see Customizing the
+EXAMPLE Express® Experience .
+•Adding external content — Carriers can load and embed content from external URLs in EXAMPLE Express ®
+pages by modifying any of the following page elements or files to further customize their EXAMPLE Express ®
+experience:
+◦Sections in EXAMPLE Author ®
+◦Left panels in the skin.config file
+◦Dashboard modules through the ApplicationLayoutMap.xml file
+For more information, see Using External Content in EXAMPLE Express® .
+•Customizing specific EXAMPLE Express ®features — Carriers can customize a number of specific features
+and functions in EXAMPLE Express ®, including:
+◦Customizing the Policy Administration Dashboard
+◦Customizing Tasks
+◦Customizing Notifications
+◦Customizing Search Options
+75 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

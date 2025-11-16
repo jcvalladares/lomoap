@@ -1,0 +1,38 @@
+This file must be present for any skin based on Avant Garde 2 skins. Absence of this file forces the code to
+use the Avant Garde skins.
+The following code sample illustrates the basic structure of the skin.config file:
+<settings>
+<CoreDirectory>Skins\DCTBase\Core</CoreDirectory>
+<Themes>
+<Theme name="DuckCreek"/>
+<ExtJsTheme cssFile="ext-xtheme-gray"/>
+<DCTExtJsExtensionTheme cssFile="dctExt-xtheme-gray"/>
+</Themes>
+<Panels>
+<RatingMessages showBar="1"/>
+<TogglePanelButton showButton="0"/>
+</Panels>
+<Buttons>
+<PreviousButtonDefaultType></PreviousButtonDefaultType>
+<NextButtonDefaultType></NextButtonDefaultType>
+</Buttons>
+<StaticPanelContent location="leftPanel"></StaticPanelContent>
+<Controls>
+<ComboBoxes maxSize="200"/>
+</Controls>
+<custom></custom>
+</settings>
+Skin.config Settings
+This section contains descriptions, defaults, and valid values of all the skin.config configuration settings. You can use
+the Edit Configuration Utility in the Duck Creek root directory (by default C:\Program Files\Duck Creek
+Technologies\UtiEditConfig.exe) to manually alter these settings.
+You can only use the Edit Configuration Utility in Text Mode to alter these settings.
+Improperly adjusting skin.config settings can lead to unintended behaviors or can prevent EXAMPLE Express ®skins
+from displaying correctly. Use caution when changing these settings.
+Key Default Value
+CoreDirectory Skins\DCTBase\Core
+Theme name DuckCreek
+ExtJsTheme ext-xtheme-gray
+DCTExtJsExtensionTheme cssFile dctExt-xtheme-gray
+RatingMessage showBar 1
+212 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.

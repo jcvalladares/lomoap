@@ -1,0 +1,37 @@
+•Terms and Conditions documents on an interview page.
+•Various company facts or achievements on the left side of the page during the application process.
+Methods of Loading External Content
+Before embedding external content in EXAMPLE Express ®, it is important to understand the two methods of doing so:
+•HTML – Use the HTML method only for retrieving content that originates from the same domain as EXAMPLE
+Express ®(for example, loading the URL "content/TermsOfUse.html" which resides at http://your-site/Express/
+content/TermsOfUse.html ).
+Loading content(using the HTML method)from external domains can be insecure, and each browser
+handles it differently (security warnings, preventing content from loading, etc.).
+Since the HTML is being loaded directly into the EXAMPLE Express ®HTML document, the externally-loaded
+HTML elements will inherit styling from the EXAMPLE Express ®CSS definitions. This is useful when creating an
+external "Terms of Use" HTML page because the <h2> and <p> elements will be styled the identically to the <h2>
+and <p> elements throughout the rest of the page.
+•iFrame – The iFrame method is the recommended method for loading content from external domains. Using this
+method, the external content will be contained in its own frame without being able to interact with EXAMPLE
+Express ®.
+Since pages in an iFrame are kept separate from EXAMPLE Express ®, iFrame content will not be altered by the
+CSS definitions from EXAMPLE Express ®, making them very useful when external content should be displayed
+as if it had been opened by itself.
+Adding External Content
+Out of the box, external content can be applied to:
+•Sections through EXAMPLE Author ®
+•The left panel through the skin.config file
+•Dashboard modules through the ApplicationLayoutMap.xml file
+Adding External Content to Sections
+Using EXAMPLE Author ®, you can embed external content in EXAMPLE Express ®.
+To add external content to EXAMPLE Express ®through EXAMPLE Author ®:
+1.In Page Designer, click the section to which you wish to add external content.
+2.In the Advanced section of the Properties pane, select a value for the Static Content Type property.
+Additional properties appear in the Advanced section.
+3.Enter values for all desired section properties, and then click Save .
+For more information about defining section properties, see Sections in the Guide to EXAMPLE Author ®.
+Adding External Content to the Left Panel
+You can embed external content in the left panel by making changes to the Skin.config file.
+The following configuration settings are available for use with external content:
+•ContentUrl
+159 Contains proprietary information. Copyright 2012 Accenture Duck Creek. All rights reserved.
