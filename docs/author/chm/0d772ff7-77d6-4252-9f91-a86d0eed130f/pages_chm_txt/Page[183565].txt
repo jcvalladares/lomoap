@@ -1,0 +1,1 @@
+Changing the Page Designer Preview XSL Changing the Page Designer Preview XSL Save Page to .PDF Page Designer View To change the XSL style sheets for Page Designer previews: On the View menu, click Options . The Options dialog box appears. Click the Advanced tab. Enter the path to the Interview Preview XSL Sheet or Documentation Preview XSL Sheet . Click OK .

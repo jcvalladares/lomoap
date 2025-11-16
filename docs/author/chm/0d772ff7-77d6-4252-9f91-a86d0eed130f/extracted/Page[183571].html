@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Groups</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Groups</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183571/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>You can define the groups through which the program iterates for a form or sub-form. If a form contains more than one sub-form, the groups listed for each-sub-form will control those sub-forms. You can add, delete, or move groups within the list.</p>
+<p>The properties for groups appear in the Groups grid in the upper-right corner of Forms Mapper.</p>
+<div id="section_1"><span id="Adding_a_Group"></span><h5 class="editable">Adding a Group</h5>
+<p><em><img class="internal default" alt="FormsMapperViewIcon.gif" style="width: 20px; height: 20px;" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>When you add a form, you must specify the main group associated with that form. This group is the public group whose iterations cause the form to be generated. In general, when specifying the main group associated with a form, start with the <strong>data</strong> group.</p>
+<p>You may also add additional groups to a form or a sub-form in order to get additional data not available in the initial group. Unless the main group executes the fields in the additional groups, the values of those fields will remain static through subsequent iterations. In general, add additional groups at the form level. For forms with multiple iterative sub-forms, however, you may need to add groups at the sub-form level.</p>
+<p>To ensure forms function properly, add any additional groups in hierarchical order.</p>
+<p class="note-tip">For .pdf source documents, you should only add groups at the form level. For .doc source documents, you can add groups to the form or sub-form level. In some cases, iterative fields may need to be associated with groups on both the form and sub-form levels.</p>
+<p>To add additional groups:</p>
+<ol> <li>In the <strong>Forms</strong> list, click the form or sub-form.</li> <li>Above the <strong>Group</strong> grid, click the <strong>Add Group</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="AddRecordButton.gif" class="internal default" src="Images/AddRecordButton.gif">. <p class="listcontinue">The Select Group dialog box appears.</p> <p class="note-shortcut">You can also:<br> &bull; On the <strong>Edit </strong>menu, point to <strong>Group</strong>, and then click <strong>Add Group</strong>.<br> &bull; Press CTRL+G.</p> </li> <li>Click the appropriate group, and then click <strong>OK</strong>. In general, when selecting the main group for a form, select the <strong>data</strong> group. <p class="note">Only public groups appear in the dialog box.</p> </li>
+</ol>
+<p>Continue adding groups in hierarchal order until you have included the groups containing all the merge fields in the form or sub-form Merge Field grid.</p>
+</div><div id="section_2"><span id="Deleting_a_Group"></span><h5 class="editable">Deleting a Group</h5>
+<p><em><img class="internal default" alt="FormsMapperViewIcon.gif" style="width: 20px; height: 20px;" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>You can delete the additional groups associated with a form or sub-form.</p>
+<p>To delete a group:</p>
+<ol> <li>Above the <strong>Group</strong> grid, click the group to be removed.</li> <li>In the <strong>Group</strong> toolbar, click the <strong>Delete Group</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="DeleteRecordButton_1.gif" class="internal default" src="Images/DeleteRecordButton_1.gif">. <p class="note-shortcut">You can also:<br> &bull; On the <strong>Edit</strong> menu, point to <strong>Groups</strong>, and then click <strong>Delete Group</strong>.<br> &bull; Press CTRL+L.</p> </li>
+</ol>
+</div><div id="section_3"><span id="Moving_a_Group"></span><h5 class="editable">Moving a Group</h5>
+<p><em><img class="internal default" alt="FormsMapperViewIcon.gif" style="width: 20px; height: 20px;" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>You can change the order of groups in the Group grid.</p>
+<p>To move a group up or down in the Group grid:</p>
+<ol> <li>In the Group grid, click the group to be moved.</li> <li>Click the <strong>Move Up</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="MoveUpButton.gif" class="internal default" src="Images/MoveUpButton.gif"> or the <strong>Move Down</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="EnterDownButton.gif" class="internal default" src="Images/EnterDownButton.gif"> to move the group in the list. <p class="note-shortcut">You can also:<br> &bull; On the <strong>Edit</strong> menu, point to <strong>Group</strong>, and then click <strong>Move Group Up</strong> or <strong>Move Group Down</strong>.<br> &bull; Press CTRL+ALT+U or CTRL+ALT+W.</p> </li>
+</ol>
+<div id="section_4"><span id="Setting_Group_Properties"></span><h2 class="editable">Setting Group Properties</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FormsMapperViewIcon.gif" class="internal default" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>After adding a form and specifying the groups to use on the form, you can define properties for those groups in the Group grid on the right side of the Forms Mapper interface.</p>
+<p>The Group grid contains the following group properties.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th> <p>Option</p> </th> <th> <p>Description/Action</p> </th> </tr> <tr> <td> <p>Group</p> </td> <td> <p>Indicates the selected group. Change by clicking the <strong>G </strong>button&nbsp;<img style="width: 16px; height: 15px;" alt="GButton.png" class="internal default" src="Images/GButton.png"> to open the Select New Group dialog box.</p> </td> </tr> <tr> <td> <p># of Iterations</p> </td> <td> <p>Specifies the number of iterations to print on a page. If there are more iterations than will fit on a page, an additional page prints.</p> </td> </tr> <tr> <td> <p>Start Iteration</p> </td> <td> <p>Specifies the starting iteration for a form. If there are more iterations than will fit on a page, an additional page prints. You do not need to specify which iteration begins on the additional page. The program does this automatically.</p> </td> </tr> <tr> <td> <p>End Iteration</p> </td> <td> <p>Specifies the ending iteration for a specific form. If you enter an asterisk, the form includes all iterations.</p> </td> </tr> <tr> <td> <p>Include Deleted</p> </td> <td> <p>Indicates whether to include records marked for deletion on the form.</p> </td> </tr> <tr> <td> <p>Order By</p> </td> <td> <p>Indicates the field used to order the iterations on the form. Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</p> </td> </tr> <tr> <td> <p>Direction</p> </td> <td> <p>Indicates the sort order: Ascending or Descending. This option is available only if you select an Order By field.</p> </td> </tr> <tr> <td> <p>Restriction</p> </td> <td> <p>Specifies a boolean field that defines which iterations the form should include. Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</p> </td> </tr> </tbody>
+</table></div></div></div>
+	</body>
+</html>

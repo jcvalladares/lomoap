@@ -1,0 +1,1 @@
+Designing Version 1 Pages Designing Version 1 Pages Save Section to .PDF Save Page to .PDF When using Page Designer to create version 1 pages, you specify: PageSets Pages Groups Layouts Fields Section Contents PageSets Pages Page Groups Layouts Page Fields

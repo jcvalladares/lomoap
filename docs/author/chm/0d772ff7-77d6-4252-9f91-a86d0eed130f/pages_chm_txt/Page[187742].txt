@@ -1,0 +1,72 @@
+XML Examples XML Examples Save Page to .PDF Creating an Upload public group <object id="Upload" path="upload">
+   <minOccurs value="1" />
+   <maxOccurs value="1" />
+</object> Creating a UploadInput private group and field <object id="UploadInput" path="">
+   <minOccurs value="1" />
+   <maxOccurs value="1" />
+</object> <public id="UploadInput.FilePath" path="FilePath" type="string">
+   <definition>
+      <caption value="Select the Excel file:" />
+      <formatMask value="file" />
+      <readOnly idref="UploadPrivate.HasFilePath" />
+      <maxLength value="255" />
+   </definition>
+</public> Creating an Upload Private private group and field <object id="UploadPrivate" path="">
+   <minOccurs value="1" />
+   <maxOccurs value="1" />
+</object> <private id="UploadPrivate.HasFilePath" type="boolean" path="HasFilePath">
+   <value>
+      <comparison compare="ne">
+         <operand idref="UploadInput.FilePath" type="string" />
+         <operand type="string" value="" />
+      </comparison>
+   </value>
+</private> <private id="UploadPrivate.HasNoFilePath" type="boolean" path="HasNoFilePath">
+   <value>
+      <comparison compare="eq">
+         <operand idref="UploadInput.FilePath" type="string" />
+         <operand type="string" value="" />
+      </comparison>
+   </value>
+</private> <private id="UploadPrivate.ResetFilePath" type="string" path="ResetFilePath">
+   <value value="" />
+   <affects>
+      <reference idref="UploadInput.FilePath" effect="setValue" />
+   </affects>
+</private> Collecting Specific Columns <object id="Mapping" path="mapping">
+   <minOccurs value="1" />
+   <maxOccurs value="1" />
+</object> Including the [@valueMap=&quot;1&quote;] in the path attribute <object id="MapType" path="Type[@valueMap=&quot;1&quot;]">
+<minOccurs value="1" />
+<maxOccurs value="1" />
+</object> Default value and Caption values <public id="MapType.column" path="@column" type="string">
+<definition>
+<caption value="Type" />
+<options>
+<request verb="ExcelImport.getColumnNamesRq">
+<responsePath value="columns/column" />
+<captionPath value="@caption" />
+<valuePath value="@name" />
+<nameValues>
+<nameValue idref="UploadInput.FilePath"
+name="fileName" dataType="attribute" />
+</nameValues>
+</request>
+</options>
+<formatMask value="blankOption:Not Applicable" />
+</definition>
+<rules>
+<value>
+<request verb="ExcelImport.inferValueRq" get="@column">
+<default value="" />
+<nameValues>
+<nameValue idref="UploadInput.FilePath"
+name="fileName" dataType="attribute" />
+<nameValue value="string" name="dataType"
+dataType="attribute" />
+</nameValues>
+</request>
+</value>
+<default value="Type" />
+</rules>
+</public>

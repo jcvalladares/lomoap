@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Validator</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Validator</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183576/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>The Validate pane includes the controls for and results of ManuScript validation.</p>
+<p>To open the Validate pane:</p>
+<ul> <li>Click the <strong>Validate </strong>button&nbsp;<img style="width: 20px; height: 20px;" alt="Validator.gif" class="internal default" src="Images/Validator.gif">. <p class="note-shortcut">You can also:<br> On the <strong>Tools </strong>menu, click <strong>Validate</strong>.</p> </li>
+</ul>
+<div id="section_1"><span id="Validations"></span><h5 class="editable"><strong>Validations</strong></h5>
+<p>The Validator may return a warning or an error if it encounters any of the following:</p>
+<p><strong>Definitions</strong></p>
+<ul> <li>A field has an option list and there is a value in the value tab.</li> <li>A value is used twice within an option list for a field.</li> <li>The default value is different than the default value set in Options.</li> <li>A condition has a duplicate value in the pick list.</li> <li>The data type specified is not valid for the option values used.</li> <li>A (defined) option is empty.</li> <li>A notify option is empty.</li> <li>Miscellaneous rules have been defined but are empty.</li> <li>(Defined) rules are empty.</li>
+</ul>
+<p><strong>Values</strong></p>
+<ul> <li>A primary value is not selected in the properties of a field.</li> <li>A select value type has an invalid value or reference.</li> <li>Invalid operators exist in any string calculation.</li> <li>A public field has a set minimum.</li> <li>Comparisons of <em>is</em>, <em>isnot</em> or <em>contains</em> are followed by a value type other than string.</li>
+</ul>
+<p><strong>Data Types</strong></p>
+<ul> <li>A date method has invalid arguments.</li> <li>A substring has no value or reference for base string, start position, or length.</li> <li>The data type used for the session is not valid.</li> <li>A single condition rule is not defined as boolean.</li> <li>A conditional statement has mismatched data types.</li>
+</ul>
+<p><strong>Paths</strong></p>
+<ul> <li>No path is specified for a field.</li> <li>A path is used by multiple fields in the ManuScript.</li> <li>Coded items in a path are invalid.</li> <li>A group path is not valid for the Data Schema.</li>
+</ul>
+<p><strong>Group</strong></p>
+<ul> <li>A group level is invalid for a table or a table field does not have access to a group.</li> <li>A group is not mapped to a valid object.</li>
+</ul>
+<p><strong>Pages</strong></p>
+<ul> <li>A field is used more than once in a PageSet.</li> <li>Topics of iteration links have the same name as a PageSet.</li> <li>PageSet names contain spaces.</li>
+</ul>
+<p><strong>Iterations</strong></p>
+<ul> <li>Iterator reference groups have an invalid reference field (if not a count).</li> <li>An iterator reference field does not exist.</li> <li>The conditions of an iterating field are defined outside of that field's group.</li> <li>Calculation rules exist on an iterating field with the new Subtotal check box selected.</li> <li>An invalid context of reference groups is used to restrict iterations for an iterator field type.</li>
+</ul>
+<p><strong>Forms</strong></p>
+<ul> <li>A print job name uses invalid characters.</li> <li>A merge field or mapped file is missing.</li>
+</ul>
+<p><strong>Tables</strong></p>
+<ul> <li>A lookup references an invalid table.</li> <li>A key of a table is unused or has no value or reference specified.</li> <li>A table does not have at least one key, either row or column.</li> <li>Row data exceeds the number of keys defined for a table.</li> <li>Indexes in a conditional table are not sequential.</li> <li>A table has been overridden in an inherited ManuScript, but it has then been reverted to match the base ManuScript.</li>
+</ul>
+<p><strong>References</strong></p>
+<ul> <li>A message referenced by a field does not exist in the message block.</li> <li>An external name points to a missing ManuScript or field.</li> <li>A field is used more than once in the Database Mapping tool.</li> <li>A database mapping reference does not exist.</li> <li>For Request value types, an incorrect Request Command was entered or a Response Attribute does not exist.</li>
+</ul>
+<p><strong>Other</strong></p>
+<ul> <li>Fields or tables may be unused in the ManuScript. These are called orphans.</li> <li>Invalid characters exist, such as a group name or ID which begins with a number.</li> <li>A field has been overridden in an inherited ManuScript, but it has then been reverted to match the base ManuScript.</li>
+</ul>
+</div><div id="section_2"><span id="Setting_Validator_Options"></span><h5 class="editable">Setting Validator Options</h5>
+<p>To set the validation level select or clear the appropriate check boxes.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th> <p>Item</p> </th> <th> <p>Action</p> </th> </tr> <tr> <td> <p>Validate against ManuScript Schema</p> </td> <td> <p>Warns if the ManuScript is not a valid ManuScript file. A ManuScript must pass this validation for EXAMPLE Server<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> to recognize it. Click the <strong>Browse</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="LoadDataFileButton.gif" class="internal default" src="Images/LoadDataFileButton.gif"> to select an appropriate schema.</p> </td> </tr> <tr> <td> <p>Validate paths against Data Schema</p> </td> <td> <p>Warns if paths in the current ManuScript fail to match those in the schema. Click the <strong>Browse</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="LoadDataFileButton.gif" class="internal default" src="Images/LoadDataFileButton.gif"> to select an appropriate schema.</p> </td> </tr> <tr> <td> <p>Check for errors only</p> </td> <td> <p>Warns if any errors are encountered.</p> <p class="note-caution">Selecting this check box disables all other validator options.</p> </td> </tr> <tr> <td> <p>Check for orphaned fields/tables/messages</p> </td> <td> <p>Warns if any orphans are detected. Note that these items may be used by external ManuScripts.</p> </td> </tr> <tr> <td> <p>Check for captions on all public fields</p> </td> <td> <p>Warns if any public field has no Caption.</p> </td> </tr> <tr> <td> <p>All public fields must have annotations</p> </td> <td> <p>Warns if any public field has no annotation.</p> </td> </tr> <tr> <td> <p>Check for references to missing fields</p> </td> <td> <p>Checks for references to fields assumed to be local that do not exist in the local ManuScript.</p> </td> </tr> <tr> <td> <p>Warn if field has no rules or definition</p> </td> <td> <p>Warns if a field has an incomplete definition.</p> </td> </tr> <tr> <td> <p>Public fields must have maximum length defined</p> </td> <td> <p>Warns if a public field has no Maximum Length defined.</p> </td> </tr> <tr> <td> <p>Check for minimums on all public fields</p> </td> <td> <p>Warns if a public field has no Minimum defined.</p> </td> </tr> <tr> <td> <p>Flag overridden fields/tables that are the same as the base</p> </td> <td> <p>Warns if a field has been overridden in an inherited ManuScript but was then changed to match the base ManuScript.</p> </td> </tr> </tbody>
+</table>
+<p class="note-tip">If a ManuScript has many field reference problems, selecting <strong>Validate against ManuScript Schema</strong> may cause the validation process to fail. In a ManuScript with many reference problems, clear the Validate against ManuScript Schema check box before validating.</p>
+</div><div id="section_3"><span id="Validating_a_ManuScript"></span><h5 class="editable">Validating a ManuScript</h5>
+<p>To validate a ManuScript:</p>
+<ol> <li>In the Validate pane, click <strong>Validate ManuScript</strong>. <p class="listcontinue">The ManuScript validates completely and the Validator window displays the results.</p> </li> <li>Review the <strong>Status </strong>and description of any errors or warnings. <p class="listcontinue">Double-click an item in the list to display it in Fields view.</p> </li> <li>(Optional) Select the <strong>Ignore</strong> check box to skip a given warning during future validations. <p class="listcontinue">This check box is only available for warnings. Errors cannot be ignored.</p> </li>
+</ol></div></div>
+	</body>
+</html>

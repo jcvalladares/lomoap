@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Inheritance and EXAMPLE Server&reg;</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Inheritance and EXAMPLE Server&reg;</h1>
+		<div>
+<p>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/4090/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+
+<p>The following sections describe how EXAMPLE Server<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> facilitates ManuScript inheritance.</p>
+<span id="Deployment"></span><h5>Deployment</h5>
+<p>Deployment sends the physical image of all ManuScripts needed by a given ManuScript to the target EXAMPLE Server<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>. The deployment process includes all ManuScripts upon which the active ManuScript is dependent.</p>
+<span id="Runtime_Loading_of_Logical_Model"></span><h5>Runtime Loading of Logical Model</h5>
+<p>When the runtime version of a ManuScript is needed, the logical view of the ManuScript is assembled on the first demand for the ManuScript. As a result, all ManuScripts upon which the active ManuScript is dependent must exist on the EXAMPLE Server<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>.</p>
+<span id="Development_Platform_Modifications"></span><h5>Development Platform Modifications</h5>
+<p>When working on a development EXAMPLE Server<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> used by multiple developers, users need to ensure that runtime images loaded for rating and testing are correct each time a runtime request is initiated. Because the EXAMPLE Server<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> maintains a cache of the ManuScripts in memory, runtime components built from the logical image in memory may be stale. Changes recently made to the base ManuScripts may not appear in the cached logical image.</p>
+<p>To accommodate this problem, you can configure an EXAMPLE Server<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> to be a development server. This configuration forces the runtime image of a ManuScript to refresh each time a user initiates a request. This development configuration, however, comes with a performance cost and should be reserved for development servers only.</p></p></div>
+	</body>
+</html>

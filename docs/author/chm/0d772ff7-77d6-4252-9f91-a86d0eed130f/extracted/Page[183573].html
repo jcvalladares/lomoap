@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>Print Jobs</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Print Jobs</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183573/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>A print job defines a set of forms and their print order. You give each print job a name, and then you identify the print job by that name in any print output request. Any number of print jobs can exist in a ManuScript, and a print job can reference any form in a ManuScript's form list. It can also specify the order in which the forms should be printed within the print job.</p>
+<p>In addition to a list of forms, a print job also generates a control file. The control file provides a list of the forms in a print job in their correct print order. This file allows outside printing services to print the forms correctly.</p>
+<p>When configuring print jobs, you can control various print job features:</p>
+<ul> <li><strong>Document Type</strong> &mdash; Specifies the output type of the print job.</li> <li><strong>Condition</strong> &mdash; Specifies the conditions that must be met for this print job to print.</li> <li><strong>Forms</strong> &mdash; Configures which forms compose a print job.</li>
+</ul>
+<p>You create and define print jobs in the Manage Print Jobs dialog box.</p>
+<p>To open the Manage Print Jobs dialog:</p>
+<ul> <li>On the <strong>Edit </strong>menu, click <strong>Manage Print Jobs</strong>.</li>
+</ul>
+<div id="section_1"><span id="Print_Job_Toolbar_Buttons"></span><h5 class="editable">Print Job Toolbar Buttons</h5>
+<p>The Print Job toolbar contains the following buttons.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th colspan="2">Action</th> <th> <p>Description</p> </th> </tr> <tr> <td> <p><img class="internal default" alt="AddPrintJobButton.png" style="width: 20px; height: 20px;" src="Images/AddPrintJobButton.png"></p> </td> <td> <p>Add Print Job (CTRL+A)</p> </td> <td> <p>Add a print job to the Print Jobs list.</p> </td> </tr> <tr> <td> <p><img class="internal default" alt="DeletePrintJobButton.png" style="width: 20px; height: 20px;" src="Images/DeletePrintJobButton.png"></p> </td> <td> <p>Delete Print Job (CTRL+D)</p> </td> <td> <p>Delete a print job from the Print Jobs list.</p> </td> </tr> <tr> <td> <p><img class="internal default" alt="RenamePrintJobButton.gif" style="width: 20px; height: 20px;" src="Images/RenamePrintJobButton.gif"></p> </td> <td> <p>Rename Print Job</p> </td> <td> <p>Open the Rename Print Job dialog box to rename the selected print job.</p> </td> </tr> <tr> <td> <p><img class="internal default" alt="ViewPrintJobXMLButton.gif" style="width: 20px; height: 20px;" src="Images/ViewPrintJobXMLButton.gif"></p> </td> <td> <p>View Print Job XML</p> </td> <td> <p>Open the XML Viewer dialog box to view or edit the print job XML.</p> </td> </tr> </tbody>
+</table>
+</div><div id="section_2"><span id="Adding_a_Print_Job"></span><h5 class="editable">Adding a Print Job</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FormsMapperViewIcon.gif" class="internal default" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>To print specific forms, you must set up a print job in the Manage Print Jobs dialog box in Forms Mapper. A print job may consist of one or more forms, and each form may consist of multiple sub-forms.</p>
+<p>To add a print job:</p>
+<ol> <li>In the Manage Print Jobs dialog box, click the <strong>Add Print Job</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="AddPrintJobButton.png" class="internal default" src="Images/AddPrintJobButton.png">. <p class="listcontinue">The Add Print Job dialog box appears.</p> <p class="note-shortcut">You can also:<br> Press CTRL+A.</p> </li> <li>Enter the name of the print job, and then click <strong>OK</strong>.</li>
+</ol>
+</div><div id="section_3"><span id="Adding_a_Print_Job_from_an_External_ManuScript"></span><h5 class="editable">Adding a Print Job from an External ManuScript</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FormsMapperViewIcon.gif" class="internal default" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>EXAMPLE Forms&trade; allows you to reference and include print jobs from other ManuScripts within a print job. This feature allows a print job to combine forms in the active ManuScript with a set of forms in another ManuScript. When including a print job in another print job, all forms from the referenced print job are placed into the output list at the precise spot of the reference in the XML.</p>
+<p>Print jobs can be recursive. This means external print jobs can contain other external print jobs. External print jobs can also be dynamic. You can define rules that allow the Forms Engine to determine the name of the ManuScript and print job to reference at runtime.</p>
+<p>To add a print job from an external ManuScript:</p>
+<ol> <li>On the appropriate line in the <strong>Used Jobs/Forms</strong> grid, click the <strong>Browse</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="LoadDataFileButton.gif" class="internal default" src="Images/LoadDataFileButton.gif">. <p class="listcontinue">The ManuScript Catalog dialog box appears.</p> </li> <li>Click the ManuScript with the print job, and then click <strong>Load</strong>. <p class="listcontinue">The Select Print Job dialog box appears.</p> </li> <li>Click the appropriate print job, and then click <strong>OK</strong>.</li> <li>(Optional) On the appropriate row, to the right of the <strong>Print Job Condition</strong> column, click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to select a boolean field to determine whether the external print job is printed.</li>
+</ol>
+</div><div id="section_4"><span id="Deleting_a_Print_Job"></span><h5 class="editable">Deleting a Print Job</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FormsMapperViewIcon.gif" class="internal default" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>You can delete a print job if you no longer need it. Deleting a print job does not affect the forms contained in that print job.</p>
+<p>To delete a print job:</p>
+<ol> <li>In the <strong>Print Jobs</strong> list, click the print job.</li> <li>Click the <strong>Delete Print Job</strong> button <img style="width: 20px; height: 20px;" alt="DeletePrintJobButton.png" class="internal default" src="Images/DeletePrintJobButton.png">. <p class="listcontinue">The Deletion Confirmation dialog box appears.</p> </li> <li>Click <strong>Yes</strong> to confirm the deletion, or click <strong>No</strong> to cancel.</li>
+</ol>
+</div><div id="section_5"><span id="Adding_a_Form_to_a_Print_Job"></span><h5 class="editable">Adding a Form to a Print Job</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FormsMapperViewIcon.gif" class="internal default" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>You must specify the forms to be printed in a print job.</p>
+<p>To add a form to a print job:</p>
+<ol> <li>In the <strong>Print Jobs</strong> list, click the print job.</li> <li>In the <strong>Available Forms</strong> list, click one or more forms in the list, and then click the<strong> Add</strong> button <img style="width: 29px; height: 17px;" alt="AddButton.png" class="internal default" src="Images/AddButton.png">. <p class="listcontinue">You can multi-select using <strong>CTRL+click</strong> or <strong>SHIFT+click</strong>.</p> </li> <li>(Optional) Adjust the order of the form by clicking&nbsp;<img class="internal default" alt="EnterDownButton.gif" style="width: 20px; height: 20px;" src="Images/EnterDownButton.gif"> or&nbsp;<img class="internal default" alt="MoveUpButton.gif" style="width: 20px; height: 20px;" src="Images/MoveUpButton.gif">.</li>
+</ol>
+<p>To add all available forms, click the <strong>Add All</strong> button&nbsp;<img style="width: 29px; height: 17px;" alt="AddAllButton.png" class="internal default" src="Images/AddAllButton.png">.</p>
+</div><div id="section_6"><span id="Removing_a_Form_from_a_Print_Job"></span><h5 class="editable">Removing a Form from a Print Job</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FormsMapperViewIcon.gif" class="internal default" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>If you have a form in a print job that you do not wish to print, you can delete it from the print job.</p>
+<p>To delete a form from a print job:</p>
+<ol> <li>In the <strong>Print Jobs</strong> list, click the print job.</li> <li>In the <strong>Used Jobs/Forms</strong> list, click the form to be removed.</li> <li>Click the <strong>Remove</strong> button&nbsp;<img style="width: 29px; height: 17px;" alt="RemoveButton.png" class="internal default" src="Images/RemoveButton.png">. <p class="listcontinue">You can multi-select using <strong>CTRL+click</strong> or <strong>SHIFT+click</strong>.</p> <p class="listcontinue">To remove all forms, click the <strong>Remove All</strong> button&nbsp;<img style="width: 29px; height: 17px;" alt="RemoveAllButton.png" class="internal default" src="Images/RemoveAllButton.png">.</p> </li>
+</ol>
+</div><div id="section_7"><span id="Moving_a_Form_in_a_Print_Job"></span><h5 class="editable">Moving a Form in a Print Job</h5>
+<p><em><img class="internal default" alt="FormsMapperViewIcon.gif" style="width: 20px; height: 20px;" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>You can move a form up or down in the list so the forms print in a different sequence.</p>
+<p>To change the order in which forms are printed in a print job:</p>
+<ol> <li>In the <strong>Print Jobs</strong> list, click the print job.</li> <li>In the <strong>Used Jobs/Forms</strong> list, click the form to be moved.</li> <li>Click the <strong>Move Up</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="MoveUpButton.gif" class="internal default" src="Images/MoveUpButton.gif"> or the <strong>Move Down </strong>button&nbsp;<img style="width: 20px; height: 20px;" alt="EnterDownButton.gif" class="internal default" src="Images/EnterDownButton.gif">.</li>
+</ol>
+</div><div id="section_8"><span id="Setting_the_Document_Type"></span><h5 class="editable">Setting the Document Type</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FormsMapperViewIcon.gif" class="internal default" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>You can specify the type of output your print job generates. Options are:</p>
+<ul> <li>PDF</li> <li>MSWord</li> <li>RTF</li> <li>HTML</li> <li>MIXED</li>
+</ul>
+<p>By using the MIXED docType, users can set different output formats for each form in a print job. When this docType is enabled, the forms generator will determine the output format of each form by the output format of the first sub-form. For example, if the first sub-form in a given form is an HTML file, then all sub-forms of that form will be generated as an HTML file.</p>
+<p>Before enabling the MIXED docType, you should be aware of the following:</p>
+<ul> <li>Each form in a print job must contain either all PDF sub-forms or all non-PDF sub-forms, regardless of the docType of the print job. For example, you can create a form with a word document sub-form, 2 .rtf sub-forms, and 4 HTML sub-forms. However, you can not create a form that contains 2 PDF sub-forms, one MSWord sub-form, and 3 HTML sub-forms. If one subform in a given form is a PDF, all sub-forms in the form must be PDFs.</li> <li>When using the MIXED docType, the value of the onePDF attribute cannot be set to <em>1</em> because it is impossible to combine two documents of different types into one. The value of the onePDF attribute must be set to either <em>0</em> or <em>2</em>.</li>
+</ul>
+<p class="note-caution">MSWord (.doc) forms generated through the EXAMPLE Forms&trade; Engine are actually generated using TXTextControlWords.exe rather than Microsoft Word. Because of this distinction, Duck Creek Technologies, Inc. strongly recommends that users preview the format of .doc source documents in TXTextControlWords.exe before generating forms with those source documents to ensure that they generate appropriately. For more information about previewing .doc source documents in TXTextControlWords.exe, see <a class="internal" rel="internal" href="http://solution.duckcreektech.com/02_Platform/43/EXAMPLE_Forms_Reference_Guide/02_Creating_Forms/01_Source_Documents/02_Creating_Source_Documents#Previewing_in_TXTextControlWords.exe" target="_blank">Previewing in TXTextControlWords.exe</a> in the <a class="internal" rel="internal" href="http://solution.duckcreektech.com/02_Platform/43/EXAMPLE_Forms_Reference_Guide" target="_blank">EXAMPLE&nbsp;Forms&trade; Reference Guide</a>.</p>
+<p>To set the document type (for all document types except MIXED):</p>
+<ol> <li>In the <strong>Print Jobs</strong> list, click the print job.</li> <li>In the <strong>Document Type</strong> list, click the desired document type. <p class="note-caution">The EXAMPLE Forms&trade; engine can generate any document type from .doc source forms, but it can only generate the .pdf document type from .pdf source forms. Specifying MSWord, RTF, or HTML as the output type for .pdf source documents will not generate MSWord, RTF, or HTML documents. Instead, all .pdf source documents will be generated as .pdf files.</p> </li>
+</ol>
+<p>To set the document type to MIXED:</p>
+<ol> <li>Open a text editor.</li> <li>Locate the print job in the ManuScript.</li> <li>Change the docType attribute to MIXED. 
+          <pre name="code" class="xml">&lt;printJob name=&quot;Both&quot; docType=&quot;MIXED&quot;&gt;
+  &lt;printDoc name=&quot;Summary&quot; /&gt;
+  &lt;printDoc name=&quot;Detail&quot; /&gt;
+&lt;/printJob&gt;</pre>
+         </li>
+</ol>
+</div><div id="section_9"><span id="Setting_the_Print_Condition"></span><h5 class="editable">Setting the Print Condition</h5>
+<p><em><img class="internal default" alt="FormsMapperViewIcon.gif" style="width: 20px; height: 20px;" src="Images/FormsMapperViewIcon.gif">&nbsp;Forms Mapper View</em></p>
+<p>You can specify a condition under which a print job executes.</p>
+<p>To set a print condition:</p>
+<ol> <li>In the Manage Print Jobs dialog box, click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to the right of the <strong>Condition </strong>text box. <p class="listcontinue">The Reference Select dialog box appears.</p> </li> <li>Click the appropriate boolean field, and then click <strong>OK</strong>.</li>
+</ol>
+</div><div id="section_10"><span id="Editing_the_Control_File_Field_List"></span><h5 class="editable">Editing the Control File Field List</h5>
+<p>You can use a control file to define the order and location of forms that are to be printed. The control file provides information to a print service that aids in printing the forms. You can only edit the control file field list if you have purchased the EXAMPLE Forms&trade; license.</p>
+<p>You can modify the control file to identify a block of control information to be written into the control file. For example, you can specify how many copies of a form to print, or to which printer to send them. You can also identify a list of fields to write out. This passes other information to the application that is responsible for processing the forms. If you are attached to a database, the values for username, email, and FullName are added to the control file from the database.</p>
+<p>To edit the control file field list:</p>
+<ol> <li>On the <strong>Edit </strong>menu, click <strong>Edit Control File Field List</strong>. <p class="listcontinue">The Control Block dialog box opens.</p> </li> <li>Click <strong>Add.</strong> <p class="listcontinue">The Reference Select dialog box opens.</p> </li> <li>Navigate to the field to include in the control block, and then click <strong>OK</strong>.</li> <li>Repeat steps 2 and 3 for each field to include.</li> <li>In the Control Block dialog box, click <strong>OK</strong>.</li>
+</ol>
+<p>For each field in the list, the value of the field will be added to the control file (order.xml).</p>
+<p>The following XML will be added to the control file for the print job:</p>
+
+          <pre name="code" class="xml">&lt;ControlBlock&gt;
+  &lt;[fieldname] value=&quot;&quot;/&gt;
+  &lt;[fieldName] value=&quot;&quot;/&gt;
+&lt;/ControlBlock&gt;</pre>
+        
+<p>So if the fields added to the control block were Policy.PolicyNumber and Client.FullName, the control block could look like this:</p>
+
+          <pre name="code" class="xml">&lt;ControlBlock&gt;
+  &lt;Policy.PolicyNumber value=&quot;P123-897&quot;/&gt;
+  &lt;Client.FullName value=&quot;James Doe&quot;/&gt;
+&lt;/ControlBlock&gt;</pre>
+        </div></div>
+	</body>
+</html>

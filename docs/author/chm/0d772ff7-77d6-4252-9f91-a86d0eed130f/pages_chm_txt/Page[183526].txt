@@ -1,0 +1,1 @@
+Selecting Tables By Class Selecting Tables By Class Save Page to .PDF Tables View You can sort and select tables by their optional property Class. To select tables by Class: On the Edit menu, click Select by Class . The Select by Class dialog box appears. In List of Tables by Class , click the appropriate table. Click OK.

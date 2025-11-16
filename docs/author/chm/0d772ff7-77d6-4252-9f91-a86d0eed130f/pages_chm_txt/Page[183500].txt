@@ -1,0 +1,1 @@
+Setting Field Comments Setting Field Comments Save Page to .PDF Fields View A Comment is information about the field that may be useful for documentation purposes. To set the value of the Comment property: Click the field. On the Value tab, click Comment , and then enter the comment text.

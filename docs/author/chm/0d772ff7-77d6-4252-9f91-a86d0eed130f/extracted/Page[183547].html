@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>Comparison Widgets</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Comparison Widgets</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183547/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>Comparison widgets provide a way to display option lists so that the impact of each option on the final premium is visible to the EXAMPLE Express<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> user. Comparison widgets can be used in many different contexts and can be easily configured to display in different ways.</p>
+<p>You can add and remove comparison widgets, as well as define comparison widget properties. Comparison widgets can be nested within sections or tables.</p>
+<div id="section_1"><span id="Adding_a_Comparison_Widget"></span><h2 class="editable">Adding a Comparison Widget</h2>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>To add a comparison widget:</p>
+<ol> <li>Click the section or table under which to add a comparison widget.</li> <li>On the <strong>Edit</strong> menu, click <strong>Advanced</strong>, and then click <strong>Add Comparison Widget</strong>. <p class="note-shortcut">You can also:<br> Right-click a section or table, click <strong>Advanced</strong>, and then click <strong>Add Comparison Widget</strong>.</p> </li>
+</ol></div><div id="section_2"><span id="Deleting_a_Comparison_Widget"></span><h2 class="editable">Deleting a Comparison Widget</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>To delete a comparison widget:</p>
+<ol> <li>Select the comparison widget you wish to delete.</li> <li>Click the <strong class="bold">Delete</strong> button <img style="width: 20px; height: 20px;" alt="DeleteButton.gif" class="internal default" src="Images/DeleteButton.gif">.</li> <li>In the Confirm dialog box, click <strong class="bold">Yes </strong>to confirm the deletion, or <strong>No</strong> to cancel.</li>
+</ol>
+</div><div id="section_3"><span id="Defining_Comparison_Widget_Properties"></span><h2 class="editable">Defining Comparison Widget Properties</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>To define a comparison widget, specify the following properties.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th class="strong"> <p>Property</p> </th> <th class="strong"> <p>Description</p> </th> </tr> <tr> <th colspan="2"> <p>General</p> </th> </tr> <tr> <td> <p>Name</p> </td> <td> <p>Name of the comparison widget.</p> </td> </tr> <tr> <th colspan="2"> <p>Data</p> </th> </tr> <tr> <td> <p>Option List Field</p> </td> <td> <p>Field containing the options to render in the comparison widget. This field can be any field with a defined option list.</p> <p>&nbsp;</p> <p class="bestPractice">If using the Slider Bar display type, specify a default option for the field specified for this property. If no default is specified, the slider bar may initially appear to have an option selected, but no value will be set in the session.</p> </td> </tr> <tr> <td> <p>Affected Value Field</p> </td> <td> <p>Field affected by the option selected. This field determines the secondary value that appears for each option. If this field has a numeric value, the secondary values that display will be the difference between the value for the currently selected option and the value for each additional option. If it does not have a numeric value, the value for each option displays.</p> </td> </tr> <tr> <td> <p>Affected Rating Field</p> </td> <td> <p>Field to use to execute rating when the field specified by the <em>Affected Value Field</em> property does not execute rating on its own or when the option selected affects additional coverages.</p> <p>&nbsp;</p> <p class="note-bestpractice">To minimize performance implications, use the smallest amount of rating necessary to produce the appropriate affected values. However, when the option selected affects coverages outside of the coverage displayed as the affected value (for example, if the selected BI limit changes the available UM limit), select a rating field that accounts for changes in those other coverages.</p> </td> </tr> <tr> <th colspan="2"> <p>Display</p> </th> </tr> <tr> <td> <p>Display Type</p> </td> <td> <p>Specification of how to display the comparison widget. Options are:</p> <ul> <li>Drop Down List</li> <li>Radio Button List</li> <li>Slider Bar <p>This property defaults to <em>Drop Down List</em>.</p> </li> </ul> <p class="note">If an index.xml file does not exist in the <em>Global Root Directory</em>\Express\Widgets\comparison directory, or if this file is empty, this property will display <em>No display types available</em>.</p> </td> </tr> <tr> <td> <p>Restore Session</p> </td> <td> <p>Indication of whether to restore session data after each affected value is calculated. This option allows ManuScript logic to set session values that may need to be reset after each affected value is calculated.</p> <p>&nbsp;</p> <p class="note-bestpractice">Duck Creek Technologies, Inc. recommends setting this property to <em>True</em>.</p> </td> </tr> <tr> <td> <p>Caption Override</p> </td> <td> <p>Caption to display. Overrides the caption of the option list field.</p> </td> </tr> <tr> <td> <p>Affected Value Format Mask</p> </td> <td> <p>Format mask to apply to the secondary value that appears for each option. If no format mask is specified, the system uses the format mask specified on the <em>Affected Value Field</em>.</p> <p>This format mask does not apply to the selected or special options.</p> </td> </tr> <tr> <td> <p>Selected Format Mask</p> </td> <td> <p>Format mask to apply to the secondary value that appears for the option that is selected.</p> </td> </tr> <tr> <td> <p>Special Option Format Mask</p> </td> <td> <p>Format mask to apply to the secondary value that appears for the specified special option.</p> </td> </tr> <tr> <td> <p>Special Option</p> </td> <td> <p>Specific option to style in a special way. This feature can be used to promote a particular option.</p> </td> </tr> <tr> <td> <p>Read Only</p> </td> <td> <p>Specification of whether comparison widget content should be read-only.</p> </td> </tr> <tr> <td> <p>Show Condition</p> </td> <td> <p>Specification of when to display the comparison widget.</p> </td> </tr> <tr> <td> <p>Comparison Style</p> </td> <td> <p>CSS styles to apply to the comparison widget content. Styles apply according to CSS inheritance rules.</p> </td> </tr> </tbody>
+</table>
+<div id="section_4"><span id="Setting_the_Name_Property"></span><h5 class="editable">Setting the Name Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Name property contains the name of the comparison widget. This name appears on the comparison widget in the Page Designer list.</p>
+<p>To set the value of the Name property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Name</strong>.</li> <li>Enter the comparison widget name.</li>
+</ol>
+</div><div id="section_5"><span id="Setting_the_Option_List_Field_Property"></span><h5 class="editable">Setting the Option List Field Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Option List Field property specifies the field containing the options to render in the comparison widget. This field can be any field with a defined option list.</p>
+<p class="bestPractice">If using the Slider Bar display type, specify a default option for the field specified for this property. If no default is specified, the slider bar may initially appear to have an option selected, but no value will be set in the session.</p>
+<p>To set the value of the Option List Field property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Option List Field</strong>.</li> <li>To the right of the <strong>Option List Field</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_6"><span id="Setting_the_Affected_Value_Field_Property"></span><h5 class="editable">Setting the Affected Value Field Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Affected Value Field property specifies the field affected by the option selected. This field determines the secondary value that appears for each option. If this field has a numeric value, the secondary values that display will be the difference between the value for the currently selected option and the value for each additional option. If it does not have a numeric value, the value for each option displays.</p>
+<p>To set the value of the Affected Value Field property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Affected Value Field</strong>.</li> <li>To the right of the <strong>Affected Value Field</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_7"><span id="Setting_the_Affected_Rating_Field_Property"></span><h5 class="editable">Setting the Affected Rating Field Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Affected Rating Field property specifies the field to use to execute rating when the field specified by the Affected Value Field property does not execute rating on its own.</p>
+<p>To set the value of the Affected Rating Field property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Affected Rating Field</strong>.</li> <li>To the right of the <strong>Affected Rating Field</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_8"><span id="Setting_the_Display_Type_Property"></span><h5 class="editable">Setting the Display Type Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Display Type property specifies how to display the comparison widget. An example of the selected display type appears below the Display Type property.</p>
+<p>To set the value of the Display Type property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Display Type</strong>.</li> <li>In the <strong>Display Type</strong> list, click the desired option. Options are: <ul> <li><strong>Dropdown - Deluxe</strong> &mdash; Drop-down list with the value of the affected field aligned to the right.</li> <li><strong>Radio Button List</strong> &mdash; Collection of radio buttons.</li> <li><strong>Slider Bar</strong> &mdash; Slider control.</li> </ul> </li>
+</ol>
+</div><div id="section_9"><span id="Setting_the_Restore_Session_Property"></span><h5 class="editable">Setting the Restore Session Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Restore Session property indicates whether to restore session data after each affected value is calculated. This option allows ManuScript logic to set session values that may need to be reset after each affected value is calculated.</p>
+<p class="caution">Setting this property to <em>True</em> will impact performance. Use this setting with caution.</p>
+<p>To set the value of the Restore Session property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Restore Session</strong>.</li> <li>In the <strong>Restore Session</strong> list, click the desired option. Options are: <ul> <li>True</li> <li>False</li> </ul> </li>
+</ol>
+</div><div id="section_10"><span id="Setting_the_Caption_Override_Property"></span><h5 class="editable">Setting the Caption Override Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Caption Override property specifies the caption to display. This caption overrides the caption of the option list field.</p>
+<p>To set the value of the Caption Override property:</p>
+<ol> <li>Click the field.</li> <li>On the <strong>Definition</strong> tab, click <strong>Caption Override</strong>.</li> <li>Specify the desired caption.</li>
+</ol>
+</div><div id="section_11"><span id="Setting_the_Affected_Value_Format_Mask_Property"></span><h5 class="editable">Setting the Affected Value Format Mask Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Affected Value Format Mask property specifies the format mask to apply to the secondary value that appears for each option. This format mask does not apply to the selected or recommended options.</p>
+<p>To set the value of the Affected Value Format Mask property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Affected Value Format Mask</strong>.</li> <li>Specify a value, or, to the right of the <strong>Affected Value Format Mask</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_12"><span id="Setting_the_Selected_Format_Mask_Property"></span><h5 class="editable">Setting the Selected Format Mask Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Selected Format Mask property specifies the format mask to apply to the secondary value that appears for the selected option.</p>
+<p>To set the value of the Selected Format Mask property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Selected Format Mask</strong>.</li> <li>Specify a value, or, to the right of the <strong>Selected Format Mask</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_13"><span id="Setting_the_Special_Option_Format_Mask_Property"></span><h5 class="editable">Setting the Special Option Format Mask Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Special Option Format Mask property specifies the format mask to apply to the secondary value that appears for the specified special option. If an EXAMPLE Express<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> user selects the specified option, the format specified by the Special Option Format Mask property overrides the format mask specified by the Selected Format Mask property.</p>
+<p>To set the value of the Special Option Format Mask property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Special Option Format Mask</strong>.</li> <li>Specify a value, or, to the right of the <strong>Special Option Format Mask</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_14"><span id="Setting_the_Special_Option_Property"></span><h5 class="editable">Setting the Special Option Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Special Option property specifies an option to style in a special way. This feature can be used to promote a particular option.</p>
+<p>To set the value of the Special Option property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Special Option</strong>.</li> <li>Specify a value, or, to the right of the <strong>Special Option</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_15"><span id="Setting_the_Read_Only_Property"></span><h5 class="editable">Setting the Read Only Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Read Only property specifies whether the comparison widget should be read-only. Rules specified here apply in addition to read-only rules specified in the field definition. The page-level Read-Only Content property overrides this widget-level property.</p>
+<p>To set the value of the Read Only property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Read Only</strong>.</li> <li>Specify a value, or, to the right of the <strong>Read Only</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_16"><span id="Setting_the_Show_Condition_Property"></span><h5 class="editable">Setting the Show Condition Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Show Condition property specifies when to show the comparison widget.</p>
+<p>To set the value of the Show Condition property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Show Condition</strong>.</li> <li>To the right of the <strong>Show Condition</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_17"><span id="Setting_the_Comparison_Style_Property"></span><h5 class="editable">Setting the Comparison Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Comparison Style property specifies the CSS styles to apply to the content of the comparison widget. Styles specified in this property will override any global CSS styles assigned. Styles apply according to CSS inheritance rules.</p>
+<p>To set the value of the Comparison Style property:</p>
+<ol> <li>Click the comparison widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Comparison Style</strong>.</li> <li>To the right of the <strong>Comparison Style</strong> text box, click the CSS button&nbsp;<img class="internal default" alt="CSSButton.png" style="width: 25px; height: 15px;" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol></div></div></div>
+	</body>
+</html>

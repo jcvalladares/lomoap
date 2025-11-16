@@ -1,0 +1,208 @@
+<html>
+	<head>
+		<title>Sections</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Sections</h1>
+		<div>
+<div id="docPage"><a class="saveGuideToPDF" title="Save Guide to .PDF" onclick="return saveToPDF('/@api/deki/pages/55779/pdf?path=02_Platform/43/Guide_to_EXAMPLE_Author/07_Page_Designer/03_Designing_Version_2_Pages/04_Sections');" href="#"><img class="internal default" alt="Save_Guide_to_PDF.png" style="width: 16px; height: 16px;" src="Images/Save_Guide_to_PDF.png"> Save Section to .PDF</a> <a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183542/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>Sections are parts of a page used as containers for fields, actions, tables, widgets, or other sections. You can add, duplicate, and remove sections, as well as define section properties and convert sections to tables or grids widgets. Sections can be nested within other sections or within tables.</p>
+<p class="note">Sections should not be used to display iterative data. When displaying iterative data, use tables or grid widgets.</p>
+<div id="section_1"><span id="Adding_a_Section"></span><h2 class="editable">Adding a Section</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>To add a section:</p>
+<ol> <li>Click the section or table under which to add another section.</li> <li>On the <strong>Edit</strong> menu, click <strong>Add Section</strong>. <p class="note-shortcut">You can also:<br> Right-click a section or table, and then click <strong>Add Section</strong>.</p> </li>
+</ol>
+</div><div id="section_2"><span id="Duplicating_a_Section"></span><h2 class="editable">Duplicating a Section</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>To duplicate a section:</p>
+<ol> <li>Click the section you wish to duplicate.</li> <li>On the <strong>Edit </strong>menu, click <strong>Duplicate</strong>. <p class="note-shortcut">You can also:<br> Right-click the section, and then click <strong>Duplicate</strong>.</p> <p class="listcontinue">The Duplicate Section dialog box appears.</p> </li> <li>Click the type of action to take. Options are: <ul> <li><strong>Duplicate section structure only</strong></li> <li><strong>Duplicate section structure and fields</strong></li> <li><strong>Duplicate section structure and replace fields</strong></li> </ul> </li> <li>If you choose to duplicate the section structure and replace fields, define <strong>Field Replacement Rules</strong>. <ol> <li>Click a group for <strong>Replace fields from the group</strong>.</li> <li>Click a group for <strong>With similar field in the group</strong>.</li> </ol> </li> <li>Click <strong>OK</strong>.</li>
+</ol>
+</div><div id="section_3"><span id="Deleting_a_Section"></span><h2 class="editable">Deleting a Section</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>To delete a section:</p>
+<ol> <li>Select the section you wish to delete.</li> <li>Click the <strong>Delete</strong> button&nbsp;<img class="internal default" alt="DeleteButton.gif" style="width: 20px; height: 20px;" src="Images/DeleteButton.gif">.</li> <li>In the Confirm dialog box, click <strong>Yes </strong>to confirm the deletion, or <strong>No</strong> to cancel.</li>
+</ol>
+</div><div id="section_4"><span id="Converting_a_Section"></span><h2 class="editable"><span>Converting a Section</span></h2>
+<p><span>For instructions on converting a section to a table or grid widget, see </span><a class="internal" rel="internal" href="page%5B183543%5D.html"><span>Converting Sections</span></a><span>.</span></p></div><div id="section_5"><span id="Defining_Section_Properties"></span><h2 class="editable">Defining Section Properties</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>To define a section, specify the following properties.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th class="strong"> <p>Property</p> </th> <th class="strong"> <p>Description</p> </th> </tr> <tr> <th colspan="2"> <p>General</p> </th> </tr> <tr> <td> <p>Section Caption</p> </td> <td> <p>Text to describe the section.</p> </td> </tr> <tr> <td> <p>Layout Direction</p> </td> <td> <p>Direction the section content is laid out on the page.</p> </td> </tr> <tr> <td> <p>Field Caption Position</p> </td> <td> <p>Specification of where to display field captions. Options vary depending upon the Layout Direction and Field Caption Display selected.</p> </td> </tr> <tr> <td> <p>Field Caption Display</p> </td> <td> <p>Specification of when to display field captions.</p> </td> </tr> <tr> <td> <p>Show Condition</p> </td> <td> <p>Specification of when to display the section.</p> </td> </tr> <tr> <td> <p>Read-Only Content</p> </td> <td> <p>Specification of whether section content should be read-only.</p> </td> </tr> <tr> <th colspan="2"> <p>Advanced</p> </th> </tr> <tr> <td> <p>Collapsible</p> </td> <td> <p>Indication of whether the section is collapsible. When <em>True</em>, additional properties appear:</p> <ul> <li><strong>Start Closed</strong> &mdash; Indicates whether to default the section to closed. (True/False)</li> <li><strong>Toggle Bar Caption</strong> &mdash; Specifies the caption for the toggle bar. If blank, the system uses the section caption.</li> </ul> </td> </tr> <tr> <td> <p>Expand Event</p> </td> <td> <p>Specification of a field to execute when the section is expanded. This property is only applicable when the section is in an accordion section.</p> </td> </tr> <tr> <td>Static Content Type</td> <td> <p>Specification of the method to use for embedding external content in EXAMPLE Express<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>. Options include:</p> <ul> <li>HTML</li> <li>iFrame</li> </ul> <p>Sub-parameters:</p> <ul> <li><strong>Content URL</strong> &ndash; Indicates the URL where the external content you wish to embed resides.</li> <li><strong>Content Title</strong> &ndash; Indicates whether a title bar containing the specified string will appear in the title bar at the top of the panel.</li> <li><strong>Content Border</strong> &ndash; Indicates whether to display or hide the border.</li> <li><strong>Content Frame</strong> &ndash; Indicates whether to display or hide the frame.</li> <li><strong>Content Collapsible</strong> &ndash; Indicates whether the content should be collabsible.</li> <li><strong>Content Scrollable</strong> &ndash; Indicates whether the content should be scrollable.</li> <li><strong>Content Height</strong> &ndash; Indicates the desired height of the panel.</li> <li><strong>Content Name</strong> &ndash; Applies a name to an iFrame, if applicable.</li> </ul> </td> </tr> <tr> <th colspan="2"> <p>Display</p> </th> </tr> <tr> <td> <p>Section Style</p> </td> <td> <p>CSS styles to apply to the section content. Styles apply according to CSS inheritance rules.</p> </td> </tr> <tr> <td> <p>Section Caption Style</p> </td> <td> <p>CSS styles to apply to the section caption. Styles apply according to CSS inheritance rules.</p> </td> </tr> <tr> <td> <p>Field Caption Style</p> </td> <td> <p>CSS styles to apply to the captions of fields in the section. Styles do not apply to fields in child sections, tables, or grid widgets. Styles apply according to CSS inheritance rules.</p> </td> </tr> <tr> <td> <p>Field Style</p> </td> <td> <p>CSS styles to apply to read-only fields in the section. Styles do not apply to fields in child sections, tables, or grid widgets. Styles apply according to CSS inheritance rules.</p> </td> </tr> <tr> <td> <p>Action Style</p> </td> <td> <p>CSS styles to apply to the actions in the section. Styles do not apply to actions in child sections, tables, or grid widgets. Styles apply according to CSS inheritance rules.</p> </td> </tr> <tr> <td>Custom Container</td> <td> <p>Custom style to apply to a container.</p> <p>&nbsp;</p> <p>Sub-parameters:</p> <ul> <li><strong>panelHeader</strong> &ndash; Custom parameter that creates a title for a custom container.</li> <li><strong>alignHeader</strong> &ndash; Custom parameter that center or right-aligns a container title. If not specified, the container aligns to the left.</li> </ul> </td> </tr> <tr> <td>Icon Image</td> <td>Allows an icon to be placed in the section heading.<br> <p class="caution">Icons only appear if an associated section caption is present.</p> </td> </tr> </tbody>
+</table>
+<p>In addition to defining the above properties, you can also define annotations for sections, and you can add actions to sections. For information on adding actions, see <a class="internal" rel="internal" href="page%5B183554%5D.html">Actions</a>.</p>
+<div id="section_6"><span id="Setting_the_Section_Caption_Property"></span><h5 class="editable">Setting the Section Caption Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Section Caption property contains text to describe the section.</p>
+<p>To set the value of the Section Caption property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Section Caption</strong>.</li> <li>Enter the section caption. <p class="listcontinue">The caption is added to the selected section in the Page Designer list.</p> </li>
+</ol>
+</div><div id="section_7"><span id="Setting_the_Layout_Direction_Property"></span><h5 class="editable">Setting the Layout Direction Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Layout Direction property specifies the direction the section content is laid out on the page. The direction can be Across or Down.</p>
+<p>To set the value of the Layout Direction property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Layout Direction</strong>.</li> <li>In the <strong>Layout Direction</strong> list, click <strong>Down</strong> or <strong>Across</strong>.</li>
+</ol>
+</div><div id="section_8"><span id="Setting_the_Field_Caption_Position_Property"></span><h5 class="editable">Setting the Field Caption Position Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Field Caption Position property specifies where to display field captions. The options for this property vary depending upon the Layout Direction and Field Caption Display selected.</p>
+<p>To set the value of the Field Caption Position property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Field Caption Position</strong>.</li> <li>In the <strong>Field Caption Position</strong> list, click <strong>Before Field</strong> or <strong>Above Field</strong>.</li>
+</ol>
+</div><div id="section_9"><span id="Setting_the_Field_Caption_Display_Property"></span><h5 class="editable">Setting the Field Caption Display Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Field Caption Display property specifies when to display field captions.</p>
+<p>To set the value of the Field Caption Display property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Field Caption Display</strong>.</li> <li>In the <strong>Field Caption Display</strong> list, click the appropriate option. The Field Caption Display property includes the following options. <table class="docTable"> <tbody valign="top"> <tr> <th> <p>Option</p> </th> <th> <p>Description</p> </th> </tr> <tr> <td> <p>All</p> </td> <td> <p>Displays captions.</p> </td> </tr> <tr> <td> <p>None</p> </td> <td> <p>Does not display captions.</p> </td> </tr> <tr> <td> <p>Only Captions</p> </td> <td> <p>Does not display the field values, just the captions of the fields.</p> </td> </tr> </tbody> </table> </li>
+</ol>
+</div><div id="section_10"><span id="Setting_the_Show_Condition_Property"></span><h5 class="editable">Setting the Show Condition Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Show Condition property specifies when to show the section.</p>
+<p>To set the value of the Show Condition property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Show Condition</strong>.</li> <li>To the right of the <strong>Show Condition</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_11"><span id="Setting_the_Read-Only_Content_Property"></span><h5 class="editable">Setting the Read-Only Content Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Read-Only Content property specifies whether the section is read-only.</p>
+<p>To set the value of the Read-Only Content property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Read-Only Content</strong>.</li> <li>In the <strong>Read-Only Content</strong> list, click <strong>False</strong> or <strong>True</strong>.</li>
+</ol>
+</div><div id="section_12"><span id="Setting_the_Collapsible_Property"></span><h5 class="editable">Setting the Collapsible Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Collapsible property specifies whether the section is collapsible. When <em>True</em>, the Start Closed and Toggle Bar Caption properties appear.</p>
+<p>To set the value of the Collapsible property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Collapsible</strong>.</li> <li>In the<strong> Collapsible</strong> list, click <strong>True</strong> or <strong>False</strong>.</li>
+</ol>
+</div><div id="section_13"><span id="Setting_the_Start_Closed_Property"></span><h5 class="editable">Setting the Start Closed Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Start Closed property appears when the Collapsible property is set to <em>True</em>. The Start Closed property indicates whether to default the section to closed.</p>
+<p>To set the value of the Start Closed property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath the <strong>Collapsible</strong> property, click <strong>Start Closed</strong>.</li> <li>In the<strong> Start Closed</strong> list, click <strong>True</strong> or <strong>False</strong>.</li>
+</ol>
+</div><div id="section_14"><span id="Setting_the_Toggle_Bar_Caption_Property"></span><h5 class="editable">Setting the Toggle Bar Caption Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Toggle Bar Caption property appears when the Collapsible property is set to <em>True</em>. The Toggle Bar Caption property specifies the caption for the section toggle bar. If this property is blank, the system uses the section caption as the toggle bar caption.</p>
+<p>To set the value of the Toggle Bar Caption property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath the <strong>Collapsible</strong> property, click <strong>Toggle Bar Caption</strong>.</li> <li>Specify a value, or, to the right of the <strong>Toggle Bar Caption</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_15"><span id="Setting_the_Expand_Condition_Property"></span><h5 class="editable">Setting the Expand Condition Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Expand Condition property specifies when to expand the section. This property is only applicable when the section is in an accordion widget.</p>
+<p>To set the value of the Expand Caption property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced</strong>, click <strong>Expand Condition</strong>.</li> <li>Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_16"><span id="Setting_the_Expand_Event_Property"></span><h5 class="editable">Setting the Expand Event Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Expand Event property specifies a field to execute when the section is expanded. This property is only applicable when the section is in an accordion widget.</p>
+<p>To set the value of the Expand Event property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Expand Event</strong>.</li> <li>Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_17"><span id="Setting_the_Static_Content_Type_Property"></span><h5 class="editable">Setting the Static Content Type Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Static Content Type property specifies the method to use for embedding external content in EXAMPLE Express<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>. Options include:</p>
+<ul> <li>HTML</li> <li>iFrame</li>
+</ul>
+<p>To set the value of the Static Content Type property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Static Content Type</strong>.</li> <li>Click the dropdown arrow to select an option.</li>
+</ol>
+</div><div id="section_18"><span id="Setting_the_Content_Url_Property"></span><h5 class="editable">Setting the Content Url Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Url property indicates the URL where the external content you wish to embed resides.</p>
+<p>To set the value of the Content Url property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Content Url</strong>.</li> <li>Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_19"><span id="Setting_the_Content_Title_Property"></span><h5 class="editable">Setting the Content Title Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Title property indicates whether a title bar containing the specified string will appear in the title bar at the top of the panel.</p>
+<p>To set the value of the Content Title property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Content Title</strong>.</li> <li>Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_20"><span id="Setting_the_Content_Border_Property"></span><h5 class="editable">Setting the Content Border Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Border property indicates whether to display or hide the border.</p>
+<p>To set the value of the Content Border property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Content Border</strong>.</li> <li>Click the dropdown arrow to select an option.</li>
+</ol>
+</div><div id="section_21"><span id="Setting_the_Content_Frame_Property"></span><h5 class="editable">Setting the Content Frame Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Frame property indicates whether to display or hide the frame.</p>
+<p>To set the value of the Content Frame property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Content Frame</strong>.</li> <li>Click the dropdown arrow to select an option.</li>
+</ol>
+</div><div id="section_22"><span id="Setting_the_Content_Collapsible_Property"></span><h5 class="editable">Setting the Content Collapsible Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Collapsible property indicates whether the content should be collabsible or not.</p>
+<p>To set the value of the Content Collapsible property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Content Collapsible</strong>.</li> <li>Click the dropdown arrow to select an option.</li>
+</ol>
+</div><div id="section_23"><span id="Setting_the_Content_Scrollable_Property"></span><h5 class="editable">Setting the Content Scrollable Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Scrollable property indicates whether the content should be scrollable or not.</p>
+<p>To set the value of the Content Scrollable property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Advanced,</strong> click <strong>Content Scrollable</strong>.</li> <li>Click the dropdown arrow to select an option.</li>
+</ol>
+</div><div id="section_24"><span id="Setting_the_Content_Height_Property"></span><h5 class="editable">Setting the Content Height Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Height property indicates the desired height of the panel.</p>
+<p>To set the value of the Content Height property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Display,</strong> click <strong>Content Height</strong>.</li> <li>Click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_25"><span id="Setting_the_Content_Name_Property"></span><h5 class="editable">Setting the Content Name Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Content Name property applies a name to an iFrame, if applicable.</p>
+<p>To set the value of the Content Name property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Display,</strong> click <strong>Content Name</strong>.</li> <li>Click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_26"><span id="Setting_the_Section_Style_Property"></span><h5 class="editable">Setting the Section Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Section Style property specifies the CSS styles to apply to the section content. Styles specified in this property will override any global CSS styles assigned. Styles apply according to CSS inheritance rules.</p>
+<p>To set the value of the Section Style property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Section Style</strong>.</li> <li>To the right of the <strong>Section Style</strong> text box, click the CSS button&nbsp;<img style="width: 25px; height: 15px;" alt="CSSButton.png" class="internal default" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol>
+</div><div id="section_27"><span id="Setting_the_Section_Caption_Style_Property"></span><h5 class="editable">Setting the Section Caption Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Section Caption Style property specifies the CSS styles to apply to the section caption. Styles specified in this property will override any global CSS styles assigned. Styles apply according to CSS inheritance rules.</p>
+<p>To set the value of the Section Caption Style property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Section Caption Style</strong>.</li> <li>To the right of the <strong>Section Caption Style</strong> text box, click the CSS button&nbsp;<img class="internal default" alt="CSSButton.png" style="width: 25px; height: 15px;" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol>
+</div><div id="section_28"><span id="Setting_the_Field_Caption_Style_Property"></span><h5 class="editable">Setting the Field Caption Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Field Caption Style property specifies the CSS styles to apply to the captions of fields in the section. Styles specified in this property do not apply to fields in child sections, tables, or grid widgets. Styles specified in this property will override any global CSS styles assigned, and they will be applied according to CSS inheritance rules.</p>
+<p>To set the value of the Field Caption Style property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Field Caption Style</strong>.</li> <li>To the right of the <strong>Field Caption Style</strong> text box, click the CSS button&nbsp;<img class="internal default" alt="CSSButton.png" style="width: 25px; height: 15px;" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol>
+</div><div id="section_29"><span id="Setting_the_Field_Style_Property"></span><h5 class="editable">Setting the Field Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Field Style property specifies the CSS styles to apply to read-only fields in the section. Styles specified in this property do not apply to fields in child sections, tables, or grid widgets. Styles specified in this property will override any global CSS styles assigned, and they will be applied according to CSS inheritance rules.</p>
+<p>To set the value of the Field Style property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Field Style</strong>.</li> <li>To the right of the <strong>Field Style</strong> text box, click the CSS button&nbsp;<img class="internal default" alt="CSSButton.png" style="width: 25px; height: 15px;" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol>
+</div><div id="section_30"><span id="Setting_the_Action_Style_Property"></span><h5 class="editable">Setting the Action Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Action Style property specifies the CSS styles to apply to actions in the section. Styles specified in this property do not apply to actions in child sections, tables, or grid widgets. Styles specified in this property will override any global CSS styles assigned, and they will be applied according to CSS inheritance rules.</p>
+<p>To set the value of the Action Style property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Action Style</strong>.</li> <li>To the right of the <strong>Action Style</strong> text box, click the CSS button&nbsp;<img class="internal default" alt="CSSButton.png" style="width: 25px; height: 15px;" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol>
+</div><div id="section_31"><span id="Setting_the_Custom_Container_Property"></span><h5 class="editable">Setting the Custom Container Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Custom Container property specifies the custom style to apply to a container.</p>
+<p>To set the value of the Custom Container property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Display,</strong> click <strong>Custom Container</strong>.</li> <li>Click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+<p>By default, custom containers are as wide as their parent container. To create a narrower container, place the section with the custom container inside a parent container that has a defined width.</p>
+</div><div id="section_32"><span id="Setting_the_Icon_Image_Property"></span><h5 class="editable">Setting the Icon Image Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>The Icon Image property allows an icon to be placed in the section heading.</p>
+<p>To set the value of the Icon Image property:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, beneath <strong>Display,</strong> click <strong>Icon Image</strong>.</li> <li>Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_33"><span id="Setting_Section_Annotations"></span><h5 class="editable">Setting Section Annotations</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png"> Page Designer View</em></p>
+<p>An annotation may be added to any field, page, section, table, or grid widget. Annotations can contain any text, but they are generally used to display descriptive information as help text for a product user interface.</p>
+<p>To set the value of the Annotations property:</p>
+<ol> <li>Click the section.</li> <li>On the <strong>Definition</strong> tab, click <strong>Annotations</strong>. <p class="listcontinue">The Annotation and Topics dialog box appears.</p> </li> <li>Enter an annotation for the section, and then click <strong>OK</strong>.</li>
+</ol>
+<p>For more information, see <a class="internal" rel="internal" href="page%5B183499%5D.html">Setting Field Annotations</a>.</p></div></div></div>
+	</body>
+</html>

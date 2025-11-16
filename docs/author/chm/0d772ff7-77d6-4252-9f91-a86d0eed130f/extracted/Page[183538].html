@@ -1,0 +1,183 @@
+<html>
+	<head>
+		<title>Pages</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Pages</h1>
+		<div>
+<div id="docPage"><a class="saveGuideToPDF" title="Save Guide to .PDF" onclick="return saveToPDF('/@api/deki/pages/55779/pdf?path=02_Platform/43/Guide_to_EXAMPLE_Author/07_Page_Designer/03_Designing_Version_2_Pages/02_Pages');" href="#"><img class="internal default" alt="Save_Guide_to_PDF.png" style="width: 16px; height: 16px;" src="Images/Save_Guide_to_PDF.png"> Save Section to .PDF</a> <a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183538/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>You can add or remove pages, convert pages from version 1 to version 2, and define page properties.</p>
+<div id="section_1"><span id="Adding_a_Page"></span><h2 class="editable">Adding a Page</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>To add a version 2 page:</p>
+<ol> <li>Click the PageSet under which to add a page.</li> <li>Click the <strong>Add Page</strong> button&nbsp;<img class="internal default" alt="AddPageButton.gif" style="width: 20px; height: 20px;" src="Images/AddPageButton.gif">. <p class="listcontinue">The Add Page dialog box appears.</p> </li> <li>In the <strong>Page Version</strong> list, click <strong>2.0</strong>.</li> <li>(Optional) If the page is a meta page, select the <strong>Meta Page</strong> check box. <p class="general">Meta pages are processed after other Page Designer pages.</p> </li> <li>Enter the name of the new page. <p class="note-tip">The &lt;header&gt; option valid for version 1 pages is not valid for version 2 pages. To create a header page in version 2 pages, select the <strong>Meta Page</strong> check box for the desired page (Step 4, above), and then define the <em>Position</em> property for the page as desired.</p> </li> <li>(Optional) Select the <strong>Referenced Page</strong> check box. <ol> <li>To the right of the <strong>ManuScript</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field. <p class="listcontinue2">The ManuScript defaults to the current ManuScript.</p> </li> <li>Select the appropriate <strong>PageSet</strong> and <strong>Page</strong>: <ul> <li><strong>If the ManuScript is the current ManuScript</strong> &mdash; Click the PageSet and page to reference.</li> <li><strong>If the ManuScript is specified</strong> &mdash; Click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field containing the name of the PageSet and page to reference.</li> </ul> </li> </ol> </li> <li>Click <strong>OK</strong>. <p class="listcontinue">The Select Group Association dialog box appears.</p> </li> <li>Click the group to use for the page, and then click <strong>OK</strong>. <p class="listcontinue">The system adds the group and a corresponding section.</p> </li>
+</ol>
+</div><div id="section_2"><span id="Deleting_a_Page"></span><h2 class="editable">Deleting a Page</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>To delete a page:</p>
+<ol> <li>Click the page you wish to delete.</li> <li>Click the <strong>Delete</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="DeleteButton.gif" class="internal default" src="Images/DeleteButton.gif">.</li> <li>In the Confirm dialog box, click <strong>Yes</strong> to confirm the deletion or <strong>No</strong> to cancel.</li>
+</ol>
+</div><div id="section_3"><span id="Converting_a_Page"></span><h2 class="editable">Converting a Page</h2>
+<p>For instructions on converting a page from Version 1 to Version 2, see <a class="internal" rel="internal" href="page%5B183539%5D.html"><span>Converting a Page (from Version 1)</span></a>.</p></div><div id="section_4"><span id="Defining_Page_Properties"></span><h2 class="editable">Defining Page Properties</h2>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>To define a page, specify the following properties.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th class="strong"> <p>Property</p> </th> <th class="strong"> <p>Description</p> </th> </tr> <tr> <th colspan="2"> <p>Basic</p> </th> </tr> <tr> <td> <p>Page Name</p> </td> <td> <p>Name of the page.</p> </td> </tr> <tr> <td> <p>Page Version</p> </td> <td> <p>Version of the page.</p> </td> </tr> <tr> <td> <p>ManuScript Reference (referenced pages only)</p> </td> <td> <p>Specification of the ManuScript containing the referenced page. (If blank, this property defaults to the current ManuScript.)</p> </td> </tr> <tr> <td> <p>Page Set Reference (referenced pages only)</p> </td> <td> <p>Specification of the PageSet containing the referenced page.</p> </td> </tr> <tr> <td> <p>Page Reference (referenced pages only)</p> </td> <td> <p>Specification of the referenced page.</p> </td> </tr> <tr> <td> <p>Caption</p> </td> <td> <p>Name of the page as the user sees it.</p> </td> </tr> <tr> <td> <p>Position (meta pages only)</p> </td> <td> <p>Specification of where the meta page content should appear. This property appears only for pages designated as meta pages.</p> </td> </tr> <tr> <td> <p>Show Page</p> </td> <td> <p>Indication of whether the page should be visible.</p> </td> </tr> <tr> <td> <p>Read-Only Content</p> </td> <td> <p>Indication of whether the page is read-only. This page-level property overrides the field-level Read Only property.</p> </td> </tr> <tr> <td> <p>Execute ManuScript</p> </td> <td> <p>Indication of whether the ManuScript calculates values before the page is displayed. Options are:</p> <ul> <li><strong>No</strong> &mdash; Do not execute the ManuScript.</li> <li><strong>Calculate</strong> &mdash; Calculate the field specified as the primary value and display the result, but do not update the session.</li> <li><strong>Calculate and Accept</strong> &mdash; Calculate the field specified as the primary value and display the result, and update the session.</li> </ul> </td> </tr> <tr> <td> <p>Execute Field</p> </td> <td> <p>Indication of the field to execute. This property appears only when the Execute Manuscript property is set to <em>Calculate</em> or <em>Calculate and Accept</em>.</p> </td> </tr> <tr> <td> <p>Allow Calculation</p> </td> <td> <p>Boolean value that specifies whether or not to run Calculate or Calculate and Accept for a specified field. This property appears only when Execute Manuscript is set to <em>Calculate </em>or <em>Calculate and Accept</em>.</p> </td> </tr> <tr> <td> <p>Include Worksheet Data</p> </td> <td> <p>Indication of whether to enable rating worksheet functionality on the page. This property appears only when the Execute ManuScript property is set to <em>Calculate </em>or <em>Calculate and Accept</em>.</p> </td> </tr> <tr> <td> <p>Include Debug</p> </td> <td> <p>Boolean value that specifies whether the page response should include rating debug information.</p> </td> </tr> <tr> <th colspan="2"> <p>Advanced</p> </th> </tr> <tr> <td> <p>Hide Header</p> </td> <td> <p>Indication of whether the meta page should display on this page.</p> </td> </tr> <tr> <td> <p>Hide Annotations</p> </td> <td> <p>Indication of whether annotation links should display on this page.</p> </td> </tr> <tr> <td> <p>Show Rating Messages</p> </td> <td> <p>Indication of whether rating messages should display on this page.</p> </td> </tr> <tr> <td> <p>Display As Popup</p> </td> <td> <p>Indication of whether to display the page as a pop-up, with the appropriate buttons and pop-up window elements.</p> </td> </tr> <tr> <td> <p>Navigation Class</p> </td> <td> <p>Indication of the navigation class to associate with the page. The referenced field must return one of the following values:</p> <ul> <li><strong>Complete</strong> &mdash; All required fields on the page are complete.</li> <li><strong>Incomplete</strong> &mdash; Required fields on the page are not complete.</li> <li><strong>Caution</strong> &mdash; All required fields on the page are complete, but verification is recommended before proceeding.</li> </ul> <p class="note">Depending upon skin customizations, other values may be valid for this property.</p> </td> </tr> <tr> <td> <p>Hover Help</p> </td> <td> <p>Indication to display annotations when the cursor hovers over a field instead of linking the field caption to the annotation.</p> </td> </tr> <tr> <td> <p>Next Button Caption</p> </td> <td> <p>Caption to replace &quot;Next&quot; on the <strong>Next</strong> button. Entering <code>&quot;&quot;</code> prevents the button from displaying.</p> </td> </tr> <tr> <td>Next Button Type</td> <td> <p>Type of custom button to be used for the <strong>Next </strong>button. If left blank, the green Avant Garde button type will be used.</p> <p class="caution">The <strong>Next Button Type </strong>property must be set for each page whose <strong>Next </strong>button you wish to customize.</p> </td> </tr> <tr> <td> <p>Previous Button Caption</p> </td> <td> <p>Caption to replace &quot;Previous&quot; on the <strong>Previous</strong> button. Entering <code>&quot;&quot;</code> prevents the button from displaying.</p> </td> </tr> <tr> <td>Previous Button Type</td> <td> <p>Type of custom button to be used for the <strong>Previous</strong> button. If left blank, the green Avant Garde button type will be used.</p> <p class="caution">The <span style="font-weight: bold;">Previous </span><strong>Button Type </strong>property must be set for each page whose <span style="font-weight: bold;">Previous</span> button you wish to customize.</p> </td> </tr> <tr> <th colspan="2"> <p>Style</p> </th> </tr> <tr> <td> <p>Page Style</p> </td> <td> <p>CSS styles to apply to the page content. Styles apply according to CSS inheritance rules.</p> </td> </tr> </tbody>
+</table>
+<p>You can also add annotations to pages.</p>
+<div id="section_5"><span id="Setting_the_Page_Name"></span><h5 class="editable">Setting the Page Name</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Page Name property specifies the name of the page as the user sees it. The value of this property is set in the Add Page dialog box when you create the page.</p>
+<p>To change the name of a page:</p>
+<ol> <li>Right-click the page.</li> <li>In the shortcut menu, click <strong>Rename</strong>. <p class="listcontinue">The Rename Item dialog box appears.</p> </li> <li>Enter the new name for the page, and then click <strong>OK</strong>. <p class="listcontinue">The Page name changes in the Page Designer list and in the Page Name property.</p> </li>
+</ol>
+</div><div id="section_6"><span id="Setting_the_Page_Version"></span><h5 class="editable">Setting the Page Version</h5>
+<p>The Page Version property specifies the page version. The value of this property is set in the Add Page dialog box when you create the page. If you have defined the page version as version 1, you can convert the page to version 2.</p>
+<p class="note">Pages cannot be converted from version 2 to version 1.</p>
+<p>To convert a page to version 2:</p>
+<ol> <li>On the <strong>Tools</strong> menu, click <strong>Page Converter</strong>. <p class="listcontinue">The Page Converter dialog box appears.</p> </li> <li>Click <strong>Convert a single page</strong>, and then specify the <strong>PageSet</strong> and <strong>Page</strong> you wish to convert.</li> <li>Click <strong>Continue</strong>. <p class="listcontinue">A warning message appears.</p> </li> <li>Select <strong>Yes, I understand</strong>, and then click <strong>Continue</strong>.</li> <li>In the success confirmation dialog, click <strong>OK</strong>. <p class="listcontinue">The Page version changes in the Page Version property.</p> </li>
+</ol>
+</div><div id="section_7"><span id="Setting_the_ManuScript_Reference_Property_(Referenced_Pages)"></span><h5 class="editable">Setting the ManuScript Reference Property (Referenced Pages)</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The ManuScript Reference property appears only for referenced pages. The ManuScript Reference property specifies the ManuScript containing the page to reference. If blank, this property defaults to the current ManuScript. The value of this property is set in the Add Page dialog box when you create the page.</p>
+<p>To change the ManuScript Reference property:</p>
+<ol> <li>Click the referenced page.</li> <li>On the <strong>Definition</strong> tab, click <strong>ManuScript Reference</strong>.</li> <li>To the right of the <strong>ManuScript Reference</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to open the Edit Reference Page dialog and change the <strong>ManuScript</strong>, <strong>PageSet</strong>, or <strong>Page</strong>.</li>
+</ol>
+</div><div id="section_8"><span id="Setting_the_Page_Set_Reference_Property_(Referenced_Pages)"></span><h5 class="editable">Setting the Page Set Reference Property (Referenced Pages)</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Page Set Reference property appears only for referenced pages. The Page Set Reference property specifies the PageSet containing the page to reference. The value of this property is set in the Add Page dialog box when you create the page.</p>
+<p>To change the Page Set Reference property:</p>
+<ol> <li>Click the referenced page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Page Set Reference</strong>.</li> <li>To the right of the <strong>Page Set Reference</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to open the Edit Reference Page dialog and change the <strong>ManuScript</strong>, <strong>PageSet</strong>, or <strong>Page</strong>.</li>
+</ol>
+</div><div id="section_9"><span id="Setting_the_Page_Reference_Property_(Referenced_Pages)"></span><h5 class="editable">Setting the Page Reference Property (Referenced Pages)</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Page Reference property appears only for referenced pages. The Page Reference property specifies the page to reference. The value of this property is set in the Add Page dialog box when you create the page.</p>
+<p>To change the Page Reference property:</p>
+<ol> <li>Click the referenced page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Page Reference</strong>.</li> <li>To the right of the <strong>Page Reference</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to open the Edit Reference Page dialog and change the <strong>ManuScript</strong>, <strong>PageSet</strong>, or <strong>Page</strong>.</li>
+</ol>
+</div><div id="section_10"><span id="Setting_the_Page_Caption"></span><h5 class="editable">Setting the Page Caption</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Caption property specifies the name of the page as the user sees it.</p>
+<p>To set the value of the Caption property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Caption</strong>.</li> <li>Specify a value, or, to the right of the <strong>Caption</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_11"><span id="Setting_the_Position_Property_(Meta_Pages)"></span><h5 class="editable">Setting the Position Property (Meta Pages)</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Position property appears only for pages designated as meta pages. The Position property specifies where the meta page content should appear on other pages in the PageSet.</p>
+<p>To set the value of the Position property:</p>
+<ol> <li>Click the meta page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Position</strong>.</li> <li>In the <strong>Position</strong> list, click the desired option: <ul> <li>Header</li> <li>Footer</li> <li>Left Panel</li> <li>Right Panel</li> </ul> </li>
+</ol>
+</div><div id="section_12"><span id="Setting_the_Show_Page_Property"></span><h5 class="editable">Setting the Show Page Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Show Page property specifies the condition under which the page should be visible.</p>
+<p>To set the value of the Show Page property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Show Page</strong>.</li> <li>To the right of the <strong>Show Page</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_13"><span id="Setting_the_Read-Only_Content_Property"></span><h5 class="editable">Setting the Read-Only Content Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Read-Only Content property specifies whether the page is read-only. This property overrides the field-level Read Only property.</p>
+<p>To set the value of the Read-Only Content property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Read-Only Content</strong>.</li> <li>To the right of the <strong>Read-Only Content</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_14"><span id="Setting_the_Execute_ManuScript_Property"></span><h5 class="editable">Setting the Execute ManuScript Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Execute ManuScript property specifies whether the ManuScript calculates values before the page is displayed.</p>
+<p>To set the value of the Execute ManuScript property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Execute ManuScript</strong>.</li> <li>In the <strong>Execute ManuScript </strong>list, click the appropriate option: <ul> <li><strong>No</strong> &mdash; Do not execute the ManuScript.</li> <li><strong>Calculate</strong> &mdash; Calculate the field specified as the primary value and display the result, but do not update the session.</li> <li><strong>Calculate and Accept</strong> &mdash; Calculate the field specified as the primary value and display the result, and update the session.</li> </ul> </li>
+</ol>
+<p class="note-tip">Executing a ManuScript often slows performance. Only execute when necessary.</p>
+</div><div id="section_15"><span id="Setting_the_Include_Worksheet_Data_Property"></span><h5 class="editable">Setting the Include Worksheet Data Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Include Worksheet Data property enables rating worksheet functionality on a page.</p>
+<p class="note">The Include Worksheet Data property appears only when the Execute ManuScript property is set to <em>Calculate </em>or <em>Calculate and Accept</em>.</p>
+<p>To set the value of the Include Worksheet Data property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition </strong>tab, click <strong>Include Worksheet Data</strong>.</li> <li>To the right of the <strong>Include Worksheet Data</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_16"><span id="Setting_the_Include_Debug_Property"></span><h5 class="editable">Setting the Include Debug Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Include Debug property specifies whether the page response should include rating debug information.</p>
+<p>To set the value of the Include Debug property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Include Debug</strong>.</li> <li>In the <strong>Include Debug</strong> list, click <strong>Yes</strong> or <strong>No</strong>.</li>
+</ol>
+</div><div id="section_17"><span id="Setting_the_Hide_Header_Property"></span><h5 class="editable">Setting the Hide Header Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Hide Header property specifies whether the meta page should display on the page.</p>
+<p>To set the value of the Hide Header property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Hide Header</strong>.</li> <li>Specify a value, or, to the right of the <strong>Hide Header</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_18"><span id="Setting_the_Hide_Annotations_Property"></span><h5 class="editable">Setting the Hide Annotations Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Hide Annotations property specifies whether annotation links should display on the page.</p>
+<p>To set the value of the Hide Annotations property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Hide Annotations</strong>.</li> <li>Specify a value, or, to the right of the <strong>Hide Annotations</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_19"><span id="Setting_the_Show_Rating_Messages_Property"></span><h5 class="editable">Setting the Show Rating Messages Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Show Rating Messages property specifies whether rating messages should display on the page.</p>
+<p>To set the value of the Show Rating Messages property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Show Rating Messages</strong>.</li> <li>Specify a value, or, to the right of the <strong>Show Rating Messages</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_20"><span id="Setting_the_Display_As_Popup_Property"></span><h5 class="editable">Setting the Display As Popup Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Display As Popup property specifies whether to display the page as a pop-up, with the appropriate buttons and pop-up window elements..</p>
+<p>To set the value of the Display As Popup property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Display As Popup</strong>.</li> <li>Specify a value, or, to the right of the <strong>Display As Popup</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_21"><span id="Setting_the_Navigation_Class_Property"></span><h5 class="editable">Setting the Navigation Class Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Navigation Class property specifies rules to determine the navigation class to associate with the page.</p>
+<p>To set the value of the Navigation Class property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Navigation Class</strong>.</li> <li>To the right of the <strong>Navigation Class</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field. The referenced field must return one of the following values: <ul> <li><strong>Complete</strong> &mdash; All required fields on the page are complete.</li> <li><strong>Incomplete</strong> &mdash; Required fields on the page are not complete.</li> <li><strong>Caution</strong> &mdash; All required fields on the page are complete, but verification is recommended before proceeding.</li> </ul> <p class="note">Depending upon skin customizations, other values may be valid for this property.</p> </li>
+</ol>
+</div><div id="section_22"><span id="Setting_the_Hover_Help_Property"></span><h5 class="editable">Setting the Hover Help Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Hover Help property specifies whether to display annotations when the cursor hovers over a field instead of linking the field caption to the annotation.</p>
+<p>To set the value of the Hover Help property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Hover Help</strong>.</li> <li>In the <strong>Hover Help</strong> list, click <strong>Yes</strong> or <strong>No</strong>.</li>
+</ol>
+</div><div id="section_23"><span id="Setting_the_Next_Button_Caption_Property"></span><h5 class="editable">Setting the Next Button Caption Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Next Button Caption property specifies the text to replace &quot;Next&quot; on the <strong>Next</strong> button. Entering <code>&quot;&quot;</code> prevents the button from displaying.</p>
+<p>To set the value of the Next Button Caption property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Next Button Caption</strong>.</li> <li>Specify a value, or, to the right of the <strong>Next Button Caption</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_24"><span id="Setting_the_Next_Button_Type_Property"></span><h5 class="editable">Setting the Next Button Type Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Next Button Type property sets the type of custom button to be used for the <strong>Next </strong>button. If left blank, the green Avant Garde button type will be used.</p>
+<p class="caution">The <strong>Next Button Type </strong>property must be set for each page whose <strong>Next </strong>button you wish to customize.</p>
+<p>To set the value of the Next Button Type property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Next Button Type</strong>.</li> <li>Specify a value, or, to the right of the <strong>Next Button Type</strong> text box, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+<p>New button types can be designed using the globalButton.psd file and then defined in the buttons.css file.&nbsp;</p>
+<p>You can also change the <strong>Next </strong>button type globally by changing the <em>NextButtonDefaultType </em>configuration setting in the skin.config file.</p>
+</div><div id="section_25"><span id="Setting_the_Previous_Button_Caption_Property"></span><h5 class="editable">Setting the Previous Button Caption Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Previous Button Caption property specifies the text to replace &quot;Previous&quot; on the <strong>Previous</strong> button. Entering <code>&quot;&quot;</code> prevents the button from displaying.</p>
+<p>To set the value of the Previous Button Caption property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Previous Button Caption</strong>.</li> <li>Specify a value, or, to the right of the <strong>Previous Button Caption</strong> text box, click the <strong>Ellipsis </strong>button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+</div><div id="section_26"><span id="Setting_the_Previous_Button_Type_Property"></span><h5 class="editable">Setting the Previous Button Type Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Previous Button Type property sets the type of custom button to be used for the <strong>Previous </strong>button. If left blank, the green Avant Garde button type will be used.</p>
+<p class="caution">The <span style="font-weight: bold;">Previous </span><strong>Button Type </strong>property must be set for each page whose <strong>Previous</strong> button you wish to customize.</p>
+<p>To set the value of the Previous Button Type property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <span style="font-weight: bold;">Previous </span><strong>Button Type</strong>.</li> <li>Specify a value, or, to the right of the <span style="font-weight: bold;">Previous </span><strong>Button Type</strong> text box, click the <strong>Ellipsis </strong>button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field.</li>
+</ol>
+<p>New button types can be designed using the globalButton.psd file and then defined in the buttons.css file.&nbsp;</p>
+<p>You can also change the <strong>Previous</strong> button type globally by changing the <em>PreviousButtonDefaultType </em>configuration setting in the skin.config file.</p>
+</div><div id="section_27"><span id="Setting_the_Page_Style_Property"></span><h5 class="editable">Setting the Page Style Property</h5>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Page Style property specifies the CSS styles to apply to the page content. Styles specified in this property will override any global CSS styles assigned. Styles apply according to CSS inheritance rules.</p>
+<p>To set the value of the Page Style property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Page Style</strong>.</li> <li>To the right of the <strong>Page Style</strong> text box, click the CSS button&nbsp;<img class="internal default" alt="CSSButton.png" style="width: 25px; height: 15px;" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol>
+</div><div id="section_28"><span id="Setting_Page_Annotations"></span><h5 class="editable">Setting Page Annotations</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>An annotation may be added to any field, page, section, table, or grid widget. Annotations can contain any text, but they are generally used to display descriptive information as help text for a product user interface.</p>
+<p>To set the value of the Annotations property:</p>
+<ol> <li>Click the page.</li> <li>On the <strong>Definition</strong> tab, click <strong>Annotations</strong>. <p class="listcontinue">The Annotation and Topics dialog box appears.</p> </li> <li>Enter an annotation for the page, and then click <strong>OK</strong>.</li>
+</ol>
+<p>For more information, see <a class="internal" rel="internal" href="page%5B183499%5D.html">Setting Field Annotations</a>.</p></div></div></div>
+	</body>
+</html>

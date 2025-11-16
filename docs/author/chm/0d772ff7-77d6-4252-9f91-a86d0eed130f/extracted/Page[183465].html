@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Inheriting ManuScripts</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281127">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Inheriting ManuScripts</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183465/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>To reduce costly ManuScript re-work for similar requirements, Duck Creek Technologies has developed the Inheritance Model. With the Inheritance Model, you can reuse the content of any ManuScript and extend it in subsequent ManuScripts. When a ManuScript is inherited from a base, the resulting ManuScript is called <em>derived</em>.</p>
+<div id="section_1"><span id="Benefits_of_Inheritance"></span><h5 class="editable">Benefits of Inheritance</h5>
+<p>There are many benefits to using inheritance in the EXAMPLE Platform<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>, but the primary benefit is reusability. You create a base ManuScript and then reuse it in subsequent ManuScripts, making only the necessary changes.</p>
+<p>This also means that when you change the base ManuScript, the changes are automatically updated in ManuScripts that have inherited the base, as long as the updated fields have not been modified in the derived ManuScript.</p>
+</div><div id="section_2"><span id="Issues_with_Inheritance"></span><h5 class="editable">Issues with Inheritance</h5>
+<p>Although inheritance brings great benefits to the EXAMPLE Platform<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>, there are still design considerations and maintenance issues to keep in mind.</p>
+<ul> <li>Any inherited items that have been overridden in the derived ManuScript are <em>not </em>changed when you update the base ManuScript. You must change these items manually. First identify the items that must be changed. Then demote any overridden items in the derived ManuScript to bring in the new base definitions. Finally, modify these items again in the local ManuScript to reflect the changes that were made to the derived ManuScript.</li> <li>When you override an item that is used in calculations in the base ManuScript, the change you make may cause the calculations in the derived ManuScript to function incorrectly or not at all.</li> <li>When you edit the base ManuScript and move or rename a field, fields in a derived ManuScript still search the original paths. If you override the renamed or moved item in the derived ManuScript, the override link is broken. The ManuScript validation process identifies these unlinked override items, but carefully consider renaming or moving items in a base ManuScript.</li>
+</ul>
+</div><div id="section_3"><span id="XML_for_an_Inherited_ManuScript"></span><h5 class="editable">XML for an Inherited ManuScript</h5>
+<p>No inherited elements actually exist in the ManuScript XML of an inherited ManuScript. There is instead a pointer in the XML to the inherited ManuScript.</p>
+<p>For more information on inheritance, see <a class="internal" rel="internal" href="page%5B183591%5D.html">Inheritance</a>.</p><div id="section_4"><span id="Creating_Inherited_ManuScripts"></span><h2 class="editable">Creating Inherited ManuScripts</h2>
+<p>To create an inherited ManuScript:</p>
+<ol> <li>Click the <strong>New ManuScript</strong> button <img style="width: 18px; height: 18px;" alt="NewManuScriptButton.png" class="internal default" src="Images/NewManuScriptButton.png">. <p class="note-shortcut">You can also:<br> On the <strong>File </strong>menu, click <strong>New</strong>.</p> </li> <li>Click <strong>Inheritance Wizard</strong>. <p class="listcontinue">The ManuScript Catalog dialog box appears.</p> </li> <li>Click the base ManuScript, and then click <strong>Load</strong>. <p class="listcontinue">The new ManuScript, derived from the base ManuScript, appears.</p> </li>
+</ol>
+</div><div id="section_5"><span id="Inheriting_into_an_Existing_ManuScript"></span><h2 class="editable">Inheriting into an Existing ManuScript</h2>
+<p>To inherit a ManuScript, the base ManuScript must be in the Catalog. The base ManuScript can be a linked ManuScript.</p>
+<p>To inherit into an existing ManuScript:</p>
+<ol> <li>Open the ManuScript to be derived from the base ManuScript.</li> <li>On the <strong>File</strong> menu, click <strong>ManuScript Properties</strong>.</li> <li>On the <strong>Inheritance</strong> tab, click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to the right of <strong>Inherited ID</strong>. <p class="listcontinue">The ManuScript Catalog dialog box appears.</p> </li> <li>Click the ManuScript to inherit.</li> <li>Click <strong>Load</strong>.</li> <li>In the ManuScript Properties dialog box, click <strong>OK</strong>.</li>
+</ol>
+<p class="note">Any given ManuScript can inherit up to three other ManuScripts, one each for fields, pages, and forms.</p>
+</div><div id="section_6"><span id="Changing_a_Derived_ManuScript"></span><h2 class="editable">Changing a Derived ManuScript</h2>
+<p>A ManuScript derived from a base ManuScript is not a finished product. It is only a starting point. You still need to make the changes specific to the particular ManuScript you are creating.</p>
+<p>In a derived ManuScript, you can change inherited groups and fields or add new ones.</p>
+<p>Inherited, changed, and new groups and fields are indicated visually. Field and group names are displayed:</p>
+<ul> <li>In <em>italics </em>when they are derived.</li> <li>In <strong>bold</strong> if they have been changed.</li> <li>As normal text when they are created in the current ManuScript.</li>
+</ul>
+</div><div id="section_7"><span id="Demoting_or_Reverting_Changes_to_Inherited_Fields"></span><h2 class="editable">Demoting or Reverting Changes to Inherited Fields</h2>
+<p>You can remove a change you make to a derived field by <em>demoting </em>it, or making it <em>revert</em> back, to the original form found in the inherited ManuScript.</p>
+<p>To demote or revert a field:</p>
+<ol> <li>Click a changed field.</li> <li>On the <strong>Edit </strong>menu, click <strong>Demote/Revert Field</strong>. <p class="listcontinue">The Confirm Demote/Revert dialog box appears.</p> <p class="note-shortcut">You can also:<br> Right-click the field, and then click <strong>Demote/Revert Field</strong>.</p> </li> <li>Click <strong>OK</strong>. <p class="listcontinue">The field name is no longer bold, signifying a changed field. It reverts back to italics, indicating that it is a derived field.</p> </li>
+</ol>
+</div><div id="section_8"><span id="Viewing_a_ManuScript_Inheritance_Chain"></span><h2 class="editable">Viewing a ManuScript Inheritance Chain</h2>
+<p>
+<p>You can view a ManuScript's inheritance chain in EXAMPLE&nbsp;Author<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> in two ways:</p>
+<ul> <li>On the Inheritance tab of the ManuScript Properties dialog box (<strong>File &gt; Properties</strong>).</li> <li>In the Inheritance dialog box (<strong>View &gt; Inheritance</strong>).</li>
+</ul>
+<span id="ManuScript_Properties_Dialog_Box"></span><h5>ManuScript Properties Dialog Box</h5>
+<p>The Inheritance tab on the ManuScript Properties dialog box (<strong>File &gt; Properties</strong>) allows users to view and define a ManuScript's inheritance chain. Depending upon the type of inheritance used by a ManuScript, the Inheritance tab may display that ManuScript's inheritance chain in two ways.</p>
+<ul> <li>The <strong>Inherited ID</strong>, <strong>Inherited Page ID</strong>, and <strong>Inherited Form ID</strong> fields specify the ManuScripts directly inherited by the derived ManuScript. If a ManuScript's inheritance chain is defined using these fields, that ManuScript only contains information about ManuScripts that are directly inherited. If those inherited ManuScripts are, in turn, derived from other ManuScripts, users must open the inherited ManuScripts to view their inherited ManuScripts. Users must continue opening each ManuScript specified on the Inheritance tab of derived ManuScripts until they reach the bottom of the inheritance chain.</li> <li>The <strong>Inheritance Maps</strong> section specifies the entire inheritance chain for the active ManuScript. If a ManuScript's inheritance chain is defined using this section, that ManuScript contains information about each ManuScript in its inheritance chain. As a result, users can view the entire chain for each type of inheritance (data, pages, and forms) in this section without opening any additional ManuScripts.</li>
+</ul>
+<span id="Inheritance_Dialog_Box"></span><h5>Inheritance Dialog Box</h5>
+<p>The Inheritance dialog box (<strong>View &gt; Inheritance</strong>) allows users to view an entire ManuScript inheritance chain for each type of inheritance (data, pages, and forms) and, if desired, open any ManuScript in that chain.</p>
+</p></div></div></div>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+Prohibited Characters Prohibited Characters Save Page to .PDF The following tables list the characters that cannot be used in user input fields in EXAMPLE UserAdmin™. EXAMPLE UserAdmin™ Character Name < angle bracket > angle bracket ' apostrophe -- double slashes % percent ; semicolon " " straight quotation marks

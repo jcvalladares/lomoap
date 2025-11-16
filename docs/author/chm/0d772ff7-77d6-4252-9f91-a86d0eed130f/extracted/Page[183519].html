@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Setting Field Options</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Setting Field Options</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183519/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>With the Options property, you can define the valid choices for a field.</p>
+<p>To set the Options property:</p>
+<ol> <li>Click the field.</li> <li>On the <strong>Definition</strong> tab, in the <strong>Options </strong>list, click <strong>(defined)</strong>.</li> <li>In the Option Definition pane, click one of the following options in the <strong>T</strong><strong>ype</strong> list: <ul> <li><strong>Standard options</strong></li> <li><strong>Key in a table</strong></li> <li><strong>Reference list</strong></li> <li><strong>Data Service</strong></li> <li><strong>Request</strong></li> <li><strong>ODBC data source</strong></li> </ul> </li> <li>(Optional) Select the <strong>Combine</strong> check box if you wish to make the value in the response be a combination of the value and the caption.</li> <li>Complete the Definition pane for the option type.</li>
+</ol>
+<div id="section_1"><span id="Setting_Options.3a_Standard"></span><h2 class="editable">Setting Options: Standard</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>When you set Standard Options, you specify a list of options to be used for the field.</p>
+<p>To set standard options:</p>
+<ol> <li>In the <strong>Type</strong> list of the Option Definition pane, click <strong>Standard Options</strong>.</li> <li>In <strong>Value </strong>column, enter the option values to be used by the ManuScript. <p class="note-caution">A Float or Int data type value must use the decimal and thousands separator appropriate to the culture defined in the ManuScript properties.</p> </li> <li>In the <strong>Caption</strong> column, edit the captions to be seen by the user.</li> <li>(Optional) In the corresponding <strong>Valid Indicator</strong> column, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field that indicates whether or not this option should be displayed for the user.</li>
+</ol>
+</div><div id="section_2"><span id="Setting_Options.3a_Key_in_a_Table"></span><h2 class="editable">Setting Options: Key in a Table</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To set options based on keys in a table:</p>
+<ol> <li>In the <strong>Type</strong> list of the Option Definition pane, click <strong>Key in a table</strong>.</li> <li>In the <strong>Table </strong>list, click the appropriate table.</li> <li>In the <strong>Key </strong>list, click the table key to use. <p class="listcontinue">The values for the selected key are included in the grid.</p> </li>
+</ol>
+<p class="note-tip">When setting options based on table keys, captions match the values and cannot be modified.</p>
+</div><div id="section_3"><span id="Setting_Options.3a_Reference_List"></span><h2 class="editable">Setting Options: Reference List</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To set options based on a field reference:</p>
+<ol> <li>In the <strong>Type</strong> list of the Option Definition pane, click <strong>Reference list</strong>.</li> <li>Click one of the following options: <ul> <li><strong>The value for each option is the ID of the group</strong></li> <li><strong>The value for each option is the value of field</strong>.</li> </ul> </li> <li>(Optional) Click <strong>Include deleted</strong> to include groups marked for deletion.</li> <li>Do one of the following: <ul> <li>If the value is the ID of the group, click the group in the list.</li> <li>If value is the value of the field, click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to select the field from the Reference Select dialog box.</li> </ul> </li> <li>(Optional) Select a field reference for <strong>The caption for each option is the value of field</strong>.</li> <li>(Optional) Select a field reference for <strong>Enter a validation reference</strong>. <p class="listcontinue">This field is used to restrict the option list.</p> </li> <li>(Optional) Select a field reference for <strong>Enter a sort reference</strong>. <p class="listcontinue">This field is used to sort the option list.</p> </li>
+</ol></div><div id="section_4"><span id="Setting_Options.3a_Data_Service"></span><h2 class="editable">Setting Options: Data Service</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p class="listcontinue">The data key is the primary key that is used to lookup the data set information. The last data key used to look up the Data Services is the final ID of the data key.</p>
+<p class="listcontinue">The data set is the information that is found using a data key. A data set requires a data key.</p>
+<p>To set options based on data services:</p>
+<ol> <li>In the <strong>Type</strong> list of the Option Definition pane, click <strong>Data Service</strong>.</li> <li>In the <strong>Data Service</strong> list, click one of the following options: <ul> <li><strong>dataSet</strong></li> <li><strong>dataKey</strong></li> </ul> </li> <li>Set the data set or data key options.</li>
+</ol>
+<div id="section_5"><span id="Setting_Data_Key_Options"></span><h5 class="editable">Setting Data Key Options</h5>
+<p>To set data key options:</p>
+<ol> <li>(Optional) If the <strong>Data Service</strong> data key is the last reference, select the <strong>ID is value</strong> check box.</li> <li>Click <strong>View Catalog,</strong> and then click the data services from the Data Key Catalog dialog box. <p class="note-shortcut">You can also:<br> Enter the name of the Catalog in quotation marks in <strong>Data Name</strong>, or use a field to determine the Catalog by clicking the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to select the field using the Reference Select dialog box.</p> </li> <li>In the <strong>Parameter Name</strong> list, enter the required parameter name. <p class="note-tip">If you purchased Data Services from Duck Creek Technologies, Inc., the parameters are provided to you.</p> </li> <li>In the corresponding <strong>Value </strong>list, click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to select the value to pass into the parameters using the Reference Select dialog box.</li>
+</ol></div><div id="section_6"><span id="Setting_Data_Set_Options"></span><h5 class="editable">Setting Data Set Options</h5>
+<p>To set data set options:</p>
+<ul> <li>In the <strong>Code</strong> list, enter the code for the <strong>Data Set</strong>. <p class="listcontinue">Setting the data set by using the <strong>Default </strong>allows you to create a list box for the user to override the data set by choosing the data set from the list.</p> </li>
+</ul>
+<p class="note-shortcut">You can also:<br>
+Create a table and a lookup field to determine the codes by setting the lookup as the default for the field to allow the user to override the data set.</p></div></div><div id="section_7"><span id="Setting_Options.3a_Request"></span><h2 class="editable">Setting Options: Request</h2>
+<p><em><img class="internal default" alt="FieldsViewIcon.png" style="width: 20px; height: 20px;" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To set options based on a Request command:</p>
+<ol> <li>In the <strong>Type</strong> list of the Option Definition pane, click <strong>Request</strong>.</li> <li>In the <strong>Request Command</strong> list, click the appropriate command.</li> <li>Click <strong>Request Parameters</strong> and specify any request parameters in the Name Value Definitions dialog box.</li> <li>Enter the <strong>Response path</strong> to indicate which elements within the response contain the information to be displayed within the option list. <p class="note-shortcut">You can also:<br> Click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>Enter the <strong>Value item</strong> to specify the attribute within the element indicated in the response path that provides the values to be associated with each item in the option list. <p class="note-shortcut">You can also:<br> Click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>Enter the <strong>Caption item</strong> to specify the attribute or element within the element indicated in the response path that provides the text displayed in the option list during an interview. <p class="note-shortcut">You can also:<br> Click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li>
+</ol></div><div id="section_8"><span id="Setting_Options.3a_ODBC_Data_Source"></span><h2 class="editable">Setting Options: ODBC Data Source</h2>
+<p><em><img class="internal default" alt="FieldsViewIcon.png" style="width: 20px; height: 20px;" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To set options based on an ODBC data source:</p>
+<ol> <li>In the <strong>Type</strong> list of the Option Definition pane, click <strong>ODBC data source</strong>.</li> <li>Enter the <strong>Connection</strong>. <p class="listcontinue">The connection is the name of the ODBC. You can enter a constant value or click the Ellipsis button <img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>Enter the <strong>Query/View</strong>. <p class="listcontinue">The query or view is the name of the field or view that contains the query to be displayed within the option list. You can enter a constant value or click the Ellipsis button <img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>Enter the <strong>Value item</strong>. <p class="listcontinue">The value item is the name of a column or field that contains the items that provide the values to be associated with each item in the option list. You can enter a constant value or click the Ellipsis button <img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>Enter the <strong>Caption item</strong>. <p class="listcontinue">The caption item is the name of a column or field that contains the text displayed in the option list during the interview. You can enter a constant value or click the Ellipsis button <img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>(Optional) Limit the items within the options list <ol> <li>Click <strong>Restrict to iterations where</strong></li> <li>Click <strong>CB</strong>.</li> <li>Build a conditional statement to limit the items within the options list. For more information, see <a class="internal" rel="internal" href="page%5B183482%5D.html">Conditional</a>.</li> </ol> </li> <li>(Optional) Order the iterations within the options list. <ol> <li>Click <strong>Order the iterations by</strong>.</li> <li>In the <strong>Field </strong>column, enter the field by which to order. <p class="listcontinue2">You can enter a constant value or click the Ellipsis button <img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>In the <strong>Order </strong>column, click <strong>Descending </strong>or <strong>Ascending</strong>.</li> </ol> </li>
+</ol>
+</div><div id="section_9"><span id="Option_Sets"></span><h2 class="editable">Option Sets</h2>
+<p>You can use Option Sets to create multiple option lists for a single field. The option list to be used is determined by a boolean field that represents the set. The first boolean field evaluated as true causes the associated option list to be used. If none of the chosen fields are true, the default option list is used.</p>
+<div id="section_10"><span id="Adding_an_Option_Set"></span><h5 class="editable">Adding an Option Set</h5>
+<p><em><img class="internal default" alt="FieldsViewIcon.png" style="width: 20px; height: 20px;" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To add an option set:</p>
+<ol> <li>In the Options Definition pane, click <strong>Add set</strong>. <p class="listcontinue">The Reference Select dialog box appears.</p> </li> <li>Click the field that determines whether the option set should be used.</li> <li>(Optional) Define the option list to be used if the field is evaluated as true.</li>
+</ol></div><div id="section_11"><span id="Deleting_an_Option_Set"></span><h5 class="editable">Deleting an Option Set</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To delete an option set:</p>
+<ol> <li>In the <strong>Options set</strong> list, click an option set.</li> <li>Click <strong>Delete Set</strong>.</li>
+</ol>
+</div></div><div id="section_12"><span id="Inserting_Options"></span><h2 class="editable">Inserting Options</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To insert an option:</p>
+<ol> <li>In the <strong>Options set</strong> list, click the line below the insertion point.</li> <li>Click <strong>Add Option</strong>.</li> <li>Set the option.</li>
+</ol>
+</div><div id="section_13"><span id="Deleting_Options"></span><h2 class="editable">Deleting Options</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To delete an option:</p>
+<ol> <li>In the Options Definition pane, click the option.</li> <li>Click <strong>Delete Option</strong>.</li>
+</ol>
+</div><div id="section_14"><span id="Moving_Options"></span><h2 class="editable">Moving Options</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To move an option in the list:</p>
+<ol> <li>In the Options Definition pane, click the option.</li> <li>Click the <strong>Move Up </strong>button&nbsp;<img class="internal default" alt="MoveUpButton.gif" style="width: 20px; height: 20px;" src="Images/MoveUpButton.gif"> or the <strong>Move Down</strong> button&nbsp;<img class="internal default" alt="EnterDownButton.gif" style="width: 20px; height: 20px;" src="Images/EnterDownButton.gif"> to move the option.</li>
+</ol>
+</div><div id="section_15"><span id="Setting_a_Default_Option"></span><h2 class="editable">Setting a Default Option</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To set a default option for a field:</p>
+<ol> <li>In the Options definition pane, click the appropriate <strong>Value</strong>.</li> <li>Click <strong>Set Default</strong>. <p class="listcontinue">A confirmation dialog box appears.</p> </li> <li>Click <strong>OK</strong>.</li>
+</ol></div></div>
+	</body>
+</html>

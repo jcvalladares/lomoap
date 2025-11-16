@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Lookup</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Lookup</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183489/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>With a Lookup value type, you access values from a table in the ManuScript. The Lookup type specifies the table to be accessed, the name of the data item in the table to be extracted, and the values used to access the keys of the table.</p>
+<div id="section_1"><span id="Defining_a_Lookup_Value_Using_an_Existing_Table"></span><h5 class="editable">Defining a Lookup Value Using an Existing Table</h5>
+<p><em><img class="internal default" alt="FieldsViewIcon.png" style="width: 20px; height: 20px;" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To define a Lookup value using an existing table:</p>
+<ol> <li>In the dropdown list for the appropriate property, click <strong>Lookup</strong>.</li> <li>In the <strong>Table to access</strong> list, click the table to use for the lookup. <p class="listcontinue">Once a table is selected, the rest of the details reflect the information for the selected table:</p> <ul> <li>The <strong>Data name </strong>list includes the data names from the table.</li> <li>The <strong>Keys </strong>grid lists the keys defined for the table.</li> </ul> </li> <li>(Optional) Click <strong>Determine table accessed</strong> and then enter a table name and (optional) an external ManuScript ID. <p class="listcontinue">This feature allows you to determine the actual table used at runtime. Select the option and a field that returns the text name of the table to be accessed. Any table to be accessed by this lookup must have the same Data Name and list of Key Names as the selected table. You can also enter a ManuScript ID if the table is contained in an external ManuScript.</p> </li> <li>In the <strong>Data name</strong> list, click the data name from the table to use for the lookup.</li> <li>Enter a <strong>Value To Find</strong> for each <strong>Key Name</strong>. <p class="listcontinue">You can enter a constant value or click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li>
+</ol></div><div id="section_2"><span id="Defining_a_Lookup_Value_Using_a_Custom_Defined_Table"></span><h5 class="editable">Defining a Lookup Value Using a Custom Defined Table</h5>
+<p><em><img class="internal default" alt="FieldsViewIcon.png" style="width: 20px; height: 20px;" src="Images/FieldsViewIcon.png">&nbsp;Fields View</em></p>
+<p>To define a Lookup value using a custom defined table:</p>
+<ol> <li>In the dropdown list for the appropriate property, click <strong>Lookup</strong>.</li> <li>In the <strong>Table</strong> list, click <strong>(custom defined)</strong>.</li> <li>Select the <strong>Determine table accessed</strong> check box and then enter a table name and (optional) an external ManuScript ID. <p class="listcontinue">You can enter a constant value or click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li> <li>In the <strong>Data name</strong> list, enter a data name to use for the lookup in the table.</li> <li>Enter <strong>Key Names</strong> for the table. <p class="note-caution">The Data name and all Key Names must be the same in each potential table to use.</p> </li> <li>Enter a <strong>Value To Find</strong> for each <strong>Key Name</strong>. <p class="listcontinue">You can enter a constant value or click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li>
+</ol></div><div id="section_3"><span id="Ignoring_a_Lookup"></span><h5 class="editable">Ignoring a Lookup</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>A ManuScript can include a decision to ignore a lookup. The lookup may not be pertinent in some situations and you may wish to use a value other than the lookup value.</p>
+<p>When you select the <strong>Ignore lookup when</strong> check box, the ManuScript checks a condition before processing the lookup and then determines whether to use the value of the lookup or another value.</p>
+<p>To limit when a lookup is performed:</p>
+<ol> <li>Select the <strong>Ignore lookup when</strong> check box.</li> <li>Click <strong>CB</strong> to use the Condition Builder dialog box to specify the conditions under which the lookup should be ignored.</li> <li>In the <strong>set the value to</strong> text box, enter the value to be used when the condition is met. <p class="listcontinue">You can enter a constant value or click the Ellipsis button&nbsp;<img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a field reference.</p> </li>
+</ol></div></div>
+	</body>
+</html>

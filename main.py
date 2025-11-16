@@ -13,6 +13,7 @@ import time
 import shutil
 import tempfile
 import io
+import subprocess
 
 # Import shared services (models, tokenizers, loading logic, GPU helpers, jobs)
 from services import (
@@ -634,6 +635,233 @@ async def extract_pdf_from_path(pdf_path: str, output_folder: str = "downloaded_
         'pdf_path': candidate,
         'pages_txt': saved_txt_files,
         'combined_txt': combined_path
+    }
+
+
+def _extract_chm_to_html(save_path: str, extract_dir: str):
+    """Try multiple strategies to extract CHM contents into `extract_dir` and
+    return a list of extracted HTML file paths.
+
+    Strategies tried (in order):
+    - Python `pychm` (if installed)
+    - `7z` command-line (if available)
+    """
+    pathlib.Path(extract_dir).mkdir(parents=True, exist_ok=True)
+
+    # Strategy 1: pychm
+    try:
+        import pychm
+        try:
+            chm = pychm.CHMFile(save_path)
+            # pychm provides a list of files under `files()` and `read()` to get bytes
+            members = []
+            try:
+                members = chm.files()
+            except Exception:
+                # some pychm versions expose `list()`
+                try:
+                    members = list(chm)
+                except Exception:
+                    members = []
+
+            for m in members:
+                try:
+                    data = chm.read(m)
+                    if not data:
+                        continue
+                    dest = os.path.join(extract_dir, m.lstrip('/\\'))
+                    os.makedirs(os.path.dirname(dest), exist_ok=True)
+                    with open(dest, 'wb') as wf:
+                        wf.write(data)
+                except Exception:
+                    continue
+
+            htmls = []
+            for root, _, files in os.walk(extract_dir):
+                for f in files:
+                    if f.lower().endswith(('.html', '.htm')):
+                        htmls.append(os.path.join(root, f))
+            if htmls:
+                return htmls
+        except Exception:
+            pass
+    except Exception:
+        # pychm not available
+        pass
+
+    # Strategy 2: use 7z to extract if available
+    try:
+        # `7z x` will extract the archive into the provided directory
+        cmd = ['7z', 'x', save_path, f'-o{extract_dir}']
+        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
+        htmls = []
+        for root, _, files in os.walk(extract_dir):
+            for f in files:
+                if f.lower().endswith(('.html', '.htm')):
+                    htmls.append(os.path.join(root, f))
+        return htmls
+    except FileNotFoundError:
+        raise RuntimeError('Neither pychm (python package) nor 7z (system binary) are available to extract CHM files')
+
+
+@app.post("/convert/chm-to-text")
+async def convert_chm_to_text(file: UploadFile = File(...), output_folder: str = "downloaded_site", max_chars: int = 50000):
+    """Upload a `.chm` file, extract HTML pages and convert them into per-page text files.
+
+    Returns a list of saved text files and a combined full text file.
+    """
+    if not file.filename.lower().endswith('.chm'):
+        raise HTTPException(status_code=400, detail="Uploaded file is not a CHM archive")
+
+    base_uuid = str(uuid.uuid4())
+    base_dir = os.path.join(output_folder, 'chm', base_uuid)
+    pathlib.Path(base_dir).mkdir(parents=True, exist_ok=True)
+
+    save_path = os.path.join(base_dir, file.filename)
+    contents = await file.read()
+    try:
+        with open(save_path, 'wb') as wf:
+            wf.write(contents)
+    finally:
+        await file.close()
+
+    extract_dir = os.path.join(base_dir, 'extracted')
+    try:
+        html_files = _extract_chm_to_html(save_path, extract_dir)
+    except RuntimeError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+    if not html_files:
+        raise HTTPException(status_code=500, detail='No HTML files were extracted from the CHM')
+
+    # Convert HTML -> text using BeautifulSoup
+    try:
+        from bs4 import BeautifulSoup
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"BeautifulSoup (bs4) is required to convert HTML to text: {e}")
+
+    pages_txt_dir = os.path.join(base_dir, 'pages_chm_txt')
+    pathlib.Path(pages_txt_dir).mkdir(parents=True, exist_ok=True)
+
+    saved_txt_files = []
+    combined_texts = []
+    for html_path in sorted(html_files):
+        try:
+            with open(html_path, 'r', encoding='utf-8', errors='ignore') as hf:
+                soup = BeautifulSoup(hf.read(), 'html.parser')
+                for tag in soup(['script', 'style', 'noscript']):
+                    tag.decompose()
+                page_text = soup.get_text(separator=' ', strip=True)
+        except Exception:
+            continue
+
+        if not page_text.strip():
+            continue
+
+        if len(page_text) > max_chars:
+            page_text = page_text[:max_chars]
+
+        rel = os.path.relpath(html_path, extract_dir)
+        safe = rel.replace(os.sep, '_')
+        if safe.endswith('.html') or safe.endswith('.htm'):
+            safe = os.path.splitext(safe)[0]
+        fname = f"{safe}.txt"
+        out_path = os.path.join(pages_txt_dir, fname)
+        try:
+            with open(out_path, 'w', encoding='utf-8') as tf:
+                tf.write(page_text)
+            saved_txt_files.append(out_path)
+            combined_texts.append(page_text)
+        except Exception:
+            continue
+
+    if not saved_txt_files:
+        raise HTTPException(status_code=500, detail='Extraction produced no text files')
+
+    combined_path = os.path.join(pages_txt_dir, os.path.splitext(file.filename)[0] + '_full.txt')
+    try:
+        with open(combined_path, 'w', encoding='utf-8') as cf:
+            cf.write('\n\n'.join(combined_texts))
+    except Exception:
+        combined_path = ''
+
+    return {
+        'message': 'CHM extracted to text',
+        'chm_path': save_path,
+        'pages_txt': saved_txt_files,
+        'combined_txt': combined_path
+    }
+
+
+@app.post("/convert/chm-to-pdf")
+async def convert_chm_to_pdf(file: UploadFile = File(...), output_folder: str = "downloaded_site"):
+    """Upload a `.chm` file, extract HTML pages and convert each HTML to PDF.
+
+    Requires either `pdfkit` + `wkhtmltopdf` installed, or `weasyprint`.
+    """
+    if not file.filename.lower().endswith('.chm'):
+        raise HTTPException(status_code=400, detail="Uploaded file is not a CHM archive")
+
+    base_uuid = str(uuid.uuid4())
+    base_dir = os.path.join(output_folder, 'chm', base_uuid)
+    pathlib.Path(base_dir).mkdir(parents=True, exist_ok=True)
+
+    save_path = os.path.join(base_dir, file.filename)
+    contents = await file.read()
+    try:
+        with open(save_path, 'wb') as wf:
+            wf.write(contents)
+    finally:
+        await file.close()
+
+    extract_dir = os.path.join(base_dir, 'extracted')
+    try:
+        html_files = _extract_chm_to_html(save_path, extract_dir)
+    except RuntimeError as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+    if not html_files:
+        raise HTTPException(status_code=500, detail='No HTML files were extracted from the CHM')
+
+    pdf_dir = os.path.join(base_dir, 'pages_pdf')
+    pathlib.Path(pdf_dir).mkdir(parents=True, exist_ok=True)
+
+    # Try pdfkit (wkhtmltopdf) first, then weasyprint
+    use_pdfkit = False
+    use_weasy = False
+    try:
+        import pdfkit
+        use_pdfkit = True
+    except Exception:
+        try:
+            from weasyprint import HTML
+            use_weasy = True
+        except Exception:
+            raise HTTPException(status_code=500, detail='PDF conversion requires `pdfkit` (with wkhtmltopdf) or `weasyprint`. Install one of them and try again.')
+
+    saved_pdfs = []
+    errors = []
+    for html_path in sorted(html_files):
+        base = os.path.splitext(os.path.basename(html_path))[0]
+        out_pdf = os.path.join(pdf_dir, f"{base}.pdf")
+        try:
+            if use_pdfkit:
+                # pdfkit uses external wkhtmltopdf binary; allow default configuration
+                pdfkit.from_file(html_path, out_pdf)
+            elif use_weasy:
+                HTML(html_path).write_pdf(out_pdf)
+            saved_pdfs.append(out_pdf)
+        except Exception as e:
+            errors.append({'html': html_path, 'error': str(e)})
+
+    if not saved_pdfs:
+        raise HTTPException(status_code=500, detail={'message': 'Failed to convert HTML to PDF', 'errors': errors})
+
+    return {
+        'message': 'CHM converted to PDF pages',
+        'chm_path': save_path,
+        'pdf_pages': saved_pdfs,
+        'errors': errors
     }
 
 

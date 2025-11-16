@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Sum Accumulator</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Sum Accumulator</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183494/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>With a Sum/Accumulator value type, the returned value is based on the iterations of a group in a ManuScript when called from an Iterator field. Sum/Accumulator fields increase the efficiency of a ManuScript for large iterations.&nbsp;</p>
+<p>For example, a ManuScript with two Iterator fields loops through the iterative group two complete times.&nbsp; You can use a single Iterator to increase efficiency.&nbsp; If you create two Sum/Accumulator fields in the place of the two Iterator fields, and one Iterator field that references the two Sum/Accumulator fields, the iterative groups only loop once for the number of instances of the iterative group.&nbsp; As the Iterator processes through each group, it performs the selected function for the fields that the Sum/Accumulator fields reference.&nbsp; When a complete loop is finished, each Sum/Accumulator field holds the calculated value.&nbsp;</p>
+<p class="note">You do not have to specifically reference the Iterator group.&nbsp; When a Sum/Accumulator field is referenced and the Iterator has not yet processed, the Iterator executes and gets values for each Sum/Accumulator field.</p>
+<div id="section_1"><span id="Defining_a_Sum.2fAccumulator_Value"></span><h5 class="editable">Defining a Sum/Accumulator Value</h5>
+<p><em><img class="internal default" alt="FieldsViewIcon.png" style="width: 20px; height: 20px;" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>To define a Sum/Accumulator value:</p>
+<ol> <li>In the dropdown list for the appropriate property, click <strong>Sum/Accumulator</strong>.</li> <li>Click the Ellipsis button <img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to the right of <strong>Field to access for each iteration's value </strong>to use theReference Select dialog box to select a field reference. <p class="listcontinue">This is the value on which the iterator operates.</p> </li> <li>Click the Ellipsis button <img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to the right of <strong>Iterator field that evaluates the Iterator item </strong>to use the Reference Select dialog box to select a field reference. <p class="listcontinue">This is the field that defines and controls the iteration.</p> </li>
+</ol></div></div>
+	</body>
+</html>

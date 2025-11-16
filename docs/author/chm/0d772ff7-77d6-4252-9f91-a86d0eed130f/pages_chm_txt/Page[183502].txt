@@ -1,0 +1,1 @@
+Setting Field Visibility Setting Field Visibility Save Page to .PDF Fields View The visibility of a field identifies whether the field is viewable by the end user (public) or used only within the ManuScript (private). To set the visibility of a field: Click the field. On the Value tab, click Public or Private . For more information on Public and Private settings, see Visibility .

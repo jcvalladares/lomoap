@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>XML Examples</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>XML Examples</h1>
+		<div>
+<p style="text-align: right;"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/187742/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></p>
+<div id="section_1"><span id="Creating_an_Upload_public_group"></span><h6 class="editable">Creating an Upload public group</h6>
+
+          <pre name="code" class="xml">&lt;object id=&quot;Upload&quot; path=&quot;upload&quot;&gt;
+   &lt;minOccurs value=&quot;1&quot; /&gt;
+   &lt;maxOccurs value=&quot;1&quot; /&gt;
+&lt;/object&gt;</pre>
+        
+</div><div id="section_2"><span id="Creating_a_UploadInput_private_group_and_field"></span><h6 class="editable">Creating a UploadInput private group and field</h6>
+
+          <pre name="code" class="xml">&lt;object id=&quot;UploadInput&quot; path=&quot;&quot;&gt;
+   &lt;minOccurs value=&quot;1&quot; /&gt;
+   &lt;maxOccurs value=&quot;1&quot; /&gt;
+&lt;/object&gt;</pre>
+        
+
+          <pre name="code" class="xml">&lt;public id=&quot;UploadInput.FilePath&quot; path=&quot;FilePath&quot; type=&quot;string&quot;&gt;
+   &lt;definition&gt;
+      &lt;caption value=&quot;Select the Excel file:&quot; /&gt;
+      &lt;formatMask value=&quot;file&quot; /&gt;
+      &lt;readOnly idref=&quot;UploadPrivate.HasFilePath&quot; /&gt;
+      &lt;maxLength value=&quot;255&quot; /&gt;
+   &lt;/definition&gt;
+&lt;/public&gt;</pre>
+        
+</div><div id="section_3"><span id="Creating_an_Upload_Private_private_group_and_field"></span><h6 class="editable">Creating an Upload Private private group and field</h6>
+
+          <pre name="code" class="xml">&lt;object id=&quot;UploadPrivate&quot; path=&quot;&quot;&gt;
+   &lt;minOccurs value=&quot;1&quot; /&gt;
+   &lt;maxOccurs value=&quot;1&quot; /&gt;
+&lt;/object&gt;</pre>
+        
+
+          <pre name="code" class="xml">&lt;private id=&quot;UploadPrivate.HasFilePath&quot; type=&quot;boolean&quot; path=&quot;HasFilePath&quot;&gt;
+   &lt;value&gt;
+      &lt;comparison compare=&quot;ne&quot;&gt;
+         &lt;operand idref=&quot;UploadInput.FilePath&quot; type=&quot;string&quot; /&gt;
+         &lt;operand type=&quot;string&quot; value=&quot;&quot; /&gt;
+      &lt;/comparison&gt;
+   &lt;/value&gt;
+&lt;/private&gt;</pre>
+        
+
+          <pre name="code" class="xml">&lt;private id=&quot;UploadPrivate.HasNoFilePath&quot; type=&quot;boolean&quot; path=&quot;HasNoFilePath&quot;&gt;
+   &lt;value&gt;
+      &lt;comparison compare=&quot;eq&quot;&gt;
+         &lt;operand idref=&quot;UploadInput.FilePath&quot; type=&quot;string&quot; /&gt;
+         &lt;operand type=&quot;string&quot; value=&quot;&quot; /&gt;
+      &lt;/comparison&gt;
+   &lt;/value&gt;
+&lt;/private&gt;</pre>
+        
+
+          <pre name="code" class="xml">&lt;private id=&quot;UploadPrivate.ResetFilePath&quot; type=&quot;string&quot; path=&quot;ResetFilePath&quot;&gt;
+   &lt;value value=&quot;&quot; /&gt;
+   &lt;affects&gt;
+      &lt;reference idref=&quot;UploadInput.FilePath&quot; effect=&quot;setValue&quot; /&gt;
+   &lt;/affects&gt;
+&lt;/private&gt;</pre>
+        
+</div><div id="section_4"><span id="Collecting_Specific_Columns"></span><h6 class="editable">Collecting Specific Columns</h6>
+
+          <pre name="code" class="xml">&lt;object id=&quot;Mapping&quot; path=&quot;mapping&quot;&gt;
+   &lt;minOccurs value=&quot;1&quot; /&gt;
+   &lt;maxOccurs value=&quot;1&quot; /&gt;
+&lt;/object&gt;</pre>
+        
+</div><div id="section_5"><span id="Including_the_.5b.40valueMap.3d.26quot.3b1.26quote.3b.5d_in_the_path_attribute"></span><h6 class="editable">Including the [@valueMap=&amp;quot;1&amp;quote;] in the path attribute</h6>
+
+          <pre name="code" class="xml">&lt;object id=&quot;MapType&quot; path=&quot;Type[@valueMap=&amp;quot;1&amp;quot;]&quot;&gt;
+&lt;minOccurs value=&quot;1&quot; /&gt;
+&lt;maxOccurs value=&quot;1&quot; /&gt;
+&lt;/object&gt;</pre>
+        
+</div><div id="section_6"><span id="Default_value_and_Caption_values"></span><h6 class="editable">Default value and Caption values</h6>
+
+          <pre name="code" class="xml">&lt;public id=&quot;MapType.column&quot; path=&quot;@column&quot; type=&quot;string&quot;&gt;
+&lt;definition&gt;
+&lt;caption value=&quot;Type&quot; /&gt;
+&lt;options&gt;
+&lt;request verb=&quot;ExcelImport.getColumnNamesRq&quot;&gt;
+&lt;responsePath value=&quot;columns/column&quot; /&gt;
+&lt;captionPath value=&quot;@caption&quot; /&gt;
+&lt;valuePath value=&quot;@name&quot; /&gt;
+&lt;nameValues&gt;
+&lt;nameValue idref=&quot;UploadInput.FilePath&quot;
+name=&quot;fileName&quot; dataType=&quot;attribute&quot; /&gt;
+&lt;/nameValues&gt;
+&lt;/request&gt;
+&lt;/options&gt;
+&lt;formatMask value=&quot;blankOption:Not Applicable&quot; /&gt;
+&lt;/definition&gt;
+&lt;rules&gt;
+&lt;value&gt;
+&lt;request verb=&quot;ExcelImport.inferValueRq&quot; get=&quot;@column&quot;&gt;
+&lt;default value=&quot;&quot; /&gt;
+&lt;nameValues&gt;
+&lt;nameValue idref=&quot;UploadInput.FilePath&quot;
+name=&quot;fileName&quot; dataType=&quot;attribute&quot; /&gt;
+&lt;nameValue value=&quot;string&quot; name=&quot;dataType&quot;
+dataType=&quot;attribute&quot; /&gt;
+&lt;/nameValues&gt;
+&lt;/request&gt;
+&lt;/value&gt;
+&lt;default value=&quot;Type&quot; /&gt;
+&lt;/rules&gt;
+&lt;/public&gt;</pre>
+        </div></div>
+	</body>
+</html>

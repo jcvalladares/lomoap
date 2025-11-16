@@ -1,0 +1,1 @@
+Tools Tools Save Section to .PDF Save Page to .PDF A number of tools are available through the EXAMPLE Author ® Tools menu. Section Contents Validator Build Schema and Data File Wizard Revision Viewer Search Viewer Constant Viewer Message Viewer Database Mapping Portfolio Mapping Wizard CSS Manager Page Converter Batch Execute/Regression Automatic Update Library Wizard

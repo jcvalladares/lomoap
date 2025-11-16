@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Function</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Function</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183486/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>ManuScript functions serve as shorcuts for applying commonly-used field formatting. With a Function value type, you apply one of several possible functions to a specified field.</p>
+<p>The following table lists the functions available out of the box for use with the Function value type.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th>Function</th> <th>Description</th> </tr> <tr> <td>String.Contains</td> <td>Determines whether a string is contained within another string.</td> </tr> <tr> <td>String.CountItems</td> <td> <p>Counts the number of entries in a delimited string.</p> </td> </tr> <tr> <td>String.Format</td> <td> <p>Formats a string according to the specified format mask and ManuScript culture. Primarily used to format numbers and some date formatting.</p> </td> </tr> <tr> <td>String.HashMD5</td> <td> <p>Returns a MD5 hash of the string.</p> </td> </tr> <tr> <td>String.IsNumeric</td> <td>Determines whether the string is a numeric value. The IsNumeric function can be used with all culture settings and comma separators.</td> </tr> <tr> <td>String.Lookup</td> <td>Retrieves a value within a specifically delimited string of key/value pairs given the key and delimiters.</td> </tr> <tr> <td>String.LowerCase</td> <td>Converts a string to its lower-case equivalent.</td> </tr> <tr> <td>String.Left</td> <td>Retrieves a portion of a string starting from the front of the string given the number of characters to retrieve.</td> </tr> <tr> <td>String.Length</td> <td>Counts the number of characters in a string.</td> </tr> <tr> <td>String.PadRight</td> <td>Appends a string to a given length with a specified character.</td> </tr> <tr> <td>String.PadLeft</td> <td>Prepends a string to a given length with a specified character.&nbsp;</td> </tr> <tr> <td>String.RegExMatch</td> <td>Returns true if the string contains a match for the specified regular expression. The .NET RegEx parser is used.&nbsp;</td> </tr> <tr> <td>String.Replace</td> <td>Replaces a string within another string with a new string.</td> </tr> <tr> <td>String.Right</td> <td>Retrieves a portion of a string starting from the end of the string given the number of characters to retrieve.</td> </tr> <tr> <td>String.Trim</td> <td>Removes leading and trailing white space from a string.</td> </tr> <tr> <td>String.UpperCase</td> <td>Converts a string to its upper-case equivalent.</td> </tr> </tbody>
+</table>
+<div id="section_1"><span id="Adding_Custom_Functions"></span><h5 class="editable">Adding Custom Functions</h5>
+<p>You can create custom functions and add them to EXAMPLE&nbsp;Author<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> by extending the ManuScriptFunctions_custom.xml file located in the Shared directory in the Duck Creek root directory (for example, <code>C:\Program Files\Duck Creek Technologies</code><code>\Shared</code>).</p>
+<p>To add a new function:</p>
+<ul> <li>In the ManuScriptFunctions_Custom.xml file, add all the desired functions, following the same syntax found in the ManuScriptFunctions.xml file.<br> <p class="caution">To avoid losing custom functions during an upgrade, never add them to the ManuScriptFunctions.xml file.</p> </li>
+</ul>
+</div><div id="section_2"><span id="Defining_a_Function_Value_Type_in_EXAMPLE.c2.a0Author.c2.ae"></span><h5 class="editable">Defining a Function Value Type in EXAMPLE&nbsp;Author&reg;</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png">&nbsp;Fields View</em></p>
+<p>To define a function value:</p>
+<ol> <li>In the dropdown list for the appropriate property, click <strong>Function</strong>.</li> <li>In the <strong>Function</strong> list, click the appropriate function option.<br> The type of value returned by the function is displayed and the following possible function options appear: <ul> <li>Source</li> <li>Item</li> <li>Separator</li> <li>Item Separator</li> <li>*Key Separator</li> <li>Key</li> <li>Length</li> <li>Count</li> <li>Character<br> <p class="tip">The function options available are determined by the type of function selected in the <strong>Function </strong>list.</p> </li> </ul> </li> <li>Enter the value for each function option available.</li>
+</ol></div></div>
+	</body>
+</html>

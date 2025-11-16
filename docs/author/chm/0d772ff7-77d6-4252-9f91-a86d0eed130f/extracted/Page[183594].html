@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Issues with Inheritance</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Issues with Inheritance</h1>
+		<div>
+<p>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/4093/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+
+<p>Although inheritance significantly enhances the EXAMPLE Platform<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>, it does raise some design considerations and maintenance issues. The following sections identify some of the potential problems that can result from the inheritance model.</p>
+<span id="Override_Items_and_Base_Changes"></span><h5>Override Items and Base Changes</h5>
+<p>Any inherited items that have been overridden in a derived ManuScript do <em>not</em> change when you update the base ManuScript. You must change these items manually. To do this, first identify the items that must be changed. Then demote any overridden items in the derived ManuScript to bring in the new base definitions. Finally, modify these items again in the local ManuScript to reflect the original changes that were made to the derived ManuScript.</p>
+<span id="Override_Items_and_Rating"></span><h5>Override Items and Rating</h5>
+<p>When you override an item that is used in calculations in the base ManuScript, changes you make can cause the calculations in the derived ManuScript to function incorrectly or not at all. To ensure correct rating, an overridden item can only contain changes that fit successfully into inherited rating calculations. You must also be sure to preserve any base rules and definitions not modified by the override.</p>
+<span id="Separation_of_Purpose_and_Runtime_Memory"></span><h5>Separation of Purpose and Runtime Memory</h5>
+<p>When derived ManuScripts inherit multiple ManuScripts for specific purposes (one for rating and rules, one for pages, and one for forms), the runtime image for each ManuScript also contains each object on which it is dependent. If the bulk of the ManuScript size is in the base ManuScript, then the logical images of the rating ManuScript, the pages ManuScript, and the forms ManuScript each consume considerable memory for the base ManuScript objects. This memory use is not an overwhelming issue, because runtime compilation of ManuScripts is machine-specific rather than user-specific. This issue, however, should still be a consideration.</p>
+<span id="Renaming_or_Moving_Base_Items"></span><h5>Renaming or Moving Base Items</h5>
+<p>Because inheritance is based on the names of ManuScript items, renaming or moving items in a base ManuScript can be problematic. When you edit a base ManuScript, EXAMPLE&nbsp;Author<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> considers items in that ManuScript to be locally defined. As a result, you can rename or move items. When you move or rename a field in a base ManuScript, however, any derived fields continue to look for the old path and field name. Furthermore, if the renamed or moved item is overridden in the derived ManuScript, the override link is broken. While the ManuScript validation process identifies these unlinked override items, this issue should be a consideration when renaming or moving items in a base ManuScript.</p>
+<p class="caution">Renaming keys in an inherited table is not a supported practice. Because table keys are used to define the structure of a table so that the ManuScript can find the appropriate data, a new table should be created when different key names are necessary.</p></p></div>
+	</body>
+</html>

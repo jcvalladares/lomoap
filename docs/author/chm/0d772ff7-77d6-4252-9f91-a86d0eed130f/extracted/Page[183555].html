@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Working with CSS Override Styles</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Working with CSS Override Styles</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183555/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>You can assign CSS override styles to individual page elements using the CSS Selector in Page Designer.</p>
+<p>To open the CSS selector:</p>
+<ul> <li>To the right of the appropriate <strong>Style</strong> property for the appropriate element, click the <strong>CSS</strong> button <img style="width: 25px; height: 15px;" alt="CSSButton.png" class="internal default" src="Images/CSSButton.png">.</li>
+</ul>
+<div id="section_1"><span id="Applying_Override_Styles"></span><h2 class="editable">Applying Override Styles</h2>
+<p>To apply an override style to a page element in Page Designer:</p>
+<ol> <li>To the right of the appropriate <strong>Style</strong> property for the appropriate element, click the <strong>CSS</strong> button <img style="width: 25px; height: 15px;" alt="CSSButton.png" class="internal default" src="Images/CSSButton.png">. <p class="listcontinue">The CSS Selector dialog box appears.</p> </li> <li>In the <strong>Available Styles</strong> list, click a style to apply, and then click <strong>Add</strong>. (You can multi-select using CTRL+click.) <p class="note">The <strong>Available Styles</strong> list in the CSS Selector displays only those styles defined with a class-only selector. It will not display styles with selectors containing conditions or other content. If you wish to define styles with more complex selectors, you can do so in the <em>x_interview.css</em> override file in the [GlobalRootPath]\Express\Skins\<em>[SkinName]</em>\css directory. To cause these styles to appear in the CSS Selector, you must first define the style with a class-only selector. (The style may contain declarations or be empty.) You can then create additional styles with the same class name and the desired selectors. The class-only style will appear in the <strong>Available Styles</strong> list, and selecting that style will then apply all styles with that class name. However, the <strong>Definition</strong> box will only display the declarations defined for the class-only style.</p> <p class="listcontinue">The selected styles appear in the Styles to Apply list, and the definition for all styles in the list appears in the Definition box.</p> </li> <li>(Optional) To move a style up or down in the hierarchy, click the style, and then click <strong>Move Up</strong> <img style="width: 20px; height: 20px;" alt="MoveUpButton.gif" class="internal default" src="Images/MoveUpButton.gif"> or <strong>Move Down</strong> <img style="width: 20px; height: 20px;" alt="EnterDownButton.gif" class="internal default" src="Images/EnterDownButton.gif">.</li> <li>Click <strong>OK</strong>.</li>
+</ol>
+</div><div id="section_2"><span id="Removing_Override_Styles"></span><h2 class="editable">Removing Override Styles</h2>
+<p>To remove an override style from a page element:</p>
+<ol> <li>To the right of the appropriate <strong>Style</strong> property for the appropriate element, click the <strong>CSS</strong> button <img style="width: 25px; height: 15px;" alt="CSSButton.png" class="internal default" src="Images/CSSButton.png">. <p class="listcontinue">The CSS Selector dialog box appears.</p> </li> <li>In the <strong>Styles to Apply</strong> list, click the style, and then click <strong>Remove</strong>.</li> <li>Click <strong>OK</strong>.</li>
+</ol>
+</div><div id="section_3"><span id="Viewing_Override_Style_Definition"></span><h2 class="editable">Viewing Override Style Definition</h2>
+<p>You can view the definition for the override styles applied to certain page elements in the CSS Selector dialog box.</p>
+<p>To view definition for the override styles currently applied:</p>
+<ol> <li>To the right of the appropriate <strong>Style</strong> property for the appropriate element, click the <strong>CSS</strong> button <img style="width: 25px; height: 15px;" alt="CSSButton.png" class="internal default" src="Images/CSSButton.png">. <p class="listcontinue">The Definition box beneath the Styles to Apply list contains the total definition for the selected styles.</p> </li> <li>(Optional) Click styles in the <strong>Styles to Apply</strong> list to isolate the definition for each specific style. <p class="listcontinue">Definition for items selected in the Styles to Apply list appears in italics. The Definition text box is read-only.</p> </li>
+</ol>
+</div><div id="section_4"><span id="Managing_Override_Styles"></span><h2 class="editable">Managing Override Styles</h2>
+<p>You can add, delete, or modify the available override styles using the CSS Manager tool in EXAMPLE&nbsp;Author<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>. This tool reads from and writes to the <em>x_interview.css</em> override file in the <em>Global Root Directory</em>\Express\Skins\<em>CustomSkin</em>\css directory. From the CSS Manager, you can access and edit the <em>x_interview.css</em> override file.</p>
+<p>The <em>x_interview.css</em> override file is shipped with several out-of-the-box override styles. From the CSS Manager, you can add to, delete, or modify these styles.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th> <p>Style</p> </th> <th> <p>Definition</p> </th> </tr> <tr> <td> <p>Bold</p> </td> <td> <p>font-weight: bold</p> </td> </tr> <tr> <td> <p>Italic</p> </td> <td> <p>font-style: italic</p> </td> </tr> <tr> <td> <p>LargeFont</p> </td> <td> <p>font-size: large</p> </td> </tr> <tr> <td> <p>MediumFont</p> </td> <td> <p>font-size: medium</p> </td> </tr> <tr> <td> <p>SmallFont</p> </td> <td> <p>font-size: small</p> </td> </tr> <tr> <td> <p>TextAlignLeft</p> </td> <td> <p>text-align: left</p> </td> </tr> <tr> <td> <p>TextAlignRight</p> </td> <td> <p>text-align: right</p> </td> </tr> <tr> <td> <p>XLargeFont</p> </td> <td> <p>font-size: x-large</p> </td> </tr> <tr> <td> <p>XSmallFont</p> </td> <td> <p>font-size: x-small</p> </td> </tr> <tr> <td> <p>XXSmallFont</p> </td> <td> <p>font-size: xx-small</p> </td> </tr> </tbody>
+</table>
+<p>To open the CSS Manager:</p>
+<ul> <li>In EXAMPLE&nbsp;Author<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>, on the <strong>Tools</strong> menu, click <strong>CSS Manager</strong>.</li>
+</ul>
+<div id="section_5"><span id="Adding_a_New_Style"></span><h5 class="editable">Adding a New Style</h5>
+<p>
+
+<p>To add a new style in CSS Manager:</p>
+<ol> <li>On the <strong>Tools</strong> menu, click <strong>CSS Manager</strong>. <p class="listcontinue">The CSS Manager dialog box appears.</p> </li> <li>Click <strong>Create New</strong>. <p class="listcontinue">The Create New dialog box appears.</p> </li> <li>Enter the <strong>Class Name</strong> for the style, and then click <strong>OK</strong>. <p class="listcontinue">The new style appears in the <strong>Style</strong> drop-down list.</p> </li> <li>In the <strong>Definition </strong>pane, define the style by performing one of the following actions: <ul> <li>Click a property from the list of properties, and then click <strong>Insert</strong>. <p class="note-shortcut">You can also:<br> Double-click the desired attribute.</p> <p class="listcontinue2">Define the property in the text box.</p> </li> <li>Enter the desired definition in the text box.</li> </ul> </li> <li>When finished, click <strong>Apply</strong> to save the definition and continue working in CSS Manager, or click <strong>OK</strong> to save the definition and close CSS Manager.</li>
+</ol>
+</p>
+</div><div id="section_6"><span id="Deleting_a_Style"></span><h5 class="editable">Deleting a Style</h5>
+<p>
+
+<p class="note-caution">Before deleting a style in CSS Manager, verify the style is not used in any ManuScripts using the <em>x_interview.css</em> file.</p>
+<p>To delete a style in CSS Manager:</p>
+<ol> <li>On the <strong>Tools</strong> menu, click <strong>CSS Manager</strong>. <p class="listcontinue">The CSS Manager dialog box appears.</p> </li> <li>In the <strong>Style</strong> list, click the style you wish to delete.</li> <li>Click <strong>Delete</strong>. <p class="listcontinue">A confirmation dialog box appears.</p> </li> <li>In the confirmation dialog, click <strong>Yes</strong>.</li>
+</ol>
+</p>
+</div><div id="section_7"><span id="Modifying_a_Style"></span><h5 class="editable">Modifying a Style</h5>
+<p>
+
+<p>To modify a style in CSS Manager:</p>
+<ol> <li>On the <strong>Tools</strong> menu, click <strong>CSS Manager</strong>. <p class="listcontinue">The CSS Manager dialog box appears.</p> </li> <li>In the <strong>Style</strong> list, click the style you wish to modify.</li> <li>In the <strong>Definition </strong>pane, modify the style as desired.</li> <li>When finished, click <strong>Apply</strong> to save the definition and continue working in CSS Manager, or click <strong>OK</strong> to save the definition and close CSS Manager.</li>
+</ol></p>
+</div></div><div id="section_8"><span id="Specificity"></span><h2 class="editable">Specificity</h2>
+<p>The EXAMPLE Platform<span style="font-size: 70%;vertical-align:text-top;">&reg;</span> uses specificity to determine the order in which identical CSS selectors are applied. For example, if .myClass {float:left; } and .myClass {float:right; } CSS selectors existed (in that order), the .myClass elements would float right because the value of the last CSS selector in the list takes precedence when the CSS selector values are the same.</p>
+<p class="caution">CSS elements within a &lt;div&gt; element take precedence because they are considered to be more specific than elements not contained in a &lt;div&gt; element.</p>
+<div id="section_9"><span id="Calculating_Specificity_Values"></span><h3 class="editable">Calculating Specificity Values</h3>
+<p>To determine the specificity of nested CSS&nbsp;selectors, each selector is assigned a point value.</p>
+<p>The following table includes a breakdown of the points assigned to each type of selector:</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th>CSS&nbsp;Selector Type</th> <th>Value</th> </tr> <tr> <td>id selectors (for example, #myId)</td> <td>100</td> </tr> <tr> <td>class selectors (for example, .myClass)</td> <td>10</td> </tr> <tr> <td>HTML selectors (for example, div)</td> <td>1</td> </tr> </tbody>
+</table>
+<p>For each selector in a group, the point values are added together. The result is the specificity value.</p>
+<p>The following table includes some examples of how specificity values are calculated.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th>Groups of Selectors</th> <th>Specificity Value</th> </tr> <tr> <td>.acrossFieldGroup&gt;div</td> <td>11 (10 + 1)</td> </tr> <tr> <td>.acrossFieldGroup&gt;.acrossBeforeFormLabel</td> <td>20 (10 + 10)</td> </tr> <tr> <td>#requiredAsterisk</td> <td>100</td> </tr> <tr> <td>.required #requiredAsterisk</td> <td>110 (10 + 100)</td> </tr> </tbody>
+</table>
+</div><div id="section_10"><span id="Overriding_Specificity"></span><h3 class="editable">Overriding Specificity</h3>
+<p>Some CSS files (for example, forms.css) use the greater than (&gt;) symbol to combine CSS selectors into groups to reduce the number of inconsistencies possible in dynamic layouts. As a result, some .css file definitions have become more specific than most of the selectors in the x_interview.css file and could cause issues to surface.</p>
+<div id="section_11"><span id="Determining_Whether_Specificity_has_Been_Overridden"></span><h5 class="editable">Determining Whether Specificity has Been Overridden</h5>
+<p>To determine whether specificity has been overridden:</p>
+<ul> <li>Using the developer toolbar in Internet Explorer 8, the Firebug feature in Mozilla Firefox, or the inspector feature in Google Chrome, search for overridden CSS styles in the toolbar. Overridden CSS styles appear with a line through them.</li>
+</ul>
+</div><div id="section_12"><span id="Overriding_Specificity_2"></span><h5 class="editable">Overriding Specificity</h5>
+<p>When experiencing specificity issues, you can often work around them by overriding specificity rules using the &quot;!important&quot; rule.</p>
+<p>To override specificity rules:</p>
+<ul> <li>Add the !important rule to the end of the CSS selector to which you wish to give precedence. The following is an example of a CSS selector with overridden specificity. 
+          <pre name="code" class="xml">.x_FloatRight { float:right !important; }</pre>
+         </li>
+</ul></div></div></div></div>
+	</body>
+</html>

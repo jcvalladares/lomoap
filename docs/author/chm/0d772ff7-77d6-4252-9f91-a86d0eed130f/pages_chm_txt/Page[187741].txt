@@ -1,0 +1,1 @@
+Appendix Appendix This section includes examples of XML for importing Excel files into EXAMPLE Author ® by mapping XML.

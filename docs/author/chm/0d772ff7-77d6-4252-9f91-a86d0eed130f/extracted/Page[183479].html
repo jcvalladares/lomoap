@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Execution Order of Field Properties</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Execution Order of Field Properties</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183479/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p><em><img style="width: 20px; height: 20px;" alt="FieldsViewIcon.png" class="internal default" src="Images/FieldsViewIcon.png"> Fields View</em></p>
+<p>The order of execution of the value types of a public field is listed below. For each step, if the property is set to (n/a), that step is ignored. Otherwise, the value of the field is modified by the rule. Any access to the field during the execution of these rules returns the in-progress value of the field.</p>
+<p>The ManuScript executes field Properties in the following order:</p>
+<ol> <li>Check the <strong>Applicable </strong>status of the field. If the <strong>Applicable </strong>status is false, check only the <strong>Default</strong> rule.</li> <li>Execute the fields listed with a <strong>Pre-Effect</strong> type on the <strong>Affects </strong>tab.</li> <li>Access the value from the data document according to the <strong>Path </strong>of the field.</li> <li>If the path node does not yet exist in the data document or the value of the node is empty, check the <strong>Default </strong>rule. If a value is returned in the <strong>Default </strong>rule, set the value of the field to that default value and issue a message indicating that the default was applied to the field.</li> <li>Apply the <strong>Value </strong>rule.</li> <li>Check the <strong>Minimum </strong>rule. If there is a specified minimum and the current value of the field is less than the specified minimum, set the value of the field to the specified minimum, and issue the message associated with the minimum rule.</li> <li>Check the <strong>Maximum </strong>rule. If there is a specified maximum and the current value of the field is greater than the specified maximum, set the value of the field to the specified maximum, and issue the message associated with the maximum rule.</li> <li>Apply any <strong>Miscellaneous Rules</strong> to the value.</li> <li>If the value was modified, assign the node in the data document, as specified by the <strong>Path</strong>, the resulting new value. If the node does not yet exist in the data document, add it.</li> <li>Execute the fields listed with a <strong>Post-Effect</strong> type on the <strong>Affects </strong>tab.</li>
+</ol>
+<p>For private fields, the order of execution is to access the <strong>Value </strong>rule, apply <strong>Pre-Effect</strong> fields, and then apply any <strong>Miscellaneous Rules</strong>.</p></div>
+	</body>
+</html>

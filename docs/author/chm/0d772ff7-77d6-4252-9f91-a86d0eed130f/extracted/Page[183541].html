@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>XPath Functions</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>XPath Functions</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183541/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>To allow users to search through large schedules containing significant numbers of items, XPath functions can be added to the Restrict XPath property in Pages View in EXAMPLE&nbsp;Author<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>.</p>
+<p>The following table lists the XPath functions available, the parameters that may be used with each of them, and the result each one produces.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th>Function</th> <th>Parameters</th> <th>Returns</th> </tr> <tr> <td>dcfn:contains(haystack, needle)</td> <td> <ul> <li><strong>haystack (string)</strong> &ndash; Item to be searched.</li> <li><strong>needle (string)</strong> &ndash; Item to search for.</li> </ul> </td> <td><em>True</em> if needle is found in haystack; otherwise returns <em>false</em>. Comparison is not case-sensitive.</td> </tr> <tr> <td>dcfn:starts-with(haystack, needle)</td> <td> <ul> <li><strong>haystack (string)</strong> &ndash; Item to be searched.</li> <li><strong>needle (string)</strong> &ndash; Item to search for.</li> </ul> </td> <td><em>True</em> if haystack starts with needle; otherwise returns <em>false</em>. Comparison is not case-sensitive.</td> </tr> <tr> <td> <ul> <li>dcfn:string-compare(string1, string2)</li> <li>dcfn:string-compare(string1, string2, culture)</li> <li>dcfn:string-compare(string1, string2, culture, case)</li> </ul> </td> <td> <ul> <li><strong>string1, string2 (string)</strong> &ndash; Two strings to compare</li> <li><strong>culture (string)</strong> &ndash; A culture string (for example, en-US). If this parameter is not specified or is an empty string, the invariant culture is used.</li> <li><strong>case (string)</strong> &ndash; String used to specify whether a comparison should be case-sensitive or not (i=case-sensitive, u=not case-sensitive). If this parameter is not specified or is an empty string, the comparison will not be case-sensitive.</li> </ul> </td> <td> <ul> <li>Less than 0 if string1 is less than string2.</li> <li>Zero if string1 is equal to string2</li> <li>Greater than 0 if string1 is greater than string2.</li> </ul> </td> </tr> <tr> <td>dcfn:xml-decode(target)</td> <td><strong>target (string)</strong> &ndash; A string that may contain one or more XML escape sequences.</td> <td>Target with XML&nbsp;escape sequences converted to the actual special characters (for example, &quot;dcfn:xml-decode('O&amp;apos;Mally')&quot; returns &quot;O'mally&quot;).</td> </tr> <tr> <td>dcfn:xml-encode(target)</td> <td><strong>target (string)</strong> &ndash; A&nbsp;string that may contain one or more special characters.</td> <td>Target with XML special characters converted to the escape sequences (for example, &quot;dfcn:xml-encode('a &quot;better&quot; way')&quot; &quot;returns &quot;a &amp;quot;better&amp;quot; way&quot;).</td> </tr> </tbody>
+</table>
+<p>The following special characters are available for the dcfn:xml-decode and dcfn:xml-encode functions.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th>Escape Sequence</th> <th>Special Character</th> </tr> <tr> <td>&amp;apos;</td> <td>'</td> </tr> <tr> <td>&amp;quot;</td> <td>&quot;</td> </tr> <tr> <td>&amp;lt;</td> <td>&lt;</td> </tr> <tr> <td>&amp;gt;</td> <td>&gt;</td> </tr> </tbody>
+</table>
+<p class="caution">All XPath parameter functions must be true strings (for example, dcfn:xml-decode(@name) will not work). Instead, the function must be converted to a string (for example, dcfn:xml-decode(string(@name))).&nbsp;</p></div>
+	</body>
+</html>

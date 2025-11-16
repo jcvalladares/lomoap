@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<title>Grid Widgets</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Grid Widgets</h1>
+		<div>
+<div id="docPage"><a class="saveGuideToPDF" title="Save Guide to .PDF" onclick="return saveToPDF('/@api/deki/pages/55779/pdf?path=02_Platform/43/Guide_to_EXAMPLE_Author/07_Page_Designer/03_Designing_Version_2_Pages/07_Grid_Widgets');" href="#"><img class="internal default" alt="Save_Guide_to_PDF.png" style="width: 16px; height: 16px;" src="Images/Save_Guide_to_PDF.png"> Save Section to .PDF</a> <a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183548/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>Grid widgets display iterative fields and actions within a sortable grid control. Like tables, grid widgets can display iterative fields and actions in a table. Unlike tables, however, grid widgets allow users to sort and rearrange table columns. In addition, grid widgets can paginate, displaying on each page the number of iterations specified in the Maximum Iterations property specified for the associated group.</p>
+<p>Grid widgets always display in the following manner:</p>
+<ul> <li>Fields are laid out across the page in columns; iterations are laid out down the page in rows (<em>Layout Direction:</em> Across).</li> <li>Field captions display only for the first iteration (<em>Field Caption Display:</em> First Iteration).</li> <li>Field captions display above field values (<em>Field Caption Position:</em> Above Field).</li> <li>Grid widget content is read-only (<em>Read-Only Content:</em> True).</li>
+</ul>
+<p>You can add, duplicate, and remove grid widgets, as well as define grid widget properties and convert grid widgets to sections or tables. Grid widgets can be nested within sections or tables.</p>
+<p class="note-caution">Duck Creek Technologies, Inc. does not support:&nbsp;<br>
+&bull; Editable radio buttons in grids (editable boolean fields with a format mask of <em>radio</em> or <em>radio:1</em>) <br>
+&bull; Multiple grids per page<br>
+&bull; Sorting of paging grids</p>
+<div id="section_1"><span id="Adding_a_Grid_Widget"></span><h2 class="editable">Adding a Grid Widget</h2>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>You can add grid widgets by:</p>
+<ul> <li>Adding the grid widget under a section or table</li> <li>Converting the section automatically created under the page group</li> <li>Adding a group and converting the corresponding table to a grid widget <p class="note-tip">When adding grid widgets, remember that a grid widget iterates through the closest <em>parent</em> group in the tree (that is, the group immediately above the grid widget in the hierarchy).</p> </li>
+</ul>
+<p>To add a grid widget under a section or table:</p>
+<ol> <li>Click the section or table under which to add a grid widget.</li> <li>On the <strong>Edit</strong> menu, click <strong>Advanced</strong>, and then click <strong>Add Grid Widget</strong>. <p class="note-shortcut">You can also:<br> &bull;Press CTRL+ALT+G.<br> &bull;Right-click a section or table, click <strong>Advanced</strong>, and then click <strong>Add Grid Widget</strong>.</p> </li>
+</ol>
+<p>To convert the section automatically created under the page group:</p>
+<ol> <li>Click the section beneath the page group.</li> <li>On the <strong>Edit </strong>menu, click <strong>Convert To Grid Widget</strong>. <p class="listcontinue">The selected section appears as a grid widget in the Page Designer list.</p> <p class="note-shortcut">You can also:<br> Right-click the section, and then click <strong>Convert To Grid Widget</strong>.</p> </li>
+</ol>
+<p>To add a group and convert the corresponding table:</p>
+<ol> <li>Click the section or table under which to add the group.</li> <li>Click the <strong>Add Group</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="AddGroupButton.gif" class="internal default" src="Images/AddGroupButton.gif">. <p class="listcontinue">The Select Group Association dialog box appears.</p> <p class="note-shortcut">You can also:<br> Press CTRL+G.</p> </li> <li>Click the appropriate group, and then click <strong>OK</strong>. <p class="listcontinue">The system adds the group and a corresponding table.</p> </li> <li>Click the table beneath the group.</li> <li>On the <strong>Edit </strong>menu, click <strong>Convert To Grid Widget</strong>. <p class="listcontinue">The selected table appears as a grid widget in the Page Designer list.</p> <p class="note-shortcut">You can also:<br> Right-click the table, and then click <strong>Convert To Grid Widget</strong>.</p> </li>
+</ol></div><div id="section_2"><span id="Duplicating_a_Grid_Widget"></span><h2 class="editable">Duplicating a Grid Widget</h2>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>To duplicate a grid widget:</p>
+<ol> <li>Click the grid widget you wish to duplicate.</li> <li>On the <strong>Edit </strong>menu, click <strong>Duplicate</strong>. <p class="note-shortcut">You can also:<br> Right-click the grid widget, and then click <strong>Duplicate</strong>.</p> <p class="listcontinue">The Duplicate Grid dialog box appears.</p> </li> <li>Click the type of action to take. Options are: <ul> <li><strong>Duplicate grid structure only</strong></li> <li><strong>Duplicate grid structure and fields</strong></li> <li><strong>Duplicate grid structure and replace fields</strong></li> </ul> </li> <li>If you choose to duplicate the grid widget structure and replace fields, define <strong>Field Replacement Rules</strong>. <ol> <li>Click a group for <strong>Replace fields from the group</strong>.</li> <li>Click a group for <strong>With similar field in the group</strong>.</li> </ol> </li> <li>Click <strong>OK</strong>.</li>
+</ol>
+</div><div id="section_3"><span id="Deleting_a_Grid_Widget"></span><h2 class="editable">Deleting a Grid Widget</h2>
+<p><em><img class="internal default" alt="PageDesignerViewIcon.png" style="width: 20px; height: 20px;" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>To delete a grid widget:</p>
+<ol> <li>Select the grid widget you wish to delete.</li> <li>Click the <strong>Delete</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="DeleteButton.gif" class="internal default" src="Images/DeleteButton.gif">.</li> <li>In the Confirm dialog box, click <strong>Yes </strong>to confirm the deletion, or <strong>No</strong> to cancel.</li>
+</ol>
+</div><div id="section_4"><span id="Converting_a_Grid_Widget"></span><h2 class="editable">Converting a Grid Widget</h2>
+<p>For instructions on converting a grid widget to a section or table, see <a class="internal" rel="internal" href="page%5B183549%5D.html">Converting Grid Widgets</a>.</p>
+</div><div id="section_5"><span id="Defining_Grid_Widget_Properties"></span><h2 class="editable">Defining Grid Widget Properties</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>To define a grid widget, specify the following properties.</p>
+<table class="docTable"> <tbody valign="top"> <tr> <th class="strong"> <p>Property</p> </th> <th class="strong"> <p>Description</p> </th> </tr> <tr> <th colspan="2"> <p>General</p> </th> </tr> <tr> <td> <p>Name</p> </td> <td> <p>Name of the grid widget.</p> </td> </tr> <tr> <th colspan="2"> <p>Display</p> </th> </tr> <tr> <td> <p>Grid Caption</p> </td> <td> <p>Text to describe the grid widget.</p> </td> </tr> <tr> <td> <p>Header Caption</p> </td> <td> <p>This property is not available for use with grid widgets.</p> </td> </tr> <tr> <td>Read-Only Content</td> <td> <p>Specification of whether grid widget content should be read-only.</p> </td> </tr> <tr> <td> <p>Show Condition</p> </td> <td> <p>Specification of when to display the grid widget.</p> </td> </tr> <tr> <td>Sorting</td> <td> <p>Indication of whether the grid widget is sortable.</p> <p class="caution">Duck Creek Technologies, Inc. does not support sorting of paging grids.</p> </td> </tr> <tr> <td> <p>Grid Caption Style</p> </td> <td> <p>CSS styles to apply to the grid widget caption. Styles apply according to CSS inheritance rules.</p> </td> </tr> <tr> <td> <p>Grid Style</p> </td> <td> <p>CSS styles to apply to the grid widget content. Styles apply according to CSS inheritance rules.</p> </td> </tr> </tbody>
+</table>
+<p>In addition to defining the above properties, you can also define annotations for grid widgets, and you can add actions to grid widgets. Grid widget actions appear as links in the grid widget under an unnamed column. For information on adding actions, see <a class="internal" rel="internal" href="page%5B183554%5D.html">Actions</a>.</p>
+<div id="section_6"><span id="Setting_the_Name_Property"></span><h5 class="editable">Setting the Name Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Name property contains the name of the grid widget. This name appears on the grid widget in the Page Designer list.</p>
+<p>To set the value of the Name property:</p>
+<ol> <li>In Page Designer, click the grid widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Name</strong>.</li> <li>Enter the grid widget name.</li>
+</ol>
+</div><div id="section_7"><span id="Setting_the_Grid_Caption_Property"></span><h5 class="editable">Setting the Grid Caption Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Grid Caption property contains the text to display as the title of the grid.</p>
+<p>To set the value of the Grid Caption property:</p>
+<ol> <li>In Page Designer, click the grid widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Grid Caption</strong>.</li> <li>Enter the grid widget caption.</li>
+</ol>
+</div><div id="section_8"><span id="Setting_the_Header_Caption_Property"></span><h5 class="editable">Setting the Header Caption Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>This property is not available for use with grid widgets.</p>
+</div><div id="section_9"><span id="Setting_the_Read-Only_Content_Property"></span><h5 class="editable">Setting the Read-Only Content Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Read-Only Content property specifies whether the grid content is read-only.</p>
+<p>To set the value of the Read-Only Content property:</p>
+<ol> <li>Click the grid widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Read-Only Content</strong>.</li> <li>In the <strong>Read-Only Content</strong> list, click <strong>False</strong> or <strong>True</strong>.</li>
+</ol>
+</div><div id="section_10"><span id="Setting_the_Show_Condition_Property"></span><h5 class="editable">Setting the Show Condition Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Show Condition property specifies when to show the grid widget.</p>
+<p>To set the value of the Show Condition property:</p>
+<ol> <li>Click the grid widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Show Condition</strong>.</li> <li>To the right of the <strong>Show Condition</strong> text box, click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to use the Reference Select dialog box to select a boolean field.</li>
+</ol>
+</div><div id="section_11"><span id="Setting_the_Sorting_Property"></span><h5 class="editable">Setting the Sorting Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Sorting property specifies whether the grid widget is sortable by column.</p>
+<p class="caution">Duck Creek Technologies, Inc. does not support sorting of paging grids.</p>
+<p>To set the value of the Sorting property:</p>
+<ol> <li>Click the grid widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Sorting</strong>.</li> <li>In the<strong> Sorting</strong> list, click <strong>True</strong> or <strong>False</strong>.</li>
+</ol>
+</div><div id="section_12"><span id="Setting_the_Grid_Caption_Style_Property"></span><h5 class="editable">Setting the Grid Caption Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Grid Caption Style property specifies the CSS styles to apply to the grid widget caption. Styles specified in this property will override any global CSS styles assigned. Styles apply according to CSS inheritance rules.</p>
+<p>To set the value of the Grid Caption Style property:</p>
+<ol> <li>Click the grid widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Grid Caption Style</strong>.</li> <li>To the right of the <strong>Grid Caption Style</strong> text box, click the CSS button&nbsp;<img style="width: 25px; height: 15px;" alt="CSSButton.png" class="internal default" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol>
+</div><div id="section_13"><span id="Setting_the_Grid_Style_Property"></span><h5 class="editable">Setting the Grid Style Property</h5>
+<p><em><img style="width: 20px; height: 20px;" alt="PageDesignerViewIcon.png" class="internal default" src="Images/PageDesignerViewIcon.png">&nbsp;Page Designer View</em></p>
+<p>The Grid Style property specifies the CSS styles to apply to the grid widget content. Styles specified in this property will override any global CSS styles assigned. Styles apply according to CSS inheritance rules.</p>
+<p>To set the value of the Grid Style property:</p>
+<ol> <li>Click the grid widget.</li> <li>On the <strong>Definition</strong> tab, click <strong>Grid Style</strong>.</li> <li>To the right of the <strong>Grid Style</strong> text box, click the CSS button&nbsp;<img style="width: 25px; height: 15px;" alt="CSSButton.png" class="internal default" src="Images/CSSButton.png"> to use the CSS Selector dialog box to select the desired styles.</li>
+</ol></div></div></div>
+	</body>
+</html>

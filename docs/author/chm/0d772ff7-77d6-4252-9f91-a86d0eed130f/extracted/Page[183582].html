@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Database Mapping</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281129">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Database Mapping</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183582/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>You use the Database Mapping tool to specify which fields in the ManuScript to store as fields in the database. The entire ManuScript is stored in the database, but the data is stored as one large group, which makes it difficult to access specific data items. By storing the data as fields, you may access the data with any standard database access tool.</p>
+<p>The fields you store may be required or optional fields in the ManuScript. Public fields in the Database Mapping are not executed at save time in EXAMPLE Express<span style="font-size: 70%;vertical-align:text-top;">&reg;</span>. Private fields in the Database Mapping must be executed at save time because the value of a private field must be executed to be determined.<br>
+<br>
+Because the Database Mapping contains private and public fields, the ManuScript can determine if rules are performed only at save time or if they are always run by the system. If the rules are to be run at save time, use a private field that references the fields or rules to be executed. If the XML data is to be extracted as is, use a public field in the Database Mapping.</p>
+<p>To open the Database Mapping tool:</p>
+<ul> <li>On the <strong>Tools </strong>menu, click <strong>Database Mapping</strong>. <p class="listcontinue">The Database Mapping dialog box appears.</p> </li>
+</ul>
+<div id="section_1"><span id="Mapping_Required_Fields"></span><h2 class="editable">Mapping Required Fields</h2>
+<p>There are 18 required fields already defined in the database. You must map a ManuScript field to each of these fields. You can also define and map to optional fields if you wish to store additional data.</p>
+<p>To map the required fields:</p>
+<ol> <li>In the Database Mapping dialog box, click the line in the <strong>Data Name</strong> list.</li> <li>Click the Ellipsis button <img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to the right of the <strong>Field </strong>text box to use the Reference Select dialog box to select the appropriate field.</li> <li>Repeat steps two and three for all of the required fields.</li>
+</ol>
+</div><div id="section_2"><span id="Mapping_Optional_Fields"></span><h2 class="editable">Mapping Optional Fields</h2>
+<p>In addition to the 18 required fields that you must map in your ManuScript, you can also map optional fields.</p>
+<p>To map optional fields:</p>
+<ol> <li>In the Database Mapping tool, click the first empty row in the <strong>Optional Fields</strong> grid.</li> <li>Enter an appropriate <strong>Data Name</strong>.</li> <li>Click the Ellipsis button <img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to the right of the <strong>Field </strong>text box to use the <strong>Reference Select</strong> dialog box to select the appropriate field.</li> <li>Repeat steps one through three to add each optional field.</li>
+</ol>
+<div id="section_3"><span id="Inserting_an_Optional_Field"></span><h5 class="editable">Inserting an Optional Field</h5>
+<p>To insert an Optional Field:</p>
+<ol> <li>In the Database Mapping tool, click the row in the <strong>Optional Fields</strong> grid above which to insert the Field.</li> <li>Click <strong>Insert Item</strong>. <p class="listcontinue">The line you selected is moved down, creating room for another entry.</p> </li> <li>Enter an appropriate <strong>Data Name</strong>.</li> <li>Click the Ellipsis button <img class="internal default" alt="EllipsisButton.gif" style="width: 20px; height: 20px;" src="Images/EllipsisButton.gif"> to the right of the <strong>Field </strong>text box and then use the Reference Select dialog box to select the appropriate field.</li> <li>Repeat steps one through four for each field to insert.</li>
+</ol>
+</div><div id="section_4"><span id="Deleting_an_Optional_Field"></span><h5 class="editable">Deleting an Optional Field</h5>
+<p>To delete an Optional Field:</p>
+<ol> <li>In the Database Mapping tool, click the row in the <strong>Optional Fields</strong> grid to delete.</li> <li>Click <strong>Delete Item</strong>.</li>
+</ol>
+</div></div><div id="section_5"><span id="Removing_All_Mapped_Fields"></span><h2 class="editable">Removing All Mapped Fields</h2>
+<p>You can remove all the mapped fields with the Database Mapping tool.</p>
+<p class="note-caution">This removes the mapping for both the required and the optional Fields.</p>
+<p>To remove all mapped fields:</p>
+<ol> <li>In the Database Mapping tool, click <strong>Remove All</strong>. <p class="listcontinue">The Confirm dialog box appears.</p> </li> <li>Click <strong>Yes </strong>to remove all the mappings or <strong>No </strong>to cancel the process.</li>
+</ol></div></div>
+	</body>
+</html>

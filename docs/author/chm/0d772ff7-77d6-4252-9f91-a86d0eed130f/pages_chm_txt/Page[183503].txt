@@ -1,0 +1,1 @@
+Setting Field Values Setting Field Values Save Page to .PDF Fields View The Field Value property specifies the value of the field in the ManuScript. To set the value of the Field Value property: Click the field. In the Field Value list, click the appropriate value type. For more information, see Defining Property Value Types . Complete the Definition pane for the value type.

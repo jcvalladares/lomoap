@@ -1,0 +1,1 @@
+Setting Field Classes Setting Field Classes Save Page to .PDF Fields View Classes are a method used for sorting tables, fields, and groups. To set the value of the Class property: Click the field or group. On the Value tab, click Class , and then enter a name for the class.

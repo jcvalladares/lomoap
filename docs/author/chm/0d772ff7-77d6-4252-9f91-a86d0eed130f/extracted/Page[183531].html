@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>Testing ManuScripts</title>
+		<meta name="GENERATOR" content="Wiki Util - 201110281128">			
+		<link rel="stylesheet" type="text/css" href="dekiForCHM.css">		
+	</head>
+	<body>
+		<h1>Testing ManuScripts</h1>
+		<div>
+<div id="docPage"><a class="saveToPDF" href="#" onclick="return saveToPDF('http://solution.duckcreektech.com/@api/deki/pages/183531/pdf');" title="Save Page to .PDF"><img style="width: 16px; height: 16px;" alt="Save_Page_to_PDF.png" class="internal default" src="Images/Save_Page_to_PDF.png"> Save Page to .PDF</a></div>
+<p>The following sections provide instructions for working with ManuScripts in Data Tester view.</p>
+<div id="section_1"><span id="Setting_the_Field_to_Access"></span><h2 class="editable">Setting the Field to Access</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>The Primary Value setting in the ManuScript Properties is necessary to specify the execution field for the finished ManuScript. For testing purposes, you may choose to execute an interim field. To do this, you specify the Field to execute.</p>
+<p>To set the value of the Field to execute:</p>
+<ol> <li>On the <strong>Edit</strong> menu, click <strong>Advanced Options</strong>. <p class="listcontinue">The Advanced Options dialog box appears.</p> </li> <li>Click the Ellipsis button&nbsp;<img style="width: 20px; height: 20px;" alt="EllipsisButton.gif" class="internal default" src="Images/EllipsisButton.gif"> to the right of the <strong>Field to access</strong> text box. <p class="listcontinue">The Reference Select dialog box appears.</p> </li> <li>Click the appropriate field.</li> <li>(Optional) Enter a <strong>Data Path</strong> to execute a particular iteration of the selected field.</li> <li>Click <strong>OK</strong>.</li>
+</ol>
+</div><div id="section_2"><span id="Entering_Data"></span><h2 class="editable">Entering Data</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>All the public fields in the ManuScript appear in the Data Records list. Enter data into only the input fields that are required for testing the ManuScript.</p>
+<p>To view only the input fields:</p>
+<ul> <li>Select the <strong>Input only fields</strong> check box.</li>
+</ul>
+<p>To enter the data:</p>
+<ol> <li>In the <strong>Data Records</strong> pane, click the group where the input fields are located. <p class="listcontinue">The public fields appear in the bottom left pane.</p> </li> <li>In each input field, enter the appropriate <strong>Data</strong>.</li>
+</ol>
+</div><div id="section_3"><span id="Adding_a_Data_Record"></span><h2 class="editable">Adding a Data Record</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>Individual data records represent a single iteration of a group within a given data file.</p>
+<p>To add a data record:</p>
+<ol> <li>Click the <strong>Add Data Record </strong>button&nbsp;<img style="width: 20px; height: 20px;" alt="AddRecordButton.gif" class="internal default" src="Images/AddRecordButton.gif">. <p class="note-shortcut">You can also:<br> &bull; Right-click a data record, and then click <strong>Add Record.<br> </strong>&bull; On the <strong>Edit</strong> menu, point to <strong>Data</strong>, and then click <strong>Add Record</strong>.</p> <p class="listcontinue">If there is only one public group in the current ManuScript, the record is added. If there is more than one public group to choose from, the Add New Record dialog box appears.</p> </li> <li>If necessary, select a group from the dialog box: <ol> <li>Click the group for the new data record.</li> <li>Click <strong>OK</strong>.</li> </ol> </li>
+</ol>
+<p class="note">The number of data records added cannot exceed the number set in the Maximum property in the Group properties in the Fields view. You can enter the value &quot;*&quot; (with the quotes) into the Maximum property to indicate an unlimited number of records.</p></div><div id="section_4"><span id="Duplicating_a_Data_Record"></span><h2 class="editable">Duplicating a Data Record</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>Individual data records represent a single iteration of a group within a given data file. When data is duplicated, all the items within the records are duplicated.</p>
+<p>To duplicate a data record:</p>
+<ol> <li>Click the record.</li> <li>Click the <strong>Duplicate Data Record</strong> button <img style="width: 20px; height: 20px;" alt="DuplicateRuleButton.gif" class="internal default" src="Images/DuplicateRuleButton.gif">. <p class="note-shortcut">You can also:<br> &bull; Right-click the data record, and then click <strong>Duplicate Record.<br> </strong>&bull; On the <strong>Edit</strong> menu, point to <strong>Data</strong>, and then click <strong>Duplicate Record</strong>.</p> </li>
+</ol>
+</div><div id="section_5"><span id="Deleting_a_Data_Record"></span><h2 class="editable">Deleting a Data Record</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">- Data Tester View</em></p>
+<p>Individual data records represent a single iteration of a group within a given data file.</p>
+<p>To delete a data record:</p>
+<ol> <li>Click the data record to be deleted.</li> <li>Click the <strong>Delete Data Record</strong> button&nbsp;<img style="width: 20px; height: 20px;" alt="DeleteRecordButton_1.gif" class="internal default" src="Images/DeleteRecordButton_1.gif">. <p class="note-shortcut">You can also:<br> &bull; Right-click the data record, and then click <strong>Delete Record</strong>.<strong><br> </strong>&bull; On the <strong>Edit</strong> menu, point to <strong>Data</strong>, and then click <strong>Delete Record</strong>.</p> </li>
+</ol>
+</div><div id="section_6"><span id="Sorting_Data_Records"></span><h2 class="editable">Sorting Data Records</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>You can sort the fields in the Data Records List.</p>
+<p>To sort the fields alphabetically:</p>
+<ul> <li>Select the <strong>Sort by Field Name</strong> check box.</li>
+</ul>
+</div><div id="section_7"><span id="Executing_a_ManuScript"></span><h2 class="editable">Executing a ManuScript</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="DataTesterViewIcon.png" class="internal default" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>When you execute a ManuScript, data entered into the data records is used in the calculations.</p>
+<p>To execute a ManuScript:</p>
+<ul> <li>Click the <strong>Execute </strong>button&nbsp;<img class="internal default" alt="ExecuteButton.gif" style="width: 20px; height: 20px;" src="Images/ExecuteButton.gif">. <p class="note-shortcut">You can also:<br> &bull; Press F9.<br> &bull; On the <strong>Edit</strong> menu, click <strong>Execute</strong>.</p> <p class="listcontinue">The output data is displayed in different formats on three tabs:</p> <ul> <li>Results</li> <li>Detailed View</li> <li>Output XML</li> </ul> <p class="listcontinue">If an error message appears indicating that there is no field to execute defined, you must designate a field.</p> <p class="listcontinue">For more information, see <a href="#Setting_the_Field_to_Access" title="Setting the Field to Access">Setting the Field to Access</a>.</p> </li>
+</ul></div><div id="section_8"><span id="Viewing_Errors_and_Messages"></span><h2 class="editable">Viewing Errors and Messages</h2>
+<p><em><img style="width: 20px; height: 20px;" alt="DataTesterViewIcon.png" class="internal default" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>When an error occurs during execution, the Error dialog box displays a detailed message.</p>
+<p>To see where an error occurred in a calculation:</p>
+<ul> <li>Click the <strong>Find Bug</strong> button&nbsp;<img class="internal default" alt="FindBugButton.gif" style="width: 20px; height: 20px;" src="Images/FindBugButton.gif">. <p class="note-shortcut">You can also:<br> On the <strong>Edit</strong> menu, click <strong>Find Bug</strong>.</p> <p class="listcontinue">The line containing the calculation in error appears in the Detailed View.</p> </li>
+</ul>
+<p>To reopen the most recent error message:</p>
+<ul> <li>On the <strong>Edit</strong> menu, click<strong> View Error</strong>. <p class="note-shortcut">You can also:<br> Press CTRL+E.</p> </li>
+</ul>
+<p>The View Messages dialog box displays any messages generated by executing a ManuScript.</p>
+<p>To view messages:</p>
+<ul> <li>On the <strong>Edit</strong> menu, click <strong>View Messages</strong>. <p class="note-shortcut">You can also:<br> Press CTRL+M.</p> </li>
+</ul></div><div id="section_9"><span id="Printing_the_Calculation"></span><h2 class="editable">Printing the Calculation</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>To print the results of the execution:</p>
+<ol> <li>Right-click any field in the Results View, and then click <strong>Print</strong>. <p class="listcontinue">The Print dialog box appears.</p> </li> <li>Click <strong>Print</strong>.</li>
+</ol>
+</div><div id="section_10"><span id="Exporting_the_Calculation"></span><h2 class="editable">Exporting the Calculation</h2>
+<p><em><img class="internal default" alt="DataTesterViewIcon.png" style="width: 20px; height: 20px;" src="Images/DataTesterViewIcon.png">&nbsp;Data Tester View</em></p>
+<p>You can export the results of a calculation as a .txt file that can then be opened in a text editor for further review.</p>
+<p>To export the results as a text file:</p>
+<ol> <li>Right-click any field in the Results View, and then click <strong>Export</strong>. <p class="listcontinue">The Export Debug Log dialog box appears.</p> </li> <li>Browse to a location to save the file.</li> <li>Enter a <strong>File name</strong>, and then click <strong>OK</strong>.</li>
+</ol></div></div>
+	</body>
+</html>

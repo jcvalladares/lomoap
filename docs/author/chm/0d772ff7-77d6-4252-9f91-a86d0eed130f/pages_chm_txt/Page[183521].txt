@@ -1,0 +1,1 @@
+Tables View Tables View Save Section to .PDF Save Page to .PDF You can use the Tables view to create and edit tables for a ManuScript. To open the Tables view: Click the Tables button . You can also: On the View menu, click Tables . Section Contents Tables View Controls Creating Tables Table Keys Data Names Selecting Tables By Class Editing Tables Viewing Table Inheritance
